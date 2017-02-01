@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/card', 'CardController@view');
+Route::get('/planet/{id}', 'PlanetController@show');

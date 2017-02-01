@@ -1,0 +1,10 @@
+name,type,escape_velocity,body,sites
+Saturn,Gas Giant,13,Requires Fusion Rockets,Fu+1C
+Jupiter,Gas Giant,24,"Requires Fusion Rockets, 4 Moons, Magnetosphere at 2nd Orbit",2xFu+1C
+Mars,Silicate,2,,"W, Fo+Cv, M, Fu"
+Earth,Ocean,4,"+2C or Draw a card for all colonies here, 1 Moon, Atmosphere",
+Venus,Silicate,4,Thick Atmosphere,"Fo, Fo"
+Mercury,Silicate,2,,"M+EL, M+EL"
+Amacata,Ocean,4,Thick Atmosphere,"F, W+1C, M+Cv, M"
+Halva,Ocean,3,,"W, W+1C, M, Fo"
+Arctus,Ocean,2,,"2xW, W+1C"
