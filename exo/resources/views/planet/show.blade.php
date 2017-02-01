@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exo</title>
-    <link rel="stylesheet" href="css/foundation/foundation.css">
-    <link rel="stylesheet" href="css/foundation/app.css">
-    <link rel="stylesheet" href="css/exo.css">
+    <title><? echo $planet->name; ?></title>
+    <link rel="stylesheet" href="/css/foundation/foundation.css">
+    <link rel="stylesheet" href="/css/foundation/app.css">
+    <link rel="stylesheet" href="/css/exo.css">
   </head>
   <body>
     <div class="row" style="background-color: #000">
@@ -15,8 +15,8 @@
         <div class="card" style="width: 700px;margin:70px 55px 70px 55px;border-radius:15px;">
           <div class="card-divider">
             <h4>
-                Luna
-                <span style="color:#888;font-size:14px;float:right;margin-top:8px;">Silicate</span>
+                <? echo $planet->name; ?>
+                <span style="color:#888;font-size:14px;float:right;margin-top:8px;"><? echo $planet->type; ?></span>
             </h4>
 
           </div>
@@ -27,6 +27,26 @@
               var canvas = document.getElementById('myCanvas');
               var context = canvas.getContext('2d');
               var radius = 70;
+
+              function create_site($context, $site){
+
+                context.beginPath();
+                context.arc(600, 250, radius, 0, 2 * Math.PI, false);
+                context.fillStyle = 'blue';
+                context.fill();
+                context.lineWidth = 5;
+                context.strokeStyle = '#000033';
+                context.shadowBlur = 20;
+                context.shadowColor = 'yellow';
+                context.stroke();                
+              }
+
+              var sites_str = <? echo $planet->sites; ?>;
+              var sites = sites_str.split(",");
+              sites.forEach(function(site){
+                create_site(context, site);
+              });
+
         
               // First Site
               context.beginPath();
@@ -127,16 +147,16 @@
             </script>
           
           <div class="card-section">
-            <span>Vacuum Atmosphere</span>
-            <span style="float:right;">Launch Cost: 1</span>
+            <span><? echo $planet->body; ?></span>
+            <span style="float:right;">Launch Cost: <? echo $planet->escape_velocity; ?></span>
           </div>
         </div>
       </div>
     </div>
 
-    <script src="js/foundation/vendor/jquery.js"></script>
-    <script src="js/foundation/vendor/what-input.js"></script>
-    <script src="js/foundation/vendor/foundation.js"></script>
-    <script src="js/foundation/app.js"></script>
+    <script src="/js/foundation/vendor/jquery.js"></script>
+    <script src="/js/foundation/vendor/what-input.js"></script>
+    <script src="/js/foundation/vendor/foundation.js"></script>
+    <script src="/js/foundation/app.js"></script>
   </body>
 </html>

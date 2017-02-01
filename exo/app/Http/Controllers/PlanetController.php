@@ -46,9 +46,8 @@ class PlanetController extends Controller
      */
     public function show($id)
     {
-        $planets = \App\Planet::all();
-        print_r($planets);
-        die();
+        $planet = \App\Planet::find($id);
+        return view('planet.show', ['planet' => $planet]);
     }
 
     /**
