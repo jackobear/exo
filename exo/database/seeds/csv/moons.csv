@@ -1,0 +1,12 @@
+name,type,escape_velocity,body,sites
+Enceladus,Ocean,1,"Drill to draw lifeforms card, Vacuum Atmosphere",W+2C
+Titan,Hydrocarbon,1,Pressurized Atmosphere,"Fu+1C, 2xFu, M"
+Mimas,Silicate,1,Vacuum Atmosphere,M
+Ganymede,Silicate,1,"Magnetosphere, Vacuum Atmosphere",M
+Callisto,Silicate,1,Vacuum Atmosphere,"W, W, M, Fu+1C"
+Io,Silicate,1,Vacuum Atmosphere,
+Europa,Ocean,1,"Drill to draw lifeforms card, Vacuum Atmosphere","W, W"
+Pallas,Silicate,1,"One of Three Dwarves, Inclined Orbit, Vacuum Atmosphere","W, M, Fu+2C"
+Vesta,Silicate,1,"One of Three Dwarves, Vacuum Atmosphere","M+1C, W, M+2C"
+Ceres,Silicate,1,Vacuum Atmosphere,"Fu+1C, W, M, W+2C"
+Luna,Silicate,1,Vacuum Atmosphere,"W+EL, M+He, Fo+Ca, Fu+EL"
