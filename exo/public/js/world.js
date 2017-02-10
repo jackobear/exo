@@ -1,5 +1,4 @@
 function World(sites_str){
-    console.log(sites_str);
   var canvas = document.getElementById('myCanvas');
   var context = canvas.getContext('2d');
   var radius = 70;
@@ -8,7 +7,7 @@ function World(sites_str){
   var site_margin = 50;
   var bonus_margin = 110;
   var site_x = 600;
-  var site_y = 250;
+  var site_y = 100;
 
   var sites = sites_str.split(",");
 
@@ -93,9 +92,10 @@ function World(sites_str){
                 context.strokeStyle = '#000000';
                 context.stroke();
                 var balloonImage = new Image();
+                var image_y = site_y - 20;
                 balloonImage.onload = function() {
                   context.shadowBlur = 0;
-                  context.drawImage(balloonImage, site_x - bonus_margin_temp - 20, site_y - 20, 40, 40);
+                  context.drawImage(balloonImage, site_x - bonus_margin_temp - 20, image_y, 40, 40);
                 };
                 balloonImage.src = '/img/balloon-original.png';
                 break;

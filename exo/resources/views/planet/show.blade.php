@@ -13,24 +13,25 @@
   <body>
     <div class="row" style="background-color: #000">
       <div class="large-12 columns">
-        <div class="card" style="width: 700px;margin:70px 55px 70px 55px;border-radius:15px;">
+        <div class="card" style="width: 700px;height:1132px;margin:70px 55px 70px 55px;border-radius:15px;">
           <div class="card-divider">
-            <h4>
+            <h1>
                 <? echo $planet->name; ?>
-                <span style="color:#888;font-size:14px;float:right;margin-top:8px;"><? echo $planet->type; ?></span>
-            </h4>
+                <span style="float:right;color:#888;font-size:30px;margin-top:20px;"><? echo $planet->type; ?> Planet</span>
+            </h1>
 
           </div>
 
-            <canvas id="myCanvas" width="700" height="1000" style="background: url('/img/luna.jpg');background-size: auto auto;"></canvas>
+            <canvas id="myCanvas" width="700" height="800" style="background: url('/img/luna.jpg');background-size: auto auto;"></canvas>
             <script type="text/javascript">
                 var sites_str = "<? echo $planet->sites; ?>";
                 var the_sites = new World(sites_str);
             </script>
           
           <div class="card-section">
-            <span><? echo $planet->body; ?></span>
-            <span style="float:right;">Launch Cost: <? echo $planet->escape_velocity; ?></span>
+            <h2><? echo $planet->body; ?>
+              <span style="float:right;">Launch Cost: <? echo $planet->escape_velocity; ?></span>
+            </h2>
           </div>
         </div>
       </div>
