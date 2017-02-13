@@ -29,9 +29,9 @@
             </script>
           
           <div class="card-section">
-            <h2><? echo $planet->body; ?>
+            <h3><? echo $planet->body; ?>
               <span style="float:right;">Launch Cost: <? echo $planet->escape_velocity; ?></span>
-            </h2>
+            </h3>
           </div>
         </div>
       </div>

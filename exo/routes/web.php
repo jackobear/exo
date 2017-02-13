@@ -18,3 +18,4 @@ Route::get('/', function () {
 Route::get('/card', 'CardController@view');
 Route::get('/planet/{id}', 'PlanetController@show');
 Route::get('/moon/{id}', 'MoonController@show');
+Route::get('/star/{id}', 'StarController@show');
