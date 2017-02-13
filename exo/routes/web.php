@@ -19,3 +19,6 @@ Route::get('/card', 'CardController@view');
 Route::get('/planet/{id}', 'PlanetController@show');
 Route::get('/moon/{id}', 'MoonController@show');
 Route::get('/star/{id}', 'StarController@show');
+Route::get('/lifeform/{id}', 'LifeformController@show');
+Route::get('/asteroid/{id}', 'AsteroidController@show');
+Route::get('/action/{id}', 'ActionController@show');

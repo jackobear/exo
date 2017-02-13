@@ -1,0 +1,13 @@
+name,type,body
+City Killer Asteroid,Silicate,"+1M, +3 Cards, 2 Fuel to deflect"
+Co-Orbital Asteroid,Silicate,"+1M, +1W, (No fuel requirement)"
+C-Type Asteroid,Water,"+3W, 1F to capture"
+Small Rocky Asteroid,Silicate,"+1M, +1W, 1F to capture"
+Snowball Asteroid,Water,"+2W, +1F, 1F to capture"
+Solid Rock Asteroid,Silicate,"+2M OR +3M for terrarium or starship, 1F to Capture"
+High Speed Comet,Silicate,"+2M, +2W, +1F, 3F to capture"
+S-Type Asteroid,Silicate,"+2M, +2F, 2F to capture"
+Trojan Asteroid,Silicate,"+2M, +1F, 1F to capture"
+M-Type Asteroid,Silicate,"+4M, 2F to catpure"
+Extinct Comet,Silicate,"+3M, +3F, 3F to capture"
+Starship-Sized Asteroid,Silicate,"+2M OR +4M for terrarium or starship, 2F to capture"

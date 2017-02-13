@@ -1,0 +1,39 @@
+name,type,cost,body,quantity
+Migrate Colony,Event,2C,Move one of your colonies to another site on the same planet.  Adjust resources prices accordingly.,1
+Space Hotel,Space Station,"1M, 1W","+1C/turn, +1 Food Price",1
+Space Farm,Space Station,"1M, 1W","+1F/turn, -1 Food Price, requires launch",2
+Embargo,Event,1C,"Target player may not trade with the market next turn. +1 Price to resources that player produces, -1 otherwise",1
+Space Fighter,Navy,"1M, 1Fu","Steal 1C from target weaker player, +1 to Navy Size, requires launch",1
+Asteroid Miner,Ship,"1M, 1Fu",Draw an asteroid and harvest up to one.  Shuffle unused asteroid back into deck.  Requires launch,8
+Solar Flare,Event,,Random other player loses 2 target resources.,1
+Bulk Shipment,Event,1C,"Sell up to 4 of any one resource.  If you sell 4, decrease the price by 1.  If bought increase it.",1
+Market Disruption,Event,1C,Increase the price of one resource by two.,1
+Offworld Blight,Event,1C,+2 Food price.  All players discard 1f.,1
+Industrial Sabotage,Event,"1Fo, 1Fu",Return target launch system to its owner's hand.  Owner gets +1M and loses a VP.,1
+Carrier,Navy,"3M, 1Fu, 1W, Fo",Spend 2 Fu to return an action to target weaker owner's hand. Requires launch. +3 Navy,1
+Meteor Strike,Event,2C,Disable target colony.  Its production stops until owner spends 1M and 1C.  +1 Price to that colony's resource.,1
+Daedelus Probe,Starship,"2M, 3Fu","After 3 turns of travel, reveal a new star system.",1
+Melt Probe,Ship,"2M, 1Fu",Explore frozen ocean for life.  Requires launch.,4
+Mutiny,Event,2C,Disable target colony.  Its production stops until owner spends 1M and 1C.  +1 Price to that colony's resource.,1
+Icarus Probe,Starship,"3M, 2Fu","After 3 turns of travel, reveal a new star system.",1
+Critical Equipment Failure,Event,1C,Disable target colony.  Its production stops until owner spends 1C+1C/Orbit from homeworld.,1
+Fuel Spill,Event,1C,"Target water colony owner loses 1Fu, 1W, +1W price",1
+Stampede,Event,1C,Target player colonizing a world with megafauna must spend an extra 2 turns to colonize the world.,1
+Asteroid Hunter,Telescope,1M,Draw an extra asteroid when mining.  Draw 1 Action card when launched.  Requires launch.,2
+Mass Driver,Launch System,"2M, 1Fu, 1W",Ignore escape velocity of exactly 1.  +1C/launch by any player.  +1 Buy/Sell Transaction per turn. +1 VP,3
+Solar Array,Space Station,2M,"Once per turn receive 1C OR Trade 1W for 1Fu.  Requires launch.  -1Fu Price, +1W price.",8
+Tether Catapult,Launch System,"2M, 1Fu","Ignore escape velocity of exactly 1.  +1C/launch by any player.  +1 Buy/Sell Transaction per turn. +1 VP, Requires Vacuum Atmosphere",3
+Launch Loop,Launch System,"3M, 1Fu, 1W",Ignore escape velocity of 2 or less. 1C/launch by any player. +1 Transaction per turn. +1 VP,1
+Space Elevator,Launch System,"3M, 2Fu, 1W",Ignore escape velocity of 3 or less. 1C/launch by any player. +1 Transaction per turn. +1 VP,1
+Garden Terrarium,Space Station,"1F, 1W,1M","+1Fo, Trade food at 2:1, Trade any resource at 3:1, Decrease Food price.  Requires discarded silicate asteroid to be placed underneath this card when built.",1
+Space Carnery,Space Station,"2M, 2W",Pay 1C for +2 Food once per turn.  Decrease food price when launched.  Requires launch.,1
+Space Arena,Space Station,"2M, 2C","+2C/turn, +1 Fuel price, requires launch.",1
+Cruiser,Navy,"2M, 2Fu",+2 Navy size.  -1C Steal a resource from any weaker player.  Requires launch.,1
+Drone Swarm,Navy,"1M, 1Fu",+1 Navy size.  Target weaker player discards an action.  Requires launch.,1
+Refinery,Building,"3M, 1W",+2 Fuel/turn.  Requires colony on a hydrocarbon world.  -1Fu price.,1
+Space Fountain,Launch System,"1M, 3Fu, 1W",Ignore escape velocity of 2 or less. 1C/launch by any player. +1 Transaction per turn. +1 VP,1
+Fighter Drone,Navy,"1M, 1Fu",+1 Navy size.  Target weaker player loses 1C.  Requires launch.,1
+Space Lab,Space Station,"1M, 2C",Draw an extra card each turn.  Place one of those cards on the bottom of the deck.,1
+Planet Hunter,Telescope,2M,"Look at planets of any system and put them back face down.  When built, draw 2 actions, keep one, and put the other on the bottom of the deck.  Requires launch.",1
+Longshot Probe,Starship,"4M, 1Fu","After 4 turns of travel, reveal a new star system.",1
+Earth Tax,Event,2C,All players discard down to 5 resources.  Shuffle earth tax and discarded actions into the action deck.,1
