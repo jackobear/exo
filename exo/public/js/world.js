@@ -85,7 +85,7 @@ function World(sites_str){
             case "He":
                 context.beginPath();
                 context.shadowBlur = 0;
-                context.arc(site_x - bonus_margin_temp, site_y, bonus_radius, 0, 2 * Math.PI, false);
+                context.rect(site_x - bonus_radius - bonus_margin_temp, site_y - bonus_radius, 2 * bonus_radius, 2 * bonus_radius);
                 context.fillStyle = 'red';
                 context.fill();
                 context.lineWidth = border_width;
@@ -103,7 +103,7 @@ function World(sites_str){
             case "Cv":
                 context.beginPath();
                 context.shadowBlur = 0;
-                context.arc(site_x - bonus_margin_temp, site_y, bonus_radius, 0, 2 * Math.PI, false);
+                context.rect(site_x - bonus_radius - bonus_margin_temp, site_y - bonus_radius, 2 * bonus_radius, 2 * bonus_radius);
                 context.fillStyle = 'silver';
                 context.fill();
                 context.lineWidth = border_width;
@@ -145,7 +145,7 @@ function World(sites_str){
         if(multiplier > 1){
             context.beginPath();
             context.shadowBlur = 0;
-            context.arc(site_x - bonus_margin_temp, site_y, bonus_radius, 0, 2 * Math.PI, false);
+            context.rect(site_x - bonus_radius - bonus_margin_temp, site_y - bonus_radius, 2 * bonus_radius, 2 * bonus_radius);
             context.fill();
             context.lineWidth = border_width;
             context.stroke();

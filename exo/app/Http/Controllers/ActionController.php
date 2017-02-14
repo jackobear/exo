@@ -47,7 +47,6 @@ class ActionController extends Controller
     public function show($id)
     {
         $action = \App\Action::find($id);
-        $actions = \App\Action::all();
         return view('action.show', ['action' => $action]);
     }
 
