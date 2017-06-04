@@ -1,5 +1,5 @@
-function Cost(cost_str, multiplier, index){
-  var canvas = document.getElementById('myCostCanvas');
+function Cost(cost_str, multiplier, index, canvas='myCostCanvas'){
+  var canvas = document.getElementById(canvas);
   var context = canvas.getContext('2d');
   var radius = 20;
   var border_width = 2;
@@ -43,6 +43,7 @@ function Cost(cost_str, multiplier, index){
           context.stroke();
           break;
       case "Fu":
+      case "*Fu":
           context.beginPath();
           context.rect(cost_x - radius, cost_y - radius, 2 * radius, 2 * radius);
           context.fillStyle = 'red';
@@ -87,6 +88,9 @@ function Cost(cost_str, multiplier, index){
   }
   context.font = "26px Arial";
   context.fillStyle = 'black';
+  if(multiplier == 0){
+    multiplier = "*";
+  }
   context.fillText(multiplier,cost_x - 7, cost_y + 9);
 
 }

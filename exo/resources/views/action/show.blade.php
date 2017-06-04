@@ -43,7 +43,9 @@
 
           </div>
 
-            <canvas id="myCanvas" width="700" height="800" style="background: url('/img/luna.jpg');background-size: auto auto;"></canvas>
+            <canvas id="myCanvas" width="700" height="800" style="background: url('/img/cards/actions/<? 
+              echo strtolower(str_replace(" ", "-", $action->name)); 
+            ?>.jpg');background-size: auto auto;"></canvas>
           
           <div class="card-section">
             <h3><? echo $action->body; ?></h3>

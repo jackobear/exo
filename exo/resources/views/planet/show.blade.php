@@ -22,7 +22,9 @@
 
           </div>
 
-            <canvas id="myCanvas" width="700" height="800" style="background: url('/img/luna.jpg');background-size: auto auto;"></canvas>
+            <canvas id="myCanvas" width="700" height="800" style="background: url('/img/cards/planets/<? 
+              echo strtolower(str_replace(" ", "-", $planet->name)); 
+            ?>.jpg');background-size: auto auto;"></canvas>
             <script type="text/javascript">
                 var sites_str = "<? echo $planet->sites; ?>";
                 var the_sites = new World(sites_str);

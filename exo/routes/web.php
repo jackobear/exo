@@ -22,3 +22,4 @@ Route::get('/star/{id}', 'StarController@show');
 Route::get('/lifeform/{id}', 'LifeformController@show');
 Route::get('/asteroid/{id}', 'AsteroidController@show');
 Route::get('/action/{id}', 'ActionController@show');
+Route::get('/faction/{id}', 'FactionController@show');
