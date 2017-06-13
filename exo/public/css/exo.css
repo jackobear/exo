@@ -1,0 +1,10 @@
+.launch-cost{
+    background-color:#f00;
+    border: solid 5px #660000;
+    color:#ffffff;
+    width:43px;
+    height:43px;
+    text-align:center;
+    display:inline-block;
+    line-height: 1;
+}

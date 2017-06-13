@@ -13,7 +13,7 @@
   <body>
     <div class="row" style="background-color: #000">
       <div class="large-12 columns">
-        <div class="card" style="width: 700px;height:1132px;margin:70px 55px 70px 55px;border-radius:15px;">
+        <div class="card" style="width: 678px;height:980px;margin:70px 0px 75px 59px;border-radius:15px;">
           <div class="card-divider">
             <h1>
                 <? echo $planet->name; ?>
@@ -22,7 +22,12 @@
 
           </div>
 
-            <canvas id="myCanvas" width="700" height="800" style="background: url('/img/cards/planets/<? 
+            <canvas id="myCanvas" width="700" height="<?
+              // Check if we need room for two lines of text
+              $height = 800;
+              if(strlen($planet->body) > 27) $height -= 43;
+              echo $height;
+            ?>" style="background: url('/img/cards/planets/<? 
               echo strtolower(str_replace(" ", "-", $planet->name)); 
             ?>.jpg');background-size: auto auto;"></canvas>
             <script type="text/javascript">
@@ -30,9 +35,9 @@
                 var the_sites = new World(sites_str);
             </script>
           
-          <div class="card-section">
+          <div class="card-section" style="padding-top:0px;">
             <h3><? echo $planet->body; ?>
-              <span style="float:right;">Launch Cost: <? echo $planet->escape_velocity; ?></span>
+              <div style="float:right;">Launch Cost: <div class="launch-cost"><? echo $planet->escape_velocity; ?></div></div>
             </h3>
           </div>
         </div>
