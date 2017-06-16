@@ -13,7 +13,7 @@
   <body>
     <div class="row" style="background-color: #000">
       <div class="large-12 columns">
-        <div class="card" style="width: 678px;height:980px;margin:70px 0px 75px 59px;border-radius:15px;">
+        <div class="card" style="width: 678px;height:980px;margin:73px 0px 72px 59px;border-radius:15px;">
           <div class="card-divider">
             <h1>
                 <? echo $planet->name; ?>
@@ -27,7 +27,7 @@
               $height = 800;
               if(strlen($planet->body) > 27) $height -= 43;
               echo $height;
-            ?>" style="background: url('/img/cards/planets/<? 
+            ?>" style="background: url('/img/art/planets/<? 
               echo strtolower(str_replace(" ", "-", $planet->name)); 
             ?>.jpg');background-size: auto auto;"></canvas>
             <script type="text/javascript">

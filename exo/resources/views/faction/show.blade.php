@@ -33,7 +33,7 @@
               </div>
             </div>
             <div class="large-8 columns">
-              <canvas id="myCanvas" width="1100" height="505" style="background: url('/img/cards/factions/<? 
+              <canvas id="myCanvas" width="1100" height="505" style="background: url('/img/art/factions/<? 
                 echo strtolower(str_replace(" ", "-", $faction->name)); 
               ?>.jpg');background-size: auto auto;"></canvas>
             </div>

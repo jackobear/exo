@@ -42,7 +42,7 @@ class FactionsTableSeeder extends Seeder
     
         $factions = csv_to_array($csvFile);
     
-        //DB::table('factions')->truncate();
+        DB::table('factions')->truncate();
         DB::table('factions')->insert($factions);
 
     }

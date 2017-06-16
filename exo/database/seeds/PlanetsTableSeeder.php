@@ -42,6 +42,7 @@ class PlanetsTableSeeder extends Seeder
     
         $planets = csv_to_array($csvFile);
     
+        DB::table('planets')->truncate();
         DB::table('planets')->insert($planets);
 
     }

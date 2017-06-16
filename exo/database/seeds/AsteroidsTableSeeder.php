@@ -42,7 +42,7 @@ class AsteroidsTableSeeder extends Seeder
     
         $asteroids = csv_to_array($csvFile);
     
-        //DB::table('asteroids')->truncate();
+        DB::table('asteroids')->truncate();
         DB::table('asteroids')->insert($asteroids);
 
     }

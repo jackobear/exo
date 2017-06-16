@@ -42,7 +42,7 @@ class MoonsTableSeeder extends Seeder
     
         $moons = csv_to_array($csvFile);
     
-        //DB::table('moons')->truncate();
+        DB::table('moons')->truncate();
         DB::table('moons')->insert($moons);
 
     }

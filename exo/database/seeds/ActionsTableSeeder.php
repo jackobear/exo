@@ -42,7 +42,7 @@ class ActionsTableSeeder extends Seeder
     
         $actions = csv_to_array($csvFile);
     
-        //DB::table('actions')->truncate();
+        DB::table('actions')->truncate();
         DB::table('actions')->insert($actions);
 
     }

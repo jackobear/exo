@@ -22,7 +22,9 @@
 
           </div>
 
-            <canvas id="myCanvas" width="700" height="800" style="background: url('/img/luna.jpg');background-size: auto auto;"></canvas>
+            <canvas id="myCanvas" width="700" height="800" style="background: url('/img/art/moons/<? 
+              echo strtolower(str_replace(" ", "-", $moon->name)); 
+            ?>.jpg');background-size: auto auto;"></canvas>
             <script type="text/javascript">
                 var sites_str = "<? echo $moon->sites; ?>";
                 var the_sites = new World(sites_str);
@@ -30,7 +32,7 @@
           
           <div class="card-section">
             <h3><? echo $moon->body; ?>
-              <span style="float:right;">Launch Cost: <? echo $moon->escape_velocity; ?></span>
+              <div style="float:right;">Launch Cost: <div class="launch-cost"><? echo $moon->escape_velocity; ?></div></div>
             </h3>
           </div>
         </div>

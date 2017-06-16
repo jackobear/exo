@@ -43,7 +43,7 @@
 
           </div>
 
-            <canvas id="myCanvas" width="700" height="800" style="background: url('/img/cards/actions/<? 
+            <canvas id="myCanvas" width="700" height="800" style="background: url('/img/art/actions/<? 
               echo strtolower(str_replace(" ", "-", $action->name)); 
             ?>.jpg');background-size: auto auto;"></canvas>
           

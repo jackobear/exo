@@ -42,7 +42,7 @@ class StarsTableSeeder extends Seeder
     
         $stars = csv_to_array($csvFile);
     
-        //DB::table('stars')->truncate();
+        DB::table('stars')->truncate();
         DB::table('stars')->insert($stars);
 
     }

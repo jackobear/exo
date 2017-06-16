@@ -42,7 +42,7 @@ class LifeformsTableSeeder extends Seeder
     
         $lifeforms = csv_to_array($csvFile);
     
-        //DB::table('lifeforms')->truncate();
+        DB::table('lifeforms')->truncate();
         DB::table('lifeforms')->insert($lifeforms);
 
     }
