@@ -17,7 +17,7 @@
           <div class="card-divider">
             <h1>
                 <? echo $dwarf_planet->name; ?>
-                <span style="float:right;color:#888;font-size:30px;margin-top:20px;"><? echo $dwarf_planet->type; ?> Star</span>
+                <span style="float:right;color:#888;font-size:30px;margin-top:20px;"><? echo $dwarf_planet->type; ?></span>
             </h1>
 
           </div>
@@ -27,7 +27,7 @@
               $height = 800;
               if(strlen($dwarf_planet->body) > 27) $height -= 43;
               echo $height;
-            ?>" style="background: url('/img/art/stars/<? 
+            ?>" style="background: url('/img/art/dwarf-planets/<? 
               echo strtolower(str_replace(" ", "-", $dwarf_planet->name)); 
             ?>.jpg');background-size: auto auto;"></canvas>
           
