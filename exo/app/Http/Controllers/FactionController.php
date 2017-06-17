@@ -50,6 +50,16 @@ class FactionController extends Controller
         return view('faction.show', ['faction' => $faction]);
     }
 
+    public function save_all_as_png(){
+        $factions = \App\Faction::all();
+        foreach($factions as $faction){
+            echo "Saving " . $faction->name . "...<br>";
+            $status = $faction->save_as_png();
+            print_r($status);
+        }
+        return "<br>Done<br>";
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

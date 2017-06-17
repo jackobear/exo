@@ -50,6 +50,16 @@ class MoonController extends Controller
         return view('moon.show', ['moon' => $moon]);
     }
 
+    public function save_all_as_png(){
+        $moons = \App\Moon::all();
+        foreach($moons as $moon){
+            echo "Saving " . $moon->name . "...<br>";
+            $status = $moon->save_as_png();
+            print_r($status);
+        }
+        return "<br>Done<br>";
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

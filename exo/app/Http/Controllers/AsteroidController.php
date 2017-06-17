@@ -50,6 +50,16 @@ class AsteroidController extends Controller
         return view('asteroid.show', ['asteroid' => $asteroid]);
     }
 
+    public function save_all_as_png(){
+        $asteroids = \App\Asteroid::all();
+        foreach($asteroids as $asteroid){
+            echo "Saving " . $asteroid->name . "...<br>";
+            $status = $asteroid->save_as_png();
+            print_r($status);
+        }
+        return "<br>Done<br>";
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

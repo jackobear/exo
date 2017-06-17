@@ -50,6 +50,16 @@ class ActionController extends Controller
         return view('action.show', ['action' => $action]);
     }
 
+    public function save_all_as_png(){
+        $actions = \App\Action::all();
+        foreach($actions as $action){
+            echo "Saving " . $action->name . "...<br>";
+            $status = $action->save_as_png();
+            print_r($status);
+        }
+        return "<br>Done<br>";
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

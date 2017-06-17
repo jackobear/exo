@@ -13,7 +13,7 @@
   <body>
     <div class="row" style="background-color: #000">
       <div class="large-12 columns">
-        <div class="card" style="width: 700px;height:1132px;margin:70px 55px 70px 55px;border-radius:15px;">
+        <div class="card" style="width: 678px;height:980px;margin:73px 0px 72px 59px;border-radius:15px;">
           <div class="card-divider">
             <h1>
                 <? echo $star->name; ?>
@@ -22,7 +22,14 @@
 
           </div>
 
-            <canvas id="myCanvas" width="700" height="800" style="background: url('/img/luna.jpg');background-size: auto auto;"></canvas>
+            <canvas id="myCanvas" width="700" height="<?
+              // Check if we need room for two lines of text
+              $height = 800;
+              if(strlen($star->body) > 27) $height -= 43;
+              echo $height;
+            ?>" style="background: url('/img/art/stars/<? 
+              echo strtolower(str_replace(" ", "-", $star->name)); 
+            ?>.jpg');background-size: auto auto;"></canvas>
           
           <div class="card-section">
             <h3><? echo $star->body; ?></h3>

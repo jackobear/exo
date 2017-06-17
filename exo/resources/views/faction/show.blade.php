@@ -15,7 +15,7 @@
   <body>
     <div class="row" style="background-color: #000;max-width: 108rem;">
       <div class="large-12 columns">
-        <div class="card" style="width: 1575px;height:990px;max-height:990px;margin:70px 55px 70px 55px;border-radius:15px;">
+        <div class="card" style="width: 1579px;height:985px;margin:70px 0px 70px 59px;border-radius:15px;">
           <div class="card-divider">
             <h1>
                 <? echo $faction->name; ?>

@@ -50,6 +50,16 @@ class LifeformController extends Controller
         return view('lifeform.show', ['lifeform' => $lifeform]);
     }
 
+    public function save_all_as_png(){
+        $lifeforms = \App\Lifeform::all();
+        foreach($lifeforms as $lifeform){
+            echo "Saving " . $lifeform->name . "...<br>";
+            $status = $lifeform->save_as_png();
+            print_r($status);
+        }
+        return "<br>Done<br>";
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Planet;
+use App\Star;
 
 use Illuminate\Http\Request;
 
-class PlanetController extends Controller
+class DwarfPlanetController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -46,25 +46,15 @@ class PlanetController extends Controller
      */
     public function show($id)
     {
-        $planet = \App\Planet::find($id);
-        return view('planet.show', ['planet' => $planet]);
-    }
-
-    public function save_as_png($id)
-    {
-        $planet = \App\Planet::find($id);
-        if(!is_numeric($id) || empty($planet)) return "Not found";
-        echo "Saving " . $planet->name . "...<br>";
-        $status = $planet->save_as_png();
-        print_r($status);
-        return "<br>Done<br>";
+        $dwarf_planet = \App\DwarfPlanet::find($id);
+        return view('dwarf_planet.show', ['dwarf_planet' => $dwarf_planet]);
     }
 
     public function save_all_as_png(){
-        $planets = \App\Planet::all();
-        foreach($planets as $planet){
-            echo "Saving " . $planet->name . "...<br>";
-            $status = $planet->save_as_png();
+        $dwarf_planets = \App\DwarfPlanet::all();
+        foreach($dwarf_planets as $dwarf_planet){
+            echo "Saving " . $dwarf_planet->name . "...<br>";
+            $status = $dwarf_planet->save_as_png();
             print_r($status);
         }
         return "<br>Done<br>";

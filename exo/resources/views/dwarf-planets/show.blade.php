@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><? echo $moon->name; ?></title>
+    <title><? echo $dwarf_planet->name; ?></title>
     <link rel="stylesheet" href="/css/foundation/foundation.css">
     <link rel="stylesheet" href="/css/foundation/app.css">
     <link rel="stylesheet" href="/css/exo.css">
@@ -16,8 +16,8 @@
         <div class="card" style="width: 678px;height:980px;margin:73px 0px 72px 59px;border-radius:15px;">
           <div class="card-divider">
             <h1>
-                <? echo $moon->name; ?>
-                <span style="float:right;color:#888;font-size:30px;margin-top:20px;"><? echo $moon->type; ?> Moon</span>
+                <? echo $dwarf_planet->name; ?>
+                <span style="float:right;color:#888;font-size:30px;margin-top:20px;"><? echo $dwarf_planet->type; ?> Star</span>
             </h1>
 
           </div>
@@ -25,20 +25,14 @@
             <canvas id="myCanvas" width="700" height="<?
               // Check if we need room for two lines of text
               $height = 800;
-              if(strlen($moon->body) > 27) $height -= 43;
+              if(strlen($dwarf_planet->body) > 27) $height -= 43;
               echo $height;
-            ?>" style="background: url('/img/art/moons/<? 
-              echo strtolower(str_replace(" ", "-", $moon->name)); 
+            ?>" style="background: url('/img/art/stars/<? 
+              echo strtolower(str_replace(" ", "-", $dwarf_planet->name)); 
             ?>.jpg');background-size: auto auto;"></canvas>
-            <script type="text/javascript">
-                var sites_str = "<? echo $moon->sites; ?>";
-                var the_sites = new World(sites_str);
-            </script>
           
-          <div class="card-section" style="padding-top:0px;">
-            <h3><? echo $moon->body; ?>
-              <div style="float:right;">Launch Cost: <div class="launch-cost"><? echo $moon->escape_velocity; ?></div></div>
-            </h3>
+          <div class="card-section">
+            <h3><? echo $dwarf_planet->body; ?></h3>
           </div>
         </div>
       </div>

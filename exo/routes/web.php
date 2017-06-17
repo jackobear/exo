@@ -18,7 +18,13 @@ Route::get('/', function () {
 // Save as PNG
 Route::get('/planet/save_as_png/{id}', 'PlanetController@save_as_png');
 Route::get('/planet/save_all_as_png', 'PlanetController@save_all_as_png');
-Route::get('/planet/fart', 'PlanetController@fart');
+Route::get('/moon/save_all_as_png', 'MoonController@save_all_as_png');
+Route::get('/asteroid/save_all_as_png', 'AsteroidController@save_all_as_png');
+Route::get('/action/save_all_as_png', 'ActionController@save_all_as_png');
+Route::get('/dwarf_planet/save_all_as_png', 'DwarfPlanetController@save_all_as_png');
+Route::get('/faction/save_all_as_png', 'FactionController@save_all_as_png');
+Route::get('/lifeform/save_all_as_png', 'LifeformController@save_all_as_png');
+Route::get('/star/save_all_as_png', 'StarController@save_all_as_png');
 
 // Card views
 Route::get('/card', 'CardController@view');
@@ -29,5 +35,6 @@ Route::get('/lifeform/{id}', 'LifeformController@show');
 Route::get('/asteroid/{id}', 'AsteroidController@show');
 Route::get('/action/{id}', 'ActionController@show');
 Route::get('/faction/{id}', 'FactionController@show');
+Route::get('/dwarf-planet/{id}', 'DwarfPlanetController@show');
 
 

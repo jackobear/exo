@@ -50,6 +50,16 @@ class StarController extends Controller
         return view('star.show', ['star' => $star]);
     }
 
+    public function save_all_as_png(){
+        $stars = \App\Star::all();
+        foreach($stars as $star){
+            echo "Saving " . $star->name . "...<br>";
+            $status = $star->save_as_png();
+            print_r($status);
+        }
+        return "<br>Done<br>";
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
