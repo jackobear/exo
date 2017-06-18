@@ -8,3 +8,14 @@
     display:inline-block;
     line-height: 1;
 }
+.market-resource{
+	font-size:31px;
+	color:#FFF;
+	margin: 20px;
+	text-align:center;
+	height:300px;
+	line-height:300px;
+}
+body{
+	font-size:31px;
+}
