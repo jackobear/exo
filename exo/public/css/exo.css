@@ -9,13 +9,23 @@
     line-height: 1;
 }
 .market-resource{
-	font-size:31px;
-	color:#FFF;
-	margin: 20px;
-	text-align:center;
-	height:300px;
-	line-height:300px;
+    font-size:31px;
+    color:#FFF;
+    margin: 20px;
+    text-align:center;
+    height:300px;
+    line-height:300px;
+}
+.scoring-marker{
+    background-color:#FFFFFF;
+    border: solid 5px #333333;
+    font-size:100px;
+    color:#333;
+    margin: 20px;
+    text-align:center;
+    height:180px;
+    line-height:180px;  
 }
 body{
-	font-size:31px;
+    font-size:31px;
 }

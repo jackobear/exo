@@ -53,13 +53,15 @@ class ReferenceCardController extends Controller
                 return view('reference_card.space_market');
             case 3:
                 return view('reference_card.victory_points');
+            case 4:
+                return view('reference_card.scoring_track');
             default:
                 return "Reference Card not found.";
         }
     }
 
     public function save_all_as_png(){
-        $card_count = 3;
+        $card_count = 4;
         for($i=1;$i<=$card_count;$i++){
             echo "<br>Saving a reference card...<br>";
             $filename = "/var/www/exo/public/img/cards/reference-cards/" . $i . ".png";
