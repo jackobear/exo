@@ -22,27 +22,38 @@
             </h1>
           </div>
 
-          <br />
           <div class="row expanded">
-            <div class="large-3 columns">
-              <h2 style="text-align:center;">Water</h2>
-              <div class="market-resource" style="background-color:#0000FF;border: solid 5px #000033;">3</div>
-            </div>
-            <div class="large-3 columns">
-              <h2 style="text-align:center;">Food</h2>
-              <div class="market-resource" style="background-color:#00FF00;border: solid 5px #003300;">4</div>
-            </div>
-            <div class="large-3 columns">
-              <h2 style="text-align:center;">Fuel</h2>
-              <div class="market-resource" style="background-color:#FF0000;border: solid 5px #330000;">2</div>
-            </div>
-            <div class="large-3 columns">
-              <h2 style="text-align:center;">Metal</h2>
-              <div class="market-resource" style="background-color:#999999;border: solid 5px #333333;">1</div>
-            </div>
+            <canvas id="myCanvas" width="1600" height="650"></canvas>
           </div>
-          <p style="margin-left:20px;">Starting prices are shown above.  One trade per player per turn.  Building launch systems allows for more trades per turn.
-            A trade may consist of buying one resource, selling one resource, or trading one resource for another and paying or receiving the difference in price.
+          <script type="text/javascript">
+            var radius = 150;
+            var price_x = radius + 40;
+            var price_y = radius + 20;
+            var canvas = document.getElementById("myCanvas");
+            var context = canvas.getContext('2d');
+            for(var i=1;i<9;i++){
+              context.beginPath();
+              context.arc(price_x, price_y, radius, 0, 2 * Math.PI, false);
+              context.fillStyle = 'yellow';
+              context.fill();
+              context.lineWidth = 3;
+              context.strokeStyle = '#aa0';
+              context.stroke();
+              context.font = "150px Arial";
+              context.fillStyle = 'black';
+              context.fillText(i, price_x - 40, price_y + 47);
+              price_x += 2*radius + 110;
+              if(i == 4){
+                price_y += 2*radius + 10;
+                price_x = radius + 40;
+              }
+            }
+
+          </script>
+
+          <p style="margin-left:20px;">One trade per player per turn.  Building launch systems allows for more trades per turn.
+            A trade may consist of buying one resource, selling one resource, or trading one resource for another and paying or gaining the difference in price.
+            Starting prices are Metal:1, Fuel:2, Water:3, Food:4.  Use resources to mark prices.
           </p>
         </div>
       </div>
