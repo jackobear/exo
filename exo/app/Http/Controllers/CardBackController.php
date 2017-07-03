@@ -53,7 +53,7 @@ class CardBackController extends Controller
         for($i=1;$i<=$card_count;$i++){
             echo "<br>Saving a card back...<br>";
             $filename = "/var/www/exo/public/img/cards/card-backs/" . $i . ".png";
-            $cmd = "google-chrome --headless --disable-gpu --screenshot=$filename --window-size=1725,1125 http://192.168.33.10/card-backs/" . $i;
+            $cmd = "google-chrome --headless --disable-gpu --screenshot=$filename --window-size=1725,1125 http://192.168.33.10/card-back/" . $i;
             $output = "";
             $return_var = 0;
             exec(escapeshellcmd($cmd), $output, $return_var);
