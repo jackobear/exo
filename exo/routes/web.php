@@ -28,6 +28,7 @@ Route::get('/lifeform/save_all_as_png', 'LifeformController@save_all_as_png');
 Route::get('/star/save_all_as_png', 'StarController@save_all_as_png');
 Route::get('/reference-card/save_all_as_png', 'ReferenceCardController@save_all_as_png');
 Route::get('/asteroid-belt/save_all_as_png', 'AsteroidBeltController@save_all_as_png');
+Route::get('/card-back/save_all_as_png', 'CardBackController@save_all_as_png');
 
 // Card views
 Route::get('/card', 'CardController@view');
@@ -42,5 +43,6 @@ Route::get('/dwarf-planet/{id}', 'DwarfPlanetController@show');
 Route::get('/habitable-world/{id}', 'HabitableWorldController@show');
 Route::get('/reference-card/{id}', 'ReferenceCardController@show');
 Route::get('/asteroid-belt/{id}', 'AsteroidBeltController@show');
+Route::get('/card-back/{id}', 'CardBackController@show');
 
 

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ReferenceCardController extends Controller
+class CardBackController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -45,28 +45,15 @@ class ReferenceCardController extends Controller
      */
     public function show($id)
     {
-        switch($id){
-            case 1:
-                return view('reference_card.turn_sequence');
-            case 2:
-                return view('reference_card.space_market');
-            case 3:
-                return view('reference_card.victory_points');
-            case 4:
-                return view('reference_card.scoring_track');
-            case 5:
-                return view('reference_card.board_layout');
-            default:
-                return "Reference Card not found.";
-        }
+        return view('card_back.show', ['id'=>$id]);
     }
 
     public function save_all_as_png(){
-        $card_count = 5;
+        $card_count = 9;
         for($i=1;$i<=$card_count;$i++){
-            echo "<br>Saving a reference card...<br>";
-            $filename = "/var/www/exo/public/img/cards/reference-cards/" . $i . ".png";
-            $cmd = "google-chrome --headless --disable-gpu --screenshot=$filename --window-size=1725,1125 http://192.168.33.10/reference-card/" . $i;
+            echo "<br>Saving a card back...<br>";
+            $filename = "/var/www/exo/public/img/cards/card-backs/" . $i . ".png";
+            $cmd = "google-chrome --headless --disable-gpu --screenshot=$filename --window-size=1725,1125 http://192.168.33.10/card-backs/" . $i;
             $output = "";
             $return_var = 0;
             exec(escapeshellcmd($cmd), $output, $return_var);
