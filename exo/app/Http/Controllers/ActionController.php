@@ -47,6 +47,7 @@ class ActionController extends Controller
     public function show($id)
     {
         $action = \App\Action::find($id);
+        $action->body = $this->format_resources($action->body);
         return view('action.show', ['action' => $action]);
     }
 

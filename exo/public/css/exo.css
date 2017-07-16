@@ -8,6 +8,58 @@
     display:inline-block;
     line-height: 1;
 }
+.food{
+    background-color:#0a0;
+    border: solid 5px #060;
+    color:#ffffff;
+    width:43px;
+    height:43px;
+    text-align:center;
+    display:inline-block;
+    line-height: 1;
+}
+.water{
+    background-color:#00a;
+    border: solid 5px #006;
+    color:#ffffff;
+    width:43px;
+    height:43px;
+    text-align:center;
+    display:inline-block;
+    line-height: 1;
+}
+.fuel{
+    background-color:#a00;
+    border: solid 5px #600;
+    color:#ffffff;
+    width:43px;
+    height:43px;
+    text-align:center;
+    display:inline-block;
+    line-height: 1;
+}
+.metal{
+    background-color:#aaa;
+    border: solid 5px #666;
+    color:#ffffff;
+    width:43px;
+    height:43px;
+    text-align:center;
+    display:inline-block;
+    line-height: 1;
+}
+.coin{
+    width: 40px;
+    height: 40px;
+    background: yellow;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    text-align: center;
+    display: inline-block;
+    border: solid 3px #cc0;
+    line-height: 1;
+}
 .scoring-marker{
     background-color:#FFFFFF;
     border: solid 5px #333333;

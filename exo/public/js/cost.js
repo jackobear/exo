@@ -70,6 +70,25 @@ function Cost(cost_str, multiplier, index, canvas='myCostCanvas'){
           context.strokeStyle = '#000000';
           context.stroke();
           break;
+      case "L":
+          // Launch icon
+          multiplier = 0;
+          context.beginPath();
+          context.moveTo(cost_x - 20, cost_y + 20);
+          context.lineTo(cost_x - 10, cost_y + 10);
+          context.lineTo(cost_x - 10, cost_y + 10);
+          context.quadraticCurveTo(cost_x - 10, cost_y + 20 - 40, cost_x, cost_y + 20 - 40);
+          context.quadraticCurveTo(cost_x + 10, cost_y + 20 - 40, cost_x + 10, cost_y + 10);
+          context.lineTo(cost_x + 10, cost_y + 20 - 10);
+          context.lineTo(cost_x + 20, cost_y + 20);
+          context.lineTo(cost_x - 10, cost_y + 20);
+          context.closePath();
+          context.fillStyle = '#dd0000';
+          context.fill();
+          context.lineWidth = 2;
+          context.strokeStyle = '#600';
+          context.stroke();
+          break;
       default:
           // Must be some amount of coin or a typo
           if(cost_str == "C"){
@@ -92,5 +111,4 @@ function Cost(cost_str, multiplier, index, canvas='myCostCanvas'){
     multiplier = "*";
   }
   context.fillText(multiplier,cost_x - 7, cost_y + 9);
-
 }
