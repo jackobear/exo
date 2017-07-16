@@ -1,5 +1,7 @@
-name,body,type
-Sol,"Eight Planets, Habitable at 3rd Orbit, 2/1/1 Coin for sites with Eternal Light",Yellow Dwarf
-Eridani,"Seven Planets, Habitable at 3rd Orbit, 1/1/1 Coin for sites with Eternal Light",Orange Dwarf
-Centauri,"Four Planets, Habitable at 1st Orbit, 1/0 Coin for sites with Eternal Light",Red Dwarf
-Sirius,"Six Planets, Habitable at 5th Orbit, 0/3/2/2/1/1 Coin for sites with Eternal Light","White, Binary"
+name,body,type,artist_url
+Sol,"Eight Planets, Habitable at 3rd Orbit, 2/1/1 Coin for sites with Eternal Light",Yellow Dwarf,http://starkiteckt.deviantart.com/art/Sol-wallpaper-276061688
+Eridani,"Seven Planets, Habitable at 3rd Orbit, 1/1/1 Coin for sites with Eternal Light",Orange Dwarf,http://alpha-element.deviantart.com/art/Sol-441092176
+Centauri,"Four Planets, Habitable at 1st Orbit, 1/0 Coin for sites with Eternal Light",Red Dwarf,http://alpha-element.deviantart.com/art/NML-Cygni-388583773
+Sirius,"Six Planets, Habitable at 5th Orbit, 0/3/2/2/1/1 Coin for sites with Eternal Light","White, Binary",http://facundodiaz.deviantart.com/art/Sirius-B-111909921
+Regulus,,"Blue-White, Binary",http://alpha-element.deviantart.com/art/Regulus-441790548
+Polaris,,Yellow Supergiant,http://alpha-element.deviantart.com/art/Polaris-442260718

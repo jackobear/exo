@@ -47,6 +47,7 @@ class AsteroidController extends Controller
     public function show($id)
     {
         $asteroid = \App\Asteroid::find($id);
+        $asteroid->body = $this->format_resources($asteroid->body);
         return view('asteroid.show', ['asteroid' => $asteroid]);
     }
 

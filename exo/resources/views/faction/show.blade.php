@@ -29,7 +29,7 @@
                 <h3><? echo $faction->body; ?></h3>
               </div>
               <div class="callout" style="margin:15px 0px 15px 15px;">
-                <span style="font-style:italic;font-size:20pt;color:#aaa;">The massive generation ship carries entire habitats full of genetically modified humans to the stars.  Since their massive ship is already a functioning colony, they'll be setup in no time after landing.</span>
+                <span style="font-style:italic;font-size:20pt;color:#aaa;"><? echo $faction->flavor_text; ?></span>
               </div>
             </div>
             <div class="large-8 columns">

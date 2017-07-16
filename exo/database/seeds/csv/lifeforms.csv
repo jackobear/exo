@@ -1,10 +1,9 @@
-name,type,body
-Stromatolites,Microbe,+2 Cards
-Fish and Forests,Complex,+3 Cards
-Photosynthetic Bacteria,Microbe,+2 Cards
-Archea,Microbe,+2 Cards
-No Signs of Life,,"+1 Card, +1 Coin"
-Eukaryotes,Microbe,+2 Cards
-Cyanobacteria,Microbe,+2 Cards
-Dinosaurs,Megafauna,"+3 Cards, +2 Coin"
-Trilobytes and Sponges,Complex,"+3 Cards, +1 Coin"
+name,type,body,artist_url
+Stromatolites,Microbe,+2 Cards,http://gogosardina.deviantart.com/
+Fish and Forests,Complex,+3 Cards,http://plioart.deviantart.com
+Photosynthetic Bacteria,Microbe,+2 Cards,http://discovermagazine.com/tags/?tag=phytoplankton
+Archea,Microbe,+2 Cards,https://www.britannica.com/science/archaea
+No Signs of Life,,"+1 Card, +1C",http://ariel-x.deviantart.com/art/Barren-Rim-438244970
+Eukaryotes,Microbe,+2 Cards,http://catchme-22.deviantart.com/art/Microscopic-bundle-111646625
+Dinosaurs,Megafauna,"+3 Cards, +2C",http://fel-x.deviantart.com/art/Dinosaurs-589122014
+Trilobytes and Sponges,Complex,"+3 Cards, +1C",http://cbsorgeartworks.deviantart.com/art/Cambrian-Reef-378507365

@@ -47,6 +47,7 @@ class HabitableWorldController extends Controller
     public function show($id)
     {
         $habitable_world = \App\HabitableWorld::find($id);
+        $habitable_world->body = $this->format_resources($habitable_world->body);
         return view('habitable_world.show', ['habitable_world' => $habitable_world]);
     }
 

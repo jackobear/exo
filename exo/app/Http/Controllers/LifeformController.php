@@ -47,6 +47,7 @@ class LifeformController extends Controller
     public function show($id)
     {
         $lifeform = \App\Lifeform::find($id);
+        $lifeform->body = $this->format_resources($lifeform->body);
         return view('lifeform.show', ['lifeform' => $lifeform]);
     }
 

@@ -1,12 +1,9 @@
-name,type,escape_velocity,body,sites
-Enceladus,Ocean,1,"Drill to draw lifeforms card, Vacuum Atmosphere",W+2C
-Titan,Hydrocarbon,1,Pressurized Atmosphere,"Fu+1C, 2xFu, M"
-Mimas,Silicate,1,Vacuum Atmosphere,M
-Ganymede,Silicate,1,"Magnetosphere, Vacuum Atmosphere",M
-Callisto,Silicate,1,Vacuum Atmosphere,"W, W, M, Fu+1C"
-Io,Silicate,1,Vacuum Atmosphere,
-Europa,Ocean,1,"Drill to draw lifeforms card, Vacuum Atmosphere","W, W"
-Pallas,Silicate,1,"One of Three Dwarves, Inclined Orbit, Vacuum Atmosphere","W, M, Fu+2C"
-Vesta,Silicate,1,"One of Three Dwarves, Vacuum Atmosphere","M+1C, W, M+2C"
-Ceres,Silicate,1,Vacuum Atmosphere,"Fu+1C, W, M, W+2C"
-Luna,Silicate,1,Vacuum Atmosphere,"W+EL, M+He, Fo+Ca, Fu+EL"
+name,type,escape_velocity,body,sites,artist_url
+Enceladus,Ocean,1,"Drill to draw lifeforms card, Vacuum Atmosphere",W+2C,
+Titan,Hydrocarbon,1,Pressurized Atmosphere,"Fu+1C, 2xFu, M",
+Mimas,Rocky,1,Vacuum Atmosphere,M,http://asterisk.apod.com/viewtopic.php?t=20325
+Ganymede,Rocky,1,"Magnetosphere, Vacuum Atmosphere",M,http://plutonius.deviantart.com
+Callisto,Rocky,1,Vacuum Atmosphere,"W, W, M, Fu+1C",
+Io,Rocky,1,Vacuum Atmosphere,,http://solarsystem.nasa.gov/planets/io/indepth
+Europa,Ocean,1,"Drill to draw lifeforms card, Vacuum Atmosphere",W,http://kimdingwall.deviantart.com/art/Europa-and-the-Milky-Bull-329390024
+Luna,Rocky,1,Vacuum Atmosphere,"W+EL, M+He, Fo+Ca, Fu+EL",https://www.reddit.com/r/spaceporn/comments/254aci/ive_been_doing_astrophotography_for_a_little/

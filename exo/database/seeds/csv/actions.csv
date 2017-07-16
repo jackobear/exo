@@ -2,38 +2,38 @@ name,type,cost,body,quantity,artist_url
 Asteroid Hunter,Telescope,"1M, L",Draw an extra asteroid when mining.  Draw 1 Action card when launched.,2,http://physicsworld.com/cws/article/news/2013/aug/22/nasa-s-wise-telescope-poised-for-second-life-as-asteroid-hunter
 Asteroid Miner,Ship,"1M, 1Fu, L","Once per turn, draw an asteroid and harvest up to one.  Shuffle unused asteroids back into deck.",8,http://artek92.deviantart.com/art/Asteroid-mining-329845832
 Bulk Shipment,Event,1C,"Buy or Sell up to 4 of any one resource.  If you sell 4, decrease the price by 1.  If you buy 4, increase the price by 1.",1,http://tryingtofly.deviantart.com
-Carrier,Navy,"4M, 1W, Fo, L","Once per turn, spend 2Fu to return an action card from play back into a weaker player's hand. +3 Navy",1,http://www.deviantart.com/art/Cerberus-Carrier-Maximus-688693191
-Cruiser,Navy,"2M, 2Fu, L",+2 Navy size.  Pay 1 Coin to steal a resource from any weaker player.,1,http://markusvogt.deviantart.com
+Carrier,Navy,"3M, 1Fu, 1W, Fo, L","+3 Navy Size. Once per turn, spend 2Fu to return an action card from play back into a weaker player's hand.",1,http://www.deviantart.com/art/Cerberus-Carrier-Maximus-688693191
+Cruiser,Navy,"2M, 2Fu, L",+2 Navy size.  Pay 1C to steal a resource from any weaker player.,1,http://markusvogt.deviantart.com
 Daedelus Probe,Starship,"2M, 3Fu","After 3 turns of travel, reveal and enter a new star system.",1,http://grahamtg.deviantart.com/
-Drone Swarm,Navy,"1M, 1Fu, L",+1 Navy size.  Target weaker player discards an action.,1,http://endlessillusionx.deviantart.com/art/Drone-swarm-510688820
+Drone Swarm,Navy,"1M, 1Fu, L","+1 Navy Size. Once per turn, spend 2C and then target weaker player discards an action.",1,http://endlessillusionx.deviantart.com/art/Drone-swarm-510688820
 Earth Tax,Event,2C,All players lose all but five resources.  Shuffle this and all discarded actions into the action deck.,1,http://adoreluna.deviantart.com/art/The-Transmission-590779034
 Embargo,Event,1C,"Target player may not trade with the market next turn. +1 Price to resources that player produces, -1 otherwise.",1,http://hothcold.deviantart.com
 Equipment Failure,Event,1C,Disable target colony.  Its production stops until owner spends 1C + 1C per Orbit from Starting World.,1,http://steve-burg.deviantart.com
-Fighter Drone,Navy,"1M, 1Fu, L",+1 Navy size.  Target weaker player loses one Coin.,1,http://nssunset.deviantart.com/art/SDF-Super-Aggressor-Havoc-Heavy-Assault-Fighter-674514447
-Fuel Spill,Event,1C,Target Water colony owner loFuWIncrease the price of Water by 1C.,1,http://thirdheir.deviantart.com/art/Lava-Pollution-624396729
+Fighter Drone,Navy,"1M, 1Fu, L",+1 Navy Size.  Target weaker player loses one Coin.,1,http://nssunset.deviantart.com/art/SDF-Super-Aggressor-Havoc-Heavy-Assault-Fighter-674514447
+Fuel Spill,Event,1C,Target Water colony owner loses 1Fu and 1W. Increase the price of Water by 1C.,1,http://thirdheir.deviantart.com/art/Lava-Pollution-624396729
 Garden Terrarium,Space Station,"1F, 1W,1M","Gain 1Fo per Turn. You may trade Food at 2:1 or any other resource at 3:1 once per turn, Decrease Food price by 1C.  Requires discarded rocky asteroid to be placed underneath this card when built.",1,http://blakee45.deviantart.com/art/Asteroid-Base-180612687
 Icarus Probe,Starship,"3M, 2Fu","After 3 turns of travel, reveal and enter a new star system.",1,http://snowfall-the-cat.deviantart.com
 Industrial Sabotage,Event,"1Fo, 1Fu",Return target launch system to its owner's hand.  Owner gets +1M and loses a VP.,1,http://tryingtofly.deviantart.com
-Launch Loop,Launch System,"3M, 1Fu, 1W",Ignore escape velocity of 2 or less. 1C/launch by any player. +1 Transaction per turn. +1 VP.,1,http://spacehabitats.blogspot.com/2016/05/alternatives-to-rockets-space-elevators.html
+Launch Loop,Launch System,"3M, 1Fu, 1W",Ignore escape velocity of 2 or less. 1C/launch by any player. +1 Trade per turn. +1 VP.,1,http://spacehabitats.blogspot.com/2016/05/alternatives-to-rockets-space-elevators.html
 Longshot Probe,Starship,"4M, 1Fu","After 4 turns of travel, reveal and enter a new star system.",1,http://steve-burg.deviantart.com
-Market Disruption,Event,1C,Increase the price of one resource by two.,1,http://axl99.deviantart.com
-Mass Driver,Launch System,"2M, 1Fu, 1W",Ignore escape velocity of exactly 1.  +1C/launch by any player.  +1 Buy/Sell Transaction per turn. +1 VP.,3,http://www.projectrho.com/public_html/rocket/images/planetbase/planetbase04.jpg
-Melt Probe,Ship,"2M, 1Fu, L",Explore frozen ocean for life.,4,http://www.nbcnews.com/id/24128716/ns/technology_and_science-space/t/nasa-europe-explore-mission-outer-planets/#.WNWcEVXyuHs
+Market Disruption,Event,1C,Increase the price of one resource by 2C.,1,http://axl99.deviantart.com
+Mass Driver,Launch System,"2M, 1Fu, 1W",Ignore escape velocity of exactly 1.  +1C per launch by any player.  +1 Trade per turn. +1 VP.,3,http://www.projectrho.com/public_html/rocket/images/planetbase/planetbase04.jpg
+Melt Probe,Ship,"2M, 1Fu, L",Explore frozen ocean for life.  Draw a Lifeform card and place underneath the targeted world.,4,http://www.nbcnews.com/id/24128716/ns/technology_and_science-space/t/nasa-europe-explore-mission-outer-planets/#.WNWcEVXyuHs
 Meteor Strike,Event,2C,Disable target colony.  Its production stops until owner spends 1M and 1C. Increase the price of the resource that colony produces by 1C.,1,http://cosmicspark.deviantart.com
 Migrate Colony,Event,1C,Move one of your colonies to another site on the same planet.  Increase the price of the old colony's resource and decrease the price of the new colony's resource.,1,http://kristmiha.deviantart.com
 Mutiny,Event,2C,Disable target colony.  Its production stops until owner spends 1M and 1C.  Increase the price of that colony's resource.,1,http://fantasyps.deviantart.com
-Offworld Blight,Event,1C,Increase the price of Food by 2C.  All players discard 1Fo.,1,http://razowi.deviantart.com
-Planet Hunter,Telescope,"2M, L","Look at planets of any system and put them back face down.  When built, draw 2 actions, keep one, and put the other on the bottom of the deck.",1,http://www.deviantart.com/art/Mely3D-Space-telescope-pp-01-684519161
+Offworld Blight,Event,1C,Increase the price of Food by 2C.  All players lose 1Fo.,1,http://razowi.deviantart.com
+Planet Hunter,Telescope,"2M, L","Look at the planets of any Star system and put them back face down.  When built, draw 2 actions, keep one, and put the other on the bottom of the deck.",1,http://www.deviantart.com/art/Mely3D-Space-telescope-pp-01-684519161
 Refinery,Building,"3M, 1W",Gain 2Fu per turn.  Requires colony on a hydrocarbon world.  Decrease the price of Fuel by 1C.,1,http://hideyoshi.deviantart.com
-Solar Array,Space Station,"2M, L",Once per turn receive 1C OR Trade 1W for 1Fu. Decrease the price of Fuel by 1C and Increase the price of Water by 1C.,8,http://shroomworks.deviantart.com/art/Space-Engineers-Rotor-Fun-493056532
-Solar Flare,Event,1C,Random other player loses 2 target resources.,1,http://priteeboy.deviantart.com
+Solar Array,Space Station,"2M, L",Once per turn receive 1C Or Trade 1W for 1Fu. Decrease the price of Fuel by 1C and Increase the price of Water by 1C.,8,http://shroomworks.deviantart.com/art/Space-Engineers-Rotor-Fun-493056532
+Solar Flare,Event,1C,Target player loses 2 target resources.,1,http://priteeboy.deviantart.com
 Space Arena,Space Station,"2M, 2C, L",Gain 2C per turn. Increase the price of Fuel by 1C.,1,http://macrebisz.deviantart.com/
-Space Carnery,Space Station,"2M, 2W, L",Pay 1C to gain two Food once per turn.  Decrease food price when launched.,1,http://smpritchard.deviantart.com
-Space Elevator,Launch System,"3M, 2Fu, 1W",Ignore escape velocity of 3 or less. 1C/launch by any player. +1 Transaction per turn. +1 VP.,1,http://glennclovis.deviantart.com
+Space Carnery,Space Station,"2M, 2W, L",Pay 1C to gain 2Fo once per turn.  Decrease the price of Food when launched.,1,http://smpritchard.deviantart.com
+Space Elevator,Launch System,"3M, 2Fu, 1W",Ignore escape velocity of 3 or less. 1C/launch by any player. +1 Trade per turn. +1 VP.,1,http://glennclovis.deviantart.com
 Space Farm,Space Station,"1M, 1W, L",Gain 1Fo per turn. Decrease the price of Food by 1C.,2,https://fineartamerica.com/profiles/1-bryan-versteeg.html
 Space Fighter,Navy,"1M, 1Fu, L","Steal 1C from target weaker player, +1 to Navy Size.",1,http://leonovichdmitriy.deviantart.com
-Space Fountain,Launch System,"1M, 3Fu, 1W",Ignore escape velocity of two or less. 1C/launch by any player. +1 Transaction per turn. +1 VP.,1,gone
+Space Fountain,Launch System,"1M, 3Fu, 1W",Ignore escape velocity of two or less. 1C/launch by any player. +1 Trade per turn. +1 VP.,1,gone
 Space Hotel,Space Station,"1M, 1W",Gain 1C per turn.  Increase the price of Food by 1C.,1,http://meckanicalmind.deviantart.com
 Space Lab,Space Station,"1M, 2C",Draw an extra card each turn.  Place one of those cards on the bottom of the deck.,1,http://numptynum.deviantart.com
 Stampede,Event,1C,Target player colonizing a world with megafauna must spend an extra two turns to colonize the world.,1,http://deskridge.deviantart.com/art/Buffalo-Storm-630487661
-Tether Catapult,Launch System,"2M, 1Fu",Ignore escape velocity of exactly one.  +1C/launch by any player.  +1 Buy/Sell Transaction per turn. +1 VP. Requires Vacuum Atmosphere,3,http://www.arcadiastreet.com/cgvistas/spacexp/se_luna_5500b.htm
+Tether Catapult,Launch System,"2M, 1Fu",Ignore escape velocity of exactly one.  +1C/launch by any player.  +1 Trade per turn. +1 VP. Requires Vacuum Atmosphere,3,http://www.arcadiastreet.com/cgvistas/spacexp/se_luna_5500b.htm

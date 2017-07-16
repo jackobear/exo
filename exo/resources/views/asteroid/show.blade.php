@@ -15,17 +15,15 @@
       <div class="large-12 columns">
         <div class="card" style="width: 678px;height:980px;margin:73px 0px 72px 59px;border-radius:15px;">
           <div class="card-divider">
-            <h1>
-                <? echo $asteroid->name; ?>
-                <span style="float:right;color:#888;font-size:30px;margin-top:20px;"><? echo $asteroid->type; ?> Asteroid</span>
-            </h1>
-
+            <span style="font-size:48px;"><? echo $asteroid->name; ?></span>
+            <div style="color:#888;font-size:30px;margin-top:-10px;"><? echo $asteroid->type; ?></div>
           </div>
 
             <canvas id="myCanvas" width="700" height="<?
               // Check if we need room for two lines of text
               $height = 800;
               if(strlen($asteroid->body) > 27) $height -= 43;
+              if(strlen($asteroid->body) > 40) $height -= 43;
               echo $height;
             ?>" style="background: url('/img/art/asteroids/<? 
               echo strtolower(str_replace(" ", "-", $asteroid->name)); 

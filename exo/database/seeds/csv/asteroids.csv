@@ -1,13 +1,13 @@
-name,type,body
-City Killer Asteroid,Silicate,"+1M, +3 Cards, 2 Fuel to deflect"
-Co-Orbital Asteroid,Silicate,"+1M, +1W, (No fuel requirement)"
-C-Type Asteroid,Water,"+3W, 1F to capture"
-Small Rocky Asteroid,Silicate,"+1M, +1W, 1F to capture"
-Snowball Asteroid,Water,"+2W, +1F, 1F to capture"
-Solid Rock Asteroid,Silicate,"+2M OR +3M for terrarium or starship, 1F to Capture"
-High Speed Comet,Silicate,"+2M, +2W, +1F, 3F to capture"
-S-Type Asteroid,Silicate,"+2M, +2F, 2F to capture"
-Trojan Asteroid,Silicate,"+2M, +1F, 1F to capture"
-M-Type Asteroid,Silicate,"+4M, 2F to catpure"
-Extinct Comet,Silicate,"+3M, +3F, 3F to capture"
-Starship-Sized Asteroid,Silicate,"+2M OR +4M for terrarium or starship, 2F to capture"
+name,type,body,artist_url
+City Killer Asteroid,Rocky Asteroid,"+1M, +3 Cards, 2Fu to deflect",http://www.express.co.uk/news/science/759540/asteroid-crash-earth-2016-wf9-nasa-planet-x-nibiru
+Co-Orbital Asteroid,Rocky Asteroid,"+1M, +1W, (No fuel requirement)",http://photojournal.jpl.nasa.gov/target/Other?subselect=Mission%3AWide-field+Infrared+Survey+Explorer+%28WISE%29%3A
+Carbon Asteroid,Water Asteroid,"+3W, 1Fu to capture",https://en.wikipedia.org/wiki/C-type_asteroid
+Small Rocky Asteroid,Rocky Asteroid,"+1M, +1W, 1Fu to capture",http://www.sci-news.com/space/science-2015-tb145-great-pumpkin-asteroid-03364.html
+Snowball Asteroid,Water Asteroid,"+2W, +1Fu, 1Fu to capture",https://forum.keenswh.com/threads/ice-asteroids-ship-and-station-atmospheres-alternative-fuel-sources-and-biological-matter.7093631/
+Solid Rock Asteroid,Rocky Asteroid,"+2M Or +3M for building any Terrarium or Interstellar ship, 1Fu to Capture",http://danieljoelnewman.deviantart.com
+High Speed Comet,Rocky Asteroid,"+2M, +2W, +1Fu, 3Fu to capture",http://cosmoskitty.deviantart.com/art/Comet-515140018
+Rocky Asteroid,Rocky Asteroid,"+2M, +2Fu, 2Fu to capture",http://www3.canisius.edu/~grandem/solar/SolarSystem1_print.html
+Trojan Asteroid,Rocky Asteroid,"+2M, +1Fu, 1Fu to capture",http://www.businessinsider.com/neocam-mission-not-fully-funded-nasa-2017-1
+Metallic Asteroid,Rocky Asteroid,"+4M, 2Fu to capture",http://www.chron.com/news/science-environment/article/NASA-to-explore-asteroid-made-of-10-000-10860219.php
+Extinct Comet,Rocky Asteroid,"+3M, +3Fu, 3Fu to capture",https://nssdc.gsfc.nasa.gov/photo_gallery/photogallery-asteroids.html
+Starship-Sized Asteroid,Rocky Asteroid,"+2M OR +4M for terrarium or starship, 2Fu to capture",http://eimer.deviantart.com/art/NASA-JPL-Comet-Hitchhiker-1-507152927
