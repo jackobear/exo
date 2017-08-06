@@ -2,7 +2,6 @@
   $card_types = [
     "Actions",
     "Asteroids",
-    "Asteroid Belts",
     "Dwarf Planets",
     "Habitable Worlds",
     "Lifeforms",

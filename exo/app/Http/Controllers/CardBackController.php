@@ -49,11 +49,11 @@ class CardBackController extends Controller
     }
 
     public function save_all_as_png(){
-        $card_count = 9;
+        $card_count = 8;
         for($i=1;$i<=$card_count;$i++){
             echo "<br>Saving a card back...<br>";
             $filename = "/var/www/exo/public/img/cards/card-backs/" . $i . ".png";
-            $cmd = "google-chrome --headless --disable-gpu --screenshot=$filename --window-size=1725,1125 http://192.168.33.10/card-back/" . $i;
+            $cmd = "google-chrome --headless --disable-gpu --screenshot=$filename --window-size=825,1125 http://192.168.33.10/card-back/" . $i;
             $output = "";
             $return_var = 0;
             exec(escapeshellcmd($cmd), $output, $return_var);
