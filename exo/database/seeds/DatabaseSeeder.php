@@ -39,7 +39,6 @@ class DatabaseSeeder extends Seeder
         // ,1,2,AREA MALAGA N/ORIENT,,2013/10/13 10:27:52,2013/10/13 10:27:52
 
         $this->call(ActionsTableSeeder::class);
-        $this->call(AsteroidBeltsTableSeeder::class);
         $this->call(AsteroidsTableSeeder::class);
         $this->call(DwarfPlanetsTableSeeder::class);
         $this->call(FactionsTableSeeder::class);

@@ -374,7 +374,8 @@
             context.lineTo(curlyWidth+curlyx, curlyHeight - curlyWidth+curlyy);
             context.arcTo(curlyWidth+curlyx, curlyHeight + curlyy, curlyx, curlyHeight + curlyy, curlyWidth);
             context.stroke();
-            context.fillText("Moons",900,615);
+            context.fillText("Moons and",900,605);
+            context.fillText("Dwarf Planets",900,630);
 
             // Habitable World deck
             context.fillText("Habitable",300,540);

@@ -25,7 +25,7 @@
             <canvas id="myCanvas" width="700" height="<?
               // Check if we need room for two lines of text
               $height = 800;
-              if(strlen($habitable_world->body) > 27) $height -= 43;
+              if(strlen(strip_tags($habitable_world->body)) > 27) $height -= 43;
               echo $height;
             ?>" style="background: url('/img/art/habitable-worlds/<? 
               echo strtolower(str_replace(" ", "-", $habitable_world->name)); 

@@ -1,3 +1,5 @@
+// Draw all the Sites and Features for the given world string
+
 function World(sites_str){
   var canvas = document.getElementById('myCanvas');
   var context = canvas.getContext('2d');
@@ -125,8 +127,21 @@ function World(sites_str){
                 context.stroke();
                 break;
             default:
-                // Must be some amount of coin or a typo
-                if(feature[1] == "C"){
+                if(feature[0] == "C"){
+                    // Coin Site
+                    context.beginPath();
+                    context.shadowBlur = 0;
+                    context.arc(site_x, site_y, radius, 0, 2 * Math.PI, false);
+                    context.fillStyle = 'yellow';
+                    context.fill();
+                    context.lineWidth = border_width;
+                    context.strokeStyle = '#cccc00';
+                    context.shadowBlur = blur;
+                    context.shadowColor = 'yellow';
+                    context.stroke();
+                    break;
+                }else if(feature[1] == "C"){
+                    // Coin Feature
                     context.beginPath();
                     context.shadowBlur = 0;
                     context.arc(site_x - bonus_margin_temp, site_y, bonus_radius, 0, 2 * Math.PI, false);

@@ -68,7 +68,7 @@
             <h3>Pay fuel for launch and travel distance.  Decrease price of new colony's resource.</h3>
           </div>
 
-          <div class="callout" style="margin: 0px 10px 10px 10px;">
+          <div class="callout" style="margin: 0px 10px 10px 10px;padding-bottom:0px;">
             <h2>Interstellar Colony Ship
               <span style="float:right;color:#888;font-size:30px;">
                 <canvas id="starshipCostCanvas" width="100" height="100" style="display:inline-block;"></canvas>

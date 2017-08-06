@@ -21,9 +21,8 @@
 
             <canvas id="myCanvas" width="700" height="<?
               // Check if we need room for two lines of text
-              $height = 800;
-              if(strlen($asteroid->body) > 27) $height -= 43;
-              if(strlen($asteroid->body) > 40) $height -= 43;
+              $height = 750;
+              if(strlen(strip_tags($asteroid->body)) > 27) $height -= 43;
               echo $height;
             ?>" style="background: url('/img/art/asteroids/<? 
               echo strtolower(str_replace(" ", "-", $asteroid->name)); 

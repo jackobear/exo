@@ -25,7 +25,7 @@
             <canvas id="myCanvas" width="700" height="<?
               // Check if we need room for two lines of text
               $height = 800;
-              if(strlen($lifeform->body) > 27) $height -= 43;
+              if(strlen(strip_tags($lifeform->body)) > 27) $height -= 43;
               echo $height;
             ?>" style="background: url('/img/art/lifeforms/<? 
               echo strtolower(str_replace(" ", "-", $lifeform->name)); 

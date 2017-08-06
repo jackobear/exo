@@ -25,14 +25,22 @@
             <canvas id="myCanvas" width="700" height="<?
               // Check if we need room for two lines of text
               $height = 800;
-              if(strlen($dwarf_planet->body) > 27) $height -= 43;
+              if(strlen(strip_tags($dwarf_planet->body)) > 27) $height -= 43;
               echo $height;
             ?>" style="background: url('/img/art/dwarf-planets/<? 
               echo strtolower(str_replace(" ", "-", $dwarf_planet->name)); 
             ?>.jpg');background-size: auto auto;"></canvas>
+            <script type="text/javascript">
+                var sites_str = "<? echo $dwarf_planet->sites; ?>";
+                var the_sites = new World(sites_str);
+            </script>
           
           <div class="card-section">
-            <h3><? echo $dwarf_planet->body; ?></h3>
+            <h3><? echo $dwarf_planet->body; ?>
+              <?php if($dwarf_planet->escape_velocity > 0){ ?>
+                <div style="float:right;">Launch Cost: <div class="launch-cost"><? echo $dwarf_planet->escape_velocity; ?></div></div>
+              <?php } ?>
+            </h3>
           </div>
         </div>
       </div>

@@ -25,7 +25,7 @@
             <canvas id="myCanvas" width="700" height="<?
               // Check if we need room for two lines of text
               $height = 800;
-              if(strlen($star->body) > 27) $height -= 43;
+              if(strlen(strip_tags($star->body)) > 27) $height -= 43;
               echo $height;
             ?>" style="background: url('/img/art/stars/<? 
               echo strtolower(str_replace(" ", "-", $star->name)); 

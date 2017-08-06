@@ -17,7 +17,7 @@
           <div class="card-divider">
             <h1>
                 <? echo $planet->name; ?>
-                <span style="float:right;color:#888;font-size:30px;margin-top:20px;"><? echo $planet->type; ?> Planet</span>
+                <span style="float:right;color:#888;font-size:30px;margin-top:20px;"><? echo $planet->type; ?></span>
             </h1>
 
           </div>
@@ -25,7 +25,7 @@
             <canvas id="myCanvas" width="700" height="<?
               // Check if we need room for two lines of text
               $height = 800;
-              if(strlen($planet->body) > 27) $height -= 43;
+              if(strlen(strip_tags($planet->body)) > 27) $height -= 43;
               echo $height;
             ?>" style="background: url('/img/art/planets/<? 
               echo strtolower(str_replace(" ", "-", $planet->name)); 
@@ -37,7 +37,9 @@
           
           <div class="card-section" style="padding-top:0px;">
             <h3><? echo $planet->body; ?>
-              <div style="float:right;">Launch Cost: <div class="launch-cost"><? echo $planet->escape_velocity; ?></div></div>
+              <?php if($planet->escape_velocity > 0){ ?>
+                <div style="float:right;">Launch Cost: <div class="launch-cost"><? echo $planet->escape_velocity; ?></div></div>
+              <?php } ?>
             </h3>
           </div>
         </div>

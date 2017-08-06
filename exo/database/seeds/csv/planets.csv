@@ -1,8 +1,10 @@
 name,type,escape_velocity,body,sites,artist_url
-Saturn,Gas Giant,13,Requires Fusion Power to colonize.,Fu+1C,http://alpha-element.deviantart.com/
-Jupiter,Gas Giant,24,"Requires Fusion Power to colonize, 4 Moons, Magnetosphere at 2nd Orbit",2xFu+1C,http://alpha-element.deviantart.com/
+Saturn,Gas Giant,13,Two Moons,,http://alpha-element.deviantart.com/
+Jupiter,Gas Giant,24,Four Moons.  Magnetosphere at 2nd Orbit,,http://alpha-element.deviantart.com/
 Mars,Rocky,3,,"W, Fo+Cv, M, Fu",http://alpha-element.deviantart.com/
 Venus,Rocky,4,Thick Atmosphere,"Fo, Fo",http://alpha-element.deviantart.com/
 Mercury,Rocky,2,,"M+EL, M+EL",http://alpha-element.deviantart.com/
-Uranus,Gas Giant,8,4 Moons,,
-Neptune,Gas Giant,9,1 Moon,,
+Uranus,Gas Giant,8,Four Moons,,
+Neptune,Gas Giant,9,One Moon,,
+Main Belt,Asteroid Belt,0,Three Dwarf Planets,,http://stefanpwinc.deviantart.com/art/Asteroid-belt-366639286
+Kuiper Belt,Asteroid Belt,0,Four Dwarf Planets,,http://davidlinik.deviantart.com/art/Asteroid-Field-687158297

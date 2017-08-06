@@ -44,10 +44,10 @@
             <canvas id="myCanvas" width="700" height="<?
               // Check if we need room for two lines of text
               $height = 750;
-              if(strlen($action->body) > 27) $height -= 43;
-              if(strlen($action->body) > 80) $height -= 43;
-              if(strlen($action->body) > 130) $height -= 43;
-              if(strlen($action->body) > 180) $height -= 43;
+              if(strlen(strip_tags($action->body)) > 27) $height -= 43;
+              if(strlen(strip_tags($action->body)) > 80) $height -= 43;
+              if(strlen(strip_tags($action->body)) > 130) $height -= 43;
+              if(strlen(strip_tags($action->body)) > 180) $height -= 43;
               echo $height;
             ?>" style="background: url('/img/art/actions/<? 
               echo strtolower(str_replace(" ", "-", $action->name)); 
