@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Planet;
 
-use Illuminate\Http\Request;
+use Request;
 
 class PlanetController extends Controller
 {
@@ -78,7 +78,8 @@ class PlanetController extends Controller
      */
     public function edit($id)
     {
-        //
+        $planet = \App\Planet::findOrFail($id);
+        return view('planet.edit', ['planet' => $planet]);
     }
 
     /**
@@ -90,7 +91,10 @@ class PlanetController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $planet = \App\Planet::findOrFail($id);
+        $input = Request::all();
+        $planet->update($input);
+        return redirect('planet/'.$id);
     }
 
     /**

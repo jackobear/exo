@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Faction extends Model
 {
+    protected $fillable = ['name', 'body', 'planetship_cost', 'starship_cost', 'travel_time', 'colonize_time', 'artist_url'];
+    public $timestamps = false;
+    
     public function save_as_png(){
         $filename = "/var/www/exo/public/img/cards/factions/" . str_replace(" ", "_", strtolower($this->name)) . ".png";
         $cmd = "google-chrome --headless --disable-gpu --screenshot=$filename --window-size=1725,1125 http://192.168.33.10/faction/" . $this->id;

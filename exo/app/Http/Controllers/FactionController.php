@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Faction;
 
-use Illuminate\Http\Request;
+use Request;
 
 class FactionController extends Controller
 {
@@ -68,7 +68,8 @@ class FactionController extends Controller
      */
     public function edit($id)
     {
-        //
+        $faction = \App\Faction::findOrFail($id);
+        return view('faction.edit', ['faction' => $faction]);
     }
 
     /**
@@ -80,7 +81,10 @@ class FactionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $faction = \App\Faction::findOrFail($id);
+        $input = Request::all();
+        $faction->update($input);
+        return redirect('faction/'.$id);
     }
 
     /**

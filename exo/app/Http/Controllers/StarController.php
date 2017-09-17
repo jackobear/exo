@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Star;
 
-use Illuminate\Http\Request;
+use Request;
 
 class StarController extends Controller
 {
@@ -68,7 +68,8 @@ class StarController extends Controller
      */
     public function edit($id)
     {
-        //
+        $star = \App\Star::findOrFail($id);
+        return view('star.edit', ['star' => $star]);
     }
 
     /**
@@ -80,7 +81,10 @@ class StarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $star = \App\Star::findOrFail($id);
+        $input = Request::all();
+        $star->update($input);
+        return redirect('star/'.$id);
     }
 
     /**

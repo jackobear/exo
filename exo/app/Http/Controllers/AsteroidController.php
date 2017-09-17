@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\asteroid;
+use App\Asteroid;
 
-use Illuminate\Http\Request;
+use Request;
 
 class AsteroidController extends Controller
 {
@@ -69,7 +69,8 @@ class AsteroidController extends Controller
      */
     public function edit($id)
     {
-        //
+        $asteroid = \App\Asteroid::findOrFail($id);
+        return view('asteroid.edit', ['asteroid' => $asteroid]);
     }
 
     /**
@@ -81,7 +82,10 @@ class AsteroidController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $asteroid = \App\Asteroid::findOrFail($id);
+        $input = Request::all();
+        $asteroid->update($input);
+        return redirect('asteroid/'.$id);
     }
 
     /**

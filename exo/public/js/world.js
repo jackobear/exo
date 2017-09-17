@@ -49,6 +49,20 @@ function World(sites_str){
                 context.shadowBlur = blur;
                 context.shadowColor = 'yellow';
                 context.stroke();
+
+                context.beginPath();
+                context.shadowBlur = 0;
+                context.rect(site_x - bonus_radius - bonus_margin_temp, site_y - bonus_radius, 2 * bonus_radius, 2 * bonus_radius);
+                context.fillStyle = 'green';
+                context.fill();
+                context.lineWidth = border_width;
+                context.strokeStyle = '#003300';
+                context.stroke();
+                context.font = "30px Arial";
+                context.fillStyle = 'black';
+                context.fillText("+"+multiplier,site_x - bonus_margin_temp - 20, site_y+10);
+
+                bonus_margin_temp += (2 * bonus_radius) + 20;                
                 break;
             case "Fu":
                 context.beginPath();
@@ -60,6 +74,20 @@ function World(sites_str){
                 context.shadowBlur = blur;
                 context.shadowColor = 'yellow';
                 context.stroke();
+
+                context.beginPath();
+                context.shadowBlur = 0;
+                context.rect(site_x - bonus_radius - bonus_margin_temp, site_y - bonus_radius, 2 * bonus_radius, 2 * bonus_radius);
+                context.fillStyle = 'red';
+                context.fill();
+                context.lineWidth = border_width;
+                context.strokeStyle = '#000000';
+                context.stroke();
+                context.font = "30px Arial";
+                context.fillStyle = 'black';
+                context.fillText("+"+multiplier,site_x - bonus_margin_temp - 20, site_y+10);
+
+                bonus_margin_temp += (2 * bonus_radius) + 20;                
                 break;
             case "W":
                 context.beginPath();
@@ -71,6 +99,20 @@ function World(sites_str){
                 context.shadowBlur = blur;
                 context.shadowColor = 'yellow';
                 context.stroke();
+                
+                context.beginPath();
+                context.shadowBlur = 0;
+                context.rect(site_x - bonus_radius - bonus_margin_temp, site_y - bonus_radius, 2 * bonus_radius, 2 * bonus_radius);
+                context.fillStyle = 'blue';
+                context.fill();
+                context.lineWidth = border_width;
+                context.strokeStyle = '#000033';
+                context.stroke();
+                context.font = "30px Arial";
+                context.fillStyle = 'black';
+                context.fillText("+"+multiplier,site_x - bonus_margin_temp - 20, site_y+10);
+
+                bonus_margin_temp += (2 * bonus_radius) + 20;                
                 break;
             case "M":
                 context.beginPath();
@@ -83,6 +125,20 @@ function World(sites_str){
                 context.shadowBlur = blur;
                 context.shadowColor = 'yellow';
                 context.stroke();
+                
+                context.beginPath();
+                context.shadowBlur = 0;
+                context.rect(site_x - bonus_radius - bonus_margin_temp, site_y - bonus_radius, 2 * bonus_radius, 2 * bonus_radius);
+                context.fillStyle = 'silver';
+                context.fill();
+                context.lineWidth = border_width;
+                context.strokeStyle = '#000000';
+                context.stroke();
+                context.font = "30px Arial";
+                context.fillStyle = 'black';
+                context.fillText("+"+multiplier,site_x - bonus_margin_temp - 20, site_y+10);
+
+                bonus_margin_temp += (2 * bonus_radius) + 20;                
                 break;
             case "He":
                 context.beginPath();
@@ -121,6 +177,7 @@ function World(sites_str){
                 break;
             case "EL":
                 // Extra glow layer
+                context.beginPath();
                 context.arc(site_x, site_y, radius, 0, 2 * Math.PI, false);
                 context.shadowBlur = blur + 30;
                 context.shadowColor = 'yellow';
@@ -166,7 +223,7 @@ function World(sites_str){
             context.stroke();
             context.font = "30px Arial";
             context.fillStyle = 'black';
-            context.fillText("+"+(multiplier-1),site_x - bonus_margin_temp - 20, site_y+10);
+            context.fillText("+"+multiplier,site_x - bonus_margin_temp - 20, site_y+10);
 
             bonus_margin_temp += (2 * bonus_radius) + 20;
         }else if(multipliers.length > 1){

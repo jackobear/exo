@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Moon;
 
-use Illuminate\Http\Request;
+use Request;
 
 class MoonController extends Controller
 {
@@ -68,7 +68,8 @@ class MoonController extends Controller
      */
     public function edit($id)
     {
-        //
+        $moon = \App\Moon::findOrFail($id);
+        return view('moon.edit', ['moon' => $moon]);
     }
 
     /**
@@ -80,7 +81,10 @@ class MoonController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $moon = \App\Moon::findOrFail($id);
+        $input = Request::all();
+        $moon->update($input);
+        return redirect('moon/'.$id);
     }
 
     /**

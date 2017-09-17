@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Lifeform;
 
-use Illuminate\Http\Request;
+use Request;
 
 class LifeformController extends Controller
 {
@@ -69,7 +69,8 @@ class LifeformController extends Controller
      */
     public function edit($id)
     {
-        //
+        $lifeform = \App\Lifeform::findOrFail($id);
+        return view('lifeform.edit', ['lifeform' => $lifeform]);
     }
 
     /**
@@ -81,7 +82,10 @@ class LifeformController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $lifeform = \App\Lifeform::findOrFail($id);
+        $input = Request::all();
+        $lifeform->update($input);
+        return redirect('lifeform/'.$id);
     }
 
     /**

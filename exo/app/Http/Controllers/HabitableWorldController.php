@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Planet;
 
-use Illuminate\Http\Request;
+use Request;
 
 class HabitableWorldController extends Controller
 {
@@ -69,7 +69,8 @@ class HabitableWorldController extends Controller
      */
     public function edit($id)
     {
-        //
+        $habitable_world = \App\HabitableWorld::findOrFail($id);
+        return view('habitable_world.edit', ['habitable_world' => $habitable_world]);
     }
 
     /**
@@ -81,7 +82,10 @@ class HabitableWorldController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $habitable_world = \App\HabitableWorld::findOrFail($id);
+        $input = Request::all();
+        $habitable_world->update($input);
+        return redirect('habitable-world/'.$id);
     }
 
     /**

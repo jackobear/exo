@@ -7,6 +7,10 @@ function Cost(cost_str, multiplier, index, canvas='myCostCanvas'){
   var cost_x = 75;
   var cost_y = 25;
 
+  if(canvas.width == 150){
+    cost_x += 50;
+  }
+
 
   // x,y Positioning adjustment
   switch(index){
@@ -25,8 +29,8 @@ function Cost(cost_str, multiplier, index, canvas='myCostCanvas'){
         break;
     case 5:
         cost_x -= (2 * cost_margin);
-        break;
         cost_y += cost_margin;
+        break;
     default:
         break;
   }
@@ -106,7 +110,7 @@ function Cost(cost_str, multiplier, index, canvas='myCostCanvas'){
           break;
   }
   context.font = "26px Arial";
-  context.fillStyle = 'black';
+  context.fillStyle = 'white';
   if(multiplier == 0){
     multiplier = "*";
   }

@@ -43,7 +43,7 @@
           <div class="callout" style="margin: 0px 10px 10px 10px;">
             <h2>Interplanetary Colony Ship
             <span style="float:right;color:#888;font-size:30px;">
-              <canvas id="planetshipCostCanvas" width="100" height="100" style="display:inline-block;"></canvas>
+              <canvas id="planetshipCostCanvas" width="150" height="100" style="display:inline-block;"></canvas>
               <script type="text/javascript">
                 $(document).ready(function() {
                   <?

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Action;
 
-use Illuminate\Http\Request;
+use Request;
 
 class ActionController extends Controller
 {
@@ -69,7 +69,8 @@ class ActionController extends Controller
      */
     public function edit($id)
     {
-        //
+        $action = \App\Action::findOrFail($id);
+        return view('action.edit', ['action' => $action]);
     }
 
     /**
@@ -81,7 +82,10 @@ class ActionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $action = \App\Action::findOrFail($id);
+        $input = Request::all();
+        $action->update($input);
+        return redirect('action/'.$id);
     }
 
     /**

@@ -43,4 +43,30 @@ Route::get('/habitable-world/{id}', 'HabitableWorldController@show');
 Route::get('/reference-card/{id}', 'ReferenceCardController@show');
 Route::get('/card-back/{id}', 'CardBackController@show');
 
+// Card Edits
+Route::get('/planet/edit/{id}', 'PlanetController@edit');
+Route::get('/moon/edit/{id}', 'MoonController@edit');
+Route::get('/star/edit/{id}', 'StarController@edit');
+Route::get('/lifeform/edit/{id}', 'LifeformController@edit');
+Route::get('/asteroid/edit/{id}', 'AsteroidController@edit');
+Route::get('/action/edit/{id}', 'ActionController@edit');
+Route::get('/faction/edit/{id}', 'FactionController@edit');
+Route::get('/dwarf-planet/edit/{id}', 'DwarfPlanetController@edit');
+Route::get('/habitable-world/edit/{id}', 'HabitableWorldController@edit');
+Route::get('/reference-card/edit/{id}', 'ReferenceCardController@edit');
+Route::get('/card-back/edit/{id}', 'CardBackController@edit');
+
+// Card Updates
+Route::patch('/planet/update/{id}', 'PlanetController@update');
+Route::patch('/moon/update/{id}', 'MoonController@update');
+Route::patch('/star/update/{id}', 'StarController@update');
+Route::patch('/lifeform/update/{id}', 'LifeformController@update');
+Route::patch('/asteroid/update/{id}', 'AsteroidController@update');
+Route::patch('/action/update/{id}', 'ActionController@update');
+Route::patch('/faction/update/{id}', 'FactionController@update');
+Route::patch('/dwarf-planet/update/{id}', 'DwarfPlanetController@update');
+Route::patch('/habitable-world/update/{id}', 'HabitableWorldController@update');
+Route::patch('/reference-card/update/{id}', 'ReferenceCardController@update');
+Route::patch('/card-back/update/{id}', 'CardBackController@update');
+
 

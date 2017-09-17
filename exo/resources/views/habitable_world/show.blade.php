@@ -17,7 +17,7 @@
           <div class="card-divider">
             <h1>
                 <? echo $habitable_world->name; ?>
-                <span style="float:right;color:#888;font-size:30px;margin-top:20px;"><? echo $habitable_world->type; ?></span>
+                <span style="float:right;color:#888;font-size:30px;margin-top:20px;"><? echo $habitable_world->type; ?> World</span>
             </h1>
 
           </div>
@@ -26,6 +26,9 @@
               // Check if we need room for two lines of text
               $height = 800;
               if(strlen(strip_tags($habitable_world->body)) > 27) $height -= 43;
+              if(strlen(strip_tags($habitable_world->body)) > 80) $height -= 43;
+              if(strlen(strip_tags($habitable_world->body)) > 130) $height -= 43;
+              if(strlen(strip_tags($habitable_world->body)) > 180) $height -= 43;
               echo $height;
             ?>" style="background: url('/img/art/habitable-worlds/<? 
               echo strtolower(str_replace(" ", "-", $habitable_world->name)); 
