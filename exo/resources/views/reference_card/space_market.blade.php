@@ -31,7 +31,7 @@
             var price_y = radius + 20;
             var canvas = document.getElementById("myCanvas");
             var context = canvas.getContext('2d');
-            for(var i=1;i<9;i++){
+            for(var i=1;i<7;i++){
               context.beginPath();
               context.arc(price_x, price_y, radius, 0, 2 * Math.PI, false);
               context.fillStyle = 'yellow';
@@ -42,8 +42,8 @@
               context.font = "150px Arial";
               context.fillStyle = 'black';
               context.fillText(i, price_x - 40, price_y + 47);
-              price_x += 2*radius + 110;
-              if(i == 4){
+              price_x += 2*radius + 250;
+              if(i == 3){
                 price_y += 2*radius + 10;
                 price_x = radius + 40;
               }

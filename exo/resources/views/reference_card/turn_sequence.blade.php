@@ -30,7 +30,7 @@
               <li>Buy/Sell with Space Market</li>
               <li>Activate action cards in play</li>
               <li>Build Interplanetary ship</li>
-              <li>Build towards interstellar ship (Max 2 resources/turn)</li>
+              <li>Build Interstellar ship</li>
               <li>Advance Interstellar ship</li>
             </ul>
             <li>Discard down to 5 action cards in hand</li>

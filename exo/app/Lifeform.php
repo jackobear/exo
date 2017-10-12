@@ -15,6 +15,13 @@ class Lifeform extends Model
         $output = "";
         $return_var = 0;
         exec(escapeshellcmd($cmd), $output, $return_var);
+
+        $image = imagecreatefrompng($filename);
+        if($image && imagefilter($image, IMG_FILTER_BRIGHTNESS, 20)){
+            imagepng($image, "/var/www/exo/public/img/print-cards/lifeforms/" . str_replace(" ", "_", strtolower($this->name)) . ".png");
+            imagedestroy($image);
+        }
+
         return(array($output, $return_var));
     }
 }

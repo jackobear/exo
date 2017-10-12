@@ -7,6 +7,10 @@
  {!! Form::text('body', null, ['class' => 'form-control']) !!}
 </div>
 <div class='form-group'>
+ {!! Form::label('flavor_text', 'Flavor Text:') !!}
+ {!! Form::text('flavor_text', null, ['class' => 'form-control']) !!}
+</div>
+<div class='form-group'>
  {!! Form::label('planetship_cost', 'Planetship Cost:') !!}
  {!! Form::text('planetship_cost', null, ['class' => 'form-control']) !!}
 </div>

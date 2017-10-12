@@ -72,6 +72,13 @@ class ReferenceCardController extends Controller
             exec(escapeshellcmd($cmd), $output, $return_var);
             print_r($output);
             print_r($return_var);
+
+            $image = imagecreatefrompng($filename);
+            if($image && imagefilter($image, IMG_FILTER_BRIGHTNESS, 20)){
+                imagepng($image, "/var/www/exo/public/img/print-cards/reference-cards/" . $i . ".png");
+                imagedestroy($image);
+            }
+    
         }
         return "<br>Done<br>";
     }

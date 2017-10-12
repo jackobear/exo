@@ -22,7 +22,7 @@
             </h1>
           </div>
 
-          <h2 style="margin-left:50px;">20 VP to Win</h2>
+          <h2 style="margin-left:50px;">16 VP to Win</h2>
           <ol style="font-size:31pt;margin-left:30px;">
             <ul style="list-style:none;">
               <li>+1 VP: Settle Colony</li>

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Asteroid extends Model
 {
-    protected $fillable = ['name', 'type' 'body', 'artist_url'];
+    protected $fillable = ['name', 'type', 'body', 'artist_url'];
     public $timestamps = false;
 
     public function save_as_png(){
@@ -15,6 +15,13 @@ class Asteroid extends Model
         $output = "";
         $return_var = 0;
         exec(escapeshellcmd($cmd), $output, $return_var);
+
+        $image = imagecreatefrompng($filename);
+        if($image && imagefilter($image, IMG_FILTER_BRIGHTNESS, 20)){
+            imagepng($image, "/var/www/exo/public/img/print-cards/asteroids/" . str_replace(" ", "_", strtolower($this->name)) . ".png");
+            imagedestroy($image);
+        }
+
         return(array($output, $return_var));
     }
 }

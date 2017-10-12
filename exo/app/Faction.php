@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Faction extends Model
 {
-    protected $fillable = ['name', 'body', 'planetship_cost', 'starship_cost', 'travel_time', 'colonize_time', 'artist_url'];
+    protected $fillable = ['name', 'body', 'flavor_text', 'planetship_cost', 'starship_cost', 'travel_time', 'colonize_time', 'artist_url'];
     public $timestamps = false;
     
     public function save_as_png(){
@@ -15,6 +15,13 @@ class Faction extends Model
         $output = "";
         $return_var = 0;
         exec(escapeshellcmd($cmd), $output, $return_var);
+
+        $image = imagecreatefrompng($filename);
+        if($image && imagefilter($image, IMG_FILTER_BRIGHTNESS, 20)){
+            imagepng($image, "/var/www/exo/public/img/print-cards/factions/" . str_replace(" ", "_", strtolower($this->name)) . ".png");
+            imagedestroy($image);
+        }
+
         return(array($output, $return_var));
     }
 }

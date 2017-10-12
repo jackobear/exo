@@ -47,6 +47,7 @@ class FactionController extends Controller
     public function show($id)
     {
         $faction = \App\Faction::find($id);
+        $faction->body = $this->format_resources($faction->body);
         return view('faction.show', ['faction' => $faction]);
     }
 
