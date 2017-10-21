@@ -83,19 +83,7 @@
           </div>
 
           <div class="row expanded">
-            <div class="large-2 columns large-offset-1">
-              <div class="scoring-marker">20</div>
-            </div>
-            <div class="large-2 columns">
-              <div class="scoring-marker">19</div>
-            </div>
-            <div class="large-2 columns">
-              <div class="scoring-marker">18</div>
-            </div>
-            <div class="large-2 columns">
-              <div class="scoring-marker">17</div>
-            </div>
-            <div class="large-2 columns">
+            <div class="large-2 columns large-offset-9">
               <div class="scoring-marker">16</div>
             </div>
             <div class="large-1 columns">
