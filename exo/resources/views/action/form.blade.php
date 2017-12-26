@@ -16,7 +16,7 @@
 </div>
 <div class='form-group'>
  {!! Form::label('quantity', 'Quantity:') !!}
- {!! Form::text('sites', null, ['class' => 'form-control']) !!}
+ {!! Form::text('quantity', null, ['class' => 'form-control']) !!}
 </div>
 <div class='form-group'>
  {!! Form::label('artist_url', 'Artist URL:') !!}

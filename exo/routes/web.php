@@ -42,7 +42,40 @@ Route::get('/habitable-world', 'HabitableWorldController@index');
 Route::get('/reference-card', 'ReferenceCardController@index');
 Route::get('/card-back', 'CardBackController@index');
 
-// Card views
+// Card Creates
+Route::get('/planet/create', 'PlanetController@create');
+Route::get('/moon/create', 'MoonController@create');
+Route::get('/star/create', 'StarController@create');
+Route::get('/lifeform/create', 'LifeformController@create');
+Route::get('/asteroid/create', 'AsteroidController@create');
+Route::get('/action/create', 'ActionController@create');
+Route::get('/faction/create', 'FactionController@create');
+Route::get('/dwarf-planet/create', 'DwarfPlanetController@create');
+Route::get('/habitable-world/create', 'HabitableWorldController@create');
+
+// Card Stores
+Route::post('/planet/store', 'PlanetController@store');
+Route::post('/moon/store', 'MoonController@store');
+Route::post('/star/store', 'StarController@store');
+Route::post('/lifeform/store', 'LifeformController@store');
+Route::post('/asteroid/store', 'AsteroidController@store');
+Route::post('/action/store', 'ActionController@store');
+Route::post('/faction/store', 'FactionController@store');
+Route::post('/dwarf-planet/store', 'DwarfPlanetController@store');
+Route::post('/habitable-world/store', 'HabitableWorldController@store');
+
+// Card Deletes
+Route::delete('/planet/destroy/{id}', 'PlanetController@destroy');
+Route::delete('/moon/destroy/{id}', 'MoonController@destroy');
+Route::delete('/star/destroy/{id}', 'StarController@destroy');
+Route::delete('/lifeform/destroy/{id}', 'LifeformController@destroy');
+Route::delete('/asteroid/destroy/{id}', 'AsteroidController@destroy');
+Route::delete('/action/destroy/{id}', 'ActionController@destroy');
+Route::delete('/faction/destroy/{id}', 'FactionController@destroy');
+Route::delete('/dwarf-planet/destroy/{id}', 'DwarfPlanetController@destroy');
+Route::delete('/habitable-world/destroy/{id}', 'HabitableWorldController@destroy');
+
+// Card Views
 Route::get('/card', 'CardController@view');
 Route::get('/planet/{id}', 'PlanetController@show');
 Route::get('/moon/{id}', 'MoonController@show');

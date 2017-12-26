@@ -14,7 +14,7 @@
         <h1>Actions</h1>
         <table>
           <tr>
-            <th>Name</th><th>Type</th><th>Cost</th><th>Artist URL</th><th>Edit</th>
+            <th>Name</th><th>Type</th><th>Cost</th><th>Artist URL</th><th>Edit</th><th>Delete</th>
           </tr>
           @foreach ($actions as $action)
             <tr>
@@ -23,6 +23,13 @@
               <td>{{ $action->cost }}</td>
               <td><a href="{{ $action->artist_url }}">{{ $action->artist_url }}</a></td>
               <td><a href="/action/edit/{{ $action->id }}">Edit</a></td>
+              <td>
+                <form action="/action/destroy/{{ $action->id }}" method="post">
+                  {{csrf_field()}}
+                  <input name="_method" type="hidden" value="DELETE">
+                  <button class="button alert" type="submit">Delete</button>
+                </form>
+              </td>
             </tr>
           @endforeach
         </table>

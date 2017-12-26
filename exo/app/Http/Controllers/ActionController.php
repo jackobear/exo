@@ -25,7 +25,7 @@ class ActionController extends Controller
      */
     public function create()
     {
-        //
+        return view('action.create');
     }
 
     /**
@@ -36,7 +36,10 @@ class ActionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = Request::all();
+        $action = Action::create($input);
+        $action->save();
+        return redirect("/action");
     }
 
     /**
@@ -97,6 +100,7 @@ class ActionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Action::destroy($id);
+        return redirect('action');
     }
 }
