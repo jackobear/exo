@@ -1,16 +1,4 @@
-<?php
-  $card_types = [
-    "Actions",
-    "Asteroids",
-    "Dwarf Planets",
-    "Habitable Worlds",
-    "Lifeforms",
-    "Moons",
-    "Planets",
-    "Stars"
-  ];
-  $card_type = $card_types[$id - 1];
-?><!doctype html>
+<!doctype html>
 <html class="no-js" lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">

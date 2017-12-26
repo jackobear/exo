@@ -14,7 +14,8 @@ class FactionController extends Controller
      */
     public function index()
     {
-        //
+        $factions = \App\Faction::orderBy('name')->get();
+        return view('faction.index', ['factions' => $factions]);
     }
 
     /**

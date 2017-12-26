@@ -6,6 +6,15 @@ use Illuminate\Http\Request;
 
 class ReferenceCardController extends Controller
 {
+
+    private $cards = [
+        "turn_sequence",
+        "space_market",
+        "victory_points",
+        "scoring_track",
+        "board_layout"
+    ];
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +22,7 @@ class ReferenceCardController extends Controller
      */
     public function index()
     {
-        //
+        return view('reference_card.index', ['cards' => $this->cards]);
     }
 
     /**
@@ -45,20 +54,7 @@ class ReferenceCardController extends Controller
      */
     public function show($id)
     {
-        switch($id){
-            case 1:
-                return view('reference_card.turn_sequence');
-            case 2:
-                return view('reference_card.space_market');
-            case 3:
-                return view('reference_card.victory_points');
-            case 4:
-                return view('reference_card.scoring_track');
-            case 5:
-                return view('reference_card.board_layout');
-            default:
-                return "Reference Card not found.";
-        }
+        return view('reference_card.' . $this->cards[$id - 1]);
     }
 
     public function save_all_as_png(){

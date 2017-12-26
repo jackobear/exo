@@ -14,7 +14,8 @@ class LifeformController extends Controller
      */
     public function index()
     {
-        //
+        $lifeforms = \App\Lifeform::orderBy('name')->get();
+        return view('lifeform.index', ['lifeforms' => $lifeforms]);
     }
 
     /**

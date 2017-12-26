@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Planet;
+use App\HabitableWorld;
 
 use Request;
 
@@ -14,7 +14,8 @@ class HabitableWorldController extends Controller
      */
     public function index()
     {
-        //
+        $habitable_worlds = \App\HabitableWorld::orderBy('name')->get();
+        return view('habitable_world.index', ['habitable_worlds' => $habitable_worlds]);
     }
 
     /**

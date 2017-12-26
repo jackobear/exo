@@ -14,7 +14,8 @@ class PlanetController extends Controller
      */
     public function index()
     {
-        //
+        $planets = \App\Planet::orderBy('name')->get();
+        return view('planet.index', ['planets' => $planets]);
     }
 
     /**

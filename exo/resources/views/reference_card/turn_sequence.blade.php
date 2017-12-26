@@ -26,14 +26,15 @@
             <li>Collect resources from colonies and buildings.</li>
             <li>Main Phase (Play in any order)</li>
             <ul>
-              <li>Play an action card</li>
+              <li>Once per turn, purchase an Action card for 2C</li>
+              <li>Play an Action card</li>
               <li>Buy/Sell with Space Market</li>
               <li>Activate action cards in play</li>
               <li>Build Interplanetary ship</li>
               <li>Build Interstellar ship</li>
               <li>Advance Interstellar ship</li>
             </ul>
-            <li>Discard down to 5 action cards in hand</li>
+            <li>Discard down to 5 Action cards in hand</li>
           </ol>
 
         </div>

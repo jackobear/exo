@@ -14,7 +14,8 @@ class StarController extends Controller
      */
     public function index()
     {
-        //
+        $stars = \App\Star::orderBy('name')->get();
+        return view('star.index', ['stars' => $stars]);
     }
 
     /**

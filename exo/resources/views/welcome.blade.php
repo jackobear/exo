@@ -79,15 +79,21 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    ExoColony
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="/action">Actions</a>
+                    <a href="/asteroid">Asteroids</a>
+                    <a href="/card-back">Card Backs</a>
+                    <a href="/dwarf-planet">Dwarf Planets</a>
+                    <a href="/faction">Factions</a>
+                    <a href="/habitable-world">Habitable Worlds</a> <br />
+                    <a href="/lifeform">Lifeforms</a>
+                    <a href="/moon">Moons</a>
+                    <a href="/planet">Planets</a>
+                    <a href="/reference-card">Reference Cards</a>
+                    <a href="/star">Stars</a>
                 </div>
             </div>
         </div>

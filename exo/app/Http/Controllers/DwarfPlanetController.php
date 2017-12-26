@@ -14,7 +14,8 @@ class DwarfPlanetController extends Controller
      */
     public function index()
     {
-        //
+        $dwarf_planets = \App\DwarfPlanet::orderBy('name')->get();
+        return view('dwarf_planet.index', ['dwarf_planets' => $dwarf_planets]);
     }
 
     /**

@@ -14,7 +14,8 @@ class AsteroidController extends Controller
      */
     public function index()
     {
-        //
+        $asteroids = \App\Asteroid::orderBy('name')->get();
+        return view('asteroid.index', ['asteroids' => $asteroids]);
     }
 
     /**

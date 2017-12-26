@@ -29,6 +29,19 @@ Route::get('/star/save_all_as_png', 'StarController@save_all_as_png');
 Route::get('/reference-card/save_all_as_png', 'ReferenceCardController@save_all_as_png');
 Route::get('/card-back/save_all_as_png', 'CardBackController@save_all_as_png');
 
+// Indexes
+Route::get('/planet', 'PlanetController@index');
+Route::get('/moon', 'MoonController@index');
+Route::get('/star', 'StarController@index');
+Route::get('/lifeform', 'LifeformController@index');
+Route::get('/asteroid', 'AsteroidController@index');
+Route::get('/action', 'ActionController@index');
+Route::get('/faction', 'FactionController@index');
+Route::get('/dwarf-planet', 'DwarfPlanetController@index');
+Route::get('/habitable-world', 'HabitableWorldController@index');
+Route::get('/reference-card', 'ReferenceCardController@index');
+Route::get('/card-back', 'CardBackController@index');
+
 // Card views
 Route::get('/card', 'CardController@view');
 Route::get('/planet/{id}', 'PlanetController@show');

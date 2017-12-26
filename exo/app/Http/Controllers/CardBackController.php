@@ -6,6 +6,18 @@ use Illuminate\Http\Request;
 
 class CardBackController extends Controller
 {
+
+    private $card_types = [
+        "Actions",
+        "Asteroids",
+        "Dwarf Planets",
+        "Habitable Worlds",
+        "Lifeforms",
+        "Moons",
+        "Planets",
+        "Stars"
+    ];
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +25,7 @@ class CardBackController extends Controller
      */
     public function index()
     {
-        //
+        return view('card_back.index', ["card_types" => $this->card_types]);
     }
 
     /**
@@ -45,11 +57,11 @@ class CardBackController extends Controller
      */
     public function show($id)
     {
-        return view('card_back.show', ['id'=>$id]);
+        return view('card_back.show', ['card_type'=>$this->card_types[$id-1]]);
     }
 
     public function save_all_as_png(){
-        $card_count = 8;
+        $card_count = count($this->card_types);
         for($i=1;$i<=$card_count;$i++){
             echo "<br>Saving a card back...<br>";
             $filename = "/var/www/exo/public/img/cards/card-backs/" . $i . ".png";

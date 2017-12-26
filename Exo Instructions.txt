@@ -1,0 +1,100 @@
+Game Goal:
+	Be the first player to get 16 Victory Points.  Victory points are gained by settling worlds, discovering lifeforms and building launch systems.
+
+Game Setup:
+	1. Randomly determine a starting player using the included d6.
+	2. Each player gets a faction card, which dictates his/her starting action cards.
+	3. Each player gets one Food, one Metal and one Water.  Each player also gets one Fuel equal to their starting position plus four.
+	4. Shuffle the star deck and deal one star.  Refer to the Board Layout card for position.
+	5. Shuffle the planet deck and deal planets according to the star card.
+	6. Shuffle the moon deck and deal moons as each planet describes.
+	7. Shuffle the astorid deck and place it near the center the table.
+	8. Each player places a colony on a habitable world in the starting star system that was just dealt.
+
+Game Round:
+	1. The current player receives resources and coin as described by the sites he/she has colonized as well as any building income.
+	2. The current player's main phase begins.  The current player can do any or none of these things in any order:
+		a. Once per turn, the current player may pay two coin to draw an action card.
+		b. Play an action card by paying the cost in the upper right of the card an annoucing the effects.  Note that some cards also have a launch cost.  The launch cost is shown in the lower left corner of a world's card.  The player must pay this amount in fuel plus one for each difference in orbit from the launching colony to the target world.
+		c. Buy one resource from and/or sell one resource to the space market once per turn.
+		d. Activate any action card he/she has in play, such as using an asteroid miner.
+		e. Build an interplanetary colony ship and colonize a world in the starting star system.  Decrease the price of the new colony's resource.
+		f. Build an interstellar colony ship.  The player places a colony ship on his/her ship track.  When the ship has travelled to the new system, the player places a colony on the habitable world of the new system.  If no new systems have yet been explored, the player draws a star card and generates a new star system and colonizes one of the worlds therein.  Rather than generating the entire system, simply draw one habitable planet and its moons.
+		g. Advance each owned instellar ship by one square if its journey did not start this turn.
+	3. The current player discards down to 5 action cards and announces that he/she is done.
+	4. The next player repeats the previous steps until somebody declares victory at 16 victory points.
+
+Action Cards:
+	1. After paying the building cost, some action cards stay in play, others are discarded.
+	2. Some action cards require an additional launch cost to get into play.
+	3. Each player has a maximum hand size of 5.  There is no limit to the number of action cards you can have in play.
+
+Launches:
+	1. Players can launch from any colony they own.  Colonies always require a minimum of one Fuel to build.
+	2. Launch costs can be cheapened by building launch systems.
+	3. Example launch: Launching a colony ship from Earth to Europa in the beginner setup costs four Fuel to get off Earth plus another three to go three orbits out to Jupiter.  There is no orbit distance cost associated with moons, so the total Fuel cost is seven.
+	4. Example launch: Launching a Space Miner from Luna costs two Fuel.  The Space Miner can operate in any orbit, so there are is no cost associated with travelling to other orbits.
+
+Asteroid Mining:
+	1. Activate an Asteroid Miner to draw an Asteroid from the Asteroid deck.
+	2. If able and willing to pay any harvesting costs, receive resources and discard the Asteroid into the Asteroid discard pile.
+	3. If unable or unwilling to harvest, the Asteroid is placed on the bottom of the Asteroid deck.
+	4. When the Asteroid deck runs out, shuffle up the Asteroid discard pile and use it over again once per game.
+
+Colonization:
+	1. Place your igloo shaped colony marker on the site you are colonizing.
+	2. Some sites have features such as caves which give a Metal rebate when colonizing.  See the Site Features list below.
+	3. Some worlds have features such as Vacuum atmosphere.  Some action cards only effect Vacuum atmosphere worlds.
+	4. Colonizing a world in the starting star system decreases the market price of the new colony's resource by one Coin.
+	5. Colonies always have a minimum total Fuel cost of one.
+
+Space Launch Systems:
+	1. Grants the building player one extra trading transaction per turn.
+	2. Can only be built on a site you have already colonized.
+
+Trading:
+	1. Each resource price in the space market has a minimum of one and a maximum of 6.
+	2. Prices change due to action cards and colonizations.
+	3. Launch systems allow for additional trades per turn.
+
+Site Features
+	Cave - After being colonized, the player receives one Metal.
+	Peak of Eternal Light - The colony produces extra solar power that is sold for Coin.  The Coin amount is described by the star and relates to the distance that the site is from the star.
+	Helium Deposits - If you have fusion tech, the site generates an extra three Coin per turn.
+
+World Features
+	Hydrocarbon World - Allows Refinery
+	Vacuum Atmosphere - Allows Tether Catapult
+	Helium Deposits - Gives three Coin per turn with Fusion Power
+
+Game Pieces:
+	Victory Points reference card
+	Board Layout reference card
+	Scoring Track card
+	Space Market card
+	4 Turn Sequence Helper cards
+	10 Colony Igloos per player
+	1 Colony Ship per player
+	2 Probes per player
+	3 Launch systems per player
+	50 Action cards
+	12 Asteroid cards
+	7 Dwarf Planet cards
+	3 Faction cards
+	5 Habitable World cards
+	8 Lifeform cards
+	8 Moon cards
+	9 Planet cards
+	6 Star cards
+
+New Action Cards (and revisions)
+	Need more resource giving actions, communal bonuses, large trade cards...up to 5x at a time
+	Need more that mess w/ prices
+	Need more that use coin
+	Space farm should require a coin to work
+	Tech actions?
+	Fusion Tech...be able to use helium deposits
+	Carrier is way too strong
+	Refinery should probably be nerfed a lil bit, maybe pay 1c
+	Reword planet hunter to work like space lab
+Need more planets, moons, factions?

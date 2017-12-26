@@ -14,7 +14,8 @@ class MoonController extends Controller
      */
     public function index()
     {
-        //
+        $moons = \App\Moon::orderBy('name')->get();
+        return view('moon.index', ['moons' => $moons]);
     }
 
     /**
