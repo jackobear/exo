@@ -25,7 +25,7 @@ class PlanetController extends Controller
      */
     public function create()
     {
-        //
+        return view('planet.create');
     }
 
     /**
@@ -36,7 +36,10 @@ class PlanetController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = Request::all();
+        $planet = Planet::create($input);
+        $planet->save();
+        return redirect("/planet");
     }
 
     /**
