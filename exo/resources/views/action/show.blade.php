@@ -7,10 +7,10 @@
     <title><? echo $action->name; ?></title>
     <link rel="stylesheet" href="/css/foundation/foundation.css">
     <link rel="stylesheet" href="/css/foundation/app.css">
-    <link rel="stylesheet" href="/css/exo.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/Glyphter.css">
+    <link rel="stylesheet" href="/css/exo.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/cost.js"></script>
   </head>
   <body>
     <div class="row" style="background-color: #000">
@@ -19,10 +19,8 @@
           <div class="card-divider">
             <span style="font-size:48px;"><? echo $action->name; ?></span>
             <span style="float:right;color:#888;font-size:30px;">
-              <canvas id="myCostCanvas" width="100" height="100" style="display:inline-block;margin-top:10px;"></canvas>
-              <script type="text/javascript">
-                $(document).ready(function() {
-                  <?
+
+                <?php
                     $costs = explode(",", $action->cost);
                     $multiplier = 1;
                     for($i=0;$i<count($costs);$i++){
@@ -31,14 +29,42 @@
                         $multiplier = $cost[0];
                         $cost = substr($cost, 1);
                       }
-                      echo "var cost$i = new Cost('$cost', $multiplier, $i);";
+                      $resource = "coin";
+                      switch($cost){
+                        case "F":
+                        case "Fo":
+                          $resource = "food";
+                          break;
+                        case "Fu":
+                        case "*Fu":
+                        case "L":
+                          $resource = "fuel";
+                          break;
+                        case "W":
+                          $resource = "water";
+                          break;
+                        case "M":
+                          $resource = "metal";
+                          break;
+                        default:
+                          $resource = "coin";
+                          break;
+                      }
+                      if($multiplier == 0 || $cost == "L") $multiplier = "X";
+                      if(($i == 2 && count($costs) < 5) || ($i == 3 && count($costs) > 4)) echo "<br />";
+                      ?>
+
+                      <span class="fa-stack fa-lg">
+                        <i class="exo-<?php echo $resource ?> fa-stack-1x"></i>
+                        <i class="fa-stack-1x cost<?php if($resource == 'water') echo ' water-cost';?>"><?php echo $multiplier; ?></i>
+                      </span>
+
+                      <?php
                     }
                   ?>
-                });
-              </script>
+
             </span>
             <div style="color:#888;font-size:30px;margin-top:-10px;"><? echo $action->type; ?></div>
-
           </div>
 
             <canvas id="myCanvas" width="700" height="<?

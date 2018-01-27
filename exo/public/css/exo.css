@@ -76,3 +76,21 @@ body{
 .card-section{
     padding-top:0px;
 }
+
+
+
+.cost{
+  color:white;
+  font-style: normal;
+  text-shadow:-1px -1px 0 #222,1px -1px 0 #222,-1px 1px 0 #222,1px 1px 0 #222;
+  margin-top:-2px;
+}
+.water-cost{
+  margin-top:-1px;
+}
+.fa-stack{
+    line-height: 45px;
+    height:45px;
+    width:45px;
+    float:right;
+}
