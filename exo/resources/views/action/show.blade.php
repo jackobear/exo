@@ -56,7 +56,7 @@
 
                       <span class="fa-stack fa-lg">
                         <i class="exo-<?php echo $resource ?> fa-stack-1x"></i>
-                        <i class="fa-stack-1x cost<?php if($resource == 'water') echo ' water-cost';?>"><?php echo $multiplier; ?></i>
+                        <i class="fa-stack-1x cost"><?php echo $multiplier; ?></i>
                       </span>
 
                       <?php

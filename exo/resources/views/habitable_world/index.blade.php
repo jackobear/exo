@@ -18,11 +18,11 @@
           </tr>
           @foreach ($habitable_worlds as $habitable_world)
             <tr>
-              <td><a href="/habitable_world/{{ $habitable_world->id }}">{{ $habitable_world->name }}</a></td>
+              <td><a href="/habitable-world/{{ $habitable_world->id }}">{{ $habitable_world->name }}</a></td>
               <td>{{ $habitable_world->type }}</td>
               <td>{{ $habitable_world->escape_velocity }}</td>
               <td><a href="{{ $habitable_world->artist_url }}">{{ $habitable_world->artist_url }}</a></td>
-              <td><a href="/habitable_world/edit/{{ $habitable_world->id }}">Edit</a></td>
+              <td><a href="/habitable-world/edit/{{ $habitable_world->id }}">Edit</a></td>
             </tr>
           @endforeach
         </table>

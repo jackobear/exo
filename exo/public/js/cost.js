@@ -1,3 +1,5 @@
+// No longer in use in favor of using glyphter fonts for icons
+
 function Cost(cost_str, multiplier, index, canvas='myCostCanvas'){
   var canvas = document.getElementById(canvas);
   var context = canvas.getContext('2d');

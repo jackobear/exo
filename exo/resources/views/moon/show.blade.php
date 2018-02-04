@@ -7,6 +7,8 @@
     <title><? echo $moon->name; ?></title>
     <link rel="stylesheet" href="/css/foundation/foundation.css">
     <link rel="stylesheet" href="/css/foundation/app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/Glyphter.css">
     <link rel="stylesheet" href="/css/exo.css">
     <script type="text/javascript" src="/js/world.js"></script>
   </head>
@@ -37,7 +39,12 @@
           
           <div class="card-section" style="padding-top:0px;">
             <h3><? echo $moon->body; ?>
-              <div style="float:right;">Launch Cost: <div class="launch-cost"><? echo $moon->escape_velocity; ?></div></div>
+                <div style="float:right;">Launch Cost: 
+                 <span class="fa-stack fa-lg">
+                   <i class="exo-fuel fa-stack-1x"></i>
+                   <i class="fa-stack-1x cost"><?php echo $moon->escape_velocity; ?></i>
+                 </span>
+                </div>
             </h3>
           </div>
         </div>

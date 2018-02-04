@@ -11,14 +11,15 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    // Given a string, format the resource codes in html
+    // Given a string, format the resource codes into html for inline resource icons
+    // TODO: Move into a view component/helper or something similar
     public function format_resources($text){
-        $text = preg_replace('/(\d)Fo/', "<span class='food'>$1</span>", $text);
-        $text = preg_replace('/(\d)Fu/', "<span class='fuel'>$1</span>", $text);
-        $text = preg_replace('/(\d)F/', "<span class='food'>$1</span>", $text);
-        $text = preg_replace('/(\d)W/', "<span class='water'>$1</span>", $text);
-        $text = preg_replace('/(\d)M/', "<span class='metal'>$1</span>", $text);
-        $text = preg_replace('/(\d)C/', "<span class='coin'>$1</span>", $text);
+        $text = preg_replace('/(\d)Fo/', "<span class='fa-stack fa-lg'><i class='exo-food fa-stack-1x'></i><i class='fa-stack-1x cost'>$1</i></span>", $text);
+        $text = preg_replace('/(\d)Fu/', "<span class='fa-stack fa-lg'><i class='exo-fuel fa-stack-1x'></i><i class='fa-stack-1x cost'>$1</i></span>", $text);
+        $text = preg_replace('/(\d)F/', "<span class='fa-stack fa-lg'><i class='exo-food fa-stack-1x'></i><i class='fa-stack-1x cost'>$1</i></span>", $text);
+        $text = preg_replace('/(\d)W/', "<span class='fa-stack fa-lg'><i class='exo-water fa-stack-1x'></i><i class='fa-stack-1x cost'>$1</i></span>", $text);
+        $text = preg_replace('/(\d)M/', "<span class='fa-stack fa-lg'><i class='exo-metal fa-stack-1x'></i><i class='fa-stack-1x cost'>$1</i></span>", $text);
+        $text = preg_replace('/(\d)C/', "<span class='fa-stack fa-lg'><i class='exo-coin fa-stack-1x'></i><i class='fa-stack-1x cost'>$1</i></span>", $text);
         return $text;
     }
 }

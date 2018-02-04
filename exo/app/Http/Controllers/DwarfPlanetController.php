@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Star;
 
-use Illuminate\Http\Request;
+use Request;
 
 class DwarfPlanetController extends Controller
 {
@@ -25,7 +25,7 @@ class DwarfPlanetController extends Controller
      */
     public function create()
     {
-        //
+        return view('dwarf_planet.create');
     }
 
     /**
@@ -36,7 +36,10 @@ class DwarfPlanetController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = Request::all();
+        $dwarf_planet = DwarfPlanet::create($input);
+        $dwarf_planet->save();
+        return redirect("/dwarf-planet");
     }
 
     /**
@@ -69,7 +72,8 @@ class DwarfPlanetController extends Controller
      */
     public function edit($id)
     {
-        //
+        $dwarf_planet = \App\DwarfPlanet::findOrFail($id);
+        return view('dwarf_planet.edit', ['dwarf_planet' => $dwarf_planet]);
     }
 
     /**
@@ -81,7 +85,10 @@ class DwarfPlanetController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $dwarf_planet = \App\DwarfPlanet::findOrFail($id);
+        $input = Request::all();
+        $dwarf_planet->update($input);
+        return redirect('dwarf-planet/'.$id);
     }
 
     /**

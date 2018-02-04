@@ -7,9 +7,10 @@
     <title><? echo $faction->name; ?></title>
     <link rel="stylesheet" href="/css/foundation/foundation.css">
     <link rel="stylesheet" href="/css/foundation/app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/Glyphter.css">
     <link rel="stylesheet" href="/css/exo.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/cost.js"></script>
     <script type="text/javascript" src="/js/interstellarTrack.js"></script>
   </head>
   <body>
@@ -43,10 +44,8 @@
           <div class="callout" style="margin: 0px 10px 10px 10px;">
             <h2>Interplanetary Colony Ship
             <span style="float:right;color:#888;font-size:30px;">
-              <canvas id="planetshipCostCanvas" width="150" height="100" style="display:inline-block;"></canvas>
-              <script type="text/javascript">
-                $(document).ready(function() {
-                  <?
+
+                <?php
                     $costs = explode(",", $faction->planetship_cost);
                     $multiplier = 1;
                     for($i=0;$i<count($costs);$i++){
@@ -55,14 +54,40 @@
                         $multiplier = $cost[0];
                         $cost = substr($cost, 1);
                       }
-                      if($cost[0] == "*"){
-                        $multiplier = 0;
+                      $resource = "coin";
+                      switch($cost){
+                        case "F":
+                        case "Fo":
+                          $resource = "food";
+                          break;
+                        case "Fu":
+                        case "*Fu":
+                        case "L":
+                          $resource = "fuel";
+                          break;
+                        case "W":
+                          $resource = "water";
+                          break;
+                        case "M":
+                          $resource = "metal";
+                          break;
+                        default:
+                          $resource = "coin";
+                          break;
                       }
-                      echo "var cost$i = new Cost('$cost', $multiplier, $i, 'planetshipCostCanvas');";
+                      if($multiplier == 0 || $cost == "L") $multiplier = "X";
+                      if(($i == 2 && count($costs) < 5) || ($i == 3 && count($costs) > 4)) echo "<br />";
+                      ?>
+
+                      <span class="fa-stack fa-lg">
+                        <i class="exo-<?php echo $resource ?> fa-stack-1x"></i>
+                        <i class="fa-stack-1x cost"><?php echo $multiplier; ?></i>
+                      </span>
+
+                      <?php
                     }
                   ?>
-                });
-              </script>
+
             </span>
             </h2>
             <h3>Pay fuel for launch and travel distance.  Decrease price of new colony's resource.</h3>
@@ -71,23 +96,50 @@
           <div class="callout" style="margin: 0px 10px 10px 10px;padding-bottom:0px;">
             <h2>Interstellar Colony Ship
               <span style="float:right;color:#888;font-size:30px;">
-                <canvas id="starshipCostCanvas" width="100" height="100" style="display:inline-block;"></canvas>
-                <script type="text/javascript">
-                  $(document).ready(function() {
-                    <?
-                      $costs = explode(",", $faction->starship_cost);
-                      $multiplier = 1;
-                      for($i=0;$i<count($costs);$i++){
-                        $cost = trim($costs[$i]);
-                        if(is_numeric($cost[0])){
-                          $multiplier = $cost[0];
-                          $cost = substr($cost, 1);
-                        }
-                        echo "var cost$i = new Cost('$cost', $multiplier, $i, 'starshipCostCanvas');";
+
+                <?php
+                    $costs = explode(",", $faction->starship_cost);
+                    $multiplier = 1;
+                    for($i=0;$i<count($costs);$i++){
+                      $cost = trim($costs[$i]);
+                      if(is_numeric($cost[0])){
+                        $multiplier = $cost[0];
+                        $cost = substr($cost, 1);
                       }
-                    ?>
-                  });
-                </script>
+                      $resource = "coin";
+                      switch($cost){
+                        case "F":
+                        case "Fo":
+                          $resource = "food";
+                          break;
+                        case "Fu":
+                        case "*Fu":
+                        case "L":
+                          $resource = "fuel";
+                          break;
+                        case "W":
+                          $resource = "water";
+                          break;
+                        case "M":
+                          $resource = "metal";
+                          break;
+                        default:
+                          $resource = "coin";
+                          break;
+                      }
+                      if($multiplier == 0 || $cost == "L") $multiplier = "X";
+                      if(($i == 2 && count($costs) < 5) || ($i == 3 && count($costs) > 4)) echo "<br />";
+                      ?>
+
+                      <span class="fa-stack fa-lg">
+                        <i class="exo-<?php echo $resource ?> fa-stack-1x"></i>
+                        <i class="fa-stack-1x cost"><?php echo $multiplier; ?></i>
+                      </span>
+
+                      <?php
+                    }
+                  ?>
+
               </span>
             </h2>
 
