@@ -44,7 +44,7 @@ function World(sites_str){
             case "F":
             case "Fo":
                 fillStyle = '#47331b';
-                strokeStyle = '#003300';
+                strokeStyle = '#170400';
                 featureType = 'food';
                 break;
             case "Fu":
