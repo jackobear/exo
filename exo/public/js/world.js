@@ -3,7 +3,7 @@
 function World(sites_str){
   var canvas = document.getElementById('myCanvas');
   var context = canvas.getContext('2d');
-  var radius = 70;
+  var radius = 70; // site radius
   var bonus_radius = 25;
   var border_width = 5;
   var site_margin = 50;
@@ -11,6 +11,7 @@ function World(sites_str){
   var site_x = 600;
   var site_y = 100;
 
+  if(sites_str == "") return;
   var sites = sites_str.split(",");
 
   // Push sites further down the card if there are fewer of them
@@ -21,129 +22,85 @@ function World(sites_str){
   });
 
   function create_site(context, site){
-    var bonus_margin_temp = bonus_margin;
     var features = site.split("+");
     var blur = 0;
     features.forEach(function(feature){
         if(feature == "EL") blur = 20;
     });
 
+    var feature_index = 0;
     features.forEach(function(feature){
         feature = feature.trim();
-        var multipliers = feature.split("x");
         var multiplier = 1;
-        if(multipliers.length > 1){
-            multiplier = multipliers[0];
-            feature = multipliers[1];
+        if(!isNaN(parseInt(feature[0], 10))){
+            multiplier = feature[0];
+            feature = feature.slice(1);
         }
 
+        var fillStyle = '';
+        var strokeStyle = '';
+        var featureType = '';
         switch(feature){
             case "F":
             case "Fo":
-                context.beginPath();
-                context.arc(site_x, site_y, radius, 0, 2 * Math.PI, false);
-                context.fillStyle = 'green';
-                context.fill();
-                context.lineWidth = border_width;
-                context.strokeStyle = '#003300';
-                context.shadowBlur = blur;
-                context.shadowColor = 'yellow';
-                context.stroke();
-
-                context.beginPath();
-                context.shadowBlur = 0;
-                context.rect(site_x - bonus_radius - bonus_margin_temp, site_y - bonus_radius, 2 * bonus_radius, 2 * bonus_radius);
-                context.fillStyle = 'green';
-                context.fill();
-                context.lineWidth = border_width;
-                context.strokeStyle = '#003300';
-                context.stroke();
-                context.font = "30px Arial";
-                context.fillStyle = 'black';
-                context.fillText("+"+multiplier,site_x - bonus_margin_temp - 20, site_y+10);
-
-                bonus_margin_temp += (2 * bonus_radius) + 20;                
+                fillStyle = '#47331b';
+                strokeStyle = '#003300';
+                featureType = 'food';
                 break;
             case "Fu":
-                context.beginPath();
-                context.arc(site_x, site_y, radius, 0, 2 * Math.PI, false);
-                context.fillStyle = 'red';
-                context.fill();
-                context.lineWidth = border_width;
-                context.strokeStyle = '#330000';
-                context.shadowBlur = blur;
-                context.shadowColor = 'yellow';
-                context.stroke();
-
-                context.beginPath();
-                context.shadowBlur = 0;
-                context.rect(site_x - bonus_radius - bonus_margin_temp, site_y - bonus_radius, 2 * bonus_radius, 2 * bonus_radius);
-                context.fillStyle = 'red';
-                context.fill();
-                context.lineWidth = border_width;
-                context.strokeStyle = '#000000';
-                context.stroke();
-                context.font = "30px Arial";
-                context.fillStyle = 'black';
-                context.fillText("+"+multiplier,site_x - bonus_margin_temp - 20, site_y+10);
-
-                bonus_margin_temp += (2 * bonus_radius) + 20;                
+                fillStyle = '#e60000';
+                strokeStyle = '#330000';
+                featureType = 'fuel';
                 break;
             case "W":
-                context.beginPath();
-                context.arc(site_x, site_y, radius, 0, 2 * Math.PI, false);
-                context.fillStyle = 'blue';
-                context.fill();
-                context.lineWidth = border_width;
-                context.strokeStyle = '#000033';
-                context.shadowBlur = blur;
-                context.shadowColor = 'yellow';
-                context.stroke();
-                
-                context.beginPath();
-                context.shadowBlur = 0;
-                context.rect(site_x - bonus_radius - bonus_margin_temp, site_y - bonus_radius, 2 * bonus_radius, 2 * bonus_radius);
-                context.fillStyle = 'blue';
-                context.fill();
-                context.lineWidth = border_width;
-                context.strokeStyle = '#000033';
-                context.stroke();
-                context.font = "30px Arial";
-                context.fillStyle = 'black';
-                context.fillText("+"+multiplier,site_x - bonus_margin_temp - 20, site_y+10);
-
-                bonus_margin_temp += (2 * bonus_radius) + 20;                
+                fillStyle = '#3567cc';
+                strokeStyle = '#000033';
+                featureType = 'water';
                 break;
             case "M":
-                context.beginPath();
-                context.shadowBlur = 0;
-                context.arc(site_x, site_y, radius, 0, 2 * Math.PI, false);
-                context.fillStyle = 'silver';
-                context.fill();
-                context.lineWidth = border_width;
-                context.strokeStyle = '#000000';
-                context.shadowBlur = blur;
-                context.shadowColor = 'yellow';
-                context.stroke();
-                
-                context.beginPath();
-                context.shadowBlur = 0;
-                context.rect(site_x - bonus_radius - bonus_margin_temp, site_y - bonus_radius, 2 * bonus_radius, 2 * bonus_radius);
-                context.fillStyle = 'silver';
-                context.fill();
-                context.lineWidth = border_width;
-                context.strokeStyle = '#000000';
-                context.stroke();
-                context.font = "30px Arial";
-                context.fillStyle = 'black';
-                context.fillText("+"+multiplier,site_x - bonus_margin_temp - 20, site_y+10);
-
-                bonus_margin_temp += (2 * bonus_radius) + 20;                
+                fillStyle = '#7d7d7d';
+                strokeStyle = '#000000';
+                featureType = 'metal';
                 break;
             case "He":
+                fillStyle = '#e60000';
+                strokeStyle = '#000000';
+                featureType = 'helium';
+                break;
+            case "Ca":
+            case "Cv":
+                fillStyle = '#7d7d7d';
+                strokeStyle = '#000000';
+                featureType = 'cave';
+                break;
+            case "EL":
+                fillStyle = 'yellow';
+                strokeStyle = '#cccc00';
+                featureType = 'glow';
+                break;
+            default:
+                fillStyle = '#fff8a8';
+                strokeStyle = '#cccc00';
+                featureType = 'coin';
+                break;
+        }
+        if(feature_index == 0){
+            // Main site
+            context.beginPath();
+            context.arc(site_x, site_y, radius, 0, 2 * Math.PI, false);
+            context.fillStyle = fillStyle;
+            context.fill();
+            context.lineWidth = border_width;
+            context.strokeStyle = strokeStyle;
+            context.shadowBlur = blur;
+            context.shadowColor = 'yellow';
+            context.stroke();
+        }else{
+            // Extra bonuses
+            if(featureType == 'helium'){
                 context.beginPath();
                 context.shadowBlur = 0;
-                context.rect(site_x - bonus_radius - bonus_margin_temp, site_y - bonus_radius, 2 * bonus_radius, 2 * bonus_radius);
+                context.rect(site_x - (2 * bonus_radius * feature_index) - bonus_margin, site_y - bonus_radius, 2 * bonus_radius, 2 * bonus_radius);
                 context.fillStyle = 'red';
                 context.fill();
                 context.lineWidth = border_width;
@@ -153,15 +110,13 @@ function World(sites_str){
                 var image_y = site_y - 20;
                 balloonImage.onload = function() {
                   context.shadowBlur = 0;
-                  context.drawImage(balloonImage, site_x - bonus_margin_temp - 20, image_y, 40, 40);
+                  context.drawImage(balloonImage, site_x - (bonus_radius * feature_index) - bonus_margin + 5, image_y, 40, 40);
                 };
                 balloonImage.src = '/img/balloon-original.png';
-                break;
-            case "Ca":
-            case "Cv":
+            }else if(featureType == 'cave'){
                 context.beginPath();
                 context.shadowBlur = 0;
-                context.rect(site_x - bonus_radius - bonus_margin_temp, site_y - bonus_radius, 2 * bonus_radius, 2 * bonus_radius);
+                context.rect(site_x - (2 * bonus_radius * feature_index) - bonus_margin, site_y - bonus_radius, 2 * bonus_radius, 2 * bonus_radius);
                 context.fillStyle = 'silver';
                 context.fill();
                 context.lineWidth = border_width;
@@ -171,64 +126,27 @@ function World(sites_str){
                 var image_y = site_y - 20;
                 caveImage.onload = function() {
                   context.shadowBlur = 0;
-                  context.drawImage(caveImage, site_x - bonus_margin_temp - 20, image_y, 40, 40);
+                  context.drawImage(caveImage, site_x - (bonus_radius * feature_index) - bonus_margin + 5, image_y, 40, 40);
                 };
                 caveImage.src = '/img/cave-original.png';
-                break;
-            case "EL":
-                // Extra glow layer
+            }else if(featureType == 'glow'){
                 context.beginPath();
                 context.arc(site_x, site_y, radius, 0, 2 * Math.PI, false);
                 context.shadowBlur = blur + 30;
                 context.shadowColor = 'yellow';
                 context.stroke();
-                break;
-            default:
-                if(feature[0] == "C"){
-                    // Coin Site
-                    context.beginPath();
-                    context.shadowBlur = 0;
-                    context.arc(site_x, site_y, radius, 0, 2 * Math.PI, false);
-                    context.fillStyle = 'yellow';
-                    context.fill();
-                    context.lineWidth = border_width;
-                    context.strokeStyle = '#cccc00';
-                    context.shadowBlur = blur;
-                    context.shadowColor = 'yellow';
-                    context.stroke();
-                    break;
-                }else if(feature[1] == "C"){
-                    // Coin Feature
-                    context.beginPath();
-                    context.shadowBlur = 0;
-                    context.arc(site_x - bonus_margin_temp, site_y, bonus_radius, 0, 2 * Math.PI, false);
-                    context.fillStyle = 'yellow';
-                    context.fill();
-                    context.lineWidth = border_width;
-                    context.strokeStyle = '#cccc00';
-                    context.stroke();
-                    context.font = "30px Arial";
-                    context.fillStyle = 'black';
-                    context.fillText("+"+feature[0],site_x - bonus_margin_temp - 20, site_y+10);
-                }
-                break;
+                context.shadowBlur = 0;
+            }else{
+                var x_position = site_x - (2 * bonus_radius * feature_index) - bonus_margin;
+                var y_position = site_y - bonus_radius;
+                var html = "<span class='fa-stack fa-lg' style='position:absolute;top:"+y_position+"px;left:"+x_position+"px;'>";
+                html += " <i class='exo-" + featureType + " fa-stack-1x'></i>";
+                html += " <i class='fa-stack-1x cost'>"+multiplier+"</i>";
+                html += "</span>";
+                $("#canvas_wrapper").append(html);
+            }
         }
-
-        if(multiplier > 1){
-            context.beginPath();
-            context.shadowBlur = 0;
-            context.rect(site_x - bonus_radius - bonus_margin_temp, site_y - bonus_radius, 2 * bonus_radius, 2 * bonus_radius);
-            context.fill();
-            context.lineWidth = border_width;
-            context.stroke();
-            context.font = "30px Arial";
-            context.fillStyle = 'black';
-            context.fillText("+"+multiplier,site_x - bonus_margin_temp - 20, site_y+10);
-
-            bonus_margin_temp += (2 * bonus_radius) + 20;
-        }else if(multipliers.length > 1){
-            bonus_margin_temp -= (2 * bonus_radius) + 20;
-        }
+        feature_index++;
     });
     site_y += site_margin + (radius * 2);
   }

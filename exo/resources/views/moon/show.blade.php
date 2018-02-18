@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/Glyphter.css">
     <link rel="stylesheet" href="/css/exo.css">
+    <script src="/js/foundation/vendor/jquery.js"></script>
+    <script src="/js/foundation/vendor/what-input.js"></script>
+    <script src="/js/foundation/vendor/foundation.js"></script>
+    <script src="/js/foundation/app.js"></script>
     <script type="text/javascript" src="/js/world.js"></script>
   </head>
   <body>
@@ -24,6 +28,7 @@
 
           </div>
 
+          <div id="canvas_wrapper">
             <canvas id="myCanvas" width="700" height="<?
               // Check if we need room for two lines of text
               $height = 800;
@@ -36,6 +41,7 @@
                 var sites_str = "<? echo $moon->sites; ?>";
                 var the_sites = new World(sites_str);
             </script>
+          </div>
           
           <div class="card-section" style="padding-top:0px;">
             <h3><? echo $moon->body; ?>
@@ -51,9 +57,5 @@
       </div>
     </div>
 
-    <script src="/js/foundation/vendor/jquery.js"></script>
-    <script src="/js/foundation/vendor/what-input.js"></script>
-    <script src="/js/foundation/vendor/foundation.js"></script>
-    <script src="/js/foundation/app.js"></script>
   </body>
 </html>

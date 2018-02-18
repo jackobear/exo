@@ -77,8 +77,6 @@ body{
     padding-top:0px;
 }
 
-
-
 .cost{
   color:white;
   font-style: normal;
@@ -96,4 +94,8 @@ body{
 }
 h3 span.fa-stack{
     float:none;
+}
+
+#canvas_wrapper{
+    position:relative;
 }
