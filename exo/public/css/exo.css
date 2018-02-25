@@ -83,9 +83,6 @@ body{
   text-shadow:-1px -1px 0 #222,1px -1px 0 #222,-1px 1px 0 #222,1px 1px 0 #222;
   margin-top:-2px;
 }
-.exo-water + .cost{
-  margin-top:2px;
-}
 .fa-stack{
     line-height: 45px;
     height:45px;
