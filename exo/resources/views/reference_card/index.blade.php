@@ -19,7 +19,7 @@
           @for ($i=0;$i<count($cards);$i++)
             <tr>
               <td>{{ $cards[$i] }}</td>
-              <td><a href="/reference-card/{{ $i+1 }}">Show</a></td>
+              <td><a href="/reference-card/{{ $i }}">Show</a></td>
             </tr>
           @endfor
         </table>

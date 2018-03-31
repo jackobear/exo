@@ -12,7 +12,9 @@ class ReferenceCardController extends Controller
         "space_market",
         "victory_points",
         "scoring_track",
-        "board_layout"
+        "board_layout",
+        "one_coin",
+        "five_coin",
     ];
 
     /**
@@ -54,15 +56,22 @@ class ReferenceCardController extends Controller
      */
     public function show($id)
     {
-        return view('reference_card.' . $this->cards[$id - 1]);
+        return view('reference_card.' . $this->cards[$id]);
     }
 
     public function save_all_as_png(){
-        $card_count = 5;
-        for($i=1;$i<=$card_count;$i++){
-            echo "<br>Saving a reference card...<br>";
-            $filename = "/var/www/exo/public/img/cards/reference-cards/" . $i . ".png";
-            $cmd = "google-chrome --headless --disable-gpu --screenshot=$filename --window-size=1725,1125 http://192.168.33.10/reference-card/" . $i;
+        for($i=0;$i<count($this->cards);$i++){
+            echo "<br>Saving reference cards...<br>";
+            $filename = "/var/www/exo/public/img/cards/reference-cards/" . $this->cards[$i] . ".png";
+            $cmd = "google-chrome --headless --disable-gpu --screenshot=$filename --window-size=";
+            if($this->cards[$i] == "one_coin"){
+                $cmd .= "225,225";
+            }else if($this->cards[$i] == "five_coin"){
+                $cmd .= "300x300";
+            }else{
+                $cmd .= "1725,1125";
+            }
+            $cmd .= " http://192.168.33.10/reference-card/" . $i;
             $output = "";
             $return_var = 0;
             exec(escapeshellcmd($cmd), $output, $return_var);
@@ -70,8 +79,13 @@ class ReferenceCardController extends Controller
             print_r($return_var);
 
             $image = imagecreatefrompng($filename);
+            if(strpos($this->cards[$i], 'coin') !== false){
+                // no rotation needed for coins
+            }else{
+                $image = imagerotate($image, 90, 0);
+            }
             if($image && imagefilter($image, IMG_FILTER_BRIGHTNESS, 20)){
-                imagepng($image, "/var/www/exo/public/img/print-cards/reference-cards/" . $i . ".png");
+                imagepng($image, "/var/www/exo/public/img/print-cards/reference-cards/" . $this->cards[$i] . ".png");
                 imagedestroy($image);
             }
     

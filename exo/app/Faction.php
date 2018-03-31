@@ -17,6 +17,7 @@ class Faction extends Model
         exec(escapeshellcmd($cmd), $output, $return_var);
 
         $image = imagecreatefrompng($filename);
+        $image = imagerotate($image, 90, 0);
         if($image && imagefilter($image, IMG_FILTER_BRIGHTNESS, 20)){
             imagepng($image, "/var/www/exo/public/img/print-cards/factions/" . str_replace(" ", "_", strtolower($this->name)) . ".png");
             imagedestroy($image);
