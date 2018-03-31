@@ -72,8 +72,8 @@ Game Pieces:
 	Board Layout reference card
 	Scoring Track card
 	Space Market card
-	4 Turn Sequence Helper cards
-	10 Colony Igloos per player
+	6 Turn Sequence Helper cards
+	8 Colony Igloos per player
 	1 Colony Ship per player
 	2 Probes per player
 	3 Launch systems per player
@@ -86,6 +86,10 @@ Game Pieces:
 	8 Moon cards
 	9 Planet cards
 	6 Star cards
+	15 Five Coin Chits
+	54 One Coin Chits
+
+
 
 New Action Cards (and revisions)
 	Need more resource giving actions, communal bonuses, large trade cards...up to 5x at a time
@@ -98,3 +102,5 @@ New Action Cards (and revisions)
 	Refinery should probably be nerfed a lil bit, maybe pay 1c
 	Reword planet hunter to work like space lab
 Need more planets, moons, factions?
+Planets need to talk about habitability of moons (3rd moon habitable if in star's habitable zone)
+needs logo, box art, improved instructions

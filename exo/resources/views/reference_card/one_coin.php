@@ -14,7 +14,7 @@
   </head>
   <body>
     <div class="row" style="background-color:#fff8a8;width: 225px;height: 225px;">
-      <div class="large-12 columns text-center" style='padding: 78px 0px 0px 0px;'>
+      <div class="large-12 columns text-center" style='padding: 76px 0px 0px 2px;'>
         <span class="cost" style="font-size:50px;">1</span>
       </div>
     </div>
