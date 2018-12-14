@@ -42,7 +42,7 @@
           
 
           <div class="callout" style="margin: 0px 10px 10px 10px;">
-            <h2>Interplanetary Colony Ship
+            <h2>Colony Ship
             <span style="float:right;color:#888;font-size:30px;">
 
                 <?php
@@ -90,11 +90,11 @@
 
             </span>
             </h2>
-            <h3>Pay fuel for launch and travel distance.  Decrease price of new colony's resource.</h3>
+            <h3>Pay fuel for launch and travel distance.  Decrease price of new colony's resource. +1 VP when built, +1 VP when first Colony on a world.</h3>
           </div>
 
           <div class="callout" style="margin: 0px 10px 10px 10px;padding-bottom:0px;">
-            <h2>Interstellar Colony Ship
+            <h2>Exocolony Ship
               <span style="float:right;color:#888;font-size:30px;">
 
                 <?php
@@ -143,12 +143,12 @@
               </span>
             </h2>
 
-            <canvas id="rocketCanvas" width="1300" height="110" style="display:inline-block;"></canvas>
-            <script type="text/javascript">
-              $(document).ready(function() {
-                var track = new interstellarTrack(<? echo $faction->travel_time . ", " . $faction->colonize_time ?>);
-              });
-            </script>
+              <?php echo sprintf("%+d", $faction->colonize_time) . " VP: Colonize time bonus,"; ?>
+              +1 VP: First life detection,
+              +1 VP: Detect life,
+              +1 VP: First ship to enter a new star system,
+              +1 VP: First Colony outside starting star system,
+              +1 VP: First Colony in a new star system.
 
           </div>
 
