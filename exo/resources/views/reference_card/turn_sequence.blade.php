@@ -26,13 +26,12 @@
             <li>Collect resources from colonies and buildings.</li>
             <li>Main Phase (Play in any order)</li>
             <ul>
-              <li>Once per turn, purchase an Action card for 2C</li>
-              <li>Play an Action card</li>
-              <li>Buy/Sell with Space Market</li>
-              <li>Activate action cards in play</li>
-              <li>Build Interplanetary ship</li>
-              <li>Build Interstellar ship</li>
-              <li>Advance Interstellar ship</li>
+              <li>Once per turn, pay 2C + XC and draw 1 + X Action Cards.  Keep one and put the rest on the bottom of the deck in any order.</li>
+              <li>Play any number of Action card</li>
+              <li>Once per turn, Buy and/or Sell with Space Market</li>
+              <li>Activate Action cards in play</li>
+              <li>Build Colony Ship</li>
+              <li>Build Exocolony Ship</li>
             </ul>
             <li>Discard down to 5 Action cards in hand</li>
           </ol>

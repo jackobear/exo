@@ -2,26 +2,28 @@ Game Goal:
 	Be the first player to get 16 Victory Points.  Victory points are gained by settling worlds, discovering lifeforms and building launch systems.
 
 Game Setup:
-	1. Randomly determine a starting player using the included d6.
-	2. Each player gets a faction card, which dictates his/her starting action cards.
-	3. Each player gets one Food, one Metal and one Water.  Each player also gets one Fuel equal to their starting position plus four.
-	4. Shuffle the star deck and deal one star.  Refer to the Board Layout card for position.
-	5. Shuffle the planet deck and deal planets according to the star card.
-	6. Shuffle the moon deck and deal moons as each planet describes.
-	7. Shuffle the astorid deck and place it near the center the table.
-	8. Each player places a colony on a habitable world in the starting star system that was just dealt.
+	1. Refer to the Board Layout reference card for positioning cards and decks on the table.
+	2. Randomly determine a starting player using the included d6.
+	3. Each player draws a random Faction card, which dictates his/her starting Action cards.
+	4. Each player gets one Food, one Metal and one Water.  Each player also gets one Fuel equal to their starting position plus four.
+	5. Shuffle the Star deck and deal one Star.  Refer to the Board Layout card for position.
+	6. Shuffle the Planet deck and deal Planets according to the Star card and the number of players.
+	7. Shuffle the Moon deck and deal Moons as each planet describes.
+	8. Check Stars and Planets
+	9. Shuffle the astorid deck and place it near the center the table.
+	10. Each player places a colony on a habitable world in the starting star system that was just dealt.
 
 Game Round:
 	1. The current player receives resources and coin as described by the sites he/she has colonized as well as any building income.
-	2. The current player may purchase one card from the Action market.
-	2. The current player's main phase begins.  The current player can do any or none of these things in any order:
+	2. The current player may once per turn, pay two *or more* Coin and draw one Action Card plus another Action for each Coin spent over two.  Keep one and put the rest on the bottom of the deck in any order.
+	3. The current player's main phase begins.  The current player can do any or none of these things in any order:
 		a. Play an action card by paying the cost in the upper right of the card an annoucing the effects.  Note that some cards also have a launch cost.  The launch cost is shown in the lower left corner of a world's card.  The player must pay this amount in fuel plus one for each difference in orbit from the launching colony to the target world.
 		b. Buy one resource from and/or sell one resource to the space market once per turn.
 		c. Activate any action card he/she has in play, such as using an asteroid miner.
 		d. Build an Colony Ship and colonize a world in the starting star system.  Decrease the price of the new colony's resource.
 		e. Build an Exocolony Ship.  The player places a colony ship on his/her ship track.  When the ship has travelled to the new system, the player places a colony on the habitable world of the new system.  If no new systems have yet been explored, the player draws a star card and generates a new star system and colonizes one of the worlds therein.  Rather than generating the entire system, simply draw one habitable planet and any of its moons.
-	3. The current player discards down to 5 action cards and announces that he/she is done.
-	4. The next player repeats the previous steps until somebody declares victory at 16 victory points.
+	4. The current player discards down to 5 action cards and announces that he/she is done.
+	5. The next player repeats the previous steps until somebody declares victory at 16 victory points.
 
 Action Cards:
 	1. After paying the building cost, some action cards stay in play, others are discarded into the communal discard pile.

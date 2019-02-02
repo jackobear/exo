@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="/css/Glyphter.css">
     <link rel="stylesheet" href="/css/exo.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/interstellarTrack.js"></script>
   </head>
   <body>
     <div class="row" style="background-color: #000;max-width: 108rem;">

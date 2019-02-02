@@ -31,9 +31,9 @@
               <li>+1 VP: First life detection</li>
               <li>+1 VP: Detect life</li>
               <li>+1 VP: Launch Interstellar Probe</li>
-              <li>+1 VP: First ship to enter a new star system</li>
-              <li>+1 VP: First Colony outside starting star system</li>
-              <li>+1 VP: First Colony in a new star system</li>
+              <li>+1 VP: First ship to enter a new Star system</li>
+              <li>+1 VP: First Colony outside starting Star system</li>
+              <li>+1 VP: First Colony in a new Star system</li>
             </ul>
           </ol>
 
