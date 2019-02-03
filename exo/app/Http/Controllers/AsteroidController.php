@@ -25,7 +25,7 @@ class AsteroidController extends Controller
      */
     public function create()
     {
-        //
+        return view('asteroid.create');
     }
 
     /**
@@ -36,7 +36,10 @@ class AsteroidController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = Request::all();
+        $asteroid = Asteroid::create($input);
+        $asteroid->save();
+        return redirect("/asteroid");
     }
 
     /**
@@ -97,6 +100,7 @@ class AsteroidController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Asteroid::destroy($id);
+        return redirect('asteroid');
     }
 }

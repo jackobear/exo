@@ -25,7 +25,7 @@ class HabitableWorldController extends Controller
      */
     public function create()
     {
-        //
+        return view('habitable_world.create');
     }
 
     /**
@@ -36,7 +36,10 @@ class HabitableWorldController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = Request::all();
+        $habitable_world = HabitableWorld::create($input);
+        $habitable_world->save();
+        return redirect("/habitable-world");
     }
 
     /**

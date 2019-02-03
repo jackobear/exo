@@ -25,7 +25,7 @@ class StarController extends Controller
      */
     public function create()
     {
-        //
+        return view('star.create');
     }
 
     /**
@@ -36,7 +36,10 @@ class StarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = Request::all();
+        $star = Star::create($input);
+        $star->save();
+        return redirect("/star");
     }
 
     /**

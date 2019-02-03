@@ -22,6 +22,13 @@
               <td>{{ $asteroid->type }}</td>
               <td><a href="{{ $asteroid->artist_url }}">{{ $asteroid->artist_url }}</a></td>
               <td><a href="/asteroid/edit/{{ $asteroid->id }}">Edit</a></td>
+              <td>
+                <form action="/asteroid/destroy/{{ $asteroid->id }}" method="post">
+                  {{csrf_field()}}
+                  <input name="_method" type="hidden" value="DELETE">
+                  <button class="button alert" type="submit">Delete</button>
+                </form>
+              </td>
             </tr>
           @endforeach
         </table>

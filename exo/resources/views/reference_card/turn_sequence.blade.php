@@ -26,7 +26,7 @@
             <li>Collect resources from colonies and buildings.</li>
             <li>Main Phase (Play in any order)</li>
             <ul>
-              <li>Once per turn, pay 2C + XC and draw 1 + X Action Cards.  Keep one and put the rest on the bottom of the deck in any order.</li>
+              <li>Once per turn, pay 2C + XC and draw 1 + X Action Cards.  Keep one and discard the rest.</li>
               <li>Play any number of Action card</li>
               <li>Once per turn, Buy and/or Sell with Space Market</li>
               <li>Activate Action cards in play</li>

@@ -51,9 +51,8 @@
 
           </script>
 
-          <p style="margin-left:20px;">One trade per player per turn.  Building launch systems allows for more trades per turn.
-            A trade may consist of buying one resource, selling one resource, or trading one resource for another and paying or gaining the difference in price.
-            Starting prices are Metal:1, Fuel:2, Water:3, Food:4.  Use resources to mark prices.
+          <p style="margin-left:20px;">
+            Starting prices are Metal:1, Fuel:2, Water:3, Food:4.
           </p>
         </div>
       </div>
