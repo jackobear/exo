@@ -50,7 +50,7 @@
                           $resource = "coin";
                           break;
                       }
-                      if($multiplier == 0 || $cost == "L") $multiplier = "X";
+                      if($multiplier == 0 || $cost == "L") $multiplier = "&#x2197;";
                       if(($i == 2 && count($costs) < 5) || ($i == 3 && count($costs) > 4)) echo "<br />";
                       ?>
 

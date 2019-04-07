@@ -96,7 +96,7 @@ function Cost(cost_str, multiplier, index, canvas='myCostCanvas'){
   context.font = "26px Arial";
   context.fillStyle = 'white';
   if(multiplier == 0 || cost_str == "L"){
-    multiplier = "X";
+    multiplier = "&#x2197;";
   }
   context.fillText(multiplier,cost_x - 7, cost_y + 9);
 }
