@@ -25,7 +25,7 @@ class FactionController extends Controller
      */
     public function create()
     {
-        //
+        return view('faction.create');
     }
 
     /**
@@ -36,7 +36,10 @@ class FactionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = Request::all();
+        $faction = Faction::create($input);
+        $faction->save();
+        return redirect("/faction");
     }
 
     /**
@@ -97,6 +100,7 @@ class FactionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Faction::destroy($id);
+        return redirect('faction');
     }
 }
