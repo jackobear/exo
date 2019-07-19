@@ -15,7 +15,7 @@
   <body>
     <div class="row" style="background-color: #000;max-width: 108rem;">
       <div class="large-12 columns">
-        <div class="card" style="width: 1579px;height:985px;margin:70px 0px 70px 59px;border-radius:15px;">
+        <div class="card" style="height:1579px;width:985px;margin:70px 0px 70px 59px;border-radius:15px;">
           <div class="card-divider">
             <h1>
                 <? echo $faction->name; ?>
@@ -23,29 +23,79 @@
 
           </div>
 
-          <div class="row expanded">
-            <div class="large-4 columns" style="padding-right:0px;">
-              <div class="callout" style="margin:15px 0px 15px 15px;">
-                <h3><? echo $faction->body; ?></h3>
-              </div>
-              <div class="callout" style="margin:15px 0px 15px 15px;">
-                <span style="font-style:italic;font-size:20pt;color:#aaa;"><? echo $faction->flavor_text; ?></span>
-              </div>
-            </div>
-            <div class="large-8 columns">
-              <canvas id="myCanvas" width="1100" height="505" style="background: url('/img/art/factions/<? 
-                echo strtolower(str_replace(" ", "-", $faction->name)); 
-              ?>.jpg');background-size: auto auto;"></canvas>
-            </div>
+          <div class="row">
+            <canvas id="myCanvas" width="1000" height="350" style="background: url('/img/art/factions/<? 
+              echo strtolower(str_replace(" ", "-", $faction->name)); 
+            ?>.jpg');background-size: auto auto;background-position: center; "></canvas>
           </div>
-          
 
-          <div class="callout" style="margin: 0px 10px 10px 10px;">
+          <div class="callout" style="margin: 0px 10px 10px 10px;padding: 10px 16px 10px 16px;">
+            <h3><? echo $faction->body; ?></h3>
+          </div>
+
+          <div class="callout" style="margin: 0px 10px 10px 10px;padding: 10px 16px 10px 16px;">
+            <span style="font-style:italic;font-size:20pt;color:#aaa;"><? echo $faction->flavor_text; ?></span>
+          </div>
+
+          <div class="callout" style="margin: 0px 10px 10px 10px;padding: 10px 16px 10px 16px;">
             <h2>Colony Ship
             <span style="float:right;color:#888;font-size:30px;">
 
                 <?php
                     $costs = explode(",", $faction->planetship_cost);
+                    $multiplier = 1;
+                    for($i=0;$i<count($costs);$i++){
+                      $cost = trim($costs[$i]);
+                      if(is_numeric($cost[0])){
+                        $multiplier = $cost[0];
+                        $cost = substr($cost, 1);
+                      }
+                      $resource = "coin";
+                      switch($cost){
+                        case "F":
+                        case "Fo":
+                          $resource = "food";
+                          break;
+                        case "Fu":
+                        case "*Fu":
+                        case "L":
+                          $resource = "fuel";
+                          break;
+                        case "W":
+                          $resource = "water";
+                          break;
+                        case "M":
+                          $resource = "metal";
+                          break;
+                        default:
+                          $resource = "coin";
+                          break;
+                      }
+                      if($multiplier == 0 || $cost == "L") $multiplier = "&#x2197;";
+                      if(($i == 2 && count($costs) < 5) || ($i == 3 && count($costs) > 4)) echo "<br />";
+                      ?>
+
+                      <span class="fa-stack fa-lg">
+                        <i class="exo-<?php echo $resource ?> fa-stack-1x"></i>
+                        <i class="fa-stack-1x cost"><?php echo $multiplier; ?></i>
+                      </span>
+
+                      <?php
+                    }
+                  ?>
+
+            </span>
+            </h2>
+            <h3>Pay fuel for launch and travel distance.  Decrease price of new colony's resource. +1 VP when built, +1 VP for first Colony on a world.</h3>
+          </div>
+
+          <div class="callout" style="margin: 0px 10px 10px 10px;padding: 10px 16px 10px 16px;">
+            <h2>Launch System
+            <span style="float:right;color:#888;font-size:30px;">
+
+                <?php
+                    // TODO: Add launch_system_cost to faction model
+                    $costs = explode(",", "2M, 2Fu, 1W");
                     $multiplier = 1;
                     for($i=0;$i<count($costs);$i++){
                       $cost = trim($costs[$i]);
@@ -89,10 +139,10 @@
 
             </span>
             </h2>
-            <h3>Pay fuel for launch and travel distance.  Decrease price of new colony's resource. +1 VP when built, +1 VP when first Colony on a world.</h3>
+            <h3>Requires Colony on world with launch cost of 2 or less.  Ignore Fuel cost to leave planet. +1 Trade per turn. +1 VP.  Any player with a Colony on this world may use this to launch. Gain 1C per launch by any player.</h3>
           </div>
 
-          <div class="callout" style="margin: 0px 10px 10px 10px;padding-bottom:0px;">
+          <div class="callout" style="margin: 0px 10px 10px 10px;padding: 10px 16px 10px 16px;">
             <h2>Exocolony Ship
               <span style="float:right;color:#888;font-size:30px;">
 

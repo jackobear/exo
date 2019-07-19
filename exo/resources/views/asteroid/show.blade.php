@@ -28,7 +28,7 @@
               echo $height;
             ?>" style="background: url('/img/art/asteroids/<? 
               echo strtolower(str_replace(" ", "-", $asteroid->name)); 
-            ?>.jpg');background-size: auto auto;"></canvas>
+            ?>.jpg');background-size: auto auto;-moz-background-size: cover;"></canvas>
           
           <div class="card-section">
             <h3><? echo $asteroid->body; ?></h3>

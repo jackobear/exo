@@ -74,6 +74,7 @@
               if(strlen(strip_tags($action->body)) > 80) $height -= 43;
               if(strlen(strip_tags($action->body)) > 130) $height -= 43;
               if(strlen(strip_tags($action->body)) > 180) $height -= 43;
+              if(strlen(strip_tags($action->body)) > 230) $height -= 43;
               echo $height;
             ?>" style="background: url('/img/art/actions/<? 
               echo strtolower(str_replace(" ", "-", $action->name)); 
