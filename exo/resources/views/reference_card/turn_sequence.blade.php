@@ -26,14 +26,14 @@
             <li>Collect resources from colonies and buildings.</li>
             <li>Main Phase (Play in any order)</li>
             <ul>
-              <li>Once per turn, pay 2C + XC and draw 1 + X Action Cards.  Keep one and discard the rest.</li>
-              <li>Play any number of Action card</li>
-              <li>Once per turn, Buy and/or Sell with Space Market</li>
+              <li>Once per turn, you may pay two <b>or more</b> Coin and draw one Action Card plus another Action for each Coin spent over two.</li>
+              <li>Play any number of Action cards</li>
+              <li>Once per turn, Buy and/or Sell one resource with Space Market</li>
               <li>Activate Action cards in play</li>
               <li>Build Colony Ship</li>
               <li>Build Exocolony Ship</li>
             </ul>
-            <li>Discard down to 5 Action cards in hand</li>
+            <li>Discard down to 5 Action cards in hand and announce the end of your turn.</li>
           </ol>
 
         </div>

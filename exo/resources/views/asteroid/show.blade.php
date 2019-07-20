@@ -25,6 +25,8 @@
               // Check if we need room for two lines of text
               $height = 750;
               if(strlen(strip_tags($asteroid->body)) > 27) $height -= 43;
+              if(strlen(strip_tags($asteroid->body)) > 80) $height -= 43;
+              if(strlen(strip_tags($asteroid->body)) > 130) $height -= 43;
               echo $height;
             ?>" style="background: url('/img/art/asteroids/<? 
               echo strtolower(str_replace(" ", "-", $asteroid->name)); 
