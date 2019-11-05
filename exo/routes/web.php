@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Local database export button, no feedback
+Route::get('/database/export', 'DatabaseController@export');
+
 // Save as PNG
 Route::get('/planet/save_as_png/{id}', 'PlanetController@save_as_png');
 Route::get('/planet/save_all_as_png', 'PlanetController@save_all_as_png');
