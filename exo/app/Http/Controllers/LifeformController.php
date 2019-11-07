@@ -25,7 +25,7 @@ class LifeformController extends Controller
      */
     public function create()
     {
-        //
+        return view('lifeform.create');
     }
 
     /**
@@ -36,7 +36,10 @@ class LifeformController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = Request::all();
+        $lifeform = Lifeform::create($input);
+        $lifeform->save();
+        return redirect("/lifeform");
     }
 
     /**

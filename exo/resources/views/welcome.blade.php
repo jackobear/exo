@@ -98,6 +98,8 @@
                 </div><br /><br />
                 <div class="links">
                     <a href="/database/export">Export DB</a>
+                    <a href="https://laravel.com/docs/5.3">Laravel 5.3 Docs</a>
+                    <a href="/action/decklist">Export Action Decklist</a>
                 </div>
             </div>
         </div>

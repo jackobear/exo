@@ -14,19 +14,7 @@
       <div class="large-12 columns">
         <div class="card" style="width: 678px;height:980px;margin:73px 0px 72px 59px;border-radius:15px;">
 
-            <canvas id="myCanvas" width="700" height="980?>" style="background-image: url('/img/art/card-backs/orion.jpg');background-size: cover;background-repeat: no-repeat;background-position: 50% 50%;"></canvas>
-            <script type="text/javascript">
-              var canvas = document.getElementById('myCanvas');
-              var context = canvas.getContext('2d');
-              context.font = "80px Arial";
-              context.strokeStyle = 'black';
-              context.lineWidth = 6;
-              context.textAlign = 'center';
-              context.strokeText("<? echo $card_type; ?>", 350, 290);
-              context.fillStyle = 'white';
-              context.fillText("<? echo $card_type; ?>", 350, 290);
-            </script>
-          
+            <canvas id="myCanvas" width="700" height="980" style="background-image: url('/img/art/card-backs/<? echo $card_type; ?>.jpg');background-size: cover;background-repeat: no-repeat;background-position: 50% 50%;"></canvas>
         </div>
       </div>
     </div>

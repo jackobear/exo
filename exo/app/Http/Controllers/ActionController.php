@@ -55,6 +55,12 @@ class ActionController extends Controller
         return view('action.show', ['action' => $action]);
     }
 
+    public function decklist()
+    {
+        $actions = \App\Action::orderBy('name')->get();
+        return view('action.decklist', ['actions' => $actions]);
+    }
+
     public function save_all_as_png(){
         $actions = \App\Action::all();
         foreach($actions as $action){

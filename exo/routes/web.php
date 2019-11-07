@@ -15,8 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Local database export button, no feedback
+// Utilities
 Route::get('/database/export', 'DatabaseController@export');
+Route::get('/action/decklist', 'ActionController@decklist');
 
 // Save as PNG
 Route::get('/planet/save_as_png/{id}', 'PlanetController@save_as_png');
@@ -79,7 +80,7 @@ Route::delete('/dwarf-planet/destroy/{id}', 'DwarfPlanetController@destroy');
 Route::delete('/habitable-world/destroy/{id}', 'HabitableWorldController@destroy');
 
 // Card Views
-Route::get('/card', 'CardController@view');
+Route::get('/card', 'CardController@view'); // oxbow?
 Route::get('/planet/{id}', 'PlanetController@show');
 Route::get('/moon/{id}', 'MoonController@show');
 Route::get('/star/{id}', 'StarController@show');
