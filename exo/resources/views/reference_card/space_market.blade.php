@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="/css/foundation/app.css">
     <link rel="stylesheet" href="/css/exo.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/cost.js"></script>
-    <script type="text/javascript" src="/js/interstellarTrack.js"></script>
   </head>
   <body>
     <div class="row" style="background-color: #000;max-width: 108rem;">
@@ -23,13 +21,13 @@
           </div>
 
           <div class="row expanded">
-            <canvas id="myCanvas" width="1600" height="650"></canvas>
+            <canvas id="myCanvas" width="1600" height="790" style="background: url('/img/art/starfield.jpg');background-size: contain;background-position: center;"></canvas>
           </div>
           <script type="text/javascript">
-            var radius = 150;
+            var radius = 170;
             var price_x = radius + 40;
             var price_y = radius + 20;
-            var canvas = document.getElementById("myCanvas");
+            var canvas =  document.getElementById("myCanvas");
             var context = canvas.getContext('2d');
             for(var i=1;i<7;i++){
               context.beginPath();
@@ -44,15 +42,28 @@
               context.fillText(i, price_x - 40, price_y + 47);
               price_x += 2*radius + 250;
               if(i == 3){
-                price_y += 2*radius + 10;
+                price_y += 2*radius + 60;
                 price_x = radius + 40;
               }
             }
 
+            var actionsImage = new Image();
+            actionsImage.src = '/img/art/symbols/actions.png';
+            actionsImage.onload = function(){
+              context.drawImage(actionsImage, radius + 25, radius + radius/2, 40, 50)
+
+              context.drawImage(actionsImage, 5 * radius + 500, radius + radius/2, 40, 50)
+              context.drawImage(actionsImage, 5 * radius + 540, radius + radius/2, 40, 50)
+
+              context.drawImage(actionsImage, 5 * radius + 480, 3 * radius + radius/2 + 60, 40, 50)
+              context.drawImage(actionsImage, 5 * radius + 520, 3 * radius + radius/2 + 60, 40, 50)
+              context.drawImage(actionsImage, 5 * radius + 560, 3 * radius + radius/2 + 60, 40, 50)
+            }
+
           </script>
 
-          <p style="margin-left:20px;">
-            Starting prices are Metal:1, Fuel:2, Water:3, Food:4.
+          <p style="margin-left:40px;">
+            Setup: Metal:1, Fuel:2, Water:3, Food:4
           </p>
         </div>
       </div>

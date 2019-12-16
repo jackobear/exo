@@ -15,7 +15,7 @@
   <body>
     <div class="row" style="background-color: #000;max-width: 108rem;">
       <div class="large-12 columns">
-        <div class="card" style="width: 1579px;height:985px;margin:70px 0px 70px 59px;border-radius:15px;">
+        <div class="card" style="width: 1579px;height:985px;margin:70px 0px 70px 59px;border-radius:15px;background: url('/img/art/starfield.jpg');background-size: contain;background-position: center;">
           <div class="card-divider">
             <h1>
                 Scoring Track
@@ -44,18 +44,15 @@
 
           <div class="row expanded">
             <div class="large-2 columns large-offset-1">
-              <div class="scoring-marker">10</div>
+              <div class="scoring-marker">14</div>
             </div>
             <div class="large-2 columns">
-              <div class="scoring-marker">9</div>
+              <div class="scoring-marker">15</div>
             </div>
             <div class="large-2 columns">
-              <div class="scoring-marker">8</div>
+              <div class="scoring-marker">16</div>
             </div>
-            <div class="large-2 columns">
-              <div class="scoring-marker">7</div>
-            </div>
-            <div class="large-2 columns">
+            <div class="large-2 columns large-offset-2">
               <div class="scoring-marker">6</div>
             </div>
             <div class="large-1 columns">
@@ -64,27 +61,36 @@
 
           <div class="row expanded">
             <div class="large-2 columns large-offset-1">
-              <div class="scoring-marker">11</div>
-            </div>
-            <div class="large-2 columns">
-              <div class="scoring-marker">12</div>
-            </div>
-            <div class="large-2 columns">
               <div class="scoring-marker">13</div>
             </div>
             <div class="large-2 columns">
-              <div class="scoring-marker">14</div>
             </div>
             <div class="large-2 columns">
-              <div class="scoring-marker">15</div>
+            </div>
+            <div class="large-2 columns">
+            </div>
+            <div class="large-2 columns large-offset-6">
+              <div class="scoring-marker">7</div>
             </div>
             <div class="large-1 columns">
             </div>
           </div>
 
           <div class="row expanded">
-            <div class="large-2 columns large-offset-9">
-              <div class="scoring-marker">16</div>
+            <div class="large-2 columns large-offset-1">
+              <div class="scoring-marker">12</div>
+            </div>
+            <div class="large-2 columns">
+              <div class="scoring-marker">11</div>
+            </div>
+            <div class="large-2 columns">
+              <div class="scoring-marker">10</div>
+            </div>
+            <div class="large-2 columns">
+              <div class="scoring-marker">9</div>
+            </div>
+            <div class="large-2 columns">
+              <div class="scoring-marker">8</div>
             </div>
             <div class="large-1 columns">
             </div>

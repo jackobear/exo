@@ -16,12 +16,22 @@
           <tr>
             <th>Quantity</th><th>Name</th>
           </tr>
+          @php
+            $total = 0;
+          @endphp
           @foreach ($actions as $action)
             <tr>
               <td>{{ $action->quantity }}</td>
               <td>{{ $action->name }}</td>
             </tr>
+            @php
+              $total += $action->quantity
+            @endphp
           @endforeach
+          <tr>
+            <td>{{ $total }}</td>
+            <td>TOTAL</td>
+          </tr>
         </table>
       </div>
     </div>
