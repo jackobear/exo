@@ -24,6 +24,7 @@
           @endfor
         </table>
       </div>
+      <a href="/card-back/save_all_as_png">Save All As PNG</a>
     </div>
   </body>
 </html>

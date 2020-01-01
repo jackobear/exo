@@ -39,7 +39,7 @@
             ?>.jpg');background-size: auto auto;"></canvas>
             <script type="text/javascript">
                 var sites_str = "<? echo $moon->sites; ?>";
-                var the_sites = new World(sites_str);
+                var the_sites = new World(sites_str, "<? echo $moon->body; ?>");
             </script>
           </div>
           

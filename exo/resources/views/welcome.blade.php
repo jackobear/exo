@@ -13,7 +13,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-image: url('/img/art/card-backs/orion.jpg');
+                background-image: url('/img/art/starfield.jpg');
                 background-repeat: repeat-x;
                 color: #fff;
                 font-family: 'Raleway', sans-serif;

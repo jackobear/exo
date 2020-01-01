@@ -76,7 +76,14 @@ body{
 .card-section{
     padding-top:0px;
 }
-
+@font-face {
+    font-family: quicksand;
+    src: url('/Quicksand_Book.otf') format("opentype");
+}
+* {
+    font-family: quicksand !important;
+    letter-spacing:-0.05em !important;
+}
 .cost{
   color:white;
   font-style: normal;

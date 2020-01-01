@@ -26,6 +26,7 @@
           @endforeach
         </table>
       </div>
+      <a href="/lifeform/save_all_as_png">Save All As PNG</a>
     </div>
   </body>
 </html>

@@ -1,14 +1,14 @@
 // Draw all the Sites and Features for the given world string
 
-function World(sites_str){
+function World(sites_str, body=''){
   var canvas = document.getElementById('myCanvas');
   var context = canvas.getContext('2d');
   var radius = 70; // site radius
   var bonus_radius = 25;
   var border_width = 5;
-  var site_margin = 50;
+  var site_margin = 35;
   var bonus_margin = 110;
-  var site_x = 600;
+  var site_x = 560;
   var site_y = 100;
 
   if(sites_str == "") return;
@@ -20,6 +20,15 @@ function World(sites_str){
   sites.forEach(function(site){
     create_site(context, site);
   });
+
+  // Sometimes the world itself has features (Ganymede)
+  if(body != '' && body.includes('Magnetosphere')) {
+    const shieldImage = new Image();
+    shieldImage.src = '/img/art/symbols/magnetic-shield.png';
+    shieldImage.onload = function(){
+      context.drawImage(shieldImage, 40, 50, 100, 100);
+    }
+  }
 
   function create_site(context, site){
     var features = site.split("+");
@@ -86,15 +95,13 @@ function World(sites_str){
         }
         if(feature_index == 0){
             // Main site
-            context.beginPath();
-            context.arc(site_x, site_y, radius, 0, 2 * Math.PI, false);
             context.fillStyle = fillStyle;
-            context.fill();
+            context.fillRect(site_x - radius, site_y - radius, radius * 2.4, radius * 1.8);
             context.lineWidth = border_width;
             context.strokeStyle = strokeStyle;
             context.shadowBlur = blur;
             context.shadowColor = 'yellow';
-            context.stroke();
+            context.strokeRect(site_x - radius, site_y - radius, radius * 2.4, radius * 1.8);
         }else{
             // Extra bonuses
             if(featureType == 'helium'){
@@ -130,11 +137,11 @@ function World(sites_str){
                 };
                 caveImage.src = '/img/cave-original.png';
             }else if(featureType == 'glow'){
-                context.beginPath();
-                context.arc(site_x, site_y, radius, 0, 2 * Math.PI, false);
+                context.lineWidth = border_width;
+                context.strokeStyle = strokeStyle;
                 context.shadowBlur = blur + 30;
                 context.shadowColor = 'yellow';
-                context.stroke();
+                context.strokeRect(site_x - radius, site_y - radius, radius * 2.4, radius * 1.8);
                 context.shadowBlur = 0;
             }else{
                 var x_position = site_x - (2 * bonus_radius * feature_index) - bonus_margin;
