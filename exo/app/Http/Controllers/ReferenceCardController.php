@@ -15,6 +15,7 @@ class ReferenceCardController extends Controller
         "board_layout",
         "one_coin",
         "five_coin",
+        "quick_setup",
     ];
 
     /**
