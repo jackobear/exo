@@ -23,12 +23,13 @@
           <ol style="font-size:31pt;margin-left:60px;">
             <li>Each player draws a random Faction card.</li>
             <li>Each player gets one Food, one Metal and one Water.</li>
-            <li>Each player gets one Fuel equal to their starting position plus the launch cost of the starting world.</li>
+            <li>Each player gets one Fuel equal to launch cost of the starting world.</li>
+            <li>Each player gets one Coin equal to their starting positions minus one.</li>
             <li>Deal a random Star.
             <li>Deal 4/5/6/7/8 Planets for 2/3/4/5/6 Players.  Some Stars modify this number.</li>
             <li>Deal Moons and Dwarf Planets as described by Planets and Asteroid belts.</li>
             <li>Place Magnetic Storms and Helium Deposit markers as described by Stars and Planets.</li>
-            <li>See instructions for all steps as needed.</li>
+            <li>See instructions for full details as needed.</li>
           </ol>
 
         </div>
