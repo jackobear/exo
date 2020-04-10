@@ -25,7 +25,7 @@ class MoonController extends Controller
      */
     public function create()
     {
-        //
+        return view('moon.create');
     }
 
     /**
@@ -36,7 +36,10 @@ class MoonController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = Request::all();
+        $moon = Moon::create($input);
+        $moon->save();
+        return redirect("/moon");
     }
 
     /**

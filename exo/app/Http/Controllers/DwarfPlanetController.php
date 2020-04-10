@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Star;
+use App\DwarfPlanet;
 
 use Request;
 

@@ -71,13 +71,19 @@
                           $resource = "coin";
                           break;
                       }
-                      if($multiplier == 0 || $cost == "L") $multiplier = "&#x2197;";
+                      $styles = "";
+                      if($cost == "O") {
+                        $multiplier = "&#x2194;";
+                        $styles = "margin-top:-5px";
+                      }else if($multiplier == 0 || $cost == "L") {
+                        $multiplier = "&#x2197;";
+                      }
                       if(($i == 2 && count($costs) < 5) || ($i == 3 && count($costs) > 4)) echo "<br />";
                       ?>
 
                       <span class="fa-stack fa-lg">
                         <i class="exo-<?php echo $resource ?> fa-stack-1x"></i>
-                        <i class="fa-stack-1x cost"><?php echo $multiplier; ?></i>
+                        <i class="fa-stack-1x cost" style="<?php echo $styles; ?>"><?php echo $multiplier; ?></i>
                       </span>
 
                       <?php
@@ -143,7 +149,7 @@
           </div>
 
           <div class="callout" style="margin: 0px 10px 10px 10px;padding: 10px 16px 10px 16px;">
-            <h2>Exocolony Ship
+            <h2><?php echo $faction->name === 'Rock Hoppers' ? 'Asteroid Colony' : 'Exocolony Ship'; ?>
               <span style="float:right;color:#888;font-size:30px;">
 
                 <?php
@@ -176,7 +182,12 @@
                           $resource = "coin";
                           break;
                       }
-                      if($multiplier == 0 || $cost == "L") $multiplier = "X";
+                      if($cost == "O") {
+                        $multiplier = "&#x2194;";
+                        $styles = "margin-top:-5px";
+                      }else if($multiplier == 0 || $cost == "L") {
+                        $multiplier = "&#x2197;";
+                      }
                       if(($i == 2 && count($costs) < 5) || ($i == 3 && count($costs) > 4)) echo "<br />";
                       ?>
 
@@ -191,14 +202,23 @@
 
               </span>
             </h2>
-
-              <?php echo sprintf("%+d", $faction->colonize_time) . " VP: Colonize time bonus,"; ?>
-              +1 VP: First life detection,
-              +1 VP: Detect life,
-              +1 VP: First ship to enter a new star system,
-              +1 VP: First Colony outside starting star system,
-              +1 VP: First Colony in a new star system.
-
+            <h3>
+              <?php if($faction->name !== 'Rock Hoppers') { ?>
+                <?php echo sprintf("%+d", $faction->colonize_time) . " VP: Colonize time bonus,"; ?>
+                +1 VP: First life detection,
+                +1 VP: Detect life,
+                +1 VP: First ship to enter a new star system,
+                +1 VP: First Colony outside starting star system,
+                +1 VP: First Colony in a new star system.
+              <?php }else{ ?>
+                Take any Asteroid card from the discarded Asteroid pile and your Colony and place them in any orbit.
+                These colonized asteroids provide
+                <span class='fa-stack fa-lg'><i class='exo-coin fa-stack-1x'></i><i class='fa-stack-1x cost'>2</i></span>
+                per turn and an extra victory point when built.
+                You cannot colonize it again and no other player may colonize the Asteroid.
+                Note there is no Coin cost for this colony.
+              <?php } ?>
+            </h3>
           </div>
 
         </div>

@@ -48,12 +48,14 @@
           
           <div class="card-section" style="padding-top:0px;">
             <h3><? echo $habitable_world->body; ?>
-                <div style="float:right;">Launch Cost: 
-                 <span class="fa-stack fa-lg">
-                   <i class="exo-fuel fa-stack-1x"></i>
-                   <i class="fa-stack-1x cost"><?php echo $habitable_world->escape_velocity; ?></i>
-                 </span>
-                </div>
+            	<?php if($habitable_world->escape_velocity > 0){ ?>
+	                <div style="float:right;">Launch Cost: 
+	                 <span class="fa-stack fa-lg">
+	                   <i class="exo-fuel fa-stack-1x"></i>
+	                   <i class="fa-stack-1x cost"><?php echo $habitable_world->escape_velocity; ?></i>
+	                 </span>
+	                </div>
+            	<?php } ?>
             </h3>
           </div>
         </div>
