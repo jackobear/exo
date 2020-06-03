@@ -70,6 +70,16 @@
     height:180px;
     line-height:180px;  
 }
+.columns .victory-marker{
+    text-align:center;
+    height: 180px;
+    width: 180px;
+    margin:20px 20px 20px 20px;
+    float:none;
+}
+.columns .victory-marker .cost{
+    margin-top:35px;
+}
 body{
     font-size:31px;
 }
@@ -96,7 +106,7 @@ body{
     width:45px;
     float:right;
 }
-h3 span.fa-stack{
+h3 span.fa-stack, li span.fa-stack{
     float:none;
 }
 

@@ -26,7 +26,7 @@
             <li>Collect resources from colonies and buildings.</li>
             <li>Main Phase (Play in any order)</li>
             <ul>
-              <li>Once per turn, you may pay two <b>or more</b> Coin and draw one Action Card plus another Action for each Coin spent over two.</li>
+              <li>Once per turn, you may pay 1, 3 or 6 Coin to draw 1, 2 or 3 Action cards respectively</li>
               <li>Play any number of Action cards</li>
               <li>Once per turn, Buy and/or Sell one resource with Space Market</li>
               <li>Activate Action cards in play</li>

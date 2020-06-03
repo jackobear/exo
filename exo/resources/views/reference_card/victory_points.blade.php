@@ -7,6 +7,8 @@
     <title>Turn Sequence</title>
     <link rel="stylesheet" href="/css/foundation/foundation.css">
     <link rel="stylesheet" href="/css/foundation/app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/Glyphter.css">
     <link rel="stylesheet" href="/css/exo.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="/js/cost.js"></script>
@@ -22,18 +24,19 @@
             </h1>
           </div>
 
-          <h2 style="margin-left:50px;">16 VP to Win</h2>
+          <h2 style="margin-left:50px;">16 VP to Win, All bonuses below are cumulative</h2>
           <ol style="font-size:31pt;margin-left:30px;">
-            <ul style="list-style:none;">
-              <li>+1 VP: Settle Colony</li>
-              <li>+1 VP: First Colony on a world</li>
-              <li>+1 VP: Build Launch System</li>
-              <li>+1 VP: First life detection</li>
-              <li>+1 VP: Detect life</li>
-              <li>+1 VP: Launch Interstellar Probe</li>
-              <li>+1 VP: First ship to enter a new Star system</li>
-              <li>+1 VP: First Colony outside starting Star system</li>
-              <li>+1 VP: First Colony in a new Star system</li>
+            <ul style="list-style:none;float:left;">
+              <li><span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Settle any Colony</li>
+              <li><span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : First Colony on a world</li>
+              <li><span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Build Launch System</li>
+              <li><span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Detect life</li>
+              <li><span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : First life detection</li>
+              <li><span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Launch Interstellar Probe</li>
+              <li><span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Launch First Interstellar Probe</li>
+              <li><span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : First ship to enter a new Star system</li>
+              <li><span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : First Colony outside starting Star system</li>
+              <li><span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : First Colony in any new Star system</li>
             </ul>
           </ol>
 

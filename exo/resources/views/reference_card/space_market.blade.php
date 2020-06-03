@@ -7,6 +7,8 @@
     <title>Space Market</title>
     <link rel="stylesheet" href="/css/foundation/foundation.css">
     <link rel="stylesheet" href="/css/foundation/app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/Glyphter.css">
     <link rel="stylesheet" href="/css/exo.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
@@ -62,9 +64,12 @@
 
           </script>
 
-          <p style="margin-left:40px;">
-            Setup: Metal:1, Fuel:2, Water:3, Food:4
-          </p>
+          <h3 style="margin-left:40px;" class='pull-left'>
+            Setup: Metal:<span class='fa-stack fa-lg'><i class='exo-coin fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span>,
+            Fuel: <span class='fa-stack fa-lg'><i class='exo-coin fa-stack-1x'></i><i class='fa-stack-1x cost'>2</i></span>,
+            Water: <span class='fa-stack fa-lg'><i class='exo-coin fa-stack-1x'></i><i class='fa-stack-1x cost'>3</i></span>,
+            Food: <span class='fa-stack fa-lg'><i class='exo-coin fa-stack-1x'></i><i class='fa-stack-1x cost'>4</i></span>
+          </h3>
         </div>
       </div>
     </div>

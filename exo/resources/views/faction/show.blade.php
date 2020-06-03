@@ -92,7 +92,10 @@
 
             </span>
             </h2>
-            <h3>Pay fuel for launch and travel distance.  Decrease price of new colony's resource. +1 VP when built, +1 VP for first Colony on a world.</h3>
+            <h3>Settle a Colony. Decrease price of new colony's resource. Gain 
+              <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span>
+              when built, and another <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span>
+              if its the first Colony on that world.</h3>
           </div>
 
           <div class="callout" style="margin: 0px 10px 10px 10px;padding: 10px 16px 10px 16px;">
@@ -145,7 +148,11 @@
 
             </span>
             </h2>
-            <h3>Requires Colony on world with launch cost of 2 or less.  Ignore Fuel cost to leave planet. +1 Trade per turn. +1 VP.  Any player with a Colony on this world may use this to launch. Gain 1C per launch by any player.</h3>
+            <h3>Upgrade a Colony. Gain <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span>. 
+              Requires a Colony on world with launch cost of
+              <span class='fa-stack fa-lg'><i class='exo-fuel fa-stack-1x'></i><i class='fa-stack-1x cost'>2</i></span>
+              or less.  Ignore Fuel cost to launch from this world. +1 Trade per turn. Any player with a Colony on this world may use this to launch. Gain <span class='fa-stack fa-lg'><i class='exo-coin fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span>
+            per launch by any player.</h3>
           </div>
 
           <div class="callout" style="margin: 0px 10px 10px 10px;padding: 10px 16px 10px 16px;">
@@ -182,9 +189,13 @@
                           $resource = "coin";
                           break;
                       }
+                      $styles = '';
                       if($cost == "O") {
                         $multiplier = "&#x2194;";
                         $styles = "margin-top:-5px";
+                      }else if($cost == 'T') {
+                        $multiplier = "&#x2191";
+                        $styles = "margin-top:-7px";
                       }else if($multiplier == 0 || $cost == "L") {
                         $multiplier = "&#x2197;";
                       }
@@ -193,7 +204,7 @@
 
                       <span class="fa-stack fa-lg">
                         <i class="exo-<?php echo $resource ?> fa-stack-1x"></i>
-                        <i class="fa-stack-1x cost"><?php echo $multiplier; ?></i>
+                        <i class="fa-stack-1x cost" style="<?php echo $styles; ?>"><?php echo $multiplier; ?></i>
                       </span>
 
                       <?php
@@ -204,19 +215,24 @@
             </h2>
             <h3>
               <?php if($faction->name !== 'Rock Hoppers') { ?>
-                <?php echo sprintf("%+d", $faction->colonize_time) . " VP: Colonize time bonus,"; ?>
-                +1 VP: First life detection,
-                +1 VP: Detect life,
-                +1 VP: First ship to enter a new star system,
-                +1 VP: First Colony outside starting star system,
-                +1 VP: First Colony in a new star system.
+                Settle an Exocolony.
+                <?php if ($faction->colonize_time > 0) { ?>
+                  Gain 
+                  <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'><?php echo $faction->colonize_time ?></i></span>
+                  as a Faction bonus. Gain up to another 
+                <?php } else { ?>
+                  Gain up to
+                <?php } ?>
+                <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>7</i></span>,
+                see victory Points reference card.
               <?php }else{ ?>
                 Take any Asteroid card from the discarded Asteroid pile and your Colony and place them in any orbit.
                 These colonized asteroids provide
                 <span class='fa-stack fa-lg'><i class='exo-coin fa-stack-1x'></i><i class='fa-stack-1x cost'>2</i></span>
-                per turn and an extra victory point when built.
+                per turn and an extra 
+                <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span>
+                 when built.
                 You cannot colonize it again and no other player may colonize the Asteroid.
-                Note there is no Coin cost for this colony.
               <?php } ?>
             </h3>
           </div>
