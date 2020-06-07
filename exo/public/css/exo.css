@@ -78,7 +78,10 @@
     float:none;
 }
 .columns .victory-marker .cost{
-    margin-top:35px;
+    margin-top:38px;
+}
+.scoring-track {
+    font-size:0.8em;
 }
 body{
     font-size:31px;
@@ -98,7 +101,10 @@ body{
   color:white;
   font-style: normal;
   text-shadow:-1px -1px 0 #222,1px -1px 0 #222,-1px 1px 0 #222,1px 1px 0 #222;
-  margin-top:-2px;
+  margin-top:2px;
+}
+.exo-coin + .cost {
+    margin-left:1px;
 }
 .fa-stack{
     line-height: 45px;

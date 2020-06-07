@@ -26,19 +26,19 @@
 
           <div class="row expanded">
             <div class="large-2 columns large-offset-1">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> 
+              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>1</i></span> 
             </div>
             <div class="large-2 columns">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>2</i></span> 
+              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>2</i></span> 
             </div>
             <div class="large-2 columns">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>3</i></span> 
+              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>3</i></span> 
             </div>
             <div class="large-2 columns">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>4</i></span> 
+              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>4</i></span> 
             </div>
             <div class="large-2 columns">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>5</i></span> 
+              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>5</i></span> 
             </div>
             <div class="large-1 columns">
             </div>
@@ -46,16 +46,16 @@
 
           <div class="row expanded">
             <div class="large-2 columns large-offset-1">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>14</i></span> 
+              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>14</i></span> 
             </div>
             <div class="large-2 columns">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>15</i></span> 
+              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>15</i></span> 
             </div>
             <div class="large-2 columns">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>16</i></span> 
+              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>16</i></span> 
             </div>
             <div class="large-2 columns large-offset-2">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>6</i></span> 
+              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>6</i></span> 
             </div>
             <div class="large-1 columns">
             </div>
@@ -63,7 +63,7 @@
 
           <div class="row expanded">
             <div class="large-2 columns large-offset-1">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>13</i></span> 
+              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>13</i></span> 
             </div>
             <div class="large-2 columns">
             </div>
@@ -72,7 +72,7 @@
             <div class="large-2 columns">
             </div>
             <div class="large-2 columns large-offset-6">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>7</i></span> 
+              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>7</i></span> 
             </div>
             <div class="large-1 columns">
             </div>
@@ -80,19 +80,19 @@
 
           <div class="row expanded">
             <div class="large-2 columns large-offset-1">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>12</i></span> 
+              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>12</i></span> 
             </div>
             <div class="large-2 columns">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>11</i></span> 
+              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>11</i></span> 
             </div>
             <div class="large-2 columns">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>10</i></span> 
+              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>10</i></span> 
             </div>
             <div class="large-2 columns">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>9</i></span> 
+              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>9</i></span> 
             </div>
             <div class="large-2 columns">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>8</i></span> 
+              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>8</i></span> 
             </div>
             <div class="large-1 columns">
             </div>

@@ -74,7 +74,7 @@
                       $styles = "";
                       if($cost == "O") {
                         $multiplier = "&#x2194;";
-                        $styles = "margin-top:-5px";
+                        $styles = "margin-top:-2px";
                       }else if($multiplier == 0 || $cost == "L") {
                         $multiplier = "&#x2197;";
                       }
@@ -192,10 +192,10 @@
                       $styles = '';
                       if($cost == "O") {
                         $multiplier = "&#x2194;";
-                        $styles = "margin-top:-5px";
+                        $styles = "margin-top:-2px";
                       }else if($cost == 'T') {
                         $multiplier = "&#x2191";
-                        $styles = "margin-top:-7px";
+                        $styles = "margin-top:-4px";
                       }else if($multiplier == 0 || $cost == "L") {
                         $multiplier = "&#x2197;";
                       }
