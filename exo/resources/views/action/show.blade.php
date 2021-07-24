@@ -77,7 +77,7 @@
               if(strlen(strip_tags($action->body)) > 230) $height -= 43;
               echo $height;
             ?>" style="background: url('/img/art/actions/<? 
-              echo strtolower(str_replace(" ", "-", $action->name)); 
+              echo strtolower(str_replace("'", "", str_replace(" ", "-", $action->name))); 
             ?>.jpg');background-size: auto auto;"></canvas>
           
           <div class="card-section">
