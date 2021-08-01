@@ -35,9 +35,10 @@
                         case "Fo":
                           $resource = "food";
                           break;
+                        case "L":
+                          $multiplier = "&#x2197;";
                         case "Fu":
                         case "*Fu":
-                        case "L":
                           $resource = "fuel";
                           break;
                         case "W":
@@ -46,11 +47,13 @@
                         case "M":
                           $resource = "metal";
                           break;
+                        case "O":
+                          $multiplier = "&#x2194;";
+                          $resource = "coin";
                         default:
                           $resource = "coin";
                           break;
                       }
-                      if($multiplier == 0 || $cost == "L") $multiplier = "&#x2197;";
                       if(($i == 2 && count($costs) < 5) || ($i == 3 && count($costs) > 4)) echo "<br />";
                       ?>
 

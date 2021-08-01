@@ -4,7 +4,7 @@ function World(sites_str, body=''){
   var canvas = document.getElementById('myCanvas');
   var context = canvas.getContext('2d');
   var radius = 70; // site radius
-  var bonus_radius = 25;
+  var bonus_radius = 40;
   var border_width = 5;
   var site_margin = 35;
   var bonus_margin = 110;
@@ -85,7 +85,7 @@ function World(sites_str, body=''){
             case "EL":
                 fillStyle = 'yellow';
                 strokeStyle = '#cccc00';
-                featureType = 'glow';
+                featureType = 'peak';
                 break;
             default:
                 fillStyle = '#fff8a8';
@@ -99,8 +99,11 @@ function World(sites_str, body=''){
             context.fillRect(site_x - radius, site_y - radius, radius * 2.4, radius * 1.8);
             context.lineWidth = border_width;
             context.strokeStyle = strokeStyle;
+            /*
+            // Start glow
             context.shadowBlur = blur;
             context.shadowColor = 'yellow';
+            */
             context.strokeRect(site_x - radius, site_y - radius, radius * 2.4, radius * 1.8);
         }else{
             // Extra bonuses
@@ -130,23 +133,35 @@ function World(sites_str, body=''){
                 context.strokeStyle = '#000000';
                 context.stroke();
                 var caveImage = new Image();
-                var image_y = site_y - 20;
+                var image_y = site_y - 35;
                 caveImage.onload = function() {
                   context.shadowBlur = 0;
-                  context.drawImage(caveImage, site_x - (bonus_radius * feature_index) - bonus_margin + 5, image_y, 40, 40);
+                  context.drawImage(caveImage, site_x - (bonus_radius * feature_index) - bonus_margin + 5, image_y, 70, 70);
                 };
-                caveImage.src = '/img/cave-original.png';
+                caveImage.src = '/img/art/symbols/cave.png';
+            }else if(featureType == 'peak'){
+                context.beginPath();
+                var peakImage = new Image();
+                var image_y = site_y - 35;
+                peakImage.onload = function() {
+                  context.shadowBlur = 0;
+                  context.drawImage(peakImage, site_x - (bonus_radius * feature_index) - bonus_margin + 5, image_y, 70, 70);
+                };
+                peakImage.src = '/img/art/symbols/eternal-light.png';
+                context.shadowBlur = 0; // Turn off glow
+            /*
             }else if(featureType == 'glow'){
                 context.lineWidth = border_width;
                 context.strokeStyle = strokeStyle;
                 context.shadowBlur = blur + 30;
                 context.shadowColor = 'yellow';
                 context.strokeRect(site_x - radius, site_y - radius, radius * 2.4, radius * 1.8);
-                context.shadowBlur = 0;
+                context.shadowBlur = 0; // Turn off glow
+            */
             }else{
                 var x_position = site_x - (2 * bonus_radius * feature_index) - bonus_margin;
                 var y_position = site_y - bonus_radius;
-                var html = "<span class='fa-stack fa-lg' style='position:absolute;top:"+y_position+"px;left:"+x_position+"px;'>";
+                var html = "<span class='fa-stack fa-lg site-bonus' style='position:absolute;top:"+y_position+"px;left:"+x_position+"px;'>";
                 html += " <i class='exo-" + featureType + " fa-stack-1x'></i>";
                 html += " <i class='fa-stack-1x cost'>"+multiplier+"</i>";
                 html += "</span>";

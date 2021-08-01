@@ -148,11 +148,11 @@
 
             </span>
             </h2>
-            <h3>Upgrade a Colony. Gain <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span>. 
+            <h3>Upgrade a Colony. Gain <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> and a trade ship. 
               Requires a Colony on world with launch cost of
               <span class='fa-stack fa-lg'><i class='exo-fuel fa-stack-1x'></i><i class='fa-stack-1x cost'>2</i></span>
-              or less.  Ignore Fuel cost to launch from this world. +1 Trade per turn. Any player with a Colony on this world may use this to launch. Gain <span class='fa-stack fa-lg'><i class='exo-coin fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span>
-            per launch by any player.</h3>
+              or less.  Ignore Fuel cost to launch from this world.
+            </h3>
           </div>
 
           <div class="callout" style="margin: 0px 10px 10px 10px;padding: 10px 16px 10px 16px;">
