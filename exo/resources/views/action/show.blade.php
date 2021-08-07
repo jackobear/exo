@@ -20,7 +20,8 @@
             <span style="font-size:48px;"><? echo $action->name; ?></span>
             <span style="float:right;color:#888;font-size:30px;">
 
-                <?php
+            <?php
+                if ($action->cost !== ''){
                     $costs = explode(",", $action->cost);
                     $multiplier = 1;
                     for($i=0;$i<count($costs);$i++){
@@ -64,7 +65,8 @@
 
                       <?php
                     }
-                  ?>
+                }
+            ?>
 
             </span>
             <div style="color:#888;font-size:30px;margin-top:-10px;"><? echo $action->type; ?></div>

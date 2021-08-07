@@ -18,35 +18,32 @@
   </head>
   <body>
     <div class="row" style="background-color: #000">
-      <div class="large-12 columns" style="background: url('/img/art/moons/<?echo strtolower(str_replace(" ", "-", $moon->name));?>.jpg');
-          background-size: cover;background-repeat: no-repeat;">
-        <div style="width: 695px;height:995px;margin:65px 0px 65px 50px;background:transparent;">
-          <div class="glow" style="">
-            
-            <h1 style="margin-bottom:0px;">
-              <? echo $moon->name; ?>
-              <span style="float:right;color:#888;font-size:30px;margin-top:2px;">
-                <? echo $moon->type; ?> Moon
-                <img src="/img/art/symbols/moons.png" style='height:60px;' />
-              </span>
+      <div class="large-12 columns">
+        <div class="card" style="width: 678px;height:980px;margin:73px 0px 72px 59px;border-radius:15px;">
+          <div class="card-divider">
+            <h1>
+                <? echo $moon->name; ?>
+                <span style="float:right;color:#888;font-size:30px;margin-top:20px;"><? echo $moon->type; ?> Moon</span>
             </h1>
 
           </div>
 
           <div id="canvas_wrapper">
-            <canvas id="myCanvas" width="745" height="<?
+            <canvas id="myCanvas" width="700" height="<?
               // Check if we need room for two lines of text
               $height = 800;
               if(strlen(strip_tags($moon->body)) > 27) $height -= 43;
               echo $height;
-            ?>"></canvas>
+            ?>" style="background: url('/img/art/moons/<? 
+              echo strtolower(str_replace(" ", "-", $moon->name)); 
+            ?>.jpg');background-size: auto auto;"></canvas>
             <script type="text/javascript">
                 var sites_str = "<? echo $moon->sites; ?>";
                 var the_sites = new World(sites_str, "<? echo $moon->body; ?>");
             </script>
           </div>
           
-          <div class="glow" style="">
+          <div class="card-section" style="padding-top:0px;">
             <h3><? echo $moon->body; ?>
                 <div style="float:right;">Launch Cost: 
                  <span class="fa-stack fa-lg">

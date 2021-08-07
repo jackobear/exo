@@ -96,7 +96,7 @@ function World(sites_str, body=''){
         if(feature_index == 0){
             // Main site
             context.fillStyle = fillStyle;
-            context.fillRect(site_x - radius, site_y - radius, radius * 2.4, radius * 1.8);
+            context.fillRect(site_x - radius, site_y - radius, radius * 4, radius * 1.8);
             context.lineWidth = border_width;
             context.strokeStyle = strokeStyle;
             /*
@@ -104,7 +104,7 @@ function World(sites_str, body=''){
             context.shadowBlur = blur;
             context.shadowColor = 'yellow';
             */
-            context.strokeRect(site_x - radius, site_y - radius, radius * 2.4, radius * 1.8);
+            context.strokeRect(site_x - radius, site_y - radius, radius * 4, radius * 1.8);
         }else{
             // Extra bonuses
             if(featureType == 'helium'){
@@ -142,10 +142,11 @@ function World(sites_str, body=''){
             }else if(featureType == 'peak'){
                 context.beginPath();
                 var peakImage = new Image();
-                var image_y = site_y - 35;
+                var image_y = site_y - 55;
+                var image_x = site_x - (bonus_radius * feature_index) - bonus_margin - 50;
                 peakImage.onload = function() {
                   context.shadowBlur = 0;
-                  context.drawImage(peakImage, site_x - (bonus_radius * feature_index) - bonus_margin + 5, image_y, 70, 70);
+                  context.drawImage(peakImage, image_x, image_y, 100, 100);
                 };
                 peakImage.src = '/img/art/symbols/eternal-light.png';
                 context.shadowBlur = 0; // Turn off glow
