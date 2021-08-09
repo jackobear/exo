@@ -49,6 +49,8 @@
               }
             }
 
+            /*
+            // Deprecated due to confusing players about buying cards counting as trade transactions
             var actionsImage = new Image();
             actionsImage.src = '/img/art/symbols/actions.png';
             actionsImage.onload = function(){
@@ -61,6 +63,7 @@
               context.drawImage(actionsImage, 5 * radius + 520, 3 * radius + radius/2 + 60, 40, 50)
               context.drawImage(actionsImage, 5 * radius + 560, 3 * radius + radius/2 + 60, 40, 50)
             }
+            */
 
           </script>
 

@@ -14,80 +14,121 @@
   </head>
   <body>
     <div class="row" style="background-color: #000">
-      <div class="large-12 columns">
-        <div class="card" style="width: 678px;height:980px;margin:73px 0px 72px 59px;border-radius:15px;">
-          <div class="card-divider">
-            <span style="font-size:48px;"><? echo $action->name; ?></span>
-            <span style="float:right;color:#888;font-size:30px;">
+      <div class="large-12 columns" style="background: url('/img/art/actions/<?echo strtolower(str_replace(" ", "-", str_replace("'", "", $action->name)));?>.jpg');
+          background-size: cover;background-repeat: no-repeat;background-position:center;">
+        <div style="width: 695px;height:995px;margin:65px 0px 65px 50px;background:transparent;display: flex;flex-direction: column;">
+          <div class="glow" style="">
+            
+            <?php if($action->name === 'Tradeship') {?>
+              <img src="/img/art/symbols/tradeships.png" style='height:80px;float:left;margin-right:5px;' />
+            <?php }else{ ?>
+              <img src="/img/art/symbols/actions.png" style='height:80px;float:left;margin-right:5px;' />
+            <?php } ?>
 
-            <?php
-                if ($action->cost !== ''){
-                    $costs = explode(",", $action->cost);
-                    $multiplier = 1;
-                    for($i=0;$i<count($costs);$i++){
-                      $cost = trim($costs[$i]);
-                      if(is_numeric($cost[0])){
-                        $multiplier = $cost[0];
-                        $cost = substr($cost, 1);
+            <span style="">
+
+              <span style="float:right;color:#888;font-size:30px;">
+              <?php
+                  if ($action->cost !== ''){
+                      $costs = explode(",", $action->cost);
+                      $multiplier = 1;
+                      for($i=0;$i<count($costs);$i++){
+                        $cost = trim($costs[$i]);
+                        if(is_numeric($cost[0])){
+                          $multiplier = $cost[0];
+                          $cost = substr($cost, 1);
+                        }
+                        $resource = "coin";
+                        switch($cost){
+                          case "F":
+                          case "Fo":
+                            $resource = "food";
+                            break;
+                          case "L":
+                            $multiplier = "&#x2197;";
+                          case "Fu":
+                          case "*Fu":
+                            $resource = "fuel";
+                            break;
+                          case "W":
+                            $resource = "water";
+                            break;
+                          case "M":
+                            $resource = "metal";
+                            break;
+                          case "O":
+                            $multiplier = "&#x2194;";
+                            $resource = "coin";
+                          default:
+                            $resource = "coin";
+                            break;
+                        }
+                        // No longer multiline
+                        // if(($i == 2 && count($costs) < 5) || ($i == 3 && count($costs) > 4)) echo "<br />";
+
+                        // Adjust cost symbol font size depending on how many different resources are in the cost
+                        switch(count($costs)){
+                          case 3:
+                            $font_size = 2;
+                            $line_height = 80;
+                            $width = 65;
+                            $margin_top = 5;
+                            $margin_left = 2;
+                            break;
+                          case 2:
+                            $font_size = 4;
+                            $line_height = 75;
+                            $width = 110;
+                            $margin_top = -20;
+                            $margin_left = 4;
+                            break;
+                          default:
+                            $font_size = 5;
+                            $line_height = 73;
+                            $width = 140;
+                            $margin_top = -32;
+                            $margin_left = 7;
+                            break;
+                        }
+
+                        if(count($costs) === 3){
+                        }
+                        ?>
+
+                        <span class="fa-stack fa-lg" style="font-size:<?php echo $font_size; ?>em;line-height:<?php echo $line_height; ?>px;width:<?php echo $width; ?>px;">
+                          <i class="exo-<?php echo $resource ?> fa-stack-1x" style="margin-top:<?php echo $margin_top; ?>px;"></i>
+                          <i class="fa-stack-1x cost" style="margin-left:<?php echo $margin_left; ?>px;"><?php echo $multiplier; ?></i>
+                        </span>
+
+                        <?php
                       }
-                      $resource = "coin";
-                      switch($cost){
-                        case "F":
-                        case "Fo":
-                          $resource = "food";
-                          break;
-                        case "L":
-                          $multiplier = "&#x2197;";
-                        case "Fu":
-                        case "*Fu":
-                          $resource = "fuel";
-                          break;
-                        case "W":
-                          $resource = "water";
-                          break;
-                        case "M":
-                          $resource = "metal";
-                          break;
-                        case "O":
-                          $multiplier = "&#x2194;";
-                          $resource = "coin";
-                        default:
-                          $resource = "coin";
-                          break;
-                      }
-                      if(($i == 2 && count($costs) < 5) || ($i == 3 && count($costs) > 4)) echo "<br />";
-                      ?>
+                  }
+              ?>
+            </span>
 
-                      <span class="fa-stack fa-lg">
-                        <i class="exo-<?php echo $resource ?> fa-stack-1x"></i>
-                        <i class="fa-stack-1x cost"><?php echo $multiplier; ?></i>
-                      </span>
+              <div style="margin: 0px;font-size:1.5em;line-height: 0.8;"><? echo $action->name; ?></div>
 
-                      <?php
-                    }
-                }
-            ?>
+                <?php if($action->name === 'Tradeship') {?>
+                  <span style="color:#ffff00;font-size:30px;margin:0px;line-height: 1.1;">
+                    Tradeship
+                  </span>
+                <?php }else{ ?>
+                  <span style="color:#bc14aa;font-size:30px;margin:0px;line-height: 1.1;">
+                    Action - <? echo $action->type; ?>
+                  </span>
+                <?php } ?>
 
             </span>
-            <div style="color:#888;font-size:30px;margin-top:-10px;"><? echo $action->type; ?></div>
+
+
           </div>
 
-            <canvas id="myCanvas" width="700" height="<?
-              // Check if we need room for two lines of text
-              $height = 750;
-              if(strlen(strip_tags($action->body)) > 27) $height -= 43;
-              if(strlen(strip_tags($action->body)) > 80) $height -= 43;
-              if(strlen(strip_tags($action->body)) > 130) $height -= 43;
-              if(strlen(strip_tags($action->body)) > 180) $height -= 43;
-              if(strlen(strip_tags($action->body)) > 230) $height -= 43;
-              echo $height;
-            ?>" style="background: url('/img/art/actions/<? 
-              echo strtolower(str_replace("'", "", str_replace(" ", "-", $action->name))); 
-            ?>.jpg');background-size: auto auto;"></canvas>
-          
-          <div class="card-section">
+          <div style="height:100%;">&nbsp;</div>
+
+          <div class="glow" style="vertical-align: bottom;">
             <h3><? echo $action->body; ?></h3>
           </div>
+
         </div>
       </div>
     </div>

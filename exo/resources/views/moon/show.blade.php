@@ -23,13 +23,13 @@
         <div style="width: 695px;height:995px;margin:65px 0px 65px 50px;background:transparent;">
           <div class="glow" style="">
             
-            <h1 style="margin-bottom:0px;">
-              <? echo $moon->name; ?>
-              <span style="float:right;color:#888;font-size:30px;margin-top:2px;">
+            <img src="/img/art/symbols/moons.png" style='height:80px;float:left;margin-right:5px;' />
+            <span style="">
+              <div style="margin: 0px;font-size:1.5em;line-height: 0.8;"><? echo $moon->name; ?></div>
+              <span style="color:#888;font-size:30px;margin:0px;line-height: 1.1;">
                 <? echo $moon->type; ?> Moon
-                <img src="/img/art/symbols/moons.png" style='height:60px;' />
               </span>
-            </h1>
+            </span>
 
           </div>
 
