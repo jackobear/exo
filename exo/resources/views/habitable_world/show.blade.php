@@ -18,44 +18,42 @@
   </head>
   <body>
     <div class="row" style="background-color: #000">
-      <div class="large-12 columns">
-        <div class="card" style="width: 678px;height:980px;margin:73px 0px 72px 59px;border-radius:15px;">
-          <div class="card-divider">
-            <h1>
-                <? echo $habitable_world->name; ?>
-                <span style="float:right;color:#888;font-size:30px;margin-top:20px;"><? echo $habitable_world->type; ?> World</span>
-            </h1>
+      <div class="large-12 columns" style="background: url('/img/art/habitable-worlds/<?echo strtolower(str_replace(" ", "-", $habitable_world->name));?>.jpg');
+          background-size: cover;background-repeat: no-repeat;background-position: center;">
+        <div style="width: 695px;height:995px;margin:65px 0px 65px 50px;background:transparent;">
+          <div class="glow" style="">
+            
+            <img src="/img/art/symbols/habitable-worlds.png" style='height:80px;float:left;margin-right:5px;' />
+            <span style="">
+              <div style="margin: 0px;font-size:1.5em;line-height: 0.8;"><? echo $habitable_world->name; ?></div>
+              <span style="color:#26415e;font-size:30px;margin:0px;line-height: 1.1;">
+                <? echo $habitable_world->type; ?> Habitable World
+              </span>
+            </span>
 
           </div>
 
           <div id="canvas_wrapper">
-            <canvas id="myCanvas" width="700" height="<?
+            <canvas id="myCanvas" width="745" height="<?
               // Check if we need room for two lines of text
               $height = 800;
               if(strlen(strip_tags($habitable_world->body)) > 27) $height -= 43;
-              if(strlen(strip_tags($habitable_world->body)) > 80) $height -= 43;
-              if(strlen(strip_tags($habitable_world->body)) > 130) $height -= 43;
-              if(strlen(strip_tags($habitable_world->body)) > 180) $height -= 43;
               echo $height;
-            ?>" style="background: url('/img/art/habitable-worlds/<? 
-              echo strtolower(str_replace(" ", "-", $habitable_world->name)); 
-            ?>.jpg');background-size: auto auto;"></canvas>
+            ?>"></canvas>
             <script type="text/javascript">
                 var sites_str = "<? echo $habitable_world->sites; ?>";
-                var the_sites = new World(sites_str);
+                var the_sites = new World(sites_str, "<? echo $habitable_world->body; ?>");
             </script>
           </div>
           
-          <div class="card-section" style="padding-top:0px;">
+          <div class="glow" style="">
             <h3><? echo $habitable_world->body; ?>
-            	<?php if($habitable_world->escape_velocity > 0){ ?>
-	                <div style="float:right;">Launch Cost: 
-	                 <span class="fa-stack fa-lg">
-	                   <i class="exo-fuel fa-stack-1x"></i>
-	                   <i class="fa-stack-1x cost"><?php echo $habitable_world->escape_velocity; ?></i>
-	                 </span>
-	                </div>
-            	<?php } ?>
+                <div style="float:right;">Launch Cost: 
+                 <span class="fa-stack fa-lg">
+                   <i class="exo-fuel fa-stack-1x"></i>
+                   <i class="fa-stack-1x cost"><?php echo $habitable_world->escape_velocity; ?></i>
+                 </span>
+                </div>
             </h3>
           </div>
         </div>

@@ -19,7 +19,7 @@
   <body>
     <div class="row" style="background-color: #000">
       <div class="large-12 columns" style="background: url('/img/art/moons/<?echo strtolower(str_replace(" ", "-", $moon->name));?>.jpg');
-          background-size: cover;background-repeat: no-repeat;">
+          background-size: cover;background-repeat: no-repeat;background-position: center;">
         <div style="width: 695px;height:995px;margin:65px 0px 65px 50px;background:transparent;">
           <div class="glow" style="">
             
