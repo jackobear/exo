@@ -6,5 +6,4 @@
 Homestead.json
 Homestead.yaml
 .env
-/public/img/cards/*
-/public/img/print-cards/*
+/public/img/*
