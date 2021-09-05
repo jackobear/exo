@@ -15,14 +15,13 @@
     <script type="text/javascript" src="/js/interstellarTrack.js"></script>
   </head>
   <body>
-    <div class="row" style="background-color: #000;max-width: 108rem;">
+    <div class="row" style="background: url('/img/art/starfield.jpg');
+          background-repeat: no-repeat;background-position:top;padding:0px;max-width: 108rem;">
       <div class="large-12 columns">
-        <div class="card" style="width: 1579px;height:985px;margin:70px 0px 70px 59px;border-radius:15px;background: url('/img/art/starfield.jpg');background-size: contain;background-position: center;">
-          <div class="card-divider">
+        <div class="glow" style="width: 1579px;height:985px;margin:70px 0px 70px 59px;border-radius:15px;">
             <h1>
                 Scoring Track
             </h1>
-          </div>
 
           <div class="row expanded">
             <div class="large-2 columns large-offset-1">

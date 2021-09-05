@@ -12,18 +12,18 @@
     <link rel="stylesheet" href="/css/exo.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
-  <body>
+  <body style='overflow: hidden;'>
     <div class="row" style="background-color: #000;max-width: 1725px;">
       <div class="large-12 columns" style="background: url('/img/art/factions/<?echo strtolower(str_replace(" ", "-", str_replace("'", "", $faction->name)));?>.jpg');
-          background-repeat: no-repeat;background-position:top;">
-        <div style="width: 1595px;height:995px;margin:65px 0px 65px 50px;background:transparent;display: flex;flex-direction: column;">
-          <div class="glow" style="width:max-content;">
+          background-repeat: no-repeat;background-position:top;padding:0px;">
+        <div style="width: 1725px;height:1125px;background:transparent;display: flex;flex-direction: column;">
+          <div class="glow" style="width:max-content;margin:65px 0px 65px 50px;">
             <div style="margin: 0px;font-size:1.5em;line-height: 0.8;display:inline-block;"><? echo $faction->name; ?></div>
           </div>
 
           <div style="height:100%;">&nbsp;</div>
 
-          <div class="glow" style="vertical-align: bottom;">
+          <div class="glow" style="vertical-align: bottom;padding:5px 65px 50px 65px;border-radius:0px;box-shadow: 0 0 5px #fff, -10px 0 20px #5290c6, 10px 0 20px #5290c6;">
             <div class="row expanded">
               <div class="columns large-6" style="border-right:1px solid #aaa;">
                 <h3><? echo $faction->body; ?></h3>
@@ -31,7 +31,7 @@
               </div>
 
               <div class="columns large-6" style="">
-                <h2>Colony Ship
+                <h2>Settle Colony
                 <span style="float:right;color:#888;font-size:30px;">
 
                     <?php
@@ -94,7 +94,7 @@
             <div class="row expanded">
 
               <div class="columns large-6" style="border-top:1px solid #aaa;border-right:1px solid #aaa;padding-top:10px;">
-                <h2>Launch System
+                <h2>Build Spaceport
                 <span style="float:right;color:#888;font-size:30px;">
 
                     <?php
@@ -143,7 +143,7 @@
 
                 </span>
                 </h2>
-                <h3>Upgrade a Colony. Gain <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> and a trade ship. 
+                <h3>Upgrade a Colony to a Spaceport. Gain <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> and a Trade Ship. 
                   Requires a Colony on world with launch cost of
                   <span class='fa-stack fa-lg'><i class='exo-fuel fa-stack-1x'></i><i class='fa-stack-1x cost'>2</i></span>
                   or less.  Ignore Fuel cost to launch from this world.
@@ -151,7 +151,7 @@
               </div>
 
               <div class="columns large-6" style="border-top:1px solid #aaa;padding-top:10px;">
-                <h2><?php echo $faction->name === 'Rock Hoppers' ? 'Asteroid Colony' : 'Exocolony Ship'; ?>
+                <h2><?php echo $faction->name === 'Rock Hoppers' ? 'Settle Asteroid Colony' : 'Settle Exocolony'; ?>
                   <span style="float:right;color:#888;font-size:30px;">
 
                     <?php
@@ -227,7 +227,6 @@
                     per turn and a total of
                     <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>2</i></span>
                     when built.
-                    No player may colonize the Asteroid again.
                   <?php } ?>
                 </h3>
               </div>

@@ -14,13 +14,14 @@
         <h1>Actions</h1>
         <table>
           <tr>
-            <th>Name</th><th>Type</th><th>Cost</th><th>Artist URL</th><th>Edit</th><th>Delete</th>
+            <th>Name</th><th>Type</th><th>Cost</th><th>Quantity</th><th>Artist URL</th><th>Edit</th><th>Delete</th>
           </tr>
           @foreach ($actions as $action)
             <tr>
               <td><a href="/action/{{ $action->id }}">{{ $action->name }}</a></td>
               <td>{{ $action->type }}</td>
               <td>{{ $action->cost }}</td>
+              <td>{{ $action->quantity }}</td>
               <td><a href="{{ $action->artist_url }}">{{ $action->artist_url }}</a></td>
               <td><a href="/action/edit/{{ $action->id }}">Edit</a></td>
               <td>
@@ -34,7 +35,12 @@
           @endforeach
         </table>
       </div>
-      <a href="/action/save_all_as_png">Save All As PNG</a>
+      <p>
+        Stats: {{ $stats }}
+      </p>
+      <p>
+        <a href="/action/save_all_as_png">Save All As PNG</a>
+      </p>
     </div>
   </body>
 </html>

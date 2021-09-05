@@ -15,14 +15,13 @@
     <script type="text/javascript" src="/js/interstellarTrack.js"></script>
   </head>
   <body>
-    <div class="row" style="background-color: #000;max-width: 108rem;">
+    <div class="row" style="background: url('/img/art/starfield.jpg');
+          background-repeat: no-repeat;background-position:top;padding:0px;max-width: 108rem;">
       <div class="large-12 columns">
-        <div class="card" style="width: 1579px;height:985px;margin:70px 0px 70px 59px;border-radius:15px;">
-          <div class="card-divider">
+        <div class="glow" style="width: 1579px;height:985px;margin:70px 0px 70px 59px;border-radius:15px;">
             <h1>
                 Victory Points
             </h1>
-          </div>
 
           <h2 style="margin-left:50px;">16 VP to Win, All bonuses below are cumulative</h2>
           <ol style="font-size:31pt;margin-left:30px;">

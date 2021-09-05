@@ -13,17 +13,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
   <body>
-    <div class="row" style="background-color: #000;max-width: 108rem;">
+    <div class="row" style="background: url('/img/art/starfield.jpg');
+          background-repeat: no-repeat;background-position:top;padding:0px;max-width: 108rem;">
       <div class="large-12 columns">
-        <div class="card" style="width: 1579px;height:985px;margin:70px 0px 70px 59px;border-radius:15px;">
-          <div class="card-divider">
+        <div class="glow" style="width: 1579px;height:985px;margin:70px 0px 70px 59px;border-radius:15px;">
             <h1>
                 Space Market
             </h1>
-          </div>
 
           <div class="row expanded">
-            <canvas id="myCanvas" width="1600" height="790" style="background: url('/img/art/starfield.jpg');background-size: contain;background-position: center;"></canvas>
+            <canvas id="myCanvas" width="1600" height="790" style=""></canvas>
           </div>
           <script type="text/javascript">
             var radius = 170;

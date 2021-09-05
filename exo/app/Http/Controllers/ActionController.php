@@ -15,7 +15,8 @@ class ActionController extends Controller
     public function index()
     {
         $actions = \App\Action::orderBy('name')->get();
-        return view('action.index', ['actions' => $actions]);
+        $stats = \App\Action::get_stats();
+        return view('action.index', ['actions' => $actions, 'stats' => json_encode($stats)]);
     }
 
     /**
