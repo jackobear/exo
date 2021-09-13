@@ -16,12 +16,13 @@
     <div class="row" style="background-color: #000">
       <div class="large-12 columns" style="background: url('/img/art/asteroids/<?echo strtolower(str_replace(" ", "-", $asteroid->name));?>.jpg');
           background-size: cover;background-repeat: no-repeat;background-position: center;">
-        <div style="width: 695px;height:995px;margin:65px 0px 65px 50px;background:transparent;">
-          <div class="glow" style="">
+        <div style="width: 695px;height:995px;margin:65px 0px 65px 50px;background:transparent;display: flex;flex-direction: column;">
+          <div class="glow" style="padding-bottom:5px;">
             
             <img src="/img/art/symbols/asteroids.png" style='height:80px;float:left;margin-right:5px;' />
             <span style="">
-              <div style="margin: 0px;font-size:1.5em;line-height: 0.8;"><? echo $asteroid->name; ?></div>
+              <!-- top margin misrenders in headless chrome -->
+              <div style="margin: 5px 0px 0px 0px;font-size:1.5em;line-height: 0.8;"><? echo $asteroid->name; ?></div>
               <span style="color:#000;font-size:30px;margin:0px;line-height: 1.1;">
                 <? echo $asteroid->type; ?>
               </span>
@@ -29,17 +30,10 @@
 
           </div>
 
-          <div id="canvas_wrapper">
-            <canvas id="myCanvas" width="745" height="<?
-              // Check if we need room for two lines of text
-              $height = 800;
-              if(strlen(strip_tags($asteroid->body)) > 27) $height -= 43;
-              echo $height;
-            ?>"></canvas>
-          </div>
+          <div style="height:100%;">&nbsp;</div>
           
           <div class="glow" style="">
-            <h3><? echo $asteroid->body; ?>
+            <h3 style="margin-bottom:0px;"><? echo $asteroid->body; ?>
             </h3>
           </div>
         </div>

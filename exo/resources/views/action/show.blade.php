@@ -15,9 +15,9 @@
   <body>
     <div class="row" style="background-color: #000">
       <div class="large-12 columns" style="background: url('/img/art/actions/<?echo strtolower(str_replace(" ", "-", str_replace("'", "", $action->name)));?>.jpg');
-          background-size: cover;background-repeat: no-repeat;background-position:center;">
+          background-size: cover;background-repeat: no-repeat;background-position: center;">
         <div style="width: 695px;height:995px;margin:65px 0px 65px 50px;background:transparent;display: flex;flex-direction: column;">
-          <div class="glow" style="">
+          <div class="glow" style="padding-bottom:5px;">
             
             <?php if($action->name === 'Tradeship') {?>
               <img src="/img/art/symbols/tradeships.png" style='height:80px;float:left;margin-right:5px;' />
@@ -74,6 +74,7 @@
                             $width = 65;
                             $margin_top = 5;
                             $margin_left = 2;
+                            $font_margin_top = 5;
                             break;
                           case 2:
                             $font_size = 4;
@@ -81,6 +82,7 @@
                             $width = 110;
                             $margin_top = -20;
                             $margin_left = 4;
+                            $font_margin_top = 15;
                             break;
                           default:
                             $font_size = 5;
@@ -88,6 +90,7 @@
                             $width = 140;
                             $margin_top = -32;
                             $margin_left = 7;
+                            $font_margin_top = 20;
                             break;
                         }
 
@@ -97,7 +100,7 @@
 
                         <span class="fa-stack fa-lg" style="font-size:<?php echo $font_size; ?>em;line-height:<?php echo $line_height; ?>px;width:<?php echo $width; ?>px;">
                           <i class="exo-<?php echo $resource ?> fa-stack-1x" style="margin-top:<?php echo $margin_top; ?>px;"></i>
-                          <i class="fa-stack-1x cost" style="margin-left:<?php echo $margin_left; ?>px;"><?php echo $multiplier; ?></i>
+                          <i class="fa-stack-1x cost" style="margin-left:<?php echo $margin_left; ?>px;margin-top:<?php echo $font_margin_top; ?>px;"><?php echo $multiplier; ?></i>
                         </span>
 
                         <?php
@@ -106,7 +109,7 @@
               ?>
             </span>
 
-              <div style="margin: 0px;font-size:1.5em;line-height: 0.8;"><? echo $action->name; ?></div>
+              <div style="margin: 5px 0px 0px 0px;font-size:1.5em;line-height: 0.8;"><? echo $action->name; ?></div>
 
                 <?php if($action->name === 'Tradeship') {?>
                   <span style="color:#ffff00;font-size:30px;margin:0px;line-height: 1.1;">
@@ -125,7 +128,7 @@
 
           <div style="height:100%;">&nbsp;</div>
 
-          <div class="glow" style="vertical-align: bottom;">
+          <div class="glow" style="">
             <h3><? echo $action->body; ?></h3>
           </div>
 

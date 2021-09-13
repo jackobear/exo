@@ -225,7 +225,7 @@
                     These colonized Asteroids provide
                     <span class='fa-stack fa-lg'><i class='exo-coin fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span>
                     per turn and a total of
-                    <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>2</i></span>
+                    <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>3</i></span>
                     when built.
                   <?php } ?>
                 </h3>
