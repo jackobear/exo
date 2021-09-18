@@ -22,17 +22,18 @@
             </h1>
 
           <ol style="font-size:31pt;margin-left:60px;">
-            <li>Resource Colletion Phase.  Collect resources from colonies and buildings.</li>
+            <li>Refresh exhausted Action cards</li>
+            <li>Collect resources from colonies and buildings</li>
             <li>Main Phase (Play in any order)</li>
             <ul>
               <li>Once per turn, you may pay 1, 3, or 6 Coin to draw 1, 2, or 3 Action cards respectively</li>
               <li>Play any number of Action cards</li>
-              <li>Once per turn, Buy and/or Sell one resource with Space Market</li>
+              <li>For each of your Tradeships, Buy and/or Sell one resource with Space Market</li>
               <li>Activate Action cards in play</li>
-              <li>Build Colony Ship</li>
-              <li>Build Exocolony Ship</li>
+              <li>Settle Colony as described on your Faction card</li>
+              <li>Settle Exocolony as described on you Faction card</li>
             </ul>
-            <li>Discard down to 5 Action cards in hand and announce the end of your turn.</li>
+            <li>Discard down to 5 Action cards in hand and announce the end of your turn</li>
           </ol>
 
         </div>

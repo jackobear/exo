@@ -382,7 +382,7 @@
             context.lineTo((2*curlyWidth)+curlyx + (2*linelength), curlyWidth+curlyy);
             context.arcTo((3*curlyWidth)+curlyx + (2*linelength), curlyWidth+curlyy, (3*curlyWidth)+curlyx + (2*linelength), curlyy, curlyWidth);
             context.stroke();
-            context.fillText("5th-8th Orbits for 6 Players",500,860);
+            context.fillText("5-8 Orbits for 3-6 Players",500,860);
 
             // Habitable World deck
             context.fillText("Habitable",300,540);

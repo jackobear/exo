@@ -8,12 +8,9 @@
 <div class="container">
 
 <nav class="navbar navbar-inverse">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="{{ URL::to('actions') }}">actions</a>
-    </div>
     <ul class="nav navbar-nav">
-        <li><a href="{{ URL::to('actions') }}">View All actions</a></li>
-        <li><a href="{{ URL::to('actions/create') }}">Create a action</a>
+        <li><a href="{{ URL::to('action') }}">View All actions</a></li>
+        <li><a href="{{ URL::to('action/create') }}">Create a action</a>
     </ul>
 </nav>
 

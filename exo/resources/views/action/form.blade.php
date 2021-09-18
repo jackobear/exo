@@ -22,6 +22,10 @@
  {!! Form::label('artist_url', 'Artist URL:') !!}
  {!! Form::text('artist_url', null, ['class' => 'form-control']) !!}
 </div>
+<div class='form-group'>
+ {!! Form::label('flavor_text', 'Flavor Text:') !!}
+ {!! Form::text('flavor_text', null, ['class' => 'form-control']) !!}
+</div>
 
 <div class='form-group'>
  {!! Form::submit($submitButtonText, ['class' => 'btn btn-lg btn-success form-control']) !!}

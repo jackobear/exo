@@ -18,82 +18,71 @@
     <div class="row" style="background: url('/img/art/starfield.jpg');
           background-repeat: no-repeat;background-position:top;padding:0px;max-width: 108rem;">
       <div class="large-12 columns">
-        <div class="glow" style="width: 1579px;height:985px;margin:70px 0px 70px 59px;border-radius:15px;">
+        <div class="glow" style="width: 1579px;height:985px;margin:70px 0px 70px 59px;border-radius:15px;padding-left:70px;">
             <h1>
                 Scoring Track
             </h1>
 
-          <div class="row expanded">
-            <div class="large-2 columns large-offset-1">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>1</i></span> 
+          <div class="row expanded" style='margin-bottom:60px;'>
+            <div class="large-3 columns">
+              <span class='fa-stack fa-5x victory-marker' style='font-size:8em;'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track' style='margin: 70px 0px 0px 30px;'>1</i></span> 
             </div>
-            <div class="large-2 columns">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>2</i></span> 
+            <div class="large-3 columns">
+              <span class='fa-stack fa-5x victory-marker' style='font-size:8em;'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track' style='margin: 70px 0px 0px 30px;'>2</i></span> 
             </div>
-            <div class="large-2 columns">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>3</i></span> 
+            <div class="large-3 columns">
+              <span class='fa-stack fa-5x victory-marker' style='font-size:8em;'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track' style='margin: 70px 0px 0px 30px;'>3</i></span> 
             </div>
-            <div class="large-2 columns">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>4</i></span> 
-            </div>
-            <div class="large-2 columns">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>5</i></span> 
-            </div>
-            <div class="large-1 columns">
+            <div class="large-3 columns">
+              <span class='fa-stack fa-5x victory-marker' style='font-size:8em;'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track' style='margin: 70px 0px 0px 30px;'>4</i></span> 
             </div>
           </div>
 
           <div class="row expanded">
-            <div class="large-2 columns large-offset-1">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>14</i></span> 
+            <div class="large-3 columns">
+              <span class='fa-stack fa-5x victory-marker' style='margin:20px 0px 0px 50px;'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>12</i></span> 
             </div>
-            <div class="large-2 columns">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>15</i></span> 
+            <div class="large-3 columns">
+              <span class='fa-stack fa-5x victory-marker' style='margin:20px 0px 0px 50px;'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>13</i></span> 
             </div>
-            <div class="large-2 columns">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>16</i></span> 
+            <div class="large-3 columns">
+              <span class='fa-stack fa-5x victory-marker' style='margin:20px 0px 0px 50px;'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>14</i></span> 
             </div>
-            <div class="large-2 columns large-offset-2">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>6</i></span> 
-            </div>
-            <div class="large-1 columns">
+            <div class="large-3 columns">
+              <span class='fa-stack fa-5x victory-marker' style='margin:20px 0px 0px 50px;'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>5</i></span> 
             </div>
           </div>
 
           <div class="row expanded">
-            <div class="large-2 columns large-offset-1">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>13</i></span> 
+            <div class="large-3 columns">
+              <span class='fa-stack fa-5x victory-marker' style='margin:0px 0px 0px 50px;'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>11</i></span> 
             </div>
-            <div class="large-2 columns">
+            <div class="large-3 columns">
+              <span class='fa-stack fa-5x victory-marker' style='margin:0px 0px 0px 50px;'>
+                <i class='exo-victory fa-stack-1x'></i>
+                <i class='fa-stack-1x cost scoring-track' style="text-shadow:0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #fff;">16</i>
+              </span> 
             </div>
-            <div class="large-2 columns">
+            <div class="large-3 columns">
+              <span class='fa-stack fa-5x victory-marker' style='margin:0px 0px 0px 50px;'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>15</i></span> 
             </div>
-            <div class="large-2 columns">
-            </div>
-            <div class="large-2 columns large-offset-6">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>7</i></span> 
-            </div>
-            <div class="large-1 columns">
+            <div class="large-3 columns">
+              <span class='fa-stack fa-5x victory-marker' style='margin:0px 0px 0px 50px;'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>6</i></span> 
             </div>
           </div>
 
           <div class="row expanded">
-            <div class="large-2 columns large-offset-1">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>12</i></span> 
+            <div class="large-3 columns">
+              <span class='fa-stack fa-5x victory-marker' style='margin:0px 0px 0px 50px;'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>10</i></span> 
             </div>
-            <div class="large-2 columns">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>11</i></span> 
+            <div class="large-3 columns">
+              <span class='fa-stack fa-5x victory-marker' style='margin:0px 0px 0px 50px;'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>9</i></span> 
             </div>
-            <div class="large-2 columns">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>10</i></span> 
+            <div class="large-3 columns">
+              <span class='fa-stack fa-5x victory-marker' style='margin:0px 0px 0px 50px;'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>8</i></span> 
             </div>
-            <div class="large-2 columns">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>9</i></span> 
-            </div>
-            <div class="large-2 columns">
-              <span class='fa-stack fa-5x victory-marker'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>8</i></span> 
-            </div>
-            <div class="large-1 columns">
+            <div class="large-3 columns">
+              <span class='fa-stack fa-5x victory-marker' style='margin:0px 0px 0px 50px;'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track'>7</i></span> 
             </div>
           </div>
         </div>

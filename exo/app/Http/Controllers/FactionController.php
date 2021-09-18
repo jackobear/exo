@@ -59,7 +59,7 @@ class FactionController extends Controller
         $factions = \App\Faction::all();
         foreach($factions as $faction){
             echo "Saving " . $faction->name . "...<br>";
-            $status = $faction->save_as_png();
+            $status = $faction->save_as_png(true);
             print_r($status);
         }
         return "<br>Done<br>";

@@ -99,7 +99,7 @@
 
                     <?php
                         // TODO: Add launch_system_cost to faction model
-                        $costs = explode(",", "2M, 2Fu, 1W");
+                        $costs = explode(",", "2W, 2F, 1Fu");
                         $multiplier = 1;
                         for($i=0;$i<count($costs);$i++){
                           $cost = trim($costs[$i]);

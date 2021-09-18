@@ -130,6 +130,9 @@
 
           <div class="glow" style="">
             <h3><? echo $action->body; ?></h3>
+            <?php if ($action->flavor_text) { ?>
+              <h3 style="color:gray;"><i><? echo $action->flavor_text; ?></i></h3>
+            <?php } ?>
           </div>
 
         </div>
