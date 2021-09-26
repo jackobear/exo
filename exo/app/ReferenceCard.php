@@ -5,9 +5,10 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\Traits\SavableAsPng;
 
-class Moon extends Model
+class ReferenceCard extends Model
 {
-    protected $fillable = ['name', 'type', 'escape_velocity', 'body', 'sites', 'artist_url'];
+    protected $fillable = ['name', 'type', 'quantity'];
     public $timestamps = false;
     use SavableAsPng;
+
 }

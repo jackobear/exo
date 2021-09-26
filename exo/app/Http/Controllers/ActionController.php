@@ -63,6 +63,7 @@ class ActionController extends Controller
     }
 
     public function save_all_as_png(){
+        set_time_limit(60*10);
         $actions = \App\Action::all();
         foreach($actions as $action){
             echo "Saving " . $action->name . "...<br>";

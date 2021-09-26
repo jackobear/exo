@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
+use App\ReferenceCard;
+use Request;
 
 class ReferenceCardController extends Controller
 {
@@ -25,7 +25,8 @@ class ReferenceCardController extends Controller
      */
     public function index()
     {
-        return view('reference_card.index', ['cards' => $this->cards]);
+        $reference_cards = \App\ReferenceCard::orderBy('name')->get();
+        return view('reference_card.index', ['reference_cards' => $reference_cards]);
     }
 
     /**
@@ -35,7 +36,7 @@ class ReferenceCardController extends Controller
      */
     public function create()
     {
-        //
+        return view('reference_card.create');
     }
 
     /**
@@ -46,7 +47,10 @@ class ReferenceCardController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = Request::all();
+        $reference_card = ReferenceCard::create($input);
+        $reference_card->save();
+        return redirect("/reference-card");
     }
 
     /**
@@ -57,39 +61,17 @@ class ReferenceCardController extends Controller
      */
     public function show($id)
     {
-        return view('reference_card.' . $this->cards[$id]);
+        $reference_card = \App\ReferenceCard::find($id);
+        return view('reference_card.' . str_replace(' ', '_', strtolower($reference_card->name)));
     }
 
     public function save_all_as_png(){
-        for($i=0;$i<count($this->cards);$i++){
-            echo "<br>Saving reference cards...<br>";
-            $filename = "/var/www/exo/public/img/cards/reference-cards/" . $this->cards[$i] . ".png";
-            $cmd = "google-chrome --headless --disable-gpu --screenshot=$filename --window-size=";
-            if($this->cards[$i] == "one_coin"){
-                $cmd .= "225,225";
-            }else if($this->cards[$i] == "five_coin"){
-                $cmd .= "300x300";
-            }else{
-                $cmd .= "1725,1125";
-            }
-            $cmd .= " http://192.168.33.10/reference-card/" . $i;
-            $output = "";
-            $return_var = 0;
-            exec(escapeshellcmd($cmd), $output, $return_var);
-            print_r($output);
-            print_r($return_var);
 
-            $image = imagecreatefrompng($filename);
-            if(strpos($this->cards[$i], 'coin') !== false){
-                // no rotation needed for coins
-            }else{
-                $image = imagerotate($image, 90, 0);
-            }
-            if($image && imagefilter($image, IMG_FILTER_BRIGHTNESS, 20)){
-                imagepng($image, "/var/www/exo/public/img/print-cards/reference-cards/" . $this->cards[$i] . ".png");
-                imagedestroy($image);
-            }
-    
+        $reference_cards = \App\ReferenceCard::all();
+        foreach($reference_cards as $reference_card){
+            echo "Saving " . $reference_card->name . "...<br>";
+            $status = $reference_card->save_as_png($reference_card->type);
+            print_r($status);
         }
         return "<br>Done<br>";
     }
@@ -102,7 +84,8 @@ class ReferenceCardController extends Controller
      */
     public function edit($id)
     {
-        //
+        $reference_card = \App\ReferenceCard::findOrFail($id);
+        return view('reference_card.edit', ['reference_card' => $reference_card]);
     }
 
     /**
@@ -114,7 +97,10 @@ class ReferenceCardController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $reference_card = \App\ReferenceCard::findOrFail($id);
+        $input = Request::all();
+        $reference_card->update($input);
+        return redirect('reference-card/'.$id);
     }
 
     /**
@@ -125,6 +111,7 @@ class ReferenceCardController extends Controller
      */
     public function destroy($id)
     {
-        //
+        ReferenceCard::destroy($id);
+        return redirect('reference-card');
     }
 }

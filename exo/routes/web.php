@@ -56,6 +56,7 @@ Route::get('/action/create', 'ActionController@create');
 Route::get('/faction/create', 'FactionController@create');
 Route::get('/dwarf-planet/create', 'DwarfPlanetController@create');
 Route::get('/habitable-world/create', 'HabitableWorldController@create');
+Route::get('/reference-card/create', 'ReferenceCardController@create');
 
 // Card Stores
 Route::post('/planet/store', 'PlanetController@store');
@@ -67,6 +68,7 @@ Route::post('/action/store', 'ActionController@store');
 Route::post('/faction/store', 'FactionController@store');
 Route::post('/dwarf-planet/store', 'DwarfPlanetController@store');
 Route::post('/habitable-world/store', 'HabitableWorldController@store');
+Route::post('/reference-card/store', 'ReferenceCardController@store');
 
 // Card Deletes
 Route::delete('/planet/destroy/{id}', 'PlanetController@destroy');
@@ -78,6 +80,7 @@ Route::delete('/action/destroy/{id}', 'ActionController@destroy');
 Route::delete('/faction/destroy/{id}', 'FactionController@destroy');
 Route::delete('/dwarf-planet/destroy/{id}', 'DwarfPlanetController@destroy');
 Route::delete('/habitable-world/destroy/{id}', 'HabitableWorldController@destroy');
+Route::delete('/reference-card/destroy/{id}', 'ReferenceCardController@destroy');
 
 // Card Views
 Route::get('/card', 'CardController@view'); // oxbow?

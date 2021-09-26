@@ -14,16 +14,14 @@
         <h1>Reference Cards</h1>
         <table>
           <tr>
-            <th>Name</th><th>Type</th><th>Quantity</th><th>Edit</th>
+            <th>Name</th><th>Show</th>
           </tr>
-          @foreach ($reference_cards as $reference_card)
+          @for ($i=0;$i<count($cards);$i++)
             <tr>
-              <td><a href="/reference-card/{{ $reference_card->id }}">{{ $reference_card->name }}</a></td>
-              <td>{{ $reference_card->type }}</td>
-              <td>{{ $reference_card->quantity }}</td>
-              <td><a href="/reference-card/edit/{{ $reference_card->id }}">Edit</a></td>
+              <td>{{ $cards[$i] }}</td>
+              <td><a href="/reference-card/{{ $i }}">Show</a></td>
             </tr>
-          @endforeach
+          @endfor
         </table>
       </div>
       <a href="/reference-card/save_all_as_png">Save All As PNG</a>

@@ -99,6 +99,7 @@ class DwarfPlanetController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DwarfPlanet::destroy($id);
+        return redirect('dwarf-planet');
     }
 }
