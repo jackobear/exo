@@ -139,3 +139,17 @@ h3 span.fa-stack, li span.fa-stack{
     border-radius:25px;
     display:inline-block;
 }
+
+
+#legend, #legend tr, #legend td {
+    font-size:28pt;
+    background-color:#c4cfd6;
+    padding: 0px;
+    border:none;
+}
+#legend tr td:nth-child(3) {
+    color:gray;
+}
+#legend .fa-stack {
+    float:none;
+}
