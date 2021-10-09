@@ -22,12 +22,19 @@
           <ol style="font-size:31pt;margin-left:60px;">
             <li>Each player draws a random Faction card.</li>
             <li>Each player gets one Food, one Metal and one Water.</li>
-            <li>Each player gets one Fuel equal to launch cost of the starting world.</li>
+            <li>Each player gets Fuel equal to launch cost of the starting world.</li>
             <li>Each player gets one Coin equal to their starting positions minus one.</li>
             <li>Deal a random Star.
-            <li>Deal 4/5/6/7/8 Planets for 2/3/4/5/6 Players.  Some Stars modify this number.</li>
-            <li>Deal Moons and Dwarf Planets as described by Planets and Asteroid belts.</li>
-            <li>Place Magnetic Storms and Helium Deposit markers as described by Stars and Planets.</li>
+            <li>Deal Planets as described by the Star.</li>
+            <li>Deal Moons and Dwarf Planets as described by the Planets.</li>
+            <li>
+              Place Magnetic Storms <img src='/img/art/symbols/magnetic-storm.png' style='height:50px;' />and 
+              Magnetic Shield <img src='/img/art/symbols/magnetic-shield.png' style='height:50px;' /> markers as described by Stars and Planets.
+            </li>
+            <li>
+              Place a 1-Coin <img src='/img/art/symbols/1-coin.png' style='height:50px;' /> marker
+              on each Peak of Eternal Light<img src='/img/art/symbols/eternal-light.png' style='height:50px;' />in the Habitable orbit or closer to the Star.
+            </li>
             <li>See instructions for full details as needed.</li>
           </ol>
 
