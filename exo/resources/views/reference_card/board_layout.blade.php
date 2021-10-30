@@ -476,9 +476,10 @@
             context.rect(190, 670, 50, 70);
             context.stroke();
 
-            // Tradeship deck
-            context.fillText("Tradeship deck",300,765);
-            arrow(context, 300, 755, 260, 775);
+            // Trade Ship deck
+            context.fillText("Trade Ship",30,800);
+            context.fillText("deck",50,830);
+            arrow(context, 120, 820, 175, 820);
             context.beginPath();
             context.rect(200, 760, 50, 70);
             context.stroke();

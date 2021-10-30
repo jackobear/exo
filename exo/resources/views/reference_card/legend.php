@@ -32,7 +32,7 @@
             <td>&nbsp;</td>
           </tr>
           <tr>
-            <td><img src='/img/art/symbols/food.png' style='width:60px;' /></td>
+            <td><img src='/img/art/symbols/fuel.png' style='width:60px;' /></td>
             <td>Fuel</td>
             <td>&nbsp;</td>
           </tr>

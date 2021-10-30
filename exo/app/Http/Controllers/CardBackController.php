@@ -15,7 +15,8 @@ class CardBackController extends Controller
         "Lifeforms",
         "Moons",
         "Planets",
-        "Stars"
+        "Stars",
+        "Trade Ships"
     ];
 
     /**

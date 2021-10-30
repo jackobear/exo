@@ -27,7 +27,12 @@
           @endforeach
         </table>
       </div>
-      <a href="/planet/save_all_as_png">Save All As PNG</a>
+      <p>
+        Stats: {{ $stats }}
+      </p>
+      <p>
+        <a href="/planet/save_all_as_png">Save All As PNG</a>
+      </p>
     </div>
   </body>
 </html>
