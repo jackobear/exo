@@ -7,10 +7,10 @@
     <title>Turn Sequence</title>
     <link rel="stylesheet" href="/css/foundation/foundation.css">
     <link rel="stylesheet" href="/css/foundation/app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/Glyphter.css">
     <link rel="stylesheet" href="/css/exo.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/cost.js"></script>
-    <script type="text/javascript" src="/js/interstellarTrack.js"></script>
   </head>
   <body>
     <div class="row" style="background: url('/img/art/starfield.jpg');
@@ -23,14 +23,20 @@
 
           <ol style="font-size:31pt;margin-left:60px;">
             <li>Refresh exhausted Action cards and Trade Ships</li>
-            <li>Collect resources from Colonized sites and Action cards</li>
+            <li>Collect resources from colonized sites and Action cards</li>
             <li>Main Phase (Do any or none in any order)</li>
             <ul>
-              <li>Buy 1, 2, or 3 Action cards for 1, 3, or 6 Coin respectively, once per turn</li>
-              <li>Play or exhaust any number of Action cards</li>
-              <li>Buy and/or Sell one resource with Space Market once per turn for each of your Trade Ships</li>
-              <li>Settle a Colony as described on your Faction card</li>
-              <li>Settle an Exocolony as described on you Faction card</li>
+              <li>Play any number of an Action cards from the market or your hand</li>
+              <li>
+                Purchase for later any number of Action cards from the market for
+                <span class='fa-stack fa-lg'><i class='exo-coin fa-stack-1x' style='bottom:-2px;margin-left:-5px;'></i><i class='fa-stack-1x cost'>1</i></span> each
+              </li>
+              <li>Discard and redeal the entire Action card market for
+                <span class='fa-stack fa-lg'><i class='exo-coin fa-stack-1x' style='bottom:-2px;margin-left:-5px;'></i><i class='fa-stack-1x cost'>2</i></span>
+              </li>
+              <li>Exhaust any number of Action cards which are already in play</li>
+              <li>Buy and/or Sell one resource with the Space Market once per turn for each of your Trade Ships</li>
+              <li>Settle a Colony or Exocolony as described on your Faction card</li>
             </ul>
             <li>Discard down to 5 Action cards in hand and announce the end of your turn</li>
           </ol>

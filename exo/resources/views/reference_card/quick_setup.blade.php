@@ -24,6 +24,7 @@
             <li>Each player gets one Food, one Metal and one Water.</li>
             <li>Each player gets Fuel equal to launch cost of the starting world.</li>
             <li>Each player gets one Coin equal to their starting positions minus one.</li>
+            <li>Deal 5 Action cards face up to start the Action card makret</li>
             <li>Deal a random Star.
             <li>Deal Planets as described by the Star.</li>
             <li>Deal Moons and Dwarf Planets as described by the Planets.</li>

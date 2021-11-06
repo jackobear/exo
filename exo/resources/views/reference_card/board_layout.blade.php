@@ -119,13 +119,32 @@
                 context.stroke();
 
                 // Action discard pile
-                context.fillText("Action discard pile",645,215);
-                arrow(context, 640, 205, 600, 205);
+                context.fillText("Action discard pile",645,220);
+                arrow(context, 640, 210, 600, 210);
                 context.beginPath();
                 context.setLineDash([6]);
                 context.rect(540, 175, 50, 70);
                 context.stroke();
                 context.setLineDash([0]);
+
+                // Action card market
+                context.fillText("Action card market",320,155);
+                arrow(context, 580, 145, 620, 145);
+                context.beginPath();
+                context.rect(630, 120, 50, 70);
+                context.stroke();
+                context.beginPath();
+                context.rect(690, 120, 50, 70);
+                context.stroke();
+                context.beginPath();
+                context.rect(750, 120, 50, 70);
+                context.stroke();
+                context.beginPath();
+                context.rect(810, 120, 50, 70);
+                context.stroke();
+                context.beginPath();
+                context.rect(870, 120, 50, 70);
+                context.stroke();
 
             // Centauri
             context.beginPath();
