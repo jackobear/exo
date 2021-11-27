@@ -45,6 +45,7 @@ Route::get('/dwarf-planet', 'DwarfPlanetController@index');
 Route::get('/habitable-world', 'HabitableWorldController@index');
 Route::get('/reference-card', 'ReferenceCardController@index');
 Route::get('/card-back', 'CardBackController@index');
+Route::get('/simulation', 'SimulationController@index');
 
 // Card Creates
 Route::get('/planet/create', 'PlanetController@create');

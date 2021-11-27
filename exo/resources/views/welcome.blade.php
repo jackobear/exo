@@ -95,6 +95,7 @@
                     <a href="/planet">Planets</a>
                     <a href="/reference-card">Reference Cards</a>
                     <a href="/star">Stars</a>
+                    <a href="/simulation">Simulations</a>
                 </div><br /><br />
                 <div class="links">
                     <a href="/database/export">Export DB</a>
