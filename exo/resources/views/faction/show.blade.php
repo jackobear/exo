@@ -218,7 +218,7 @@
                     <?php } else { ?>
                       Gain up to
                     <?php } ?>
-                    <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>7</i></span>,
+                    <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>6</i></span>,
                     see victory Points reference card.
                   <?php }else{ ?>
                     Take any Asteroid card from the discarded Asteroid pile and your Colony and place them in any orbit.

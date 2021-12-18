@@ -27,15 +27,14 @@
           <ol style="font-size:31pt;margin-left:30px;">
             <ul style="list-style:none;float:left;">
               <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Settle any Colony</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : First Colony on a world</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Build Launch System</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Detect life</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : First life detection</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Settle first Colony on a World</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Build Spaceport</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Detect any Lifeform</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Detect first Lifeform</li>
               <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Launch Interstellar Probe</li>
               <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Launch First Interstellar Probe</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : First ship to enter a new Star system</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : First Colony outside starting Star system</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : First Colony in any new Star system</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Settle any Exocolony</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Settle first Exocolony</li>
             </ul>
           </ol>
 
