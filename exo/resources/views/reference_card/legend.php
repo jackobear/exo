@@ -37,6 +37,11 @@
             <td>&nbsp;</td>
           </tr>
           <tr>
+            <td><img src='/img/art/symbols/water.png' style='width:60px;' /></td>
+            <td>Water</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
             <td>
               <span class="fa-stack fa-lg">
                 <i class="exo-fuel fa-stack-1x"></i>
@@ -45,16 +50,6 @@
             </td>
             <td>Launch Cost</td>
             <td>Fuel cost to launch off a world</td>
-          </tr>
-          <tr>
-            <td><img src='/img/art/symbols/metal.png' style='width:60px;' /></td>
-            <td>Metal</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td><img src='/img/art/symbols/water.png' style='width:60px;' /></td>
-            <td>Water</td>
-            <td>&nbsp;</td>
           </tr>
           <tr>
             <td>

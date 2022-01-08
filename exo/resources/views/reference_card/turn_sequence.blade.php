@@ -26,19 +26,14 @@
             <li>Collect resources from colonized sites and Action cards</li>
             <li>Main Phase (Do any or none in any order)</li>
             <ul>
-              <li>Play any number of an Action cards from the market or your hand</li>
-              <li>
-                Purchase for later any number of Action cards from the market for
-                <span class='fa-stack fa-lg'><i class='exo-coin fa-stack-1x' style='bottom:-2px;margin-left:-5px;'></i><i class='fa-stack-1x cost'>1</i></span> each
-              </li>
-              <li>Discard and redeal the entire Action card market for
-                <span class='fa-stack fa-lg'><i class='exo-coin fa-stack-1x' style='bottom:-2px;margin-left:-5px;'></i><i class='fa-stack-1x cost'>2</i></span>
+              <li>Play any number of an Action cards from the market</li>
+              <li>Discard and redeal the entire Action card market once for
+                <span class='fa-stack fa-lg'><i class='exo-coin fa-stack-1x' style='bottom:-2px;margin-left:-5px;'></i><i class='fa-stack-1x cost'>1</i></span>
               </li>
               <li>Exhaust any number of Action cards which are already in play</li>
               <li>Buy and/or Sell one resource with the Space Market once per turn for each of your Trade Ships</li>
               <li>Settle a Colony or Exocolony as described on your Faction card</li>
             </ul>
-            <li>Discard down to 5 Action cards in hand and announce the end of your turn</li>
           </ol>
 
         </div>

@@ -67,10 +67,10 @@
           </script>
 
           <h3 style="margin-left:40px;" class='pull-left'>
-            Setup: Metal:<span class='fa-stack fa-lg'><i class='exo-coin fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span>,
+            Setup: Metal:<span class='fa-stack fa-lg'><i class='exo-coin fa-stack-1x'></i><i class='fa-stack-1x cost'>2</i></span>,
             Fuel: <span class='fa-stack fa-lg'><i class='exo-coin fa-stack-1x'></i><i class='fa-stack-1x cost'>2</i></span>,
             Water: <span class='fa-stack fa-lg'><i class='exo-coin fa-stack-1x'></i><i class='fa-stack-1x cost'>3</i></span>,
-            Food: <span class='fa-stack fa-lg'><i class='exo-coin fa-stack-1x'></i><i class='fa-stack-1x cost'>4</i></span>
+            Food: <span class='fa-stack fa-lg'><i class='exo-coin fa-stack-1x'></i><i class='fa-stack-1x cost'>3</i></span>
           </h3>
         </div>
       </div>
