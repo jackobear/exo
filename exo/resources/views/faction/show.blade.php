@@ -32,6 +32,7 @@
 
               <div class="columns large-6" style="">
                 <h2>Settle Colony
+                <img src='/img/art/symbols/colony.png' style='height:50px;width:50px;' />
                 <span style="float:right;color:#888;font-size:30px;">
 
                     <?php
@@ -95,6 +96,7 @@
 
               <div class="columns large-6" style="border-top:1px solid #aaa;border-right:1px solid #aaa;padding-top:10px;">
                 <h2>Build Spaceport
+                <img src='/img/art/symbols/spaceport.png' style='height:50px;width:50px;' />
                 <span style="float:right;color:#888;font-size:30px;">
 
                     <?php
@@ -151,7 +153,14 @@
               </div>
 
               <div class="columns large-6" style="border-top:1px solid #aaa;padding-top:10px;">
-                <h2><?php echo $faction->name === 'Rock Hoppers' ? 'Settle Asteroid Colony' : 'Settle Exocolony'; ?>
+                <h2>
+                  <?php if($faction->name === 'Rock Hoppers'){ ?>
+                    Settle Asteroid Colony <img src='/img/art/symbols/exocolony.png' style='height:50px;width:50px;' />,
+                    <img src='/img/art/symbols/colony.png' style='height:50px;width:50px;' />
+                  <?php }else{ ?>
+                    Settle Exocolony <img src='/img/art/symbols/exocolony.png' style='height:50px;width:50px;' />
+                  <?php }?>
+
                   <span style="float:right;color:#888;font-size:30px;">
 
                     <?php
@@ -221,7 +230,7 @@
                     <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>6</i></span>,
                     see victory Points reference card.
                   <?php }else{ ?>
-                    Take any Asteroid card from the discarded Asteroid pile and your Colony and place them in any orbit.
+                    Take any Asteroid card from the discarded Asteroid pile and your Colony or Exocolony and place them in any orbit.
                     These colonized Asteroids provide
                     <span class='fa-stack fa-lg'><i class='exo-coin fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span>
                     per turn and a total of
