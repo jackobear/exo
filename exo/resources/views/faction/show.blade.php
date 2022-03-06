@@ -33,7 +33,7 @@
               <div class="columns large-6" style="">
                 <h2>Settle Colony
                 <img src='/img/art/symbols/colony.png' style='height:50px;width:50px;' />
-                <span style="float:right;color:#888;font-size:30px;">
+                <span style="float:right;color:#888;font-size:30px;margin-top:5px;">
 
                     <?php
                         $costs = explode(",", $faction->planetship_cost);
@@ -72,7 +72,7 @@
                           }else if($multiplier == 0 || $cost == "L") {
                             $multiplier = "&#x2197;";
                           }
-                          if(($i == 2 && count($costs) < 5) || ($i == 3 && count($costs) > 4)) echo "<br />";
+                          // if(($i == 2 && count($costs) < 5) || ($i == 3 && count($costs) > 4)) echo "<br />";
                           ?>
 
                           <span class="fa-stack fa-lg">
@@ -131,7 +131,7 @@
                               break;
                           }
                           if($multiplier == 0 || $cost == "L") $multiplier = "X";
-                          if(($i == 2 && count($costs) < 5) || ($i == 3 && count($costs) > 4)) echo "<br />";
+                          //if(($i == 2 && count($costs) < 5) || ($i == 3 && count($costs) > 4)) echo "<br />";
                           ?>
 
                           <span class="fa-stack fa-lg">
@@ -203,7 +203,7 @@
                           }else if($multiplier == 0 || $cost == "L") {
                             $multiplier = "&#x2197;";
                           }
-                          if(($i == 2 && count($costs) < 5) || ($i == 3 && count($costs) > 4)) echo "<br />";
+                          //if(($i == 2 && count($costs) < 5) || ($i == 3 && count($costs) > 4)) echo "<br />";
                           ?>
 
                           <span class="fa-stack fa-lg">

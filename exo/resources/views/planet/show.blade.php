@@ -45,21 +45,22 @@
               echo $height;
             ?>"></canvas>
             <script type="text/javascript">
-                var sites_str = "<? echo $planet->sites; ?>";
-                var the_sites = new World(sites_str);
+              var sites_str = "<? echo $planet->sites; ?>";
+              var the_sites = new World(sites_str);
             </script>
           </div>
           
           <div class="glow" style="">
             <h3><? echo $planet->body; ?>
-                <?php if ($planet->escape_velocity > 0) { ?>
-                <div style="float:right;">Launch Cost: 
-                 <span class="fa-stack fa-lg">
-                   <i class="exo-fuel fa-stack-1x"></i>
-                   <i class="fa-stack-1x cost"><?php echo $planet->escape_velocity; ?></i>
-                 </span>
+              <?php if ($planet->escape_velocity > 0) { ?>
+                <div style="float:right;">
+                  <span class="fa-stack fa-lg launch">
+                    <i class="exo-fuel fa-stack-2x launch-fuel"></i>
+                    <i class="fa-stack-1x launch-cost"><?php echo $planet->escape_velocity; ?></i>
+                    <i class="fa-stack-2x launch-arrow">&#x2197;</i>
+                  </span>
                 </div>
-                <?php } ?>
+              <?php } ?>
             </h3>
           </div>
 

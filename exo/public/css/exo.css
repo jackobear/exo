@@ -1,12 +1,24 @@
+.launch {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 50px 1fr;
+}
+.launch-fuel {
+    grid-area: 1 / 1 / 2 / 2;
+}
 .launch-cost{
-    background-color:#f00;
-    border: solid 5px #660000;
-    color:#ffffff;
-    width:43px;
-    height:43px;
-    text-align:center;
-    display:inline-block;
-    line-height: 1;
+    grid-area: 1 / 1 / 2 / 2;
+    font-size: 50px;    
+    color:white;
+    font-style: normal;
+    text-shadow:-1px -1px 0 #222,1px -1px 0 #222,-1px 1px 0 #222,1px 1px 0 #222;
+}
+.launch-arrow {
+    margin-left: 20px;
+    margin-top: 20px;
+    color:white;
+    font-style: normal;
+    text-shadow:-1px -1px 0 #222,1px -1px 0 #222,-1px 1px 0 #222,1px 1px 0 #222;
 }
 .food{
     background-color:#0a0;
