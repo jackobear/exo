@@ -31,6 +31,7 @@
               <li>Exhaust any number of your Action cards which are already in play</li>
               <li>Buy and/or Sell one resource with the Space Market once per turn for each of your Trade Ships</li>
               <li>Settle a Colony or Exocolony as described on your Faction card</li>
+              <li>Build a Spaceport as described on your Faction card</li>
             </ul>
           </ol>
 

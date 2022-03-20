@@ -8,14 +8,15 @@
 }
 .launch-cost{
     grid-area: 1 / 1 / 2 / 2;
-    font-size: 50px;    
+    font-size: 50px;
+    margin-top:10px;
     color:white;
     font-style: normal;
     text-shadow:-1px -1px 0 #222,1px -1px 0 #222,-1px 1px 0 #222,1px 1px 0 #222;
 }
 .launch-arrow {
     margin-left: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
     color:white;
     font-style: normal;
     text-shadow:-1px -1px 0 #222,1px -1px 0 #222,-1px 1px 0 #222,1px 1px 0 #222;
