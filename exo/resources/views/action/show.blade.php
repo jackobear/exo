@@ -19,7 +19,7 @@
         <div style="width: 695px;height:995px;margin:65px 0px 65px 50px;background:transparent;display: flex;flex-direction: column;">
           <div class="glow" style="padding-bottom:5px;">
             
-            <?php if($action->name === 'Tradeship') {?>
+            <?php if($action->name === 'Trade Ship') {?>
               <img src="/img/art/symbols/tradeships.png" style='height:80px;float:left;margin-right:5px;' />
             <?php }else{ ?>
               <img src="/img/art/symbols/actions.png" style='height:80px;float:left;margin-right:5px;' />
@@ -111,9 +111,9 @@
 
               <div style="margin: 5px 0px 0px 0px;font-size:1.5em;line-height: 0.8;"><? echo $action->name; ?></div>
 
-                <?php if($action->name === 'Tradeship') {?>
+                <?php if($action->name === 'Trade Ship') {?>
                   <span style="color:#ffff00;font-size:30px;margin:0px;line-height: 1.1;">
-                    Tradeship
+                    Trade Ship
                   </span>
                 <?php }else{ ?>
                   <span style="color:#bc14aa;font-size:30px;margin:0px;line-height: 1.1;">

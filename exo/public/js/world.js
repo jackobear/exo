@@ -22,13 +22,14 @@ function World(sites_str, body=''){
   });
 
   // Sometimes the world itself has features (Ganymede)
+  /*
   if(body != '' && body.includes('Magnetosphere')) {
     const shieldImage = new Image();
     shieldImage.src = '/img/art/symbols/magnetic-shield.png';
     shieldImage.onload = function(){
       context.drawImage(shieldImage, 40, 50, 100, 100);
     }
-  }
+  }*/
 
   function create_site(context, site){
     var features = site.split("+");
@@ -36,6 +37,11 @@ function World(sites_str, body=''){
     features.forEach(function(feature){
         if(feature == "EL") blur = 20;
     });
+
+    // Sometimes the world itself has features like Ganymede's Magnet Shield
+    if(body != '' && body.includes('Magnetosphere')) {
+        features.push("SH");
+    }
 
     var feature_index = 0;
     features.forEach(function(feature){
@@ -87,6 +93,11 @@ function World(sites_str, body=''){
                 strokeStyle = '#cccc00';
                 featureType = 'peak';
                 break;
+            case "SH":
+                fillStyle = '#7d7d7d';
+                strokeStyle = '#000000';
+                featureType = 'shield';
+                break;
             default:
                 fillStyle = '#fff8a8';
                 strokeStyle = '#cccc00';
@@ -134,9 +145,10 @@ function World(sites_str, body=''){
                 context.stroke();
                 var caveImage = new Image();
                 var image_y = site_y - 35;
+                var image_x = site_x - (bonus_radius * feature_index) - bonus_margin - 35;
                 caveImage.onload = function() {
                   context.shadowBlur = 0;
-                  context.drawImage(caveImage, site_x - (bonus_radius * feature_index) - bonus_margin + 5, image_y, 70, 70);
+                  context.drawImage(caveImage, image_x, image_y, 70, 70);
                 };
                 caveImage.src = '/img/art/symbols/cave.png';
             }else if(featureType == 'peak'){
@@ -150,6 +162,16 @@ function World(sites_str, body=''){
                 };
                 peakImage.src = '/img/art/symbols/eternal-light.png';
                 context.shadowBlur = 0; // Turn off glow
+            }else if(featureType == 'shield'){
+                context.beginPath();
+                const shieldImage = new Image();
+                var image_y = site_y - 40;
+                var image_x = site_x - (bonus_radius * feature_index) - bonus_margin - 80;
+                shieldImage.onload = function() {
+                  context.shadowBlur = 0;
+                  context.drawImage(shieldImage, image_x, image_y, 75, 75);
+                };
+                shieldImage.src = '/img/art/symbols/magnetic-shield.png';
             /*
             }else if(featureType == 'glow'){
                 context.lineWidth = border_width;
