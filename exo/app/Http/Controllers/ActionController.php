@@ -65,11 +65,32 @@ class ActionController extends Controller
     public function save_all_as_png(){
         set_time_limit(60*10);
         $actions = \App\Action::all();
-        foreach($actions as $action){
-            echo "Saving " . $action->name . "...<br>";
-            $status = $action->save_as_png();
+        $total_quantity = 0;
+        foreach($actions as $action) {
+            if($action->name != 'Trade Ship') {
+                $total_quantity += $action->quantity;
+            }
+        }
+        $row_count = ceil($total_quantity / 16);
+        $sheet = imagecreatetruecolor(4096, $row_count * 358);
+        $index = 0;
+        for($i=0;$i<$actions->count();$i++){
+            echo "Saving " . $actions[$i]->name . "...<br>";
+            $status = $actions[$i]->save_as_png();
+            if ($actions[$i]->name != 'Trade Ship'){
+                $name = str_replace(" ", "_", strtolower($actions[$i]->name));
+                $filename = "/var/www/exo/public/img/cards-jpeg/actions/{$name}.jpg";
+                $image = imagecreatefromjpeg($filename);
+                for($j=0;$j<$actions[$i]->quantity;$j++){
+                    $row = floor($index/16);
+                    imagecopymerge($sheet, $image, $index*256 - $row*4096, $row*358, 0, 0, 256, 358, 100);
+                    $index++;
+                }
+            }
             print_r($status);
         }
+        imagejpeg($sheet, "/var/www/exo/public/img/screentop/actions-16x{$row_count}-{$actions->count()}.jpg", 80);
+        imagedestroy($sheet);
         return "<br>Done<br>";
     }
 

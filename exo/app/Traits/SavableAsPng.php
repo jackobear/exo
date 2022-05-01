@@ -53,25 +53,42 @@ trait SavableAsPng {
         if ($rotate){
             $image = imagerotate($image, -90, 0);
         }
-        $cropped = imagecrop($image, [
+        $cropped_width = $width - 2*$crop_margin;
+        $cropped_height = $height - 2*$crop_margin;
+        $image = imagecrop($image, [
             'x' => $crop_margin,
             'y' => $crop_margin,
-            'width' => $width - 2*$crop_margin,
-            'height' => $height - 2*$crop_margin
+            'width' => $cropped_width,
+            'height' => $cropped_height
         ]);
         if($image) {
-            imagepng($cropped, $filename);
-
+            // Save high quality pngs
+            imagepng($image, $filename);
             if ($class == 'action' && $this->quantity > 1) {
                 // Make extra copies for tts deckbuilding purposes
                 for($i=2;$i<=$this->quantity;$i++){
                     $copy_filename = str_replace($name, $name . $i, $filename);
-                    imagepng($cropped, $copy_filename);
+                    imagepng($image, $copy_filename);
                 }
             }
 
+            // Save lower-res jpegs
+            $filename = str_replace('.png', '.jpg', $filename);
+            $filename = str_replace('/cards/', '/cards-jpeg/', $filename);
+            $new_width = round($cropped_width * (256/755));
+            $new_height = round($cropped_height * (256/755));
+            $image_new = imagecreatetruecolor($new_width, $new_height);
+            imagecopyresampled($image_new, $image, 0, 0, 0, 0, $new_width, $new_height, $cropped_width, $cropped_height);
+            imagejpeg($image_new, $filename, 90);
+
+            if ($class == 'action' && $this->quantity > 1) {
+                // Make extra copies for screentop deckbuilding purposes
+                for($i=2;$i<=$this->quantity;$i++){
+                    $copy_filename = str_replace($name, $name . $i, $filename);
+                    imagejpeg($image, $copy_filename);
+                }
+            }
             imagedestroy($image);
-            imagedestroy($cropped);
         }
 
         return(array($output, $return_var));

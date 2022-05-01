@@ -57,11 +57,19 @@ class HabitableWorldController extends Controller
 
     public function save_all_as_png(){
         $habitable_worlds = \App\HabitableWorld::all();
-        foreach($habitable_worlds as $habitable_world){
-            echo "Saving " . $habitable_world->name . "...<br>";
-            $status = $habitable_world->save_as_png();
+        $row_count = ceil($habitable_worlds->count() / 16);
+        $sheet = imagecreatetruecolor(4096, $row_count * 358);
+        for($i=0;$i<$habitable_worlds->count();$i++){
+            echo "Saving " . $habitable_worlds[$i]->name . "...<br>";
+            $status = $habitable_worlds[$i]->save_as_png();
+            $name = str_replace(" ", "_", strtolower($habitable_worlds[$i]->name));
+            $filename = "/var/www/exo/public/img/cards-jpeg/habitable-worlds/{$name}.jpg";
+            $image = imagecreatefromjpeg($filename);
+            imagecopymerge($sheet, $image, $i*256, floor($i/16)*358, 0, 0, 256, 358, 100);
             print_r($status);
         }
+        imagejpeg($sheet, "/var/www/exo/public/img/screentop/habitable_worlds-16x{$row_count}-{$habitable_worlds->count()}.jpg", 80);
+        imagedestroy($sheet);
         return "<br>Done<br>";
     }
 

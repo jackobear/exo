@@ -38,7 +38,7 @@
             <canvas id="myCanvas" width="745" height="<?
               // Check if we need room for two lines of text
               $height = 800;
-              if(strlen(strip_tags($moon->body)) > 27) $height -= 43;
+              /*if(strlen(strip_tags($moon->body)) > 27)*/ $height -= 43;
               echo $height;
             ?>"></canvas>
             <script type="text/javascript">
@@ -46,6 +46,8 @@
                 var the_sites = new World(sites_str, "<? echo $moon->body; ?>");
             </script>
           </div>
+
+          <div style="height:100%;">&nbsp;</div>
           
           <div class="glow" style="">
             <h3><? echo $moon->body; ?>

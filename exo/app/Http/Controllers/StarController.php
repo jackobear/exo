@@ -56,11 +56,19 @@ class StarController extends Controller
 
     public function save_all_as_png(){
         $stars = \App\Star::all();
-        foreach($stars as $star){
-            echo "Saving " . $star->name . "...<br>";
-            $status = $star->save_as_png();
+        $row_count = ceil($stars->count() / 16);
+        $sheet = imagecreatetruecolor(4096, $row_count * 358);
+        for($i=0;$i<$stars->count();$i++){
+            echo "Saving " . $stars[$i]->name . "...<br>";
+            $status = $stars[$i]->save_as_png();
+            $name = str_replace(" ", "_", strtolower($stars[$i]->name));
+            $filename = "/var/www/exo/public/img/cards-jpeg/stars/{$name}.jpg";
+            $image = imagecreatefromjpeg($filename);
+            imagecopymerge($sheet, $image, $i*256, floor($i/16)*358, 0, 0, 256, 358, 100);
             print_r($status);
         }
+        imagejpeg($sheet, "/var/www/exo/public/img/screentop/stars-16x{$row_count}-{$stars->count()}.jpg", 80);
+        imagedestroy($sheet);
         return "<br>Done<br>";
     }
 

@@ -56,11 +56,19 @@ class DwarfPlanetController extends Controller
 
     public function save_all_as_png(){
         $dwarf_planets = \App\DwarfPlanet::all();
-        foreach($dwarf_planets as $dwarf_planet){
-            echo "Saving " . $dwarf_planet->name . "...<br>";
-            $status = $dwarf_planet->save_as_png();
+        $row_count = ceil($dwarf_planets->count() / 16);
+        $sheet = imagecreatetruecolor(4096, $row_count * 358);
+        for($i=0;$i<$dwarf_planets->count();$i++){
+            echo "Saving " . $dwarf_planets[$i]->name . "...<br>";
+            $status = $dwarf_planets[$i]->save_as_png();
+            $name = str_replace(" ", "_", strtolower($dwarf_planets[$i]->name));
+            $filename = "/var/www/exo/public/img/cards-jpeg/dwarf-planets/{$name}.jpg";
+            $image = imagecreatefromjpeg($filename);
+            imagecopymerge($sheet, $image, $i*256, floor($i/16)*358, 0, 0, 256, 358, 100);
             print_r($status);
         }
+        imagejpeg($sheet, "/var/www/exo/public/img/screentop/dwarf_planets-16x{$row_count}-{$dwarf_planets->count()}.jpg", 80);
+        imagedestroy($sheet);
         return "<br>Done<br>";
     }
 

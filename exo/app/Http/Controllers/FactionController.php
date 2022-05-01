@@ -57,11 +57,21 @@ class FactionController extends Controller
 
     public function save_all_as_png(){
         $factions = \App\Faction::all();
-        foreach($factions as $faction){
-            echo "Saving " . $faction->name . "...<br>";
-            $status = $faction->save_as_png('jumbo');
+        $row_count = ceil($factions->count() / 16);
+        $width = 562;
+        $height = 358;
+        $sheet = imagecreatetruecolor($width*7, $row_count * $height);
+        for($i=0;$i<$factions->count();$i++){
+            echo "Saving " . $factions[$i]->name . "...<br>";
+            $status = $factions[$i]->save_as_png('jumbo');
+            $name = str_replace(" ", "_", strtolower($factions[$i]->name));
+            $filename = "/var/www/exo/public/img/cards-jpeg/factions/{$name}.jpg";
+            $image = imagecreatefromjpeg($filename);
+            imagecopymerge($sheet, $image, $i*$width, floor($i/7)*$height, 0, 0, $width, $height, 100);
             print_r($status);
         }
+        imagejpeg($sheet, "/var/www/exo/public/img/screentop/factions-7x{$row_count}-{$factions->count()}.jpg", 80);
+        imagedestroy($sheet);
         return "<br>Done<br>";
     }
 

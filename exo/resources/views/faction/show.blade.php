@@ -27,7 +27,7 @@
             <div class="row expanded">
               <div class="columns large-6" style="border-right:1px solid #aaa;">
                 <h3><? echo $faction->body; ?></h3>
-                <span style="font-style:italic;font-size:20pt;color:#aaa;"><? echo $faction->flavor_text; ?></span>
+                <span style="font-style:italic;font-size:20pt;color:#777;"><? echo $faction->flavor_text; ?></span>
               </div>
 
               <div class="columns large-6" style="">

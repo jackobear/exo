@@ -67,11 +67,19 @@ class PlanetController extends Controller
 
     public function save_all_as_png(){
         $planets = \App\Planet::all();
-        foreach($planets as $planet){
-            echo "Saving " . $planet->name . "...<br>";
-            $status = $planet->save_as_png();
+        $row_count = ceil($planets->count() / 16);
+        $sheet = imagecreatetruecolor(4096, $row_count * 358);
+        for($i=0;$i<$planets->count();$i++){
+            echo "Saving " . $planets[$i]->name . "...<br>";
+            $status = $planets[$i]->save_as_png();
+            $name = str_replace(" ", "_", strtolower($planets[$i]->name));
+            $filename = "/var/www/exo/public/img/cards-jpeg/planets/{$name}.jpg";
+            $image = imagecreatefromjpeg($filename);
+            imagecopymerge($sheet, $image, $i*256, floor($i/16)*358, 0, 0, 256, 358, 100);
             print_r($status);
         }
+        imagejpeg($sheet, "/var/www/exo/public/img/screentop/planets-16x{$row_count}-{$planets->count()}.jpg", 80);
+        imagedestroy($sheet);
         return "<br>Done<br>";
     }
 

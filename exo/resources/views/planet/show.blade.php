@@ -38,10 +38,7 @@
             <canvas id="myCanvas" width="745" height="<?
               // Check if we need room for two lines of text
               $height = 800;
-              if(strlen(strip_tags($planet->body)) > 27) $height -= 43;
-              if(strlen(strip_tags($planet->body)) > 80) $height -= 43;
-              if(strlen(strip_tags($planet->body)) > 130) $height -= 43;
-              if(strlen(strip_tags($planet->body)) > 180) $height -= 43;
+              if(strlen(strip_tags($planet->body)) > 50) $height -= 43;
               echo $height;
             ?>"></canvas>
             <script type="text/javascript">

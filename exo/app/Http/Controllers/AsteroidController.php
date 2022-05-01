@@ -57,11 +57,19 @@ class AsteroidController extends Controller
 
     public function save_all_as_png(){
         $asteroids = \App\Asteroid::all();
-        foreach($asteroids as $asteroid){
-            echo "Saving " . $asteroid->name . "...<br>";
-            $status = $asteroid->save_as_png();
+        $row_count = ceil($asteroids->count() / 16);
+        $sheet = imagecreatetruecolor(4096, $row_count * 358);
+        for($i=0;$i<$asteroids->count();$i++){
+            echo "Saving " . $asteroids[$i]->name . "...<br>";
+            $status = $asteroids[$i]->save_as_png();
+            $name = str_replace(" ", "_", strtolower($asteroids[$i]->name));
+            $filename = "/var/www/exo/public/img/cards-jpeg/asteroids/{$name}.jpg";
+            $image = imagecreatefromjpeg($filename);
+            imagecopymerge($sheet, $image, $i*256, floor($i/16)*358, 0, 0, 256, 358, 100);
             print_r($status);
         }
+        imagejpeg($sheet, "/var/www/exo/public/img/screentop/asteroids-16x{$row_count}-{$asteroids->count()}.jpg", 80);
+        imagedestroy($sheet);
         return "<br>Done<br>";
     }
 

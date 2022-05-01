@@ -57,11 +57,19 @@ class LifeformController extends Controller
 
     public function save_all_as_png(){
         $lifeforms = \App\Lifeform::all();
-        foreach($lifeforms as $lifeform){
-            echo "Saving " . $lifeform->name . "...<br>";
-            $status = $lifeform->save_as_png();
+        $row_count = ceil($lifeforms->count() / 16);
+        $sheet = imagecreatetruecolor(4096, $row_count * 358);
+        for($i=0;$i<$lifeforms->count();$i++){
+            echo "Saving " . $lifeforms[$i]->name . "...<br>";
+            $status = $lifeforms[$i]->save_as_png();
+            $name = str_replace(" ", "_", strtolower($lifeforms[$i]->name));
+            $filename = "/var/www/exo/public/img/cards-jpeg/lifeforms/{$name}.jpg";
+            $image = imagecreatefromjpeg($filename);
+            imagecopymerge($sheet, $image, $i*256, floor($i/16)*358, 0, 0, 256, 358, 100);
             print_r($status);
         }
+        imagejpeg($sheet, "/var/www/exo/public/img/screentop/lifeforms-16x{$row_count}-{$lifeforms->count()}.jpg", 80);
+        imagedestroy($sheet);
         return "<br>Done<br>";
     }
 
