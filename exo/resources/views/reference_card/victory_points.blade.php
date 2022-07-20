@@ -26,15 +26,15 @@
           <h2 style="margin-left:50px;">16 VP to Win, All bonuses below are cumulative</h2>
           <ol style="font-size:31pt;margin-left:30px;">
             <ul style="list-style:none;float:left;">
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Settle any Colony</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Settle first Colony on a World</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Build Spaceport</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Detect any Lifeform</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Detect first Lifeform</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Launch Interstellar Probe</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Launch First Interstellar Probe</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Settle any Exocolony</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Settle first Exocolony</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Settle a Colony</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Settle the first Colony on a World</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Build a Spaceport</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Detect a Lifeform</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Detect the first Lifeform</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Launch an Interstellar Probe</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Launch the first Interstellar Probe</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>3</i></span> : Settle an Exocolony</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Settle the first Exocolony</li>
             </ul>
           </ol>
 

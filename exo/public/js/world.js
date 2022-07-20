@@ -14,8 +14,13 @@ function World(sites_str, body=''){
   if(sites_str == "") return;
   var sites = sites_str.split(",");
 
-  // Push sites further down the card if there are fewer of them
-  site_y += (4 - sites.length) * (radius + site_margin / 2);
+  if (sites.length == 5){
+  	site_y -= 10;
+  	site_margin = 0;
+  } else {
+    // Push sites further down the card if there are fewer of them
+    site_y += (4 - sites.length) * (radius + site_margin / 2);
+  }
 
   sites.forEach(function(site){
     create_site(context, site);
