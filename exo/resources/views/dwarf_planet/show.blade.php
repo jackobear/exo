@@ -48,15 +48,13 @@
           
           <div class="glow" style="">
             <h3><? echo $dwarf_planet->body; ?>
-              <?php if ($dwarf_planet->escape_velocity > 0) { ?>
-                <div style="float:right;">
-                  <span class="fa-stack fa-lg launch">
-                    <i class="exo-fuel fa-stack-2x launch-fuel"></i>
-                    <i class="fa-stack-1x launch-cost"><?php echo $dwarf_planet->escape_velocity; ?></i>
-                    <i class="fa-stack-2x launch-arrow">&#x2197;</i>
-                  </span>
-                </div>
-              <?php } ?>
+              <div style="float:right;">
+                <span class="fa-stack fa-lg launch">
+                  <i class="exo-fuel fa-stack-2x launch-fuel"></i>
+                  <i class="fa-stack-1x launch-cost"><?php echo $dwarf_planet->escape_velocity; ?></i>
+                  <i class="fa-stack-2x launch-arrow">&#x2197;</i>
+                </span>
+              </div>
             </h3>
           </div>
         </div>
