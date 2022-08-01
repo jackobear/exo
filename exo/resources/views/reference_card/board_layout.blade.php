@@ -82,6 +82,7 @@
             arrow(context, 160, 155, 195, 280);
             context.fillText("Starting",30,250);
             context.fillText("Star",30,275);
+            context.fillText("(Sol)",30,300);
             arrow(context, 90, 275, 195, 370);
 
             // Eridani
@@ -100,32 +101,32 @@
                 context.rect(260, 200, 50, 70);
                 context.stroke();
 
-                // Action deck
-                context.fillText("Action",320,205);
-                context.fillText("deck",320,230);
-                arrow(context, 410, 205, 450, 205);
-                context.beginPath();
-                context.rect(470, 165, 50, 70);
-                context.stroke();
-
-                context.beginPath();
-                context.clearRect(465, 170, 50, 70);
-                context.rect(465, 170, 50, 70);
-                context.stroke();
-
-                context.beginPath();
-                context.clearRect(460, 175, 50, 70);
-                context.rect(460, 175, 50, 70);
-                context.stroke();
-
                 // Action discard pile
-                context.fillText("Action discard pile",645,220);
-                arrow(context, 640, 210, 600, 210);
+                context.fillText("Action",320,205);
+                context.fillText("discard pile",320,230);
+                arrow(context, 420, 195, 470, 195);
                 context.beginPath();
                 context.setLineDash([6]);
-                context.rect(540, 175, 50, 70);
+                context.rect(480, 175, 50, 70);
                 context.stroke();
                 context.setLineDash([0]);
+
+                // Action deck
+                context.fillText("Action deck",645,220);
+                arrow(context, 640, 210, 605, 210);
+                context.beginPath();
+                context.rect(550, 165, 50, 70);
+                context.stroke();
+
+                context.beginPath();
+                context.clearRect(545, 170, 50, 70);
+                context.rect(545, 170, 50, 70);
+                context.stroke();
+
+                context.beginPath();
+                context.clearRect(540, 175, 50, 70);
+                context.rect(540, 175, 50, 70);
+                context.stroke();
 
                 // Action card market
                 context.fillText("Action card market",320,155);
@@ -157,29 +158,29 @@
                 context.stroke();
 
                 // Asteroid Deck
-                context.fillText("Asteroid",320,305);
-                context.fillText("deck",320,330);
-                arrow(context, 430, 305, 450, 305);
+                context.fillText("Asteroid deck",645,345);
+                arrow(context, 640, 335, 600, 335);
                 context.beginPath();
-                context.rect(470, 260, 50, 70);
+                context.rect(550, 260, 50, 70);
                 context.stroke();
 
                 context.beginPath();
-                context.clearRect(465, 265, 50, 70);
-                context.rect(465, 265, 50, 70);
+                context.clearRect(545, 265, 50, 70);
+                context.rect(545, 265, 50, 70);
                 context.stroke();
 
                 context.beginPath();
-                context.clearRect(460, 270, 50, 70);
-                context.rect(460, 270, 50, 70);
+                context.clearRect(540, 270, 50, 70);
+                context.rect(540, 270, 50, 70);
                 context.stroke();
 
                 // Asteroid discard pile
-                context.fillText("Asteroid discard pile",645,345);
-                arrow(context, 640, 335, 600, 335);
+                context.fillText("Asteroid",320,305);
+                context.fillText("discard pile",320,330);
+                arrow(context, 440, 295, 470, 295);
                 context.beginPath();
                 context.setLineDash([6]);
-                context.rect(540, 270, 50, 70);
+                context.rect(480, 270, 50, 70);
                 context.stroke();
                 context.setLineDash([0]);
 
@@ -233,7 +234,7 @@
             context.stroke();
 
                 // Luna
-                context.fillText("12", 386, 486);
+                context.fillText("9", 396, 486);
                 context.beginPath();
                 context.rect(380, 440, 50, 70);
                 context.stroke();
@@ -251,19 +252,19 @@
             context.stroke();
 
                 // Ceres
-                context.fillText("13", 506, 486);
+                context.fillText("10", 506, 486);
                 context.beginPath();
                 context.rect(500, 440, 50, 70);
                 context.stroke();
     
                 // Vesta
-                context.fillText("14", 506, 566);
+                context.fillText("11", 506, 566);
                 context.beginPath();
                 context.rect(500, 520, 50, 70);
                 context.stroke();
     
                 // Pallas
-                context.fillText("15", 506, 646);
+                context.fillText("12", 506, 646);
                 context.beginPath();
                 context.rect(500, 600, 50, 70);
                 context.stroke();
@@ -275,25 +276,25 @@
             context.stroke();
 
                 // Io
-                context.fillText("16", 566, 486);
+                context.fillText("13", 566, 486);
                 context.beginPath();
                 context.rect(560, 440, 50, 70);
                 context.stroke();
     
                 // Europa
-                context.fillText("17", 566, 566);
+                context.fillText("14", 566, 566);
                 context.beginPath();
                 context.rect(560, 520, 50, 70);
                 context.stroke();
     
                 // Ganymede
-                context.fillText("18", 566, 646);
+                context.fillText("15", 566, 646);
                 context.beginPath();
                 context.rect(560, 600, 50, 70);
                 context.stroke();
     
                 // Callisto
-                context.fillText("19", 566, 726);
+                context.fillText("16", 566, 726);
                 context.beginPath();
                 context.rect(560, 680, 50, 70);
                 context.stroke();
@@ -305,17 +306,18 @@
             context.stroke();
 
                 // Enceladus
-                context.fillText("20", 629, 486);
+                context.fillText("17", 629, 486);
                 context.beginPath();
                 context.rect(620, 440, 50, 70);
                 context.stroke();
     
                 // Titan
                 context.beginPath();
-                context.fillText("21", 629, 566);
+                context.fillText("18", 629, 566);
                 context.rect(620, 520, 50, 70);
                 context.stroke();
 
+/*
             // Uranus
             context.fillText("9", 696, 406);
             context.beginPath();
@@ -385,15 +387,16 @@
                 context.beginPath();
                 context.rect(800, 680, 50, 70);
                 context.stroke();
+*/
 
             // Planets/Asteroid belts label
-            context.fillText("Planets",910,405);
-            arrow(context, 905, 395, 880, 395);
+            context.fillText("Planets",710,405);
+            arrow(context, 705, 395, 680, 395);
 
             // Moons and Dwarf Planets curly bracket and label
             var curlyHeight = 310;
             var linelength = (curlyHeight-60)/2;
-            var curlyx = 875;
+            var curlyx = 685;
             var curlyy = 440;
             var curlyWidth = 20;
             context.beginPath();
@@ -405,14 +408,14 @@
             context.lineTo(curlyWidth+curlyx, curlyHeight - curlyWidth+curlyy);
             context.arcTo(curlyWidth+curlyx, curlyHeight + curlyy, curlyx, curlyHeight + curlyy, curlyWidth);
             context.stroke();
-            context.fillText("Moons and",920,605);
-            context.fillText("Dwarf Planets",920,630);
+            context.fillText("Moons and",730,605);
+            context.fillText("Dwarf Planets",730,630);
 
-            // 4 Orbits for Sol label
-            var curlyLength = 230;
+            // 3 Planets for Sol label
+            var curlyLength = 170;
             var linelength = (curlyLength-60)/2;
             var curlyx = 260;
-            var curlyy = 790;
+            var curlyy = 760;
             var curlyWidth = 20;
             context.beginPath();
             context.moveTo(curlyx, curlyy);
@@ -423,13 +426,14 @@
             context.lineTo((2*curlyWidth)+curlyx + (2*linelength), curlyWidth+curlyy);
             context.arcTo((3*curlyWidth)+curlyx + (2*linelength), curlyWidth+curlyy, (3*curlyWidth)+curlyx + (2*linelength), curlyy, curlyWidth);
             context.stroke();
-            context.fillText("4 Planets for Sol",250,860);
+            context.fillText("3 Planets for",280,830);
+            context.fillText("1 Player with Sol",250,860);
 
             // Planets per player labels
-            var curlyLength = 350;
+            var curlyLength = 240;
             var linelength = (curlyLength-60)/2;
-            var curlyx = 500;
-            var curlyy = 790;
+            var curlyx = 440;
+            var curlyy = 760;
             var curlyWidth = 20;
             context.beginPath();
             context.moveTo(curlyx, curlyy);
@@ -440,7 +444,8 @@
             context.lineTo((2*curlyWidth)+curlyx + (2*linelength), curlyWidth+curlyy);
             context.arcTo((3*curlyWidth)+curlyx + (2*linelength), curlyWidth+curlyy, (3*curlyWidth)+curlyx + (2*linelength), curlyy, curlyWidth);
             context.stroke();
-            context.fillText("6-10 Planets for 2-6 Players",500,860);
+            context.fillText("4-7 Planets",530,830);
+            context.fillText("for 2-5 Players",510,860);
 
             // Star deck
             context.fillText("Star",300, 500);
@@ -514,43 +519,44 @@
             context.stroke();
       
             // Player 4
-            context.fillText("Player 4", 1220, 540);
-            context.fillText("Faction", 1165, 595);
+            context.fillText("Player 4", 1020, 440);
+            context.fillText("Faction", 965, 495);
             context.beginPath();
-            context.rect(1160, 550, 110, 70);
+            context.rect(960, 450, 110, 70);
             context.stroke();
 
                 // Player 4's Action cards
-                context.fillText("Starting",1430,570);
-                context.fillText("Action",1430,595);
-                context.fillText("cards",1430,620);
-                arrow(context, 1425, 580, 1400, 580);
+                context.fillText("Starting",1230,470);
+                context.fillText("Action",1230,495);
+                context.fillText("cards",1230,520);
+                arrow(context, 1225, 480, 1200, 480);
                 context.beginPath();
-                context.rect(1280, 550, 50, 70);
+                context.rect(1080, 450, 50, 70);
                 context.stroke();
                 context.beginPath();
-                context.rect(1340, 550, 50, 70);
+                context.rect(1140, 450, 50, 70);
                 context.stroke();
       
             // Player 5
-            context.fillText("Player 5", 1220, 660);
-            context.fillText("Faction", 1165, 715);
+            context.fillText("Player 5", 1020, 660);
+            context.fillText("Faction", 965, 715);
             context.beginPath();
-            context.rect(1160, 670, 110, 70);
+            context.rect(960, 670, 110, 70);
             context.stroke();
 
                 // Player 5's Action cards
-                context.fillText("Starting",1430,690);
-                context.fillText("Action",1430,715);
-                context.fillText("cards",1430,740);
-                arrow(context, 1425, 700, 1400, 700);
+                context.fillText("Starting",1230,690);
+                context.fillText("Action",1230,715);
+                context.fillText("cards",1230,740);
+                arrow(context, 1225, 700, 1200, 700);
                 context.beginPath();
-                context.rect(1280, 670, 50, 70);
+                context.rect(1080, 670, 50, 70);
                 context.stroke();
                 context.beginPath();
-                context.rect(1340, 670, 50, 70);
+                context.rect(1140, 670, 50, 70);
                 context.stroke();
-      
+
+/*
             // Player 6
             context.fillText("Player 6", 1220, 780);
             context.fillText("Faction", 1165, 835);
@@ -569,6 +575,7 @@
                 context.beginPath();
                 context.rect(1340, 790, 50, 70);
                 context.stroke();
+*/
 
             // Beginner Setup
             context.fillText("Beginner Setup", 1100, 30);
@@ -584,16 +591,17 @@
             context.fillText("6. Asteroid Belt", 1100, 220);
             context.fillText("7. Jupiter", 1100, 250);
             context.fillText("8. Saturn", 1100, 280);
-            context.fillText("9. Uranus", 1100, 310);
-            context.fillText("10. Neptune", 1100, 340);
-            context.fillText("11. Kuiper Belt", 1100, 370);
-            context.fillText("12. Luna", 1100, 400);
-            context.fillText("13. Ceres", 1100, 430);
-            context.fillText("14. Vesta", 1100, 460);
-            context.fillText("15. Pallas", 1100, 490);
-            context.fillText("16. Io", 1310, 70);
-            context.fillText("17. Europa", 1310, 100);
-            context.fillText("18. Ganymede", 1310, 130);
+            context.fillText("9. Luna", 1100, 310);
+            context.fillText("10. Ceres", 1310, 70);
+            context.fillText("11. Vesta", 1310, 100);
+            context.fillText("12. Pallas", 1310, 130);
+            context.fillText("13. Io", 1310, 160);
+            context.fillText("14. Europa", 1310, 190);
+            context.fillText("15. Ganymede", 1310, 220);
+            context.fillText("16. Callisto", 1310, 250);
+            context.fillText("17. Enceladus", 1310, 280);
+            context.fillText("18. Titan", 1310, 310);
+            /*
             context.fillText("19. Callisto", 1310, 160);
             context.fillText("20. Enceladus", 1310, 190);
             context.fillText("21. Titan", 1310, 220);
@@ -606,6 +614,7 @@
             context.fillText("28. Eris", 1310, 430);
             context.fillText("29. Makemake", 1310, 460);
             context.fillText("30. Humea", 1310, 490);
+            */
 
           </script>
 
