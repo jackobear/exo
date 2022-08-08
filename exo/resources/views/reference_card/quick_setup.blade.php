@@ -20,11 +20,6 @@
             </h1>
 
           <ol style="font-size:31pt;margin-left:60px;">
-            <li>Each player draws a random Faction card.</li>
-            <li>Each player gets one Food, one Metal and one Water.</li>
-            <li>Each player gets Fuel equal to launch cost of the starting world.</li>
-            <li>Each player gets one Coin equal to their starting positions minus one.</li>
-            <li>Deal 5 Action cards face up to start the Action card market</li>
             <li>Deal a random Star.
             <li>Deal Planets as described by the Star.</li>
             <li>Deal Moons and Dwarf Planets as described by the Planets.</li>
@@ -36,6 +31,11 @@
               Place a 1-Coin <img src='/img/art/symbols/1-coin.png' style='height:50px;' /> marker
               on each Peak of Eternal Light<img src='/img/art/symbols/eternal-light.png' style='height:50px;' />in the Habitable orbit or closer to the Star.
             </li>
+            <li>Each player draws a random Faction card.</li>
+            <li>Each player gets one Food, one Metal and one Water.</li>
+            <li>Each player gets Fuel equal to launch cost of the starting world.</li>
+            <li>Each player gets one Coin equal to their starting positions minus one.</li>
+            <li>Deal 5 Action cards face up to start the Action card market</li>
             <li>See instructions for full details as needed.</li>
           </ol>
 
