@@ -24,22 +24,27 @@
           <tr>
             <td><img src='/img/art/symbols/food.png' style='width:50px;' /></td>
             <td>Food</td>
-            <td>&nbsp;</td>
+            <td>Used to build Colonies, Exocolonies, Spaceports, Action cards</td>
           </tr>
           <tr>
             <td><img src='/img/art/symbols/metal.png' style='width:50px;' /></td>
             <td>Metal</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td><img src='/img/art/symbols/fuel.png' style='width:50px;' /></td>
-            <td>Fuel</td>
-            <td>&nbsp;</td>
+            <td>Used to build Colonies, Exocolonies, Spaceports, Action cards</td>
           </tr>
           <tr>
             <td><img src='/img/art/symbols/water.png' style='width:50px;' /></td>
             <td>Water</td>
-            <td>&nbsp;</td>
+            <td>Used to build Colonies, Exocolonies, Spaceports, Action cards</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="fa-stack fa-lg">
+                <i class="exo-fuel fa-stack-1x"></i>
+                <i class="fa-stack-1x cost"></i>
+              </span>
+            </td>
+            <td>Fuel</td>
+            <td>Used to build Colonies, Exocolonies, Spaceports, Action cards</td>
           </tr>
           <tr>
             <td>
@@ -58,7 +63,7 @@
               </span>
             </td>
             <td>Coin</td>
-            <td>&nbsp;</td>
+            <td>Used to build Colonies, Exocolonies, Spaceports, Action cards</td>
           </tr>
           <tr>
             <td>
@@ -68,7 +73,7 @@
               </span>
             </td>
             <td>Interplanetary transfer cost</td>
-            <td>Coin cost to travel between planets</td>
+            <td>Coin cost to travel between Planets</td>
           </tr>
           <tr>
             <td>
@@ -78,13 +83,13 @@
               </span>
             </td>
             <td>Interstellar transfer cost</td>
-            <td>Coin cost to travel between stars</td>
+            <td>Coin cost to travel between Stars</td>
           </tr>
           <tr>
             <td><img src='/img/art/symbols/eternal-light.png' style='width:50px;' /></td>
             <td>Peak of Eternal Light</td>
             <td>
-              Provides
+              Produces
               <span class="fa-stack fa-lg">
                 <i class="exo-coin fa-stack-1x"></i>
                 <i class="fa-stack-1x cost" style='margin-top:5px;'>1</i>
@@ -100,7 +105,7 @@
                 <i class="exo-metal fa-stack-1x"></i>
                 <i class="fa-stack-1x cost" style='margin-top:5px;'>1</i>
               </span>
-              <span>Discount when settling a colony</span>
+              <span>Discount when settling a Colony</span>
             </td>
           </tr>
           <tr>
@@ -111,7 +116,7 @@
                 <i class="exo-metal fa-stack-1x"></i>
                 <i class="fa-stack-1x cost" style='margin-top:5px;'>1</i>
               </span>              
-              <span>Discount when settling a colony</span>
+              <span>Discount when settling a Colony</span>
             </td>
           </tr>
           <tr>
@@ -122,7 +127,7 @@
                 <i class="exo-metal fa-stack-1x"></i>
                 <i class="fa-stack-1x cost" style='margin-top:5px;'>1</i>
               </span>
-              <span>Extra cost when settling a colony</span>
+              <span>Extra cost when settling a Colony</span>
             </td>
           </tr>
           <tr>
@@ -133,17 +138,17 @@
           <tr>
             <td><img src='/img/art/symbols/colony.png' style='width:50px;' /></td>
             <td>Colony</td>
-            <td>&nbsp;</td>
+            <td>Produces resources and victory points</td>
           </tr>
           <tr>
             <td><img src='/img/art/symbols/spaceport.png' style='width:50px;' /></td>
             <td>Spaceport</td>
-            <td>&nbsp;</td>
+            <td>Negates Launch Costs, provides a Trade Ship and a victory point</td>
           </tr>
           <tr>
             <td><img src='/img/art/symbols/exocolony.png' style='width:50px;' /></td>
             <td>Exocolony</td>
-            <td>&nbsp;</td>
+            <td>Expensive, but scores a lot of victory points</td>
           </tr>
         </table>
 

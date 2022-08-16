@@ -77,13 +77,12 @@
             context.stroke();
 
             // Stars Label
-            context.fillText("Stars",130,150);
+            context.fillText("New Stars", 60,150);
             arrow(context, 160, 155, 195, 200);
             arrow(context, 160, 155, 195, 280);
-            context.fillText("Starting",30,250);
-            context.fillText("Star",30,275);
+            context.fillText("Home Star",30,275);
             context.fillText("(Sol)",30,300);
-            arrow(context, 90, 275, 195, 370);
+            arrow(context, 95, 280, 195, 370);
 
             // Eridani
             context.beginPath();
@@ -210,110 +209,110 @@
                 context.stroke();
 
             // Sol
-            context.fillText("1", 216, 406);
+            //context.fillText("1", 216, 406);
             context.beginPath();
             context.rect(200, 360, 50, 70);
             context.stroke();
 
             // Mercury
-            context.fillText("2", 276, 406);
+            context.fillText("1", 276, 406);
             context.beginPath();
             context.rect(260, 360, 50, 70);
             context.stroke();
 
             // Venus
-            context.fillText("3", 336, 406);
+            context.fillText("2", 336, 406);
             context.beginPath();
             context.rect(320, 360, 50, 70);
             context.stroke();
 
             // Earth
-            context.fillText("4", 396, 406);
+            context.fillText("3", 396, 406);
             context.beginPath();
             context.rect(380, 360, 50, 70);
             context.stroke();
 
                 // Luna
-                context.fillText("9", 396, 486);
+                context.fillText("8", 396, 486);
                 context.beginPath();
                 context.rect(380, 440, 50, 70);
                 context.stroke();
 
             // Mars
-            context.fillText("5", 456, 406);
+            context.fillText("4", 456, 406);
             context.beginPath();
             context.rect(440, 360, 50, 70);
             context.stroke();
 
             // Asteroid Belt
-            context.fillText("6", 516, 406);
+            context.fillText("5", 516, 406);
             context.beginPath();
             context.rect(500, 360, 50, 70);
             context.stroke();
 
                 // Ceres
-                context.fillText("10", 506, 486);
+                context.fillText("9", 516, 486);
                 context.beginPath();
                 context.rect(500, 440, 50, 70);
                 context.stroke();
     
                 // Vesta
-                context.fillText("11", 506, 566);
+                context.fillText("10", 506, 566);
                 context.beginPath();
                 context.rect(500, 520, 50, 70);
                 context.stroke();
     
                 // Pallas
-                context.fillText("12", 506, 646);
+                context.fillText("11", 506, 646);
                 context.beginPath();
                 context.rect(500, 600, 50, 70);
                 context.stroke();
 
             // Jupiter
-            context.fillText("7", 576, 406);
+            context.fillText("6", 576, 406);
             context.beginPath();
             context.rect(560, 360, 50, 70);
             context.stroke();
 
                 // Io
-                context.fillText("13", 566, 486);
+                context.fillText("12", 566, 486);
                 context.beginPath();
                 context.rect(560, 440, 50, 70);
                 context.stroke();
     
                 // Europa
-                context.fillText("14", 566, 566);
+                context.fillText("13", 566, 566);
                 context.beginPath();
                 context.rect(560, 520, 50, 70);
                 context.stroke();
     
                 // Ganymede
-                context.fillText("15", 566, 646);
+                context.fillText("14", 566, 646);
                 context.beginPath();
                 context.rect(560, 600, 50, 70);
                 context.stroke();
     
                 // Callisto
-                context.fillText("16", 566, 726);
+                context.fillText("15", 566, 726);
                 context.beginPath();
                 context.rect(560, 680, 50, 70);
                 context.stroke();
 
             // Saturn
-            context.fillText("8", 636, 406);
+            context.fillText("7", 636, 406);
             context.beginPath();
             context.rect(620, 360, 50, 70);
             context.stroke();
 
                 // Enceladus
-                context.fillText("17", 629, 486);
+                context.fillText("16", 629, 486);
                 context.beginPath();
                 context.rect(620, 440, 50, 70);
                 context.stroke();
     
                 // Titan
                 context.beginPath();
-                context.fillText("18", 629, 566);
+                context.fillText("17", 629, 566);
                 context.rect(620, 520, 50, 70);
                 context.stroke();
 
@@ -583,24 +582,24 @@
             context.moveTo(1100, 40);
             context.lineTo(1310, 40);
             context.stroke();
-            context.fillText("1. Sol", 1100, 70);
-            context.fillText("2. Mercury", 1100, 100);
-            context.fillText("3. Venus", 1100, 130);
-            context.fillText("4. Earth", 1100, 160);
-            context.fillText("5. Mars", 1100, 190);
-            context.fillText("6. Asteroid Belt", 1100, 220);
-            context.fillText("7. Jupiter", 1100, 250);
-            context.fillText("8. Saturn", 1100, 280);
-            context.fillText("9. Luna", 1100, 310);
-            context.fillText("10. Ceres", 1310, 70);
-            context.fillText("11. Vesta", 1310, 100);
-            context.fillText("12. Pallas", 1310, 130);
-            context.fillText("13. Io", 1310, 160);
-            context.fillText("14. Europa", 1310, 190);
-            context.fillText("15. Ganymede", 1310, 220);
-            context.fillText("16. Callisto", 1310, 250);
-            context.fillText("17. Enceladus", 1310, 280);
-            context.fillText("18. Titan", 1310, 310);
+            //context.fillText("1. Sol", 1100, 70);
+            context.fillText("1. Mercury", 1100, 70);
+            context.fillText("2. Venus", 1100, 100);
+            context.fillText("3. Earth", 1100, 130);
+            context.fillText("4. Mars", 1100, 160);
+            context.fillText("5. Asteroid Belt", 1100, 190);
+            context.fillText("6. Jupiter", 1100, 220);
+            context.fillText("7. Saturn", 1100, 250);
+            context.fillText("8. Luna", 1100, 280);
+            context.fillText("9. Ceres", 1100, 310);
+            context.fillText("10. Vesta", 1310, 70);
+            context.fillText("11. Pallas", 1310, 100);
+            context.fillText("12. Io", 1310, 130);
+            context.fillText("13. Europa", 1310, 160);
+            context.fillText("14. Ganymede", 1310, 190);
+            context.fillText("15. Callisto", 1310, 220);
+            context.fillText("16. Enceladus", 1310, 250);
+            context.fillText("17. Titan", 1310, 280);
             /*
             context.fillText("19. Callisto", 1310, 160);
             context.fillText("20. Enceladus", 1310, 190);

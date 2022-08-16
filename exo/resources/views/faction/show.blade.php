@@ -86,7 +86,7 @@
 
                 </span>
                 </h2>
-                <h3>Settle a Colony. Decrease price of new colony's resource. Gain 
+                <h3>Place a Colony on a landing site in the home star system. Decrease the price of the new Colony's resource. Gain 
                   <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span>
                   when built, and another <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span>
                   if its the first Colony on that world.</h3>
@@ -219,7 +219,7 @@
                 </h2>
                 <h3>
                   <?php if($faction->name !== 'Rock Hoppers') { ?>
-                    Settle an Exocolony.
+                    Place an Exocolony on a landing site on an exoplanet.
                     <?php if ($faction->colonize_time > 0) { ?>
                       Gain 
                       <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'><?php echo $faction->colonize_time ?></i></span>

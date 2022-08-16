@@ -154,11 +154,15 @@ h3 span.fa-stack, li span.fa-stack{
 }
 
 
-#legend, #legend tr, #legend td {
-    font-size:28pt;
+#legend, #legend tr {
+    font-size:26pt;
     background-color:#c4cfd6;
     padding: 0px;
     border:none;
+}
+#legend td {
+    border-bottom: 1px solid #aaa;
+    padding: 0px;
 }
 #legend tr td:nth-child(3) {
     color:gray;
