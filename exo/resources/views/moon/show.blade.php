@@ -49,7 +49,7 @@
 
           <div style="height:100%;">&nbsp;</div>
           
-          <div class="glow" style="">
+          <div class="glow" id="body">
             <h3><? echo $moon->body; ?>
               <?php if ($moon->escape_velocity > 0) { ?>
                 <div style="float:right;">
@@ -67,5 +67,6 @@
       </div>
     </div>
 
+    <script type="text/javascript" src="/js/cardIcons.js"></script>
   </body>
 </html>

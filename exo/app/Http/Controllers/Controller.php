@@ -12,7 +12,7 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     // Given a string, format the resource codes into html for inline resource icons
-    // TODO: Move into a view component/helper or something similar
+    // TODO: Move into a view component/helper/js? or something similar
     public function format_resources($text){
         $text = preg_replace('/(\d)Fo/', "<span class='fa-stack fa-lg'><i class='exo-food fa-stack-1x'></i><i class='fa-stack-1x cost'>$1</i></span>", $text);
         $text = preg_replace('/(\d)Fu/', "<span class='fa-stack fa-lg'><i class='exo-fuel fa-stack-1x'></i><i class='fa-stack-1x cost'>$1</i></span>", $text);

@@ -44,9 +44,10 @@ function World(sites_str, body=''){
     });
 
     // Sometimes the world itself has features like Ganymede's Magnet Shield
-    if(body != '' && body.includes('Magnetosphere')) {
-        features.push("SH");
-    }
+    // Now putting +SH in site string since leaving magnetosphere in the text adds cognitive load to user
+    //if(body != '' && body.includes('Magnetosphere')) {
+    //    features.push("SH");
+    //}
 
     var feature_index = 0;
     features.forEach(function(feature){
@@ -121,6 +122,15 @@ function World(sites_str, body=''){
             context.shadowColor = 'yellow';
             */
             context.strokeRect(site_x - radius, site_y - radius, radius * 4, radius * 1.8);
+
+            // Now putting main site in the same collection as features
+            var x_position = site_x - (2 * bonus_radius * feature_index) - bonus_margin;
+            var y_position = site_y - bonus_radius;
+            var html = "<span class='fa-stack fa-lg site-bonus' style='position:absolute;top:"+y_position+"px;left:"+x_position+"px;'>";
+            html += " <i class='exo-" + featureType + " fa-stack-1x'></i>";
+            html += " <i class='fa-stack-1x cost'>"+multiplier+"</i>";
+            html += "</span>";
+            $("#canvas_wrapper").append(html);
         }else{
             // Extra bonuses
             if(featureType == 'helium'){
@@ -187,6 +197,7 @@ function World(sites_str, body=''){
                 context.shadowBlur = 0; // Turn off glow
             */
             }else{
+                // Resources, coins
                 var x_position = site_x - (2 * bonus_radius * feature_index) - bonus_margin;
                 var y_position = site_y - bonus_radius;
                 var html = "<span class='fa-stack fa-lg site-bonus' style='position:absolute;top:"+y_position+"px;left:"+x_position+"px;'>";

@@ -30,7 +30,7 @@
 
           <div style="height:100%;">&nbsp;</div>
           
-          <div class="glow" style="">
+          <div class="glow" id="body">
             <h3><? echo $star->body; ?>
             </h3>
           </div>
@@ -42,5 +42,6 @@
     <script src="/js/foundation/vendor/what-input.js"></script>
     <script src="/js/foundation/vendor/foundation.js"></script>
     <script src="/js/foundation/app.js"></script>
+    <script type="text/javascript" src="/js/cardIcons.js"></script>
   </body>
 </html>

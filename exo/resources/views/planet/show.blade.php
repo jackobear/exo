@@ -47,7 +47,7 @@
             </script>
           </div>
           
-          <div class="glow" style="">
+          <div class="glow" id="body">
             <h3><? echo $planet->body; ?>
               <?php if ($planet->escape_velocity > 0) { ?>
                 <div style="float:right;">
@@ -65,5 +65,6 @@
       </div>
     </div>
 
+    <script type="text/javascript" src="/js/cardIcons.js"></script>
   </body>
 </html>

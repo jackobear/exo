@@ -46,7 +46,7 @@
             </script>
           </div>
           
-          <div class="glow" style="">
+          <div class="glow" id="body">
             <h3><? echo $dwarf_planet->body; ?>
               <div style="float:right;">
                 <span class="fa-stack fa-lg launch">
@@ -61,5 +61,6 @@
       </div>
     </div>
 
+    <script type="text/javascript" src="/js/cardIcons.js"></script>
   </body>
 </html>
