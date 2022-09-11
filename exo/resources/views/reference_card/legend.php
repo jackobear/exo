@@ -98,7 +98,7 @@
             </td>
           </tr>
           <tr>
-            <td><img src='/img/art/symbols/cave.png' style='width:50px;' /></td>
+            <td><img src='/img/art/symbols/cave.png' style='width:45px;border:5px solid black;margin: 0px 0px 5px 5px;' /></td>
             <td>Cave</td>
             <td>
               <span class="fa-stack fa-lg">

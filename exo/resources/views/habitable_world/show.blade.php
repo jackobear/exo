@@ -25,6 +25,7 @@
             
             <img src="/img/art/symbols/habitable-worlds.png" style='height:80px;float:left;margin-right:5px;' />
             <span style="">
+
               <!-- top margin misrenders in headless chrome -->
               <div style="margin: 5px 0px 0px 0px;font-size:1.5em;line-height: 0.8;"><? echo $habitable_world->name; ?></div>
               <span style="color:#26415e;font-size:30px;margin:0px;line-height: 1.1;">
@@ -51,7 +52,7 @@
           </div>
           
           <div class="glow" style="">
-            <h3><? echo $habitable_world->body; ?>
+            <h3 style='margin-right:80px;'><? echo $habitable_world->body; ?>
               <?php if ($habitable_world->escape_velocity > 0) { ?>
                 <div style="float:right;">
                   <span class="fa-stack fa-lg launch">

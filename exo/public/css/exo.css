@@ -1,22 +1,31 @@
-.launch {
+span.launch {
     display: grid;
     grid-template-columns: 50px 1fr;
     grid-template-rows: 50px 1fr;
+    font-size:1.2em;
+    line-height:73px;
+    width:0px;
+    margin-top:-30px;
 }
 .launch-fuel {
     grid-area: 1 / 1 / 2 / 2;
+    font-size:3em;
 }
 .launch-cost{
     grid-area: 1 / 1 / 2 / 2;
-    font-size: 50px;
-    margin-top:10px;
-    color:white;
+    font-size: 2.7em;
+    margin-top: 8px;
+    margin-left: -11px;
+    width: 200%;
+    color: white;
     font-style: normal;
     text-shadow:-1px -1px 0 #222,1px -1px 0 #222,-1px 1px 0 #222,1px 1px 0 #222;
 }
 .launch-arrow {
-    margin-left: 20px;
-    margin-top: 30px;
+    margin-left: 42px;
+    margin-top: 38px;
+    width:200%;
+    font-size: 2.7em;
     color:white;
     font-style: normal;
     text-shadow:-1px -1px 0 #222,1px -1px 0 #222,-1px 1px 0 #222,1px 1px 0 #222;
@@ -156,6 +165,7 @@ h3 span.fa-stack, li span.fa-stack{
 
 #legend, #legend tr {
     font-size:26pt;
+    font-weight:bold;
     background-color:#c4cfd6;
     padding: 0px;
     border:none;
@@ -165,7 +175,7 @@ h3 span.fa-stack, li span.fa-stack{
     padding: 0px;
 }
 #legend tr td:nth-child(3) {
-    color:gray;
+    font-weight:normal;
 }
 #legend .fa-stack {
     float:none;

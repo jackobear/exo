@@ -47,7 +47,7 @@
           </div>
           
           <div class="glow" id="body">
-            <h3><? echo $dwarf_planet->body; ?>
+            <h3 style='margin-right:80px;'><? echo $dwarf_planet->body; ?>
               <div style="float:right;">
                 <span class="fa-stack fa-lg launch">
                   <i class="exo-fuel fa-stack-2x launch-fuel"></i>

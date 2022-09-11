@@ -50,7 +50,7 @@
           <div style="height:100%;">&nbsp;</div>
           
           <div class="glow" id="body">
-            <h3><? echo $moon->body; ?>
+            <h3 style='margin-right:80px;'><? echo $moon->body; ?>
               <?php if ($moon->escape_velocity > 0) { ?>
                 <div style="float:right;">
                   <span class="fa-stack fa-lg launch">

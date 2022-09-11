@@ -1,3 +1,4 @@
+// No longer in use...
 // Displays the travel and colonize rocket progress track for a faction card
 
 function interstellarTrack(travel_time, colonize_time){

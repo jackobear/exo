@@ -38,7 +38,11 @@
             <canvas id="myCanvas" width="745" height="<?
               // Check if we need room for two lines of text
               $height = 800;
-              if(strlen(strip_tags($planet->body)) > 50) $height -= 43;
+              //if(strlen(strip_tags($planet->body)) > 50) $height -= 43;
+              if(strlen(strip_tags($planet->body)) > 27) $height -= 43;
+              if(strlen(strip_tags($planet->body)) > 80) $height -= 43;
+              if(strlen(strip_tags($planet->body)) > 110) $height -= 43;
+              if(strlen(strip_tags($planet->body)) > 180) $height -= 43;
               echo $height;
             ?>"></canvas>
             <script type="text/javascript">
@@ -48,7 +52,7 @@
           </div>
           
           <div class="glow" id="body">
-            <h3><? echo $planet->body; ?>
+            <h3 style='margin-right:80px;'><? echo $planet->body; ?>
               <?php if ($planet->escape_velocity > 0) { ?>
                 <div style="float:right;">
                   <span class="fa-stack fa-lg launch">
