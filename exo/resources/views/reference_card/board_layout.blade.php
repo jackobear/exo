@@ -24,76 +24,98 @@
 
           <canvas id="myCanvas" width="1550" height="885" style="background-color: #c4cfd6;"></canvas>
           <script type="text/javascript">
+            // this shoulda been shopped instead...
             var canvas = document.getElementById('myCanvas');
             var context = canvas.getContext('2d');
             context.font = "30px Arial";
             context.lineWidth = 1;
             context.strokeStyle = '#333';
 
+            const actionsImage = new Image(59, 80);
+            actionsImage.src = '/img/art/symbols/actions.png';
+
             // Player 1
-            context.fillText("Player 1",475,30);
-            context.fillText("Faction",505,85);
+            /*
+            context.fillText("Player 1",515,30);
+            context.fillText("Faction",545,85);
             context.beginPath();
-            context.rect(500, 40, 110, 70);
+            context.rect(540, 40, 110, 70);
             context.stroke();
 
                 // Player 1's Action cards
-                context.fillText("Starting",320,60);
-                context.fillText("Action",320,85);
-                context.fillText("card",320,110);
-                arrow(context, 410, 75, 435, 75);
+                const actionsImage = new Image(59, 80);
+                actionsImage.src = '/img/art/symbols/actions.png';
+                context.drawImage(actionsImage, 320, 55, 30, 40);
+                context.fillText("Starting",360,60);
+                context.fillText("Action",360,85);
+                context.fillText("card(s)",360,110);
+                arrow(context, 450, 75, 475, 75);
                 context.beginPath();
-                context.rect(440, 40, 50, 70);
+                context.rect(480, 40, 50, 70);
                 context.stroke();
+            */
 
             // Player 2
-            context.fillText("Player 2",825,30);
-            context.fillText("Faction",855,85);
+            /*
+            context.fillText("Player 2",865,30);
+            context.fillText("Faction",895,85);
             context.beginPath();
-            context.rect(850, 40, 110, 70);
+            context.rect(890, 40, 110, 70);
             context.stroke();
 
                 // Player 2's Action cards
-                context.fillText("Starting",670,60);
-                context.fillText("Action",670,85);
-                context.fillText("card",670,110);
-                arrow(context, 760, 75, 785, 75);
+                context.drawImage(actionsImage, 670, 55, 30, 40);
+                context.fillText("Starting",710,60);
+                context.fillText("Action",710,85);
+                context.fillText("card(s)",710,110);
+                arrow(context, 800, 75, 825, 75);
                 context.beginPath();
-                context.rect(790, 40, 50, 70);
+                context.rect(830, 40, 50, 70);
                 context.stroke();
+            */
 
             // Market
-            context.fillText("Space",625,270);
-            context.fillText("Market",625,300);
+            context.fillText("Resource",690,250);
+            context.fillText("Market",690,280);
             context.beginPath();
-            context.rect(620, 240, 110, 70);
+            context.rect(685, 220, 140, 70);
             context.stroke();
 
             // Scoring Track
-            context.fillText("Scoring",745,270);
-            context.fillText("Track",745,300);
+            context.fillText("Scoring",855,250);
+            context.fillText("Track",855,280);
             context.beginPath();
-            context.rect(740, 240, 110, 70);
+            context.rect(850, 220, 140, 70);
             context.stroke();
 
             // Stars Label
-            context.fillText("New Stars", 60,150);
-            arrow(context, 160, 155, 195, 200);
-            arrow(context, 160, 155, 195, 280);
-            context.fillText("Home Star",30,275);
-            context.fillText("(Sol)",30,300);
-            arrow(context, 95, 280, 195, 370);
+            const starsImage = new Image(59, 80);
+            starsImage.src = '/img/art/symbols/stars.png';
+            context.drawImage(starsImage, 0, 255, 30, 40);
+            context.fillText("New", 0,250);
+            context.fillText("    Stars", 0,285);
+            arrow(context, 110, 280, 190, 240);
+            arrow(context, 110, 280, 190, 320);
+            context.drawImage(starsImage, 0, 380, 30, 40);
+            context.fillText("Home",0,375);
+            context.fillText("    Star",0,410);
+            context.fillText("(Sol)",0,445);
+            arrow(context, 105, 390, 195, 390);
 
             // Eridani
             context.beginPath();
             context.rect(200, 200, 50, 70);
             context.stroke();
 
-                // Habitable Exoplanets Label
-                context.fillText("Habitable",130,75);
-                context.fillText("Exoplanets",130,100);
-                arrow(context, 200, 105, 255, 200);
-                arrow(context, 200, 105, 255, 280);
+                // New Hab worlds Label
+                const habWorldsImage = new Image(59, 80);
+                habWorldsImage.src = '/img/art/symbols/habitable-worlds.png';
+                context.drawImage(habWorldsImage, 50, 85, 30, 40);
+                context.fillText("New",90,85);
+                context.fillText("Habitable",90,115);
+                context.fillText("Worlds",90,145);
+                arrow(context, 160, 150, 275, 220);
+                arrow(context, 160, 150, 275, 300);
 
                 // Exo1
                 context.beginPath();
@@ -101,49 +123,53 @@
                 context.stroke();
 
                 // Action discard pile
-                context.fillText("Action",320,205);
-                context.fillText("discard pile",320,230);
-                arrow(context, 420, 195, 470, 195);
+                context.drawImage(actionsImage, 320, 185, 30, 40);
+                context.fillText("Action",360,205);
+                context.fillText("discard pile",360,230);
+                arrow(context, 460, 195, 510, 195);
                 context.beginPath();
                 context.setLineDash([6]);
-                context.rect(480, 175, 50, 70);
+                context.rect(520, 175, 50, 70);
                 context.stroke();
                 context.setLineDash([0]);
 
                 // Action deck
-                context.fillText("Action deck",645,220);
-                arrow(context, 640, 210, 605, 210);
+                context.drawImage(actionsImage, 685, 170, 30, 40);
+                context.fillText("Action deck",725,200);
+                arrow(context, 680, 190, 645, 190);
                 context.beginPath();
-                context.rect(550, 165, 50, 70);
+                context.rect(590, 165, 50, 70);
                 context.stroke();
 
                 context.beginPath();
-                context.clearRect(545, 170, 50, 70);
-                context.rect(545, 170, 50, 70);
+                context.clearRect(585, 170, 50, 70);
+                context.rect(585, 170, 50, 70);
                 context.stroke();
 
                 context.beginPath();
-                context.clearRect(540, 175, 50, 70);
-                context.rect(540, 175, 50, 70);
+                context.clearRect(580, 175, 50, 70);
+                context.rect(580, 175, 50, 70);
                 context.stroke();
+                context.drawImage(actionsImage, 590, 190, 30, 40);
 
                 // Action card market
-                context.fillText("Action card market",320,155);
-                arrow(context, 580, 145, 620, 145);
+                context.drawImage(actionsImage, 320, 105, 30, 40);
+                context.fillText("Action card market",360,135);
+                arrow(context, 620, 125, 670, 125);
                 context.beginPath();
-                context.rect(630, 120, 50, 70);
+                context.rect(685, 90, 50, 70);
                 context.stroke();
                 context.beginPath();
-                context.rect(690, 120, 50, 70);
+                context.rect(745, 90, 50, 70);
                 context.stroke();
                 context.beginPath();
-                context.rect(750, 120, 50, 70);
+                context.rect(805, 90, 50, 70);
                 context.stroke();
                 context.beginPath();
-                context.rect(810, 120, 50, 70);
+                context.rect(865, 90, 50, 70);
                 context.stroke();
                 context.beginPath();
-                context.rect(870, 120, 50, 70);
+                context.rect(925, 90, 50, 70);
                 context.stroke();
 
             // Centauri
@@ -157,42 +183,49 @@
                 context.stroke();
 
                 // Asteroid Deck
-                context.fillText("Asteroid deck",645,345);
-                arrow(context, 640, 335, 600, 335);
+                const asteroidsImage = new Image(59, 80);
+                asteroidsImage.src = '/img/art/symbols/asteroids.png';
+                context.drawImage(asteroidsImage, 685, 300, 30, 40);
+                context.fillText("Asteroid deck",720,330);
+                arrow(context, 680, 320, 645, 320);
                 context.beginPath();
-                context.rect(550, 260, 50, 70);
+                context.rect(590, 260, 50, 70);
                 context.stroke();
 
                 context.beginPath();
-                context.clearRect(545, 265, 50, 70);
-                context.rect(545, 265, 50, 70);
+                context.clearRect(585, 265, 50, 70);
+                context.rect(585, 265, 50, 70);
                 context.stroke();
 
                 context.beginPath();
-                context.clearRect(540, 270, 50, 70);
-                context.rect(540, 270, 50, 70);
+                context.clearRect(580, 270, 50, 70);
+                context.rect(580, 270, 50, 70);
                 context.stroke();
+                context.drawImage(asteroidsImage, 590, 285, 30, 40);
 
                 // Asteroid discard pile
-                context.fillText("Asteroid",320,305);
-                context.fillText("discard pile",320,330);
-                arrow(context, 440, 295, 470, 295);
+                context.drawImage(asteroidsImage, 320, 285, 30, 40);
+                context.fillText("Asteroid",360,305);
+                context.fillText("discard pile",360,330);
+                arrow(context, 480, 295, 510, 295);
                 context.beginPath();
                 context.setLineDash([6]);
-                context.rect(480, 270, 50, 70);
+                context.rect(520, 270, 50, 70);
                 context.stroke();
                 context.setLineDash([0]);
 
             // Player 3
+            /*
             context.save();
             context.translate(130, 415);
             context.rotate(Math.PI/2);
             context.textAlign = "center";
             context.fillText("Player 3", 80, 0);
             context.fillText("Faction", 0, 55);
-            context.fillText("Starting", 250, 30);
-            context.fillText("Action", 250, 55);
-            context.fillText("cards", 250, 80);
+            context.drawImage(actionsImage, 210,30, 30, 40);
+            context.fillText("Starting", 297, 30);
+            context.fillText("Action", 290, 55);
+            context.fillText("card(s)", 294, 80);
             arrow(context, 205, 50, 180, 50);
             context.restore();
 
@@ -207,6 +240,7 @@
                 context.beginPath();
                 context.rect(50, 540, 70, 50);
                 context.stroke();
+            */
 
             // Sol
             //context.fillText("1", 216, 406);
@@ -388,9 +422,14 @@
                 context.stroke();
 */
 
-            // Planets/Asteroid belts label
-            context.fillText("Planets",710,405);
-            arrow(context, 705, 395, 680, 395);
+            // Planets/Hab world label
+            const planetsImage = new Image(59, 80);
+            planetsImage.src = '/img/art/symbols/planets.png';
+            context.drawImage(planetsImage, 730, 355, 30, 40);
+            context.fillText("Planets and a", 770, 385);
+            context.drawImage(habWorldsImage, 730, 400, 30, 40);
+            context.fillText("Habitable World", 770, 430);
+            arrow(context, 725, 395, 680, 395);
 
             // Moons and Dwarf Planets curly bracket and label
             var curlyHeight = 310;
@@ -407,14 +446,20 @@
             context.lineTo(curlyWidth+curlyx, curlyHeight - curlyWidth+curlyy);
             context.arcTo(curlyWidth+curlyx, curlyHeight + curlyy, curlyx, curlyHeight + curlyy, curlyWidth);
             context.stroke();
-            context.fillText("Moons and",730,605);
-            context.fillText("Dwarf Planets",730,630);
+            const moonsImage = new Image(59, 80);
+            moonsImage.src = '/img/art/symbols/moons.png';
+            context.drawImage(moonsImage, 730, 565, 30, 40);
+            context.fillText("Moons and",770,595);
+            const dwarfPlanetsImage = new Image(59, 80);
+            dwarfPlanetsImage.src = '/img/art/symbols/dwarf-planets.png';
+            context.drawImage(dwarfPlanetsImage, 730, 610, 30, 40);            
+            context.fillText("Dwarf Planets",770,640);
 
             // 3 Planets for Sol label
             var curlyLength = 170;
             var linelength = (curlyLength-60)/2;
             var curlyx = 260;
-            var curlyy = 760;
+            var curlyy = 750;
             var curlyWidth = 20;
             context.beginPath();
             context.moveTo(curlyx, curlyy);
@@ -425,14 +470,16 @@
             context.lineTo((2*curlyWidth)+curlyx + (2*linelength), curlyWidth+curlyy);
             context.arcTo((3*curlyWidth)+curlyx + (2*linelength), curlyWidth+curlyy, (3*curlyWidth)+curlyx + (2*linelength), curlyy, curlyWidth);
             context.stroke();
-            context.fillText("3 Planets for",280,830);
+            context.drawImage(planetsImage, 280, 795, 30, 40);
+            context.fillText("3     Planets for",255,830);
+            //context.drawImage(starsImage, 430, 835, 30, 40);
             context.fillText("1 Player with Sol",250,860);
 
             // Planets per player labels
             var curlyLength = 240;
             var linelength = (curlyLength-60)/2;
             var curlyx = 440;
-            var curlyy = 760;
+            var curlyy = 750;
             var curlyWidth = 20;
             context.beginPath();
             context.moveTo(curlyx, curlyy);
@@ -443,13 +490,15 @@
             context.lineTo((2*curlyWidth)+curlyx + (2*linelength), curlyWidth+curlyy);
             context.arcTo((3*curlyWidth)+curlyx + (2*linelength), curlyWidth+curlyy, (3*curlyWidth)+curlyx + (2*linelength), curlyy, curlyWidth);
             context.stroke();
-            context.fillText("4-7 Planets",530,830);
+            context.drawImage(planetsImage, 565, 795, 30, 40);
+            context.fillText("4-7     Planets",510,830);
             context.fillText("for 2-5 Players",510,860);
 
             // Star deck
-            context.fillText("Star",300, 500);
-            context.fillText("deck",300, 530);
-            arrow(context, 300, 505, 260, 505);
+            context.drawImage(starsImage, 285, 485, 30, 40);
+            context.fillText("Star",320, 500);
+            context.fillText("deck",320, 530);
+            arrow(context, 280, 505, 260, 505);
             context.beginPath();
             context.rect(200, 460, 50, 70);
             context.stroke();
@@ -463,11 +512,13 @@
             context.clearRect(190, 470, 50, 70);
             context.rect(190, 470, 50, 70);
             context.stroke();
+            context.drawImage(starsImage, 200, 485, 30, 40);
 
             // Habitable World deck
-            context.fillText("Habitable",300,590);
-            context.fillText("World deck",300,620);
-            arrow(context, 300, 595, 260, 595);
+            context.drawImage(habWorldsImage, 285, 575, 30, 40);
+            context.fillText("Habitable",320,590);
+            context.fillText("World deck",320,620);
+            arrow(context, 280, 595, 260, 595);
             context.beginPath();
             context.rect(200, 560, 50, 70);
             context.stroke();
@@ -481,10 +532,14 @@
             context.clearRect(190, 570, 50, 70);
             context.rect(190, 570, 50, 70);
             context.stroke();
+            context.drawImage(habWorldsImage, 200, 585, 30, 40);
 
             // Lifeforms deck
-            context.fillText("Lifeform deck",300,705);
-            arrow(context, 300, 695, 260, 695);
+            const lifeformsImage = new Image(59, 80);
+            lifeformsImage.src = '/img/art/symbols/lifeforms.png';
+            context.drawImage(lifeformsImage, 285, 675, 30, 40);
+            context.fillText("Lifeform deck",320,705);
+            arrow(context, 280, 695, 260, 695);
             context.beginPath();
             context.rect(200, 660, 50, 70);
             context.stroke();
@@ -498,8 +553,12 @@
             context.clearRect(190, 670, 50, 70);
             context.rect(190, 670, 50, 70);
             context.stroke();
+            context.drawImage(lifeformsImage, 200, 685, 30, 40);
 
             // Trade Ship deck
+            const tradeshipsImage = new Image(59, 80);
+            tradeshipsImage.src = '/img/art/symbols/tradeships.png';
+            context.drawImage(tradeshipsImage, 0, 785, 30, 40);
             context.fillText("Trade Ship",30,800);
             context.fillText("deck",50,830);
             arrow(context, 120, 820, 175, 820);
@@ -516,44 +575,76 @@
             context.clearRect(190, 770, 50, 70);
             context.rect(190, 770, 50, 70);
             context.stroke();
-      
-            // Player 4
-            context.fillText("Player 4", 1020, 440);
-            context.fillText("Faction", 965, 495);
+            context.drawImage(tradeshipsImage, 200, 785, 30, 40);
+ 
+            // Player layout
+            context.fillText("Player Layout", 1180, 620);
+            context.fillText("Faction", 1065, 695);
             context.beginPath();
-            context.rect(960, 450, 110, 70);
+            context.rect(1060, 650, 110, 70);
+            context.stroke();
+
+                // Player layout Starting Action cards
+                context.drawImage(actionsImage, 1330,665, 30, 40);
+                context.fillText("Starting",1370,670);
+                context.fillText("Action",1370,695);
+                context.fillText("card(s)",1370,720);
+                arrow(context, 1325, 680, 1300, 680);
+                context.beginPath();
+                context.rect(1180, 650, 50, 70);
+                context.stroke();
+                context.beginPath();
+                context.rect(1240, 650, 50, 70);
+                context.stroke();
+
+                // Tradeship
+                context.drawImage(tradeshipsImage, 1110, 770, 30, 40);
+                context.fillText("Trade Ship", 1150, 800);
+                arrow(context, 1205, 775, 1205, 725);
+
+            // Player 4
+            /*
+            context.fillText("Player 4", 1120, 640);
+            context.fillText("Faction", 1065, 695);
+            context.beginPath();
+            context.rect(1060, 650, 110, 70);
             context.stroke();
 
                 // Player 4's Action cards
-                context.fillText("Starting",1230,470);
-                context.fillText("Action",1230,495);
-                context.fillText("cards",1230,520);
-                arrow(context, 1225, 480, 1200, 480);
+                context.drawImage(actionsImage, 1330,665, 30, 40);
+                context.fillText("Starting",1370,670);
+                context.fillText("Action",1370,695);
+                context.fillText("card(s)",1370,720);
+                arrow(context, 1325, 680, 1300, 680);
                 context.beginPath();
-                context.rect(1080, 450, 50, 70);
+                context.rect(1180, 650, 50, 70);
                 context.stroke();
                 context.beginPath();
-                context.rect(1140, 450, 50, 70);
+                context.rect(1240, 650, 50, 70);
                 context.stroke();
+                */
       
             // Player 5
-            context.fillText("Player 5", 1020, 660);
-            context.fillText("Faction", 965, 715);
+            /*
+            context.fillText("Player 5", 1120, 760);
+            context.fillText("Faction", 1065, 815);
             context.beginPath();
-            context.rect(960, 670, 110, 70);
+            context.rect(1060, 770, 110, 70);
             context.stroke();
 
                 // Player 5's Action cards
-                context.fillText("Starting",1230,690);
-                context.fillText("Action",1230,715);
-                context.fillText("cards",1230,740);
-                arrow(context, 1225, 700, 1200, 700);
+                context.drawImage(actionsImage, 1330,785, 30, 40);
+                context.fillText("Starting",1370,790);
+                context.fillText("Action",1370,815);
+                context.fillText("card(s)",1370,840);
+                arrow(context, 1325, 800, 1300, 800);
                 context.beginPath();
-                context.rect(1080, 670, 50, 70);
+                context.rect(1180, 770, 50, 70);
                 context.stroke();
                 context.beginPath();
-                context.rect(1140, 670, 50, 70);
+                context.rect(1240, 770, 50, 70);
                 context.stroke();
+            */
 
 /*
             // Player 6
@@ -577,29 +668,46 @@
 */
 
             // Beginner Setup
-            context.fillText("Beginner Setup", 1100, 30);
+            context.fillText("Beginner Setup", 1060, 30);
             context.beginPath();
-            context.moveTo(1100, 40);
-            context.lineTo(1310, 40);
+            context.moveTo(1060, 40);
+            context.lineTo(1510, 40);
             context.stroke();
-            //context.fillText("1. Sol", 1100, 70);
-            context.fillText("1. Mercury", 1100, 70);
-            context.fillText("2. Venus", 1100, 100);
-            context.fillText("3. Earth", 1100, 130);
-            context.fillText("4. Mars", 1100, 160);
-            context.fillText("5. Asteroid Belt", 1100, 190);
-            context.fillText("6. Jupiter", 1100, 220);
-            context.fillText("7. Saturn", 1100, 250);
-            context.fillText("8. Luna", 1100, 280);
-            context.fillText("9. Ceres", 1100, 310);
-            context.fillText("10. Vesta", 1310, 70);
-            context.fillText("11. Pallas", 1310, 100);
-            context.fillText("12. Io", 1310, 130);
-            context.fillText("13. Europa", 1310, 160);
-            context.fillText("14. Ganymede", 1310, 190);
-            context.fillText("15. Callisto", 1310, 220);
-            context.fillText("16. Enceladus", 1310, 250);
-            context.fillText("17. Titan", 1310, 280);
+            //context.fillText("1. Sol", 1060, 70);
+            context.drawImage(planetsImage, 1095, 45, 30, 40);
+            context.fillText("1.     Mercury", 1060, 75);
+            context.drawImage(planetsImage, 1095, 90, 30, 40);
+            context.fillText("2.     Venus", 1060, 120);
+            context.drawImage(habWorldsImage, 1095, 135, 30, 40);
+            context.fillText("3.     Earth", 1060, 165);
+            context.drawImage(planetsImage, 1095, 180, 30, 40);
+            context.fillText("4.     Mars", 1060, 210);
+            context.drawImage(planetsImage, 1095, 225, 30, 40);
+            context.fillText("5.     Asteroid Belt", 1060, 255);
+            context.drawImage(planetsImage, 1095, 270, 30, 40);
+            context.fillText("6.     Jupiter", 1060, 300);
+            context.drawImage(planetsImage, 1095, 315, 30, 40);
+            context.fillText("7.     Saturn", 1060, 345);
+            context.drawImage(moonsImage, 1095, 360, 30, 40);
+            context.fillText("8.     Luna", 1060, 390);
+            context.drawImage(moonsImage, 1095, 405, 30, 40);
+            context.fillText("9.     Ceres", 1060, 435);
+            context.drawImage(dwarfPlanetsImage, 1360, 45, 30, 40);
+            context.fillText("10.     Vesta", 1310, 75);
+            context.drawImage(dwarfPlanetsImage, 1360, 90, 30, 40);
+            context.fillText("11.     Pallas", 1310, 120);
+            context.drawImage(moonsImage, 1360, 135, 30, 40);
+            context.fillText("12.     Io", 1310, 165);
+            context.drawImage(moonsImage, 1360, 180, 30, 40);
+            context.fillText("13.     Europa", 1310, 210);
+            context.drawImage(moonsImage, 1360, 225, 30, 40);
+            context.fillText("14.     Ganymede", 1310, 255);
+            context.drawImage(moonsImage, 1360, 270, 30, 40);
+            context.fillText("15.     Callisto", 1310, 300);
+            context.drawImage(moonsImage, 1360, 315, 30, 40);
+            context.fillText("16.     Enceladus", 1310, 345);
+            context.drawImage(moonsImage, 1360, 360, 30, 40);
+            context.fillText("17.     Titan", 1310, 390);
             /*
             context.fillText("19. Callisto", 1310, 160);
             context.fillText("20. Enceladus", 1310, 190);
@@ -620,6 +728,14 @@
         </div>
       </div>
     </div>
+
+    <!-- images for canvas
+    <div style="display:hidden;">
+        <div className='planets'>
+            <img src='/img/art/symbols/planets.png' />
+        </div>
+    </div>
+-->
 
     <script src="/js/foundation/vendor/jquery.js"></script>
     <script src="/js/foundation/vendor/what-input.js"></script>
