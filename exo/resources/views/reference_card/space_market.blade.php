@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Market</title>
+    <title>Resource Market</title>
     <link rel="stylesheet" href="/css/foundation/foundation.css">
     <link rel="stylesheet" href="/css/foundation/app.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,7 +18,7 @@
       <div class="large-12 columns">
         <div class="glow" style="width: 1579px;height:985px;margin:70px 0px 70px 59px;border-radius:15px;">
             <h1>
-                Space Market
+                Resource Market
             </h1>
 
           <div class="row expanded">

@@ -31,7 +31,15 @@
                 <? echo $planet->type; ?> Planet
               </span>
             </span>
-
+            <?php if ($planet->escape_velocity > 0) { ?>
+              <div style="float:right;">
+                <span class="fa-stack fa-lg launch">
+                  <i class="exo-fuel fa-stack-2x launch-fuel"></i>
+                  <i class="fa-stack-1x launch-cost"><?php echo $planet->escape_velocity; ?></i>
+                  <i class="fa-stack-2x launch-arrow">&#x2197;</i>
+                </span>
+              </div>
+            <?php } ?>
           </div>
 
           <div id="canvas_wrapper">
@@ -50,18 +58,10 @@
               var the_sites = new World(sites_str);
             </script>
           </div>
-          
+
           <div class="glow" id="body">
-            <h3 style='margin-right:80px;'><? echo $planet->body; ?>
-              <?php if ($planet->escape_velocity > 0) { ?>
-                <div style="float:right;">
-                  <span class="fa-stack fa-lg launch">
-                    <i class="exo-fuel fa-stack-2x launch-fuel"></i>
-                    <i class="fa-stack-1x launch-cost"><?php echo $planet->escape_velocity; ?></i>
-                    <i class="fa-stack-2x launch-arrow">&#x2197;</i>
-                  </span>
-                </div>
-              <?php } ?>
+            <h3'>
+              <? echo $planet->body; ?>
             </h3>
           </div>
 

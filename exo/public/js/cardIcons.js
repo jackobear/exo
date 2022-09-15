@@ -6,4 +6,5 @@ $( document ).ready(function() {
 	document.getElementById('body').innerHTML = document.getElementById('body').innerHTML.replaceAll('Magnetic Shield', '<img src=\'/img/art/symbols/magnetic-shield.png\' class=\'inline-card-icon\' />Magnetic Shield');
 	document.getElementById('body').innerHTML = document.getElementById('body').innerHTML.replaceAll('Magnetic Storm', '<img src=\'/img/art/symbols/magnetic-storm.png\' class=\'inline-card-icon\' />Magnetic Storm');
 	document.getElementById('body').innerHTML = document.getElementById('body').innerHTML.replaceAll('Lifeform', '<img src=\'/img/art/symbols/lifeforms.png\' class=\'inline-card-icon\' />Lifeform');
+	document.getElementById('body').innerHTML = document.getElementById('body').innerHTML.replaceAll('Star', '<img src=\'/img/art/symbols/stars.png\' class=\'inline-card-icon\' />Star');
 });

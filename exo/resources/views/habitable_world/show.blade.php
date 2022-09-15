@@ -33,6 +33,15 @@
               </span>
             </span>
 
+            <?php if ($habitable_world->escape_velocity > 0) { ?>
+              <div style="float:right;">
+                <span class="fa-stack fa-lg launch">
+                  <i class="exo-fuel fa-stack-2x launch-fuel"></i>
+                  <i class="fa-stack-1x launch-cost"><?php echo $habitable_world->escape_velocity; ?></i>
+                  <i class="fa-stack-2x launch-arrow">&#x2197;</i>
+                </span>
+              </div>
+            <?php } ?>
           </div>
 
           <div id="canvas_wrapper">
@@ -52,16 +61,8 @@
           </div>
           
           <div class="glow" style="">
-            <h3 style='margin-right:80px;'><? echo $habitable_world->body; ?>
-              <?php if ($habitable_world->escape_velocity > 0) { ?>
-                <div style="float:right;">
-                  <span class="fa-stack fa-lg launch">
-                    <i class="exo-fuel fa-stack-2x launch-fuel"></i>
-                    <i class="fa-stack-1x launch-cost"><?php echo $habitable_world->escape_velocity; ?></i>
-                    <i class="fa-stack-2x launch-arrow">&#x2197;</i>
-                  </span>
-                </div>
-              <?php } ?>
+            <h3>
+              <? echo $habitable_world->body; ?>
             </h3>
           </div>
         </div>

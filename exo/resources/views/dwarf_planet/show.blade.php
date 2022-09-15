@@ -31,6 +31,13 @@
               </span>
             </span>
 
+            <div style="float:right;">
+              <span class="fa-stack fa-lg launch">
+                <i class="exo-fuel fa-stack-2x launch-fuel"></i>
+                <i class="fa-stack-1x launch-cost"><?php echo $dwarf_planet->escape_velocity; ?></i>
+                <i class="fa-stack-2x launch-arrow">&#x2197;</i>
+              </span>
+            </div>
           </div>
 
           <div id="canvas_wrapper">
@@ -47,14 +54,8 @@
           </div>
           
           <div class="glow" id="body">
-            <h3 style='margin-right:80px;'><? echo $dwarf_planet->body; ?>
-              <div style="float:right;">
-                <span class="fa-stack fa-lg launch">
-                  <i class="exo-fuel fa-stack-2x launch-fuel"></i>
-                  <i class="fa-stack-1x launch-cost"><?php echo $dwarf_planet->escape_velocity; ?></i>
-                  <i class="fa-stack-2x launch-arrow">&#x2197;</i>
-                </span>
-              </div>
+            <h3>
+              <? echo $dwarf_planet->body; ?>
             </h3>
           </div>
         </div>

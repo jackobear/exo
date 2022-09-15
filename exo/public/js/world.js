@@ -1,5 +1,28 @@
 // Draw all the Sites and Features for the given world string
 
+// Helper function for rounded corners
+CanvasRenderingContext2D.prototype.roundedRectangle = function(x, y, width, height, rounded) {
+  const radiansInCircle = 2 * Math.PI;
+  const halfRadians = (2 * Math.PI)/2;
+  const quarterRadians = (2 * Math.PI)/4;  
+  // top left arc
+  this.arc(rounded + x, rounded + y, rounded, -quarterRadians, halfRadians, true);
+  // line from top left to bottom left
+  this.lineTo(x, y + height - rounded);
+  // bottom left arc  
+  this.arc(rounded + x, height - rounded + y, rounded, halfRadians, quarterRadians, true); 
+  // line from bottom left to bottom right
+  this.lineTo(x + width - rounded, y + height);
+  // bottom right arc
+  this.arc(x + width - rounded, y + height - rounded, rounded, quarterRadians, 0, true);  
+  // line from bottom right to top right
+  this.lineTo(x + width, y + rounded);
+  // top right arc
+  this.arc(x + width - rounded, y + rounded, rounded, 0, -quarterRadians, true); 
+  // line from top right to top left
+  this.lineTo(x + rounded, y);
+}
+
 function World(sites_str, body=''){
   var canvas = document.getElementById('myCanvas');
   var context = canvas.getContext('2d');
@@ -35,6 +58,22 @@ function World(sites_str, body=''){
       context.drawImage(shieldImage, 40, 50, 100, 100);
     }
   }*/
+
+  // Handle moons
+  /*
+  context.beginPath();
+  context.shadowBlur = 0;
+  context.roundedRectangle(0, 650, 70, 90, 5);
+  context.fillStyle = '#fff';
+  context.fill();
+  //context.lineWidth = border_width;
+  //context.strokeStyle = '#000000';
+  //context.stroke();
+  const moonImage = new Image(59,80);
+  moonImage.src = '/img/art/symbols/moons.png';
+  context.drawImage(moonImage, 5, 655, 59, 80);
+  */
+
 
   function create_site(context, site){
     var features = site.split("+");
@@ -104,6 +143,11 @@ function World(sites_str, body=''){
                 strokeStyle = '#000000';
                 featureType = 'shield';
                 break;
+            case "Mn":
+                fillStyle = '#7d7d7d';
+                strokeStyle = '#000000';
+                featureType = 'moon';
+                break;
             default:
                 fillStyle = '#fff8a8';
                 strokeStyle = '#cccc00';
@@ -111,26 +155,45 @@ function World(sites_str, body=''){
                 break;
         }
         if(feature_index == 0){
-            // Main site
-            context.fillStyle = fillStyle;
-            context.fillRect(site_x - radius, site_y - radius, radius * 4, radius * 1.8);
-            context.lineWidth = border_width;
-            context.strokeStyle = strokeStyle;
-            /*
-            // Start glow
-            context.shadowBlur = blur;
-            context.shadowColor = 'yellow';
-            */
-            context.strokeRect(site_x - radius, site_y - radius, radius * 4, radius * 1.8);
 
-            // Now putting main site in the same collection as features
-            var x_position = site_x - (2 * bonus_radius * feature_index) - bonus_margin;
-            var y_position = site_y - bonus_radius;
-            var html = "<span class='fa-stack fa-lg site-bonus' style='position:absolute;top:"+y_position+"px;left:"+x_position+"px;'>";
-            html += " <i class='exo-" + featureType + " fa-stack-1x'></i>";
-            html += " <i class='fa-stack-1x cost'>"+multiplier+"</i>";
-            html += "</span>";
-            $("#canvas_wrapper").append(html);
+            if(featureType == 'moon'){
+                var image_y = site_y - 40;
+                var image_x = site_x - (bonus_radius * feature_index) - bonus_margin + 180;
+                context.beginPath();
+                context.shadowBlur = 0;
+                context.roundedRectangle(image_x, image_y, 70, 90, 5);
+                context.fillStyle = '#fff';
+                context.fill();
+                context.beginPath();
+                const moonImage = new Image();
+                moonImage.onload = function() {
+                  context.shadowBlur = 0;
+                  context.drawImage(moonImage, image_x+5, image_y+5, 60, 80);
+                };
+                moonImage.src = '/img/art/symbols/moons.png';
+            }else{
+                // Main site
+                context.fillStyle = fillStyle;
+                context.fillRect(site_x - radius, site_y - radius, radius * 4, radius * 1.8);
+                context.lineWidth = border_width;
+                context.strokeStyle = strokeStyle;
+                /*
+                // Start glow
+                context.shadowBlur = blur;
+                context.shadowColor = 'yellow';
+                */
+                context.strokeRect(site_x - radius, site_y - radius, radius * 4, radius * 1.8);
+
+                // Now putting main site in the same collection as features
+                var x_position = site_x - (2 * bonus_radius * feature_index) - bonus_margin;
+                var y_position = site_y - bonus_radius;
+                var html = "<span class='fa-stack fa-lg site-bonus' style='position:absolute;top:"+y_position+"px;left:"+x_position+"px;'>";
+                html += " <i class='exo-" + featureType + " fa-stack-1x'></i>";
+                html += " <i class='fa-stack-1x cost'>"+multiplier+"</i>";
+                html += "</span>";
+                $("#canvas_wrapper").append(html);
+            }
+
         }else{
             // Extra bonuses
             if(featureType == 'helium'){

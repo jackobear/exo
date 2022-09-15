@@ -4,8 +4,8 @@ span.launch {
     grid-template-rows: 50px 1fr;
     font-size:1.2em;
     line-height:73px;
-    width:0px;
-    margin-top:-30px;
+    width:80px;
+    margin-top: -55px;
 }
 .launch-fuel {
     grid-area: 1 / 1 / 2 / 2;
@@ -24,7 +24,7 @@ span.launch {
 .launch-arrow {
     margin-left: 42px;
     margin-top: 38px;
-    width:200%;
+    width:1%;
     font-size: 2.7em;
     color:white;
     font-style: normal;
