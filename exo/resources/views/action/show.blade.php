@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/exo.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
-  <body>
+  <body id="body">
     <div class="row" style="background-color: #000">
       <div class="large-12 columns" style="background: url('/img/art/actions/<?echo strtolower(str_replace(" ", "-", str_replace("'", "", $action->name)));?>.jpg');
           background-size: cover;background-repeat: no-repeat;background-position: center;">
@@ -143,5 +143,6 @@
     <script src="/js/foundation/vendor/what-input.js"></script>
     <script src="/js/foundation/vendor/foundation.js"></script>
     <script src="/js/foundation/app.js"></script>
+     <script type="text/javascript" src="/js/actionCardIcons.js"></script>
   </body>
 </html>
