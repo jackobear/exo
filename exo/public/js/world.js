@@ -26,11 +26,11 @@ CanvasRenderingContext2D.prototype.roundedRectangle = function(x, y, width, heig
 function World(sites_str, body=''){
   var canvas = document.getElementById('myCanvas');
   var context = canvas.getContext('2d');
-  var radius = 70; // site radius
+  var radius = 70; // site radius...actually a rectangle now, not a circle
   var bonus_radius = 40;
   var border_width = 5;
   var site_margin = 35;
-  var bonus_margin = 110;
+  var bonus_margin = 185;
   var site_x = 560;
   var site_y = 100;
 
@@ -173,16 +173,18 @@ function World(sites_str, body=''){
                 moonImage.src = '/img/art/symbols/moons.png';
             }else{
                 // Main site
-                context.fillStyle = fillStyle;
-                context.fillRect(site_x - radius, site_y - radius, radius * 4, radius * 1.8);
+                //context.fillStyle = fillStyle; // add color of resource to main site
+                //context.fillRect(site_x - radius, site_y - radius, radius * 4, radius * 1.8);
                 context.lineWidth = border_width;
-                context.strokeStyle = strokeStyle;
+                context.strokeStyle = '#ddd'; //strokeStyle;
+                context.setLineDash([16]);
                 /*
                 // Start glow
                 context.shadowBlur = blur;
                 context.shadowColor = 'yellow';
                 */
-                context.strokeRect(site_x - radius, site_y - radius, radius * 4, radius * 1.8);
+                context.strokeRect(site_x - radius - 16, site_y - radius + 8, radius * 3.35, radius * 1.7);
+                // for print...752px / 63.5mm = xpx / 20mm, x=237...height = 125px, y=117...spaceport is 20mmx10mm
 
                 // Now putting main site in the same collection as features
                 var x_position = site_x - (2 * bonus_radius * feature_index) - bonus_margin;
@@ -196,6 +198,7 @@ function World(sites_str, body=''){
 
         }else{
             // Extra bonuses
+            context.setLineDash([0]);
             if(featureType == 'helium'){
                 context.beginPath();
                 context.shadowBlur = 0;
