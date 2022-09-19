@@ -32,7 +32,7 @@
 
               <div class="columns large-6" style="">
                 <h2>Settle Colony
-                <img src='/img/art/symbols/colony.png' style='height:50px;width:50px;' />
+                <img src='/img/art/symbols/colony-red.png' style='height:50px;width:50px;' />
                 <span style="float:right;color:#888;font-size:30px;margin-top:5px;">
 
                     <?php
@@ -96,7 +96,7 @@
 
               <div class="columns large-6" style="border-top:1px solid #aaa;border-right:1px solid #aaa;padding-top:10px;">
                 <h2>Build Spaceport
-                <img src='/img/art/symbols/spaceport.png' style='height:50px;width:50px;' />
+                <img src='/img/art/symbols/spaceport-red.png' style='height:50px;width:50px;' />
                 <span style="float:right;color:#888;font-size:30px;">
 
                     <?php
@@ -155,10 +155,10 @@
               <div class="columns large-6" style="border-top:1px solid #aaa;padding-top:10px;">
                 <h2>
                   <?php if($faction->name === 'Rock Hoppers'){ ?>
-                    Settle Asteroid Colony <img src='/img/art/symbols/exocolony.png' style='height:50px;width:50px;' />,
-                    <img src='/img/art/symbols/colony.png' style='height:50px;width:50px;' />
+                    Settle Asteroid Colony <img src='/img/art/symbols/exocolony-red.png' style='height:50px;width:50px;' />,
+                    <img src='/img/art/symbols/colony-red.png' style='height:50px;width:50px;' />
                   <?php }else{ ?>
-                    Settle Exocolony <img src='/img/art/symbols/exocolony.png' style='height:50px;width:50px;' />
+                    Settle Exocolony <img src='/img/art/symbols/exocolony-red.png' style='height:50px;width:50px;' />
                   <?php }?>
 
                   <span style="float:right;color:#888;font-size:30px;">

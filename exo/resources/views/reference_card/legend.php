@@ -136,17 +136,17 @@
             <td>Gain 16 to win</td>
           </tr>
           <tr>
-            <td><img src='/img/art/symbols/colony.png' style='width:50px;' /></td>
+            <td><img src='/img/art/symbols/colony-red.png' style='width:50px;' /></td>
             <td>Colony</td>
             <td>Produces resources and victory points</td>
           </tr>
           <tr>
-            <td><img src='/img/art/symbols/spaceport.png' style='width:50px;' /></td>
+            <td><img src='/img/art/symbols/spaceport-red.png' style='width:50px;' /></td>
             <td>Spaceport</td>
             <td>Negates Launch Costs, provides a Trade Ship and a victory point</td>
           </tr>
           <tr>
-            <td><img src='/img/art/symbols/exocolony.png' style='width:50px;' /></td>
+            <td><img src='/img/art/symbols/exocolony-red.png' style='width:50px;' /></td>
             <td>Exocolony</td>
             <td>Expensive, but scores a lot of victory points</td>
           </tr>
