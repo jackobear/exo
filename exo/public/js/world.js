@@ -23,7 +23,7 @@ CanvasRenderingContext2D.prototype.roundedRectangle = function(x, y, width, heig
   this.lineTo(x + rounded, y);
 }
 
-function World(sites_str, body=''){
+function World(sites_str, satellites_str=''){
   var canvas = document.getElementById('myCanvas');
   var context = canvas.getContext('2d');
   var radius = 70; // site radius...actually a rectangle now, not a circle
@@ -33,8 +33,9 @@ function World(sites_str, body=''){
   var bonus_margin = 185;
   var site_x = 560;
   var site_y = 100;
-
-  if(sites_str == "") return;
+  var satellite_x = 630;
+  var satellite_y = 220;
+  var satellite_height = 100;
   var sites = sites_str.split(",");
 
   if (sites.length == 5){
@@ -45,9 +46,11 @@ function World(sites_str, body=''){
     site_y += (4 - sites.length) * (radius + site_margin / 2);
   }
 
-  sites.forEach(function(site){
-    create_site(context, site);
-  });
+  if(sites_str != ""){
+      sites.forEach(function(site){
+        create_site(context, site);
+      });
+  }
 
   // Sometimes the world itself has features (Ganymede)
   /*
@@ -59,20 +62,62 @@ function World(sites_str, body=''){
     }
   }*/
 
-  // Handle moons
-  /*
-  context.beginPath();
-  context.shadowBlur = 0;
-  context.roundedRectangle(0, 650, 70, 90, 5);
-  context.fillStyle = '#fff';
-  context.fill();
-  //context.lineWidth = border_width;
-  //context.strokeStyle = '#000000';
-  //context.stroke();
-  const moonImage = new Image(59,80);
-  moonImage.src = '/img/art/symbols/moons.png';
-  context.drawImage(moonImage, 5, 655, 59, 80);
-  */
+  var satellites = satellites_str.split(",");
+  satellite_y += (5 - satellites.length) * satellite_height;
+  if (sites.length < 2){  // Gas giant w/ lots of text
+    satellite_y -= satellite_height;
+  }
+  if(satellites_str != ""){
+    satellites.forEach(function(satellite){
+      create_satellite(context, satellite);
+    });
+  }
+
+  function create_satellite(context, satellite){
+    console.log('sat=', satellite);
+    context.beginPath();
+    context.shadowBlur = 0;
+    context.roundedRectangle(satellite_x, satellite_y, 70, 90, 5);
+    context.fillStyle = '#ddd';
+    context.fill();
+    context.beginPath();
+    let satelliteImage = new Image(60, 80);
+    var features = satellite.split("+");
+    switch(features[0].trim()){
+        case "MN":
+            satelliteImage.src = '/img/art/symbols/moons.png';
+            break;
+        case "DP":
+            satelliteImage.src = '/img/art/symbols/dwarf-planets.png';
+            break;
+        case "PL":
+            satelliteImage.src = '/img/art/symbols/planets.png';
+            break;
+        default:
+            break;
+    }
+    context.drawImage(satelliteImage, satellite_x+5, satellite_y+5, 60, 80);
+
+    if(features.length > 1){
+        let featureImage = new Image(80, 80);
+        switch(features[1].trim()){
+            case "SH":
+                featureImage.src = '/img/art/symbols/magnetic-shield.png';
+                break;
+            case "MS":
+                featureImage.src = '/img/art/symbols/magnetic-storm.png';
+                break;
+            case "PR":
+                featureImage.src = '/img/art/symbols/players.png';
+                break;
+            default:
+                break;
+        }
+        context.drawImage(featureImage, satellite_x - 95, satellite_y + 5, 80, 80);
+    }
+
+    satellite_y += satellite_height;
+  }
 
 
   function create_site(context, site){
@@ -143,11 +188,6 @@ function World(sites_str, body=''){
                 strokeStyle = '#000000';
                 featureType = 'shield';
                 break;
-            case "Mn":
-                fillStyle = '#7d7d7d';
-                strokeStyle = '#000000';
-                featureType = 'moon';
-                break;
             default:
                 fillStyle = '#fff8a8';
                 strokeStyle = '#cccc00';
@@ -156,45 +196,28 @@ function World(sites_str, body=''){
         }
         if(feature_index == 0){
 
-            if(featureType == 'moon'){
-                var image_y = site_y - 40;
-                var image_x = site_x - (bonus_radius * feature_index) - bonus_margin + 180;
-                context.beginPath();
-                context.shadowBlur = 0;
-                context.roundedRectangle(image_x, image_y, 70, 90, 5);
-                context.fillStyle = '#fff';
-                context.fill();
-                context.beginPath();
-                const moonImage = new Image();
-                moonImage.onload = function() {
-                  context.shadowBlur = 0;
-                  context.drawImage(moonImage, image_x+5, image_y+5, 60, 80);
-                };
-                moonImage.src = '/img/art/symbols/moons.png';
-            }else{
-                // Main site
-                //context.fillStyle = fillStyle; // add color of resource to main site
-                //context.fillRect(site_x - radius, site_y - radius, radius * 4, radius * 1.8);
-                context.lineWidth = border_width;
-                context.strokeStyle = '#ddd'; //strokeStyle;
-                context.setLineDash([16]);
-                /*
-                // Start glow
-                context.shadowBlur = blur;
-                context.shadowColor = 'yellow';
-                */
-                context.strokeRect(site_x - radius - 16, site_y - radius + 8, radius * 3.35, radius * 1.7);
-                // for print...752px / 63.5mm = xpx / 20mm, x=237...height = 125px, y=117...spaceport is 20mmx10mm
+            // Main site
+            //context.fillStyle = fillStyle; // add color of resource to main site
+            //context.fillRect(site_x - radius, site_y - radius, radius * 4, radius * 1.8);
+            context.lineWidth = border_width;
+            context.strokeStyle = '#ddd'; //strokeStyle;
+            context.setLineDash([16]);
+            /*
+            // Start glow
+            context.shadowBlur = blur;
+            context.shadowColor = 'yellow';
+            */
+            context.strokeRect(site_x - radius - 16, site_y - radius + 8, radius * 3.35, radius * 1.7);
+            // for print...752px / 63.5mm = xpx / 20mm, x=237...height = 125px, y=117...spaceport is 20mmx10mm
 
-                // Now putting main site in the same collection as features
-                var x_position = site_x - (2 * bonus_radius * feature_index) - bonus_margin;
-                var y_position = site_y - bonus_radius;
-                var html = "<span class='fa-stack fa-lg site-bonus' style='position:absolute;top:"+y_position+"px;left:"+x_position+"px;'>";
-                html += " <i class='exo-" + featureType + " fa-stack-1x'></i>";
-                html += " <i class='fa-stack-1x cost'>"+multiplier+"</i>";
-                html += "</span>";
-                $("#canvas_wrapper").append(html);
-            }
+            // Now putting main site in the same collection as features
+            var x_position = site_x - (2 * bonus_radius * feature_index) - bonus_margin;
+            var y_position = site_y - bonus_radius;
+            var html = "<span class='fa-stack fa-lg site-bonus' style='position:absolute;top:"+y_position+"px;left:"+x_position+"px;'>";
+            html += " <i class='exo-" + featureType + " fa-stack-1x'></i>";
+            html += " <i class='fa-stack-1x cost'>"+multiplier+"</i>";
+            html += "</span>";
+            $("#canvas_wrapper").append(html);
 
         }else{
             // Extra bonuses

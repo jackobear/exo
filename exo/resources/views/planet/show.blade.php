@@ -55,7 +55,8 @@
             ?>"></canvas>
             <script type="text/javascript">
               var sites_str = "<? echo $planet->sites; ?>";
-              var the_sites = new World(sites_str);
+              var satellites = "<? echo $planet->satellites; ?>";
+              var the_sites = new World(sites_str, satellites);
             </script>
           </div>
 

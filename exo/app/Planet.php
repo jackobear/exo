@@ -7,7 +7,7 @@ use App\Traits\SavableAsPng;
 
 class Planet extends Model
 {
-    protected $fillable = ['name', 'type', 'escape_velocity', 'body', 'sites', 'artist_url'];
+    protected $fillable = ['name', 'type', 'escape_velocity', 'body', 'sites', 'satellites', 'artist_url'];
     public $timestamps = false;
     use SavableAsPng;
 

@@ -19,6 +19,10 @@
  {!! Form::text('sites', null, ['class' => 'form-control']) !!}
 </div>
 <div class='form-group'>
+ {!! Form::label('satellites', 'Satellites:') !!}
+ {!! Form::text('satellites', null, ['class' => 'form-control']) !!}
+</div>
+<div class='form-group'>
  {!! Form::label('artist_url', 'Artist URL:') !!}
  {!! Form::text('artist_url', null, ['class' => 'form-control']) !!}
 </div>
