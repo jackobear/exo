@@ -7,7 +7,7 @@ use App\Traits\SavableAsPng;
 
 class HabitableWorld extends Model
 {
-    protected $fillable = ['name', 'type', 'escape_velocity', 'body', 'sites', 'artist_url'];
+    protected $fillable = ['name', 'type', 'escape_velocity', 'body', 'satellites', 'sites', 'artist_url'];
     public $timestamps = false;
     use SavableAsPng;
 

@@ -1,10 +1,10 @@
 $( document ).ready(function() {
 	document.getElementById('body').innerHTML = document.getElementById('body').innerHTML.replaceAll('Dwarf Planet', '<span style=\'white-space:nowrap;\'><img src=\'/img/art/symbols/dwarf-planets.png\' class=\'inline-card-icon\' />Dwarf<span>&nbsp;Planet');
 	document.getElementById('body').innerHTML = document.getElementById('body').innerHTML.replaceAll(' Planet', ' <span style=\'white-space:nowrap;\'><img src=\'/img/art/symbols/planets.png\' class=\'inline-card-icon\' />Planet</span>');
-	document.getElementById('body').innerHTML = document.getElementById('body').innerHTML.replaceAll('Moon', '<img src=\'/img/art/symbols/moons.png\' class=\'inline-card-icon\' />Moon');
+	document.getElementById('body').innerHTML = document.getElementById('body').innerHTML.replaceAll('Moon', '<span style=\'white-space:nowrap;\'><img src=\'/img/art/symbols/moons.png\' class=\'inline-card-icon\' />Moon</span>');
 	document.getElementById('body').innerHTML = document.getElementById('body').innerHTML.replaceAll('Habitable World', '<span style=\'white-space:nowrap;\'><img src=\'/img/art/symbols/habitable-worlds.png\' class=\'inline-card-icon\' />Habitable</span> World');
 	document.getElementById('body').innerHTML = document.getElementById('body').innerHTML.replaceAll('Magnetic Shield', '<span style=\'white-space:nowrap;\'><img src=\'/img/art/symbols/magnetic-shield.png\' class=\'inline-card-icon\' />Magnetic</span> Shield');
 	document.getElementById('body').innerHTML = document.getElementById('body').innerHTML.replaceAll('Magnetic Storm', '<span style=\'white-space:nowrap;\'><img src=\'/img/art/symbols/magnetic-storm.png\' class=\'inline-card-icon\' />Magnetic</span> Storm');
-	document.getElementById('body').innerHTML = document.getElementById('body').innerHTML.replaceAll('Lifeform', '<img src=\'/img/art/symbols/lifeforms.png\' class=\'inline-card-icon\' />Lifeform');
-	document.getElementById('body').innerHTML = document.getElementById('body').innerHTML.replaceAll('Star', '<img src=\'/img/art/symbols/stars.png\' class=\'inline-card-icon\' />Star');
+	document.getElementById('body').innerHTML = document.getElementById('body').innerHTML.replaceAll('Lifeform', '<span style=\'white-space:nowrap;\'><img src=\'/img/art/symbols/lifeforms.png\' class=\'inline-card-icon\' />Lifeform</span>');
+	document.getElementById('body').innerHTML = document.getElementById('body').innerHTML.replaceAll('Star', '<span style=\'white-space:nowrap;\'><img src=\'/img/art/symbols/stars.png\' class=\'inline-card-icon\' />Star</span>');
 });

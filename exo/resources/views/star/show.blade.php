@@ -7,7 +7,13 @@
     <title><? echo $star->name; ?></title>
     <link rel="stylesheet" href="/css/foundation/foundation.css">
     <link rel="stylesheet" href="/css/foundation/app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/Glyphter.css">
     <link rel="stylesheet" href="/css/exo.css">
+    <script src="/js/foundation/vendor/jquery.js"></script>
+    <script src="/js/foundation/vendor/what-input.js"></script>
+    <script src="/js/foundation/vendor/foundation.js"></script>
+    <script src="/js/foundation/app.js"></script>
     <script type="text/javascript" src="/js/world.js"></script>
   </head>
   <body>
@@ -28,7 +34,23 @@
 
           </div>
 
-          <div style="height:100%;">&nbsp;</div>
+          <div id="canvas_wrapper">
+            <canvas id="myCanvas" width="745" height="<?
+              // Check if we need room for two lines of text
+              $height = 800;
+              //if(strlen(strip_tags($planet->body)) > 50) $height -= 43;
+              if(strlen(strip_tags($star->body)) > 27) $height -= 43;
+              if(strlen(strip_tags($star->body)) > 80) $height -= 43;
+              if(strlen(strip_tags($star->body)) > 110) $height -= 43;
+              if(strlen(strip_tags($star->body)) > 180) $height -= 43;
+              echo $height;
+            ?>"></canvas>
+            <script type="text/javascript">
+              var sites_str = "<? echo $star->sites; ?>";
+              var satellites = "<? echo $star->satellites; ?>";
+              var the_sites = new World(sites_str, satellites);
+            </script>
+          </div>
           
           <div class="glow" id="body">
             <h3><? echo $star->body; ?>

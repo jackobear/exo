@@ -36,6 +36,7 @@ function World(sites_str, satellites_str=''){
   var satellite_x = 630;
   var satellite_y = 220;
   var satellite_height = 100;
+  var satellite_width = 90;
   var sites = sites_str.split(",");
 
   if (sites.length == 5){
@@ -62,44 +63,37 @@ function World(sites_str, satellites_str=''){
     }
   }*/
 
-  var satellites = satellites_str.split(",");
-  satellite_y += (5 - satellites.length) * satellite_height;
+  var satellites = satellites_str.split(",").map(s => s.trim());
+  const is_star = satellites.includes("PL"); // Satellites of stars are positioned horizontally
+  const is_hab_world = sites.length > 4; // Habitable Worlds have so many sites that satellites should go on the left
+  if (!is_star){
+    satellite_y += (5 - satellites.length) * satellite_height;
+  }
+  if (is_hab_world) {
+    satellite_x = 0;
+  }
   if (sites.length < 2){  // Gas giant w/ lots of text
     satellite_y -= satellite_height;
   }
-  if(satellites_str != ""){
+  if (satellites_str != ""){
+    let satellite_index = 0;
     satellites.forEach(function(satellite){
-      create_satellite(context, satellite);
+      create_satellite(context, satellite, satellite_index);
+      satellite_index++;
     });
   }
 
-  function create_satellite(context, satellite){
-    console.log('sat=', satellite);
-    context.beginPath();
-    context.shadowBlur = 0;
-    context.roundedRectangle(satellite_x, satellite_y, 70, 90, 5);
-    context.fillStyle = '#ddd';
-    context.fill();
-    context.beginPath();
-    let satelliteImage = new Image(60, 80);
+  function create_satellite(context, satellite, satellite_index){
     var features = satellite.split("+");
-    switch(features[0].trim()){
-        case "MN":
-            satelliteImage.src = '/img/art/symbols/moons.png';
-            break;
-        case "DP":
-            satelliteImage.src = '/img/art/symbols/dwarf-planets.png';
-            break;
-        case "PL":
-            satelliteImage.src = '/img/art/symbols/planets.png';
-            break;
-        default:
-            break;
-    }
-    context.drawImage(satelliteImage, satellite_x+5, satellite_y+5, 60, 80);
-
     if(features.length > 1){
         let featureImage = new Image(80, 80);
+        featureImage.onload = function() {
+            if(is_star){
+                context.drawImage(featureImage, satellite_x - ((satellites.length - satellite_index - 2) * satellite_width) - 95, satellite_y + 215, 80, 80);
+            } else {
+                context.drawImage(featureImage, satellite_x - 95, satellite_y + 5 + (satellite_index * satellite_height), 80, 80);
+            }
+        }
         switch(features[1].trim()){
             case "SH":
                 featureImage.src = '/img/art/symbols/magnetic-shield.png';
@@ -110,13 +104,55 @@ function World(sites_str, satellites_str=''){
             case "PR":
                 featureImage.src = '/img/art/symbols/players.png';
                 break;
+            case "PR-1":
+                featureImage.src = '/img/art/symbols/players-minus-1.png';
+                break;
+            case "PR1":
+                featureImage.src = '/img/art/symbols/players-plus-1.png';
+                break;
             default:
                 break;
         }
-        context.drawImage(featureImage, satellite_x - 95, satellite_y + 5, 80, 80);
     }
 
-    satellite_y += satellite_height;
+    let satelliteImage = new Image(60, 80);
+    satelliteImage.onload = function() {
+        console.log('is_star', is_star);
+        if(is_star){
+            context.beginPath();
+            context.shadowBlur = 0;
+            context.roundedRectangle(satellite_x - ((satellites.length - satellite_index - 1) * satellite_width), satellite_y + 300, 70, 90, 5);
+            context.fillStyle = '#fff';
+            context.fill();
+            context.beginPath();
+            context.drawImage(satelliteImage, satellite_x + 5 - ((satellites.length - satellite_index - 1) * satellite_width), satellite_y + 305, 60, 80);
+        } else {
+            console.log('not a star...');
+            context.beginPath();
+            context.shadowBlur = 0;
+            context.roundedRectangle(satellite_x, satellite_y + (satellite_index * satellite_height), 70, 90, 5);
+            context.fillStyle = '#fff';
+            context.fill();
+            context.beginPath();
+            context.drawImage(satelliteImage, satellite_x + 5, satellite_y + 5 + (satellite_index * satellite_height), 60, 80);
+        }
+    };
+    switch(features[0].trim()){
+        case "MN":
+            satelliteImage.src = '/img/art/symbols/moons.png';
+            break;
+        case "DP":
+            satelliteImage.src = '/img/art/symbols/dwarf-planets.png';
+            break;
+        case "PL":
+            satelliteImage.src = '/img/art/symbols/planets.png';
+            break;
+        case "HW":
+            satelliteImage.src = '/img/art/symbols/habitable-worlds.png';
+            break;
+        default:
+            break;
+    }
   }
 
 

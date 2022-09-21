@@ -56,11 +56,12 @@
             ?>"></canvas>
             <script type="text/javascript">
                 var sites_str = "<? echo $habitable_world->sites; ?>";
-                var the_sites = new World(sites_str, "<? echo $habitable_world->body; ?>");
+                var satellites = "<? echo $habitable_world->satellites; ?>";
+                var the_sites = new World(sites_str, satellites);
             </script>
           </div>
           
-          <div class="glow" style="">
+          <div class="glow" id="body">
             <h3>
               <? echo $habitable_world->body; ?>
             </h3>
@@ -69,5 +70,6 @@
       </div>
     </div>
 
+    <script type="text/javascript" src="/js/cardIcons.js"></script>
   </body>
 </html>
