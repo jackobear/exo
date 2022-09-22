@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/exo.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
-  <body id="body">
+  <body>
     <div class="row" style="background-color: #000">
       <div class="large-12 columns" style="background: url('/img/art/actions/<?echo strtolower(str_replace(" ", "-", str_replace("'", "", $action->name)));?>.jpg');
           background-size: cover;background-repeat: no-repeat;background-position: center;">
@@ -128,7 +128,7 @@
 
           <div style="height:100%;">&nbsp;</div>
 
-          <div class="glow" style="">
+          <div class="glow" id="body">
             <h3><? echo $action->body; ?></h3>
             <?php if ($action->flavor_text) { ?>
               <h3 style="color:gray;"><i><? echo $action->flavor_text; ?></i></h3>

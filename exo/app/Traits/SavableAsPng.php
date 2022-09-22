@@ -35,6 +35,7 @@ trait SavableAsPng {
         $name = str_replace(" ", "_", strtolower($this->name));
         $filename = "/var/www/exo/public/img/cards/{$class}s/{$name}.png";
         $cmd = "google-chrome --headless --disable-gpu --screenshot=$filename --window-size={$width},{$height} http://192.168.33.10/{$class}/" . $this->id;
+        // Can be added to allow js requests to finish --run-all-compositor-stages-before-draw --virtual-time-budget=10000
         $output = "";
         $return_var = 0;
         exec(escapeshellcmd($cmd), $output, $return_var);

@@ -14,6 +14,7 @@
     <script src="/js/foundation/vendor/what-input.js"></script>
     <script src="/js/foundation/vendor/foundation.js"></script>
     <script src="/js/foundation/app.js"></script>
+    <script type="text/javascript" src="/js/cardIcons.js"></script>
     <script type="text/javascript" src="/js/world.js"></script>
   </head>
   <body>
@@ -21,11 +22,11 @@
       <div class="large-12 columns" style="background: url('/img/art/dwarf-planets/<?echo strtolower(str_replace(" ", "-", $dwarf_planet->name));?>.jpg');
           background-size: cover;background-repeat: no-repeat;background-position: center;">
         <div style="width: 695px;height:995px;margin:65px 0px 65px 50px;background:transparent;">
-          <div class="glow" style="">
+          <div class="glow" style="padding-bottom:5px;">
             
             <img src="/img/art/symbols/dwarf-planets.png" style='height:80px;float:left;margin-right:5px;' />
             <span style="">
-              <div style="margin: 0px;font-size:1.5em;line-height: 0.8;"><? echo $dwarf_planet->name; ?></div>
+              <div style="margin: 5px 0px 0px 0px;font-size:1.5em;line-height: 0.8;"><? echo $dwarf_planet->name; ?></div>
               <span style="color:#a52315;font-size:30px;margin:0px;line-height: 1.1;">
                 <? echo $dwarf_planet->type; ?> Dwarf Planet
               </span>
@@ -61,7 +62,5 @@
         </div>
       </div>
     </div>
-
-    <script type="text/javascript" src="/js/cardIcons.js"></script>
   </body>
 </html>

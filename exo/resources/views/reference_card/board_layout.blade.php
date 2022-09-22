@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="/css/foundation/foundation.css">
     <link rel="stylesheet" href="/css/foundation/app.css">
     <link rel="stylesheet" href="/css/exo.css">
+    <script src="/js/foundation/vendor/jquery.js"></script>
+    <script src="/js/foundation/vendor/what-input.js"></script>
+    <script src="/js/foundation/vendor/foundation.js"></script>
+    <script src="/js/foundation/app.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="/js/cost.js"></script>
     <script type="text/javascript" src="/js/arrow.js"></script>
@@ -30,9 +34,6 @@
             context.font = "30px Arial";
             context.lineWidth = 1;
             context.strokeStyle = '#333';
-
-            const actionsImage = new Image(59, 80);
-            actionsImage.src = '/img/art/symbols/actions.png';
 
             // Player 1
             /*
@@ -89,14 +90,13 @@
             context.stroke();
 
             // Stars Label
-            const starsImage = new Image(59, 80);
-            starsImage.src = '/img/art/symbols/stars.png';
-            context.drawImage(starsImage, 0, 255, 30, 40);
+            drawIcon('stars', 0, 255, 30, 40);
             context.fillText("New", 0,250);
             context.fillText("    Stars", 0,285);
             arrow(context, 110, 280, 190, 240);
             arrow(context, 110, 280, 190, 320);
-            context.drawImage(starsImage, 0, 380, 30, 40);
+            drawIcon('stars', 0, 380, 30, 40);
+
             context.fillText("Home",0,375);
             context.fillText("    Star",0,410);
             context.fillText("(Sol)",0,445);
@@ -108,9 +108,7 @@
             context.stroke();
 
                 // New Hab worlds Label
-                const habWorldsImage = new Image(59, 80);
-                habWorldsImage.src = '/img/art/symbols/habitable-worlds.png';
-                context.drawImage(habWorldsImage, 50, 85, 30, 40);
+                drawIcon('habitable-worlds', 50, 85, 30, 40);
                 context.fillText("New",90,85);
                 context.fillText("Habitable",90,115);
                 context.fillText("Worlds",90,145);
@@ -123,7 +121,7 @@
                 context.stroke();
 
                 // Action discard pile
-                context.drawImage(actionsImage, 320, 185, 30, 40);
+                drawIcon('actions', 320, 185, 30, 40);
                 context.fillText("Action",360,205);
                 context.fillText("discard pile",360,230);
                 arrow(context, 460, 195, 510, 195);
@@ -134,7 +132,7 @@
                 context.setLineDash([0]);
 
                 // Action deck
-                context.drawImage(actionsImage, 685, 170, 30, 40);
+                drawIcon('actions', 685, 170, 30, 40);
                 context.fillText("Action deck",725,200);
                 arrow(context, 680, 190, 645, 190);
                 context.beginPath();
@@ -150,10 +148,11 @@
                 context.clearRect(580, 175, 50, 70);
                 context.rect(580, 175, 50, 70);
                 context.stroke();
-                context.drawImage(actionsImage, 590, 190, 30, 40);
+                drawIcon('actions', 685, 170, 30, 40);
+                drawIcon('actions', 590, 190, 30, 40);
 
                 // Action card market
-                context.drawImage(actionsImage, 320, 105, 30, 40);
+                drawIcon('actions', 320, 105, 30, 40);
                 context.fillText("Action card market",360,135);
                 arrow(context, 620, 125, 670, 125);
                 context.beginPath();
@@ -183,9 +182,7 @@
                 context.stroke();
 
                 // Asteroid Deck
-                const asteroidsImage = new Image(59, 80);
-                asteroidsImage.src = '/img/art/symbols/asteroids.png';
-                context.drawImage(asteroidsImage, 685, 300, 30, 40);
+                drawIcon('asteroids', 685, 300, 30, 40);
                 context.fillText("Asteroid deck",720,330);
                 arrow(context, 680, 320, 645, 320);
                 context.beginPath();
@@ -201,10 +198,10 @@
                 context.clearRect(580, 270, 50, 70);
                 context.rect(580, 270, 50, 70);
                 context.stroke();
-                context.drawImage(asteroidsImage, 590, 285, 30, 40);
+                drawIcon('asteroids', 590, 285, 30, 40);
 
                 // Asteroid discard pile
-                context.drawImage(asteroidsImage, 320, 285, 30, 40);
+                drawIcon('asteroids', 320, 285, 30, 40);
                 context.fillText("Asteroid",360,305);
                 context.fillText("discard pile",360,330);
                 arrow(context, 480, 295, 510, 295);
@@ -423,11 +420,9 @@
 */
 
             // Planets/Hab world label
-            const planetsImage = new Image(59, 80);
-            planetsImage.src = '/img/art/symbols/planets.png';
-            context.drawImage(planetsImage, 730, 355, 30, 40);
+            drawIcon('planets', 730, 355, 30, 40);
             context.fillText("Planets and a", 770, 385);
-            context.drawImage(habWorldsImage, 730, 400, 30, 40);
+            drawIcon('habitable-worlds', 730, 400, 30, 40);
             context.fillText("Habitable World", 770, 430);
             arrow(context, 725, 395, 680, 395);
 
@@ -446,13 +441,9 @@
             context.lineTo(curlyWidth+curlyx, curlyHeight - curlyWidth+curlyy);
             context.arcTo(curlyWidth+curlyx, curlyHeight + curlyy, curlyx, curlyHeight + curlyy, curlyWidth);
             context.stroke();
-            const moonsImage = new Image(59, 80);
-            moonsImage.src = '/img/art/symbols/moons.png';
-            context.drawImage(moonsImage, 730, 565, 30, 40);
+            drawIcon('moons', 730, 565, 30, 40);
             context.fillText("Moons and",770,595);
-            const dwarfPlanetsImage = new Image(59, 80);
-            dwarfPlanetsImage.src = '/img/art/symbols/dwarf-planets.png';
-            context.drawImage(dwarfPlanetsImage, 730, 610, 30, 40);            
+            drawIcon('dwarf-planets', 730, 610, 30, 40);            
             context.fillText("Dwarf Planets",770,640);
 
             // 3 Planets for Sol label
@@ -470,7 +461,7 @@
             context.lineTo((2*curlyWidth)+curlyx + (2*linelength), curlyWidth+curlyy);
             context.arcTo((3*curlyWidth)+curlyx + (2*linelength), curlyWidth+curlyy, (3*curlyWidth)+curlyx + (2*linelength), curlyy, curlyWidth);
             context.stroke();
-            context.drawImage(planetsImage, 280, 795, 30, 40);
+            drawIcon('planets', 280, 795, 30, 40);
             context.fillText("3     Planets for",255,830);
             //context.drawImage(starsImage, 430, 835, 30, 40);
             context.fillText("1 Player with Sol",250,860);
@@ -490,12 +481,12 @@
             context.lineTo((2*curlyWidth)+curlyx + (2*linelength), curlyWidth+curlyy);
             context.arcTo((3*curlyWidth)+curlyx + (2*linelength), curlyWidth+curlyy, (3*curlyWidth)+curlyx + (2*linelength), curlyy, curlyWidth);
             context.stroke();
-            context.drawImage(planetsImage, 565, 795, 30, 40);
+            drawIcon('planets', 562, 795, 30, 40);
             context.fillText("4-7     Planets",510,830);
             context.fillText("for 2-5 Players",510,860);
 
             // Star deck
-            context.drawImage(starsImage, 285, 485, 30, 40);
+            drawIcon('stars', 285, 485, 30, 40);
             context.fillText("Star",320, 500);
             context.fillText("deck",320, 530);
             arrow(context, 280, 505, 260, 505);
@@ -512,10 +503,10 @@
             context.clearRect(190, 470, 50, 70);
             context.rect(190, 470, 50, 70);
             context.stroke();
-            context.drawImage(starsImage, 200, 485, 30, 40);
+            drawIcon('stars', 200, 485, 30, 40);
 
             // Habitable World deck
-            context.drawImage(habWorldsImage, 285, 575, 30, 40);
+            drawIcon('habitable-worlds', 285, 575, 30, 40);
             context.fillText("Habitable",320,590);
             context.fillText("World deck",320,620);
             arrow(context, 280, 595, 260, 595);
@@ -532,12 +523,10 @@
             context.clearRect(190, 570, 50, 70);
             context.rect(190, 570, 50, 70);
             context.stroke();
-            context.drawImage(habWorldsImage, 200, 585, 30, 40);
+            drawIcon('habitable-worlds', 200, 585, 30, 40);
 
             // Lifeforms deck
-            const lifeformsImage = new Image(59, 80);
-            lifeformsImage.src = '/img/art/symbols/lifeforms.png';
-            context.drawImage(lifeformsImage, 285, 675, 30, 40);
+            drawIcon('lifeforms', 285, 675, 30, 40);
             context.fillText("Lifeform deck",320,705);
             arrow(context, 280, 695, 260, 695);
             context.beginPath();
@@ -553,12 +542,10 @@
             context.clearRect(190, 670, 50, 70);
             context.rect(190, 670, 50, 70);
             context.stroke();
-            context.drawImage(lifeformsImage, 200, 685, 30, 40);
+            drawIcon('lifeforms', 200, 685, 30, 40);
 
             // Trade Ship deck
-            const tradeshipsImage = new Image(59, 80);
-            tradeshipsImage.src = '/img/art/symbols/tradeships.png';
-            context.drawImage(tradeshipsImage, 0, 785, 30, 40);
+            drawIcon('tradeships', 0, 785, 30, 40);
             context.fillText("Trade Ship",30,800);
             context.fillText("deck",50,830);
             arrow(context, 120, 820, 175, 820);
@@ -575,7 +562,7 @@
             context.clearRect(190, 770, 50, 70);
             context.rect(190, 770, 50, 70);
             context.stroke();
-            context.drawImage(tradeshipsImage, 200, 785, 30, 40);
+            drawIcon('tradeships', 200, 785, 30, 40);
  
             // Player layout
             context.fillText("Player Layout", 1180, 620);
@@ -585,7 +572,7 @@
             context.stroke();
 
                 // Player layout Starting Action cards
-                context.drawImage(actionsImage, 1330,665, 30, 40);
+                drawIcon('actions', 1330,665, 30, 40);
                 context.fillText("Starting",1370,670);
                 context.fillText("Action",1370,695);
                 context.fillText("card(s)",1370,720);
@@ -598,7 +585,7 @@
                 context.stroke();
 
                 // Tradeship
-                context.drawImage(tradeshipsImage, 1110, 770, 30, 40);
+                drawIcon('tradeships', 1110, 770, 30, 40);
                 context.fillText("Trade Ship", 1150, 800);
                 arrow(context, 1205, 775, 1205, 725);
 
@@ -674,39 +661,39 @@
             context.lineTo(1510, 40);
             context.stroke();
             //context.fillText("1. Sol", 1060, 70);
-            context.drawImage(planetsImage, 1095, 45, 30, 40);
+            drawIcon('planets', 1095, 45, 30, 40);
             context.fillText("1.     Mercury", 1060, 75);
-            context.drawImage(planetsImage, 1095, 90, 30, 40);
+            drawIcon('planets', 1095, 90, 30, 40);
             context.fillText("2.     Venus", 1060, 120);
-            context.drawImage(habWorldsImage, 1095, 135, 30, 40);
+            drawIcon('habitable-worlds',  1095, 135, 30, 40);
             context.fillText("3.     Earth", 1060, 165);
-            context.drawImage(planetsImage, 1095, 180, 30, 40);
+            drawIcon('planets', 1095, 180, 30, 40);
             context.fillText("4.     Mars", 1060, 210);
-            context.drawImage(planetsImage, 1095, 225, 30, 40);
+            drawIcon('planets', 1095, 225, 30, 40);
             context.fillText("5.     Asteroid Belt", 1060, 255);
-            context.drawImage(planetsImage, 1095, 270, 30, 40);
+            drawIcon('planets', 1095, 270, 30, 40);
             context.fillText("6.     Jupiter", 1060, 300);
-            context.drawImage(planetsImage, 1095, 315, 30, 40);
+            drawIcon('planets', 1095, 315, 30, 40);
             context.fillText("7.     Saturn", 1060, 345);
-            context.drawImage(moonsImage, 1095, 360, 30, 40);
+            drawIcon('moons', 1095, 360, 30, 40);
             context.fillText("8.     Luna", 1060, 390);
-            context.drawImage(moonsImage, 1095, 405, 30, 40);
+            drawIcon('moons', 1095, 405, 30, 40);
             context.fillText("9.     Ceres", 1060, 435);
-            context.drawImage(dwarfPlanetsImage, 1360, 45, 30, 40);
+            drawIcon('dwarf-planets', 1360, 45, 30, 40);
             context.fillText("10.     Vesta", 1310, 75);
-            context.drawImage(dwarfPlanetsImage, 1360, 90, 30, 40);
+            drawIcon('dwarf-planets', 1360, 90, 30, 40);
             context.fillText("11.     Pallas", 1310, 120);
-            context.drawImage(moonsImage, 1360, 135, 30, 40);
+            drawIcon('moons', 1360, 135, 30, 40);
             context.fillText("12.     Io", 1310, 165);
-            context.drawImage(moonsImage, 1360, 180, 30, 40);
+            drawIcon('moons', 1360, 180, 30, 40);
             context.fillText("13.     Europa", 1310, 210);
-            context.drawImage(moonsImage, 1360, 225, 30, 40);
+            drawIcon('moons', 1360, 225, 30, 40);
             context.fillText("14.     Ganymede", 1310, 255);
-            context.drawImage(moonsImage, 1360, 270, 30, 40);
+            drawIcon('moons', 1360, 270, 30, 40);
             context.fillText("15.     Callisto", 1310, 300);
-            context.drawImage(moonsImage, 1360, 315, 30, 40);
+            drawIcon('moons', 1360, 315, 30, 40);
             context.fillText("16.     Enceladus", 1310, 345);
-            context.drawImage(moonsImage, 1360, 360, 30, 40);
+            drawIcon('moons', 1360, 360, 30, 40);
             context.fillText("17.     Titan", 1310, 390);
             /*
             context.fillText("19. Callisto", 1310, 160);
@@ -723,23 +710,19 @@
             context.fillText("30. Humea", 1310, 490);
             */
 
+            function drawIcon(type, x, y, w, h){
+              const worldImage = new Image(59, 80);
+              worldImage.src = `/img/art/symbols/${type}.png`;
+              worldImage.onload = function() {
+                context.shadowBlur = 0;
+                context.drawImage(worldImage, x, y, w, h);
+              };
+            }
+
           </script>
 
         </div>
       </div>
     </div>
-
-    <!-- images for canvas
-    <div style="display:hidden;">
-        <div className='planets'>
-            <img src='/img/art/symbols/planets.png' />
-        </div>
-    </div>
--->
-
-    <script src="/js/foundation/vendor/jquery.js"></script>
-    <script src="/js/foundation/vendor/what-input.js"></script>
-    <script src="/js/foundation/vendor/foundation.js"></script>
-    <script src="/js/foundation/app.js"></script>
   </body>
 </html>

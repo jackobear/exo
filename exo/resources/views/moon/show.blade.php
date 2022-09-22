@@ -14,6 +14,7 @@
     <script src="/js/foundation/vendor/what-input.js"></script>
     <script src="/js/foundation/vendor/foundation.js"></script>
     <script src="/js/foundation/app.js"></script>
+    <script type="text/javascript" src="/js/cardIcons.js"></script>
     <script type="text/javascript" src="/js/world.js"></script>
   </head>
   <body>
@@ -66,7 +67,5 @@
         </div>
       </div>
     </div>
-
-    <script type="text/javascript" src="/js/cardIcons.js"></script>
   </body>
 </html>

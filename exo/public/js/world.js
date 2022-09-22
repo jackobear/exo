@@ -306,7 +306,8 @@ function World(sites_str, satellites_str=''){
                 context.beginPath();
                 const shieldImage = new Image();
                 var image_y = site_y - 40;
-                var image_x = site_x - (bonus_radius * feature_index) - bonus_margin - 80;
+                var image_x = site_x - (bonus_radius * 2 * feature_index) - bonus_margin;
+                console.log('shield at x=', image_x);
                 shieldImage.onload = function() {
                   context.shadowBlur = 0;
                   context.drawImage(shieldImage, image_x, image_y, 75, 75);

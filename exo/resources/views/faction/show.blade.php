@@ -10,7 +10,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/Glyphter.css">
     <link rel="stylesheet" href="/css/exo.css">
+    <script src="/js/foundation/vendor/jquery.js"></script>
+    <script src="/js/foundation/vendor/what-input.js"></script>
+    <script src="/js/foundation/vendor/foundation.js"></script>
+    <script src="/js/foundation/app.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/actionCardIcons.js"></script>
   </head>
   <body style='overflow: hidden;'>
     <div class="row" style="background-color: #000;max-width: 1725px;">
@@ -23,7 +28,7 @@
 
           <div style="height:100%;">&nbsp;</div>
 
-          <div class="glow" style="vertical-align: bottom;padding:5px 65px 50px 65px;border-radius:0px;box-shadow: 0 0 5px #fff, -10px 0 20px #5290c6, 10px 0 20px #5290c6;">
+          <div class="glow" id="body" style="vertical-align: bottom;padding:5px 65px 50px 65px;border-radius:0px;box-shadow: 0 0 5px #fff, -10px 0 20px #5290c6, 10px 0 20px #5290c6;">
             <div class="row expanded">
               <div class="columns large-6" style="border-right:1px solid #aaa;">
                 <h3><? echo $faction->body; ?></h3>
@@ -31,8 +36,7 @@
               </div>
 
               <div class="columns large-6" style="">
-                <h2>Settle Colony
-                <img src='/img/art/symbols/colony-red.png' style='height:50px;width:50px;' />
+                <h2>Settle CO Colony
                 <span style="float:right;color:#888;font-size:30px;margin-top:5px;">
 
                     <?php
@@ -86,17 +90,16 @@
 
                 </span>
                 </h2>
-                <h3>Place a Colony on a landing site in the home star system. Decrease the price of the new Colony's resource. Gain 
+                <h3>Place a CO Colony on a landing site in the home star system. Decrease the price of the new CO Colony's resource. Gain 
                   <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span>
                   when built, and another <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span>
-                  if its the first Colony on that world.</h3>
+                  if its the first CO Colony on that world.</h3>
               </div>
             </div>
             <div class="row expanded">
 
               <div class="columns large-6" style="border-top:1px solid #aaa;border-right:1px solid #aaa;padding-top:10px;">
-                <h2>Build Spaceport
-                <img src='/img/art/symbols/spaceport-red.png' style='height:50px;width:50px;' />
+                <h2>Build SP Spaceport
                 <span style="float:right;color:#888;font-size:30px;">
 
                     <?php
@@ -145,10 +148,10 @@
 
                 </span>
                 </h2>
-                <h3>Upgrade a Colony to a Spaceport. Gain <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> and a Trade Ship. 
-                  Requires a Colony on world with launch cost of
+                <h3>Upgrade a CO Colony to a SP Spaceport. Gain <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> and a TS Trade Ship. 
+                  Requires a CO Colony on world with LC Launch Cost of
                   <span class='fa-stack fa-lg'><i class='exo-fuel fa-stack-1x'></i><i class='fa-stack-1x cost'>2</i></span>
-                  or less.  Ignore Fuel cost to launch from this world.
+                  or less.  Ignore FU Fuel cost to launch from this world.
                 </h3>
               </div>
 
@@ -158,7 +161,7 @@
                     Settle Asteroid Colony <img src='/img/art/symbols/exocolony-red.png' style='height:50px;width:50px;' />,
                     <img src='/img/art/symbols/colony-red.png' style='height:50px;width:50px;' />
                   <?php }else{ ?>
-                    Settle Exocolony <img src='/img/art/symbols/exocolony-red.png' style='height:50px;width:50px;' />
+                    Settle EX Exocolony
                   <?php }?>
 
                   <span style="float:right;color:#888;font-size:30px;">
@@ -219,19 +222,18 @@
                 </h2>
                 <h3>
                   <?php if($faction->name !== 'Rock Hoppers') { ?>
-                    Place an Exocolony on a landing site on an exoplanet.
+                    Place an EX Exocolony on a landing site on a HW Habitable World outside the home system.
                     <?php if ($faction->colonize_time > 0) { ?>
                       Gain 
                       <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'><?php echo $faction->colonize_time ?></i></span>
-                      as a Faction bonus. Gain up to another 
+                      as a Faction bonus. Check the victory points reference card to gain up to another 
                     <?php } else { ?>
-                      Gain up to
+                      Check the victory points reference card to gain up to
                     <?php } ?>
-                    <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>6</i></span>,
-                    see victory Points reference card.
+                    <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>6</i></span>.
                   <?php }else{ ?>
-                    Take any Asteroid card from the discarded Asteroid pile and your Colony or Exocolony and place them in any orbit.
-                    These colonized Asteroids provide
+                    Take any AS Asteroid card from the discarded AS Asteroid pile and your CO Colony or EX Exocolony and place them in any orbit.
+                    These colonized AS Asteroids provide
                     <span class='fa-stack fa-lg'><i class='exo-coin fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span>
                     per turn and a total of
                     <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>3</i></span>
@@ -245,10 +247,5 @@
         </div>
       </div>
     </div>
-
-    <script src="/js/foundation/vendor/jquery.js"></script>
-    <script src="/js/foundation/vendor/what-input.js"></script>
-    <script src="/js/foundation/vendor/foundation.js"></script>
-    <script src="/js/foundation/app.js"></script>
   </body>
 </html>
