@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/foundation/foundation.css">
     <link rel="stylesheet" href="css/foundation/app.css">
     <link rel="stylesheet" href="css/exo.css">
+    <script src="js/foundation/vendor/jquery.js"></script>
+    <script src="js/foundation/vendor/what-input.js"></script>
+    <script src="js/foundation/vendor/foundation.js"></script>
+    <script src="js/foundation/app.js"></script>
   </head>
   <body>
     <div class="row" style="background-color: #000">
@@ -133,10 +137,5 @@
         </div>
       </div>
     </div>
-
-    <script src="js/foundation/vendor/jquery.js"></script>
-    <script src="js/foundation/vendor/what-input.js"></script>
-    <script src="js/foundation/vendor/foundation.js"></script>
-    <script src="js/foundation/app.js"></script>
   </body>
 </html>

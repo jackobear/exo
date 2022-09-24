@@ -55,7 +55,7 @@
           </div>
           
           <div class="glow" id="body">
-            <h3>
+            <h3 style="margin-bottom:0px;">
               <? echo $dwarf_planet->body; ?>
             </h3>
           </div>

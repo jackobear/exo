@@ -11,6 +11,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="/js/cost.js"></script>
     <script type="text/javascript" src="/js/interstellarTrack.js"></script>
+    <script src="/js/foundation/vendor/jquery.js"></script>
+    <script src="/js/foundation/vendor/what-input.js"></script>
+    <script src="/js/foundation/vendor/foundation.js"></script>
+    <script src="/js/foundation/app.js"></script>
   </head>
   <body>
     <div class="row" style="background-color:#fff8a8;width: 225px;height: 225px;">
@@ -18,10 +22,5 @@
         <span class="cost" style="font-size:50px;">1</span>
       </div>
     </div>
-
-    <script src="/js/foundation/vendor/jquery.js"></script>
-    <script src="/js/foundation/vendor/what-input.js"></script>
-    <script src="/js/foundation/vendor/foundation.js"></script>
-    <script src="/js/foundation/app.js"></script>
   </body>
 </html>

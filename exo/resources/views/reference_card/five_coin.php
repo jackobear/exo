@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="/css/foundation/foundation.css">
     <link rel="stylesheet" href="/css/foundation/app.css">
     <link rel="stylesheet" href="/css/exo.css">
+    <script src="/js/foundation/vendor/what-input.js"></script>
+    <script src="/js/foundation/vendor/foundation.js"></script>
+    <script src="/js/foundation/app.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="/js/cost.js"></script>
-    <script type="text/javascript" src="/js/interstellarTrack.js"></script>
   </head>
   <body>
     <div class="row" style="background-color:#fff8a8;width: 300px;height: 300px;">
@@ -19,9 +21,5 @@
       </div>
     </div>
 
-    <script src="/js/foundation/vendor/jquery.js"></script>
-    <script src="/js/foundation/vendor/what-input.js"></script>
-    <script src="/js/foundation/vendor/foundation.js"></script>
-    <script src="/js/foundation/app.js"></script>
   </body>
 </html>

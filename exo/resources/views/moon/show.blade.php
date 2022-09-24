@@ -60,7 +60,7 @@
           <div style="height:100%;">&nbsp;</div>
           
           <div class="glow" id="body">
-            <h3>
+            <h3 style="margin-bottom:0px;">
               <? echo $moon->body; ?>
             </h3>
           </div>

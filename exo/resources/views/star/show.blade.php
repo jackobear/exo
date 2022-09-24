@@ -40,9 +40,9 @@
               // Check if we need room for two lines of text
               $height = 800;
               //if(strlen(strip_tags($planet->body)) > 50) $height -= 43;
-              if(strlen(strip_tags($star->body)) > 27) $height -= 43;
-              if(strlen(strip_tags($star->body)) > 80) $height -= 43;
-              if(strlen(strip_tags($star->body)) > 110) $height -= 43;
+              if(strlen(strip_tags($star->body)) > 45) $height -= 43;
+              if(strlen(strip_tags($star->body)) > 90) $height -= 43;
+              if(strlen(strip_tags($star->body)) > 135) $height -= 43;
               if(strlen(strip_tags($star->body)) > 180) $height -= 43;
               echo $height;
             ?>"></canvas>

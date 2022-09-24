@@ -7,6 +7,8 @@
     <title>Board Layout</title>
     <link rel="stylesheet" href="/css/foundation/foundation.css">
     <link rel="stylesheet" href="/css/foundation/app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/Glyphter.css">
     <link rel="stylesheet" href="/css/exo.css">
     <script src="/js/foundation/vendor/jquery.js"></script>
     <script src="/js/foundation/vendor/what-input.js"></script>
@@ -15,7 +17,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="/js/cost.js"></script>
     <script type="text/javascript" src="/js/arrow.js"></script>
-    <script type="text/javascript" src="/js/interstellarTrack.js"></script>
   </head>
   <body>
     <div class="row" style="background: url('/img/art/starfield.jpg');
@@ -92,13 +93,13 @@
             // Stars Label
             drawIcon('stars', 0, 255, 30, 40);
             context.fillText("New", 0,250);
-            context.fillText("    Stars", 0,285);
+            context.fillText("     Stars", 0,285);
             arrow(context, 110, 280, 190, 240);
             arrow(context, 110, 280, 190, 320);
             drawIcon('stars', 0, 380, 30, 40);
 
             context.fillText("Home",0,375);
-            context.fillText("    Star",0,410);
+            context.fillText("     Star",0,410);
             context.fillText("(Sol)",0,445);
             arrow(context, 105, 390, 195, 390);
 
@@ -461,10 +462,10 @@
             context.lineTo((2*curlyWidth)+curlyx + (2*linelength), curlyWidth+curlyy);
             context.arcTo((3*curlyWidth)+curlyx + (2*linelength), curlyWidth+curlyy, (3*curlyWidth)+curlyx + (2*linelength), curlyy, curlyWidth);
             context.stroke();
-            drawIcon('planets', 280, 795, 30, 40);
-            context.fillText("3     Planets for",255,830);
+            drawIcon('planets', 280, 800, 30, 40);
+            context.fillText("3      Planets for",255,830);
             //context.drawImage(starsImage, 430, 835, 30, 40);
-            context.fillText("1 Player with Sol",250,860);
+            context.fillText("1 Player with Sol",250,865);
 
             // Planets per player labels
             var curlyLength = 240;
@@ -481,9 +482,9 @@
             context.lineTo((2*curlyWidth)+curlyx + (2*linelength), curlyWidth+curlyy);
             context.arcTo((3*curlyWidth)+curlyx + (2*linelength), curlyWidth+curlyy, (3*curlyWidth)+curlyx + (2*linelength), curlyy, curlyWidth);
             context.stroke();
-            drawIcon('planets', 562, 795, 30, 40);
-            context.fillText("4-7     Planets",510,830);
-            context.fillText("for 2-5 Players",510,860);
+            drawIcon('planets', 564, 800, 30, 40);
+            context.fillText("4-7       Planets",510,830);
+            context.fillText("for 2-5 Players",510,865);
 
             // Star deck
             drawIcon('stars', 285, 485, 30, 40);
@@ -662,39 +663,39 @@
             context.stroke();
             //context.fillText("1. Sol", 1060, 70);
             drawIcon('planets', 1095, 45, 30, 40);
-            context.fillText("1.     Mercury", 1060, 75);
+            context.fillText("1.       Mercury", 1060, 75);
             drawIcon('planets', 1095, 90, 30, 40);
-            context.fillText("2.     Venus", 1060, 120);
+            context.fillText("2.       Venus", 1060, 120);
             drawIcon('habitable-worlds',  1095, 135, 30, 40);
-            context.fillText("3.     Earth", 1060, 165);
+            context.fillText("3.       Earth", 1060, 165);
             drawIcon('planets', 1095, 180, 30, 40);
-            context.fillText("4.     Mars", 1060, 210);
+            context.fillText("4.       Mars", 1060, 210);
             drawIcon('planets', 1095, 225, 30, 40);
-            context.fillText("5.     Asteroid Belt", 1060, 255);
+            context.fillText("5.       Main Belt", 1060, 255);
             drawIcon('planets', 1095, 270, 30, 40);
-            context.fillText("6.     Jupiter", 1060, 300);
+            context.fillText("6.       Jupiter", 1060, 300);
             drawIcon('planets', 1095, 315, 30, 40);
-            context.fillText("7.     Saturn", 1060, 345);
+            context.fillText("7.       Saturn", 1060, 345);
             drawIcon('moons', 1095, 360, 30, 40);
-            context.fillText("8.     Luna", 1060, 390);
+            context.fillText("8.       Luna", 1060, 390);
             drawIcon('moons', 1095, 405, 30, 40);
-            context.fillText("9.     Ceres", 1060, 435);
+            context.fillText("9.       Ceres", 1060, 435);
             drawIcon('dwarf-planets', 1360, 45, 30, 40);
-            context.fillText("10.     Vesta", 1310, 75);
+            context.fillText("10.       Vesta", 1310, 75);
             drawIcon('dwarf-planets', 1360, 90, 30, 40);
-            context.fillText("11.     Pallas", 1310, 120);
+            context.fillText("11.       Pallas", 1310, 120);
             drawIcon('moons', 1360, 135, 30, 40);
-            context.fillText("12.     Io", 1310, 165);
+            context.fillText("12.       Io", 1310, 165);
             drawIcon('moons', 1360, 180, 30, 40);
-            context.fillText("13.     Europa", 1310, 210);
+            context.fillText("13.       Europa", 1310, 210);
             drawIcon('moons', 1360, 225, 30, 40);
-            context.fillText("14.     Ganymede", 1310, 255);
+            context.fillText("14.       Ganymede", 1310, 255);
             drawIcon('moons', 1360, 270, 30, 40);
-            context.fillText("15.     Callisto", 1310, 300);
+            context.fillText("15.       Callisto", 1310, 300);
             drawIcon('moons', 1360, 315, 30, 40);
-            context.fillText("16.     Enceladus", 1310, 345);
+            context.fillText("16.       Enceladus", 1310, 345);
             drawIcon('moons', 1360, 360, 30, 40);
-            context.fillText("17.     Titan", 1310, 390);
+            context.fillText("17.       Titan", 1310, 390);
             /*
             context.fillText("19. Callisto", 1310, 160);
             context.fillText("20. Enceladus", 1310, 190);

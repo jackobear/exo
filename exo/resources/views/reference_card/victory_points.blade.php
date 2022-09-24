@@ -10,9 +10,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/Glyphter.css">
     <link rel="stylesheet" href="/css/exo.css">
+    <script src="/js/foundation/vendor/what-input.js"></script>
+    <script src="/js/foundation/vendor/foundation.js"></script>
+    <script src="/js/foundation/app.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="/js/cost.js"></script>
-    <script type="text/javascript" src="/js/interstellarTrack.js"></script>
+    <script type="text/javascript" src="/js/actionCardIcons.js"></script>
   </head>
   <body>
     <div class="row" style="background: url('/img/art/starfield.jpg');
@@ -23,28 +26,23 @@
                 Victory Points
             </h1>
 
-          <h2 style="margin-left:50px;">16 VP to Win, All bonuses below are cumulative</h2>
+          <h2 style="margin-left:50px;">16 to Win, All bonuses below are cumulative</h2>
           <ol style="font-size:31pt;margin-left:30px;">
             <ul style="list-style:none;float:left;">
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Settle a Colony</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Settle the first Colony on a World</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Build a Spaceport</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Detect a Lifeform</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Detect the first Lifeform</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Launch an Interstellar Probe</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Launch the first Interstellar Probe</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>3</i></span> : Settle an Exocolony</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Settle the first Exocolony</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Settle a CO Colony</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Settle the first CO Colony on a World</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Build a SP Spaceport</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Detect a LF Lifeform</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Detect the first LF Lifeform</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Build an AC Action Card with the sub-type 'Interstellar Probe'</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Build the first AC Action Card with the sub-type 'Interstellar Probe'</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>3</i></span> : Settle an EX Exocolony</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Settle the first EX Exocolony</li>
             </ul>
           </ol>
 
         </div>
       </div>
     </div>
-
-    <script src="/js/foundation/vendor/jquery.js"></script>
-    <script src="/js/foundation/vendor/what-input.js"></script>
-    <script src="/js/foundation/vendor/foundation.js"></script>
-    <script src="/js/foundation/app.js"></script>
   </body>
 </html>

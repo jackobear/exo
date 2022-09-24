@@ -10,7 +10,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/Glyphter.css">
     <link rel="stylesheet" href="/css/exo.css">
+    <script src="/js/foundation/vendor/jquery.js"></script>
+    <script src="/js/foundation/vendor/what-input.js"></script>
+    <script src="/js/foundation/vendor/foundation.js"></script>
+    <script src="/js/foundation/app.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/actionCardIcons.js"></script>
   </head>
   <body style="line-height: 1.35;">
     <div class="row" style="background: url('/img/art/starfield.jpg');
@@ -24,17 +29,17 @@
           <tr>
             <td><img src='/img/art/symbols/food.png' style='width:50px;' /></td>
             <td>Food</td>
-            <td>Used to build Colonies, Exocolonies, Spaceports, Action cards</td>
+            <td>Used to build CO Colonies, EX Exocolonies, SP Spaceports, AC Action cards</td>
           </tr>
           <tr>
             <td><img src='/img/art/symbols/metal.png' style='width:50px;' /></td>
             <td>Metal</td>
-            <td>Used to build Colonies, Exocolonies, Spaceports, Action cards</td>
+            <td>Used to build CO Colonies, EX Exocolonies, SP Spaceports, AC Action cards</td>
           </tr>
           <tr>
             <td><img src='/img/art/symbols/water.png' style='width:50px;' /></td>
             <td>Water</td>
-            <td>Used to build Colonies, Exocolonies, Spaceports, Action cards</td>
+            <td>Used to build CO Colonies, EX Exocolonies, SP Spaceports, AC Action cards</td>
           </tr>
           <tr>
             <td>
@@ -44,7 +49,7 @@
               </span>
             </td>
             <td>Fuel</td>
-            <td>Used to build Colonies, Exocolonies, Spaceports, Action cards</td>
+            <td>Used to build CO Colonies, EX Exocolonies, SP Spaceports, AC Action cards</td>
           </tr>
           <tr>
             <td>
@@ -54,7 +59,7 @@
               </span>
             </td>
             <td>Launch Cost</td>
-            <td>Fuel cost to launch off a world</td>
+            <td>FU Fuel cost to launch off a world</td>
           </tr>
           <tr>
             <td>
@@ -63,7 +68,7 @@
               </span>
             </td>
             <td>Coin</td>
-            <td>Used to build Colonies, Exocolonies, Spaceports, Action cards</td>
+            <td>Used to build CO Colonies, EX Exocolonies, SP Spaceports, AC Action cards</td>
           </tr>
           <tr>
             <td>
@@ -73,7 +78,7 @@
               </span>
             </td>
             <td>Interplanetary transfer cost</td>
-            <td>Coin cost to travel between Planets</td>
+            <td>Coin cost to travel between PL Planets</td>
           </tr>
           <tr>
             <td>
@@ -83,7 +88,7 @@
               </span>
             </td>
             <td>Interstellar transfer cost</td>
-            <td>Coin cost to travel between Stars</td>
+            <td>Coin cost to travel between ST Stars</td>
           </tr>
           <tr>
             <td><img src='/img/art/symbols/eternal-light.png' style='width:50px;' /></td>
@@ -105,7 +110,7 @@
                 <i class="exo-metal fa-stack-1x"></i>
                 <i class="fa-stack-1x cost" style='margin-top:5px;'>1</i>
               </span>
-              <span>Discount when settling a Colony</span>
+              <span>Discount when settling a CO Colony</span>
             </td>
           </tr>
           <tr>
@@ -116,7 +121,7 @@
                 <i class="exo-metal fa-stack-1x"></i>
                 <i class="fa-stack-1x cost" style='margin-top:5px;'>1</i>
               </span>              
-              <span>Discount when settling a Colony</span>
+              <span>Discount when settling a CO Colony</span>
             </td>
           </tr>
           <tr>
@@ -127,7 +132,7 @@
                 <i class="exo-metal fa-stack-1x"></i>
                 <i class="fa-stack-1x cost" style='margin-top:5px;'>1</i>
               </span>
-              <span>Extra cost when settling a Colony</span>
+              <span>Extra cost when settling a CO Colony</span>
             </td>
           </tr>
           <tr>
@@ -138,26 +143,21 @@
           <tr>
             <td><img src='/img/art/symbols/colony-red.png' style='width:50px;' /></td>
             <td>Colony</td>
-            <td>Produces resources and victory points</td>
+            <td>Produces resources and VP Victory Points</td>
           </tr>
           <tr>
             <td><img src='/img/art/symbols/spaceport-red.png' style='width:50px;' /></td>
             <td>Spaceport</td>
-            <td>Negates Launch Costs, provides a Trade Ship and a victory point</td>
+            <td>Negates LC Launch Cost, provides a TS Trade Ship and a VP Victory Point</td>
           </tr>
           <tr>
             <td><img src='/img/art/symbols/exocolony-red.png' style='width:50px;' /></td>
             <td>Exocolony</td>
-            <td>Expensive, but scores a lot of victory points</td>
+            <td>Expensive, but scores a lot of VP Victory Points</td>
           </tr>
         </table>
 
       </div>
     </div>
-
-    <script src="/js/foundation/vendor/jquery.js"></script>
-    <script src="/js/foundation/vendor/what-input.js"></script>
-    <script src="/js/foundation/vendor/foundation.js"></script>
-    <script src="/js/foundation/app.js"></script>
   </body>
 </html>

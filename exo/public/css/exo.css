@@ -164,7 +164,7 @@ h3 span.fa-stack, li span.fa-stack{
 
 
 #legend, #legend tr {
-    font-size:26pt;
+    font-size:24pt;
     font-weight:bold;
     background-color:#c4cfd6;
     padding: 0px;
@@ -179,6 +179,13 @@ h3 span.fa-stack, li span.fa-stack{
 }
 #legend .fa-stack {
     float:none;
+}
+
+#quick-setup {
+    font-size:31pt;margin-left:60px;
+}
+#quick-setup .fa-lg {
+    font-size:1em;
 }
 
 .inline-card-icon {

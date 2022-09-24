@@ -1,4 +1,5 @@
 ## Exocolony
+Art assets are in a separate repository
 
 ### Getting Started
 1. Install virtualbox and vagrant

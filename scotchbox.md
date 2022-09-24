@@ -128,6 +128,10 @@ vagrant ssh
 
 ### MySQL 
 
+vagrant ssh
+mysql -u root -p
+root
+use scotchbox;
 - Hostname: localhost or 127.0.0.1
 - Username: root
 - Password: root

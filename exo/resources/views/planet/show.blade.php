@@ -47,10 +47,9 @@
             <canvas id="myCanvas" width="745" height="<?
               // Check if we need room for two lines of text
               $height = 800;
-              //if(strlen(strip_tags($planet->body)) > 50) $height -= 43;
-              if(strlen(strip_tags($planet->body)) > 27) $height -= 43;
-              if(strlen(strip_tags($planet->body)) > 80) $height -= 43;
-              if(strlen(strip_tags($planet->body)) > 110) $height -= 43;
+              if(strlen(strip_tags($planet->body)) > 45) $height -= 43;
+              if(strlen(strip_tags($planet->body)) > 90) $height -= 43;
+              if(strlen(strip_tags($planet->body)) > 135) $height -= 43;
               if(strlen(strip_tags($planet->body)) > 180) $height -= 43;
               echo $height;
             ?>"></canvas>
@@ -62,7 +61,7 @@
           </div>
 
           <div class="glow" id="body">
-            <h3'>
+            <h3 style="margin-bottom:0px;">
               <? echo $planet->body; ?>
             </h3>
           </div>

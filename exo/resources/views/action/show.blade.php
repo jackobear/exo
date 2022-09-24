@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/css/Glyphter.css">
     <link rel="stylesheet" href="/css/exo.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/actionCardIcons.js"></script>
   </head>
   <body>
     <div class="row" style="background-color: #000">
@@ -138,11 +139,5 @@
         </div>
       </div>
     </div>
-
-    <script src="/js/foundation/vendor/jquery.js"></script>
-    <script src="/js/foundation/vendor/what-input.js"></script>
-    <script src="/js/foundation/vendor/foundation.js"></script>
-    <script src="/js/foundation/app.js"></script>
-     <script type="text/javascript" src="/js/actionCardIcons.js"></script>
   </body>
 </html>

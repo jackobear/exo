@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/css/Glyphter.css">
     <link rel="stylesheet" href="/css/exo.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/actionCardIcons.js"></script>
   </head>
   <body>
     <div class="row" style="background: url('/img/art/starfield.jpg');
@@ -22,26 +23,21 @@
             </h1>
 
           <ol style="font-size:31pt;margin-left:60px;">
-            <li>Refresh exhausted Action cards and Trade Ships.</li>
+            <li>Refresh exhausted AC Action cards and TS Trade Ships.</li>
             <li>Collect resources from colonized sites.</li>
             <li>Main Phase (Do any or none in any order).</li>
             <ul>
-              <li>Play any number of an Action cards from the market.</li>
-              <li>Discard and redeal up to two Action cards in the Action card market once per turn.</li>
-              <li>Exhaust any number of your Action cards which are already in play.</li>
-              <li>Buy and/or Sell one resource with the Space Market once per turn for each of your Trade Ships.</li>
-              <li>Settle Colonies or an Exocolony as described on your Faction card.</li>
-              <li>Build Spaceports as described on your Faction card.</li>
+              <li>Play any number of an AC Action cards from the market.</li>
+              <li>Discard and redeal up to two AC Action cards in the Action card market once per turn.</li>
+              <li>Exhaust any number of your AC Action cards which are already in play.</li>
+              <li>Buy and/or Sell one resource with the Resource Market once per turn for each of your TS Trade Ships.</li>
+              <li>Settle CO Colonies or an EX Exocolony as described on your Faction card.</li>
+              <li>Build SP Spaceports as described on your Faction card.</li>
             </ul>
           </ol>
 
         </div>
       </div>
     </div>
-
-    <script src="/js/foundation/vendor/jquery.js"></script>
-    <script src="/js/foundation/vendor/what-input.js"></script>
-    <script src="/js/foundation/vendor/foundation.js"></script>
-    <script src="/js/foundation/app.js"></script>
   </body>
 </html>

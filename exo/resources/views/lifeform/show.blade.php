@@ -15,6 +15,7 @@
     <script src="/js/foundation/vendor/foundation.js"></script>
     <script src="/js/foundation/app.js"></script>
     <script type="text/javascript" src="/js/world.js"></script>
+    <script type="text/javascript" src="/js/actionCardIcons.js"></script>
   </head>
   <body>
     <div class="row" style="background-color: #000">
