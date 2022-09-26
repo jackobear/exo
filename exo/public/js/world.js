@@ -64,7 +64,7 @@ function World(sites_str, satellites_str=''){
   }*/
 
   var satellites = satellites_str.split(",").map(s => s.trim());
-  const is_star = satellites.includes("PL"); // Satellites of stars are positioned horizontally
+  const is_star = -1 < satellites.findIndex((satellite) => { return satellite.startsWith("PL");});
   const is_hab_world = sites.length > 4; // Habitable Worlds have so many sites that satellites should go on the left
   if (!is_star){
     satellite_y += (5 - satellites.length) * satellite_height;
@@ -117,7 +117,6 @@ function World(sites_str, satellites_str=''){
 
     let satelliteImage = new Image(60, 80);
     satelliteImage.onload = function() {
-        console.log('is_star', is_star);
         if(is_star){
             context.beginPath();
             context.shadowBlur = 0;
