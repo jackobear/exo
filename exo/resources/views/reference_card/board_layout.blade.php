@@ -655,8 +655,8 @@
                 context.stroke();
 */
 
-            // Beginner Setup
-            context.fillText("Beginner Setup", 1060, 30);
+            // Example Setup
+            context.fillText("Example Setup", 1060, 30);
             context.beginPath();
             context.moveTo(1060, 40);
             context.lineTo(1510, 40);

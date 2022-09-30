@@ -24,13 +24,13 @@
           </h1>
 
           <div class="row expanded" style='margin-bottom:60px;'>
-            <hr style="border-width: 10px;border-color:#a80096;width:1200px;max-width:1200px;position:absolute;top:270px;left:280px;" />
-            <hr style="border-width: 10px;border-color:#a80096;width:600px;max-width:600px;position:absolute;top:560px;left:1132px;transform: rotate(90deg);" />
-            <hr style="border-width: 10px;border-color:#a80096;width:1200px;max-width:1200px;position:absolute;top:850px;left:280px;" />
-            <hr style="border-width: 10px;border-color:#a80096;width:400px;max-width:400px;position:absolute;top:700px;left:93px;transform: rotate(90deg);" />
-            <hr style="border-width: 10px;border-color:#a80096;width:800px;max-width:800px;position:absolute;top:500px;left:280px;" />
-            <hr style="border-width: 10px;border-color:#a80096;width:200px;max-width:200px;position:absolute;top:550px;left:952px;transform: rotate(90deg);" />
-            <hr style="border-width: 10px;border-color:#a80096;width:400px;max-width:400px;position:absolute;top:680px;left:660px;" />
+            <hr style="border-width: 40px;border-color:#c97fc1;width:1200px;max-width:1200px;position:absolute;top:250px;left:280px;" />
+            <hr style="border-width: 40px;border-color:#c97fc1;width:600px;max-width:600px;position:absolute;top:560px;left:1132px;transform: rotate(90deg);" />
+            <hr style="border-width: 40px;border-color:#c97fc1;width:1200px;max-width:1200px;position:absolute;top:850px;left:280px;" />
+            <hr style="border-width: 40px;border-color:#c97fc1;width:400px;max-width:400px;position:absolute;top:700px;left:93px;transform: rotate(90deg);" />
+            <hr style="border-width: 40px;border-color:#c97fc1;width:800px;max-width:800px;position:absolute;top:490px;left:280px;" />
+            <hr style="border-width: 40px;border-color:#c97fc1;width:200px;max-width:200px;position:absolute;top:550px;left:952px;transform: rotate(90deg);" />
+            <hr style="border-width: 40px;border-color:#c97fc1;width:400px;max-width:400px;position:absolute;top:680px;left:660px;" />
             <div class="large-3 columns">
               <span class='fa-stack fa-5x victory-marker' style='font-size:8em;'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost scoring-track' style='margin: 70px 0px 0px 30px;'>1</i></span> 
             </div>
