@@ -23,9 +23,9 @@
             </h1>
 
           <ol id='quick-setup' style="">
-            <li>Play a random ST Star onto the table as shown on the board layout.
-            <li>Play PL Planets and a HW Habitable World onto the table as described by the ST Star.</li>
-            <li>Play MN Moons and DP Dwarf Planets as described by the PL Planets.</li>
+            <li>Place a random ST Star onto the table as shown on the board layout.
+            <li>Place PL Planets and a HW Habitable World as described by the ST Star.</li>
+            <li>Place MN Moons and DP Dwarf Planets as described by the PL Planets.</li>
             <li>
               Place <img src='/img/art/symbols/magnetic-storm.png' style='height:50px;' />Magnetic Storms and 
               <img src='/img/art/symbols/magnetic-shield.png' style='height:50px;' />  Magnetic Shield markers as described by ST Stars and PL Planets.
@@ -40,7 +40,7 @@
               LC Launch Cost of the starting world.</li>
             <li>Each player gets 0, 2, 4, 6, or 8 
               CO Coins based on their starting position.</li>
-            <li>Play five AC Action cards face up to start the Action card market.</li>
+            <li>Place five AC Action cards face up to start the Action card market.</li>
             <li>Place resoures onto the Resource Market to set initial prices.</li>
           </ol>
 
