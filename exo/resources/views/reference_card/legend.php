@@ -78,7 +78,7 @@
               </span>
             </td>
             <td>Interplanetary transfer cost</td>
-            <td>Coin cost to travel between PL Planets</td>
+            <td>Coin cost to travel from PL Planet to PL Planet</td>
           </tr>
           <tr>
             <td>
@@ -88,7 +88,7 @@
               </span>
             </td>
             <td>Interstellar transfer cost</td>
-            <td>Coin cost to travel between ST Stars</td>
+            <td>Coin cost to travel from ST Star to ST Star</td>
           </tr>
           <tr>
             <td><img src='/img/art/symbols/eternal-light.png' style='width:50px;' /></td>

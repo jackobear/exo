@@ -1,7 +1,7 @@
 // Used by worlds
 $( document ).ready(function() {
 	var body = $("body");
-	var newBody = body.html().replace(/Dwarf Planet/g, '<span style=\'white-space:nowrap;\'><img src=\'/img/art/symbols/dwarf-planets.png\' class=\'inline-card-icon\' />Dwarf<span>&nbsp;Planet')
+	var newBody = body.html().replace(/Dwarf Planet/g, '<span style=\'white-space:nowrap;\'><img src=\'/img/art/symbols/dwarf-planets.png\' class=\'inline-card-icon\' />Dwarf</span>&nbsp;Planet')
 		.replace(/ Planet/g, ' <span style=\'white-space:nowrap;\'><img src=\'/img/art/symbols/planets.png\' class=\'inline-card-icon\' />Planet</span>')
 		.replace(/Moon/g, '<span style=\'white-space:nowrap;\'><img src=\'/img/art/symbols/moons.png\' class=\'inline-card-icon\' />Moon</span>')
 		.replace(/Habitable World/g, '<span style=\'white-space:nowrap;\'><img src=\'/img/art/symbols/habitable-worlds.png\' class=\'inline-card-icon\' />Habitable</span> World')

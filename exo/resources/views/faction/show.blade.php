@@ -36,7 +36,7 @@
               </div>
 
               <div class="columns large-6" style="">
-                <h2>Settle CO Colony
+                <h2 style="border-bottom:1px solid #aaa;">Settle CO Colony
                 <span style="float:right;color:#888;font-size:30px;margin-top:5px;">
 
                     <?php
@@ -90,16 +90,17 @@
 
                 </span>
                 </h2>
-                <h3>Place a CO Colony on a landing site in the home star system. Decrease the price of the new CO Colony's resource. Gain 
+                <h3>Place a CO Colony on a landing site in the home star system. Decrease the price of the new CO Colony's resource in the
+                  Resource Market. Gain 
                   <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span>
-                  when built, and another <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span>
+                  and another <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span>
                   if its the first CO Colony on that world.</h3>
               </div>
             </div>
             <div class="row expanded">
 
               <div class="columns large-6" style="border-top:1px solid #aaa;border-right:1px solid #aaa;padding-top:10px;">
-                <h2>Build SP Spaceport
+                <h2 style="border-bottom:1px solid #aaa;">Build SP Spaceport
                 <span style="float:right;color:#888;font-size:30px;">
 
                     <?php
@@ -156,7 +157,7 @@
               </div>
 
               <div class="columns large-6" style="border-top:1px solid #aaa;padding-top:10px;">
-                <h2>
+                <h2 style="border-bottom:1px solid #aaa;">
                   <?php if($faction->name === 'Rock Hoppers'){ ?>
                     Settle Asteroid Colony <img src='/img/art/symbols/exocolony-red.png' style='height:50px;width:50px;' />,
                     <img src='/img/art/symbols/colony-red.png' style='height:50px;width:50px;' />
@@ -237,7 +238,7 @@
                     <span class='fa-stack fa-lg'><i class='exo-coin fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span>
                     per turn and a total of
                     <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>3</i></span>
-                    when built.
+                    when placed.
                   <?php } ?>
                 </h3>
               </div>
