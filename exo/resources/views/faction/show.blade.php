@@ -159,8 +159,11 @@
               <div class="columns large-6" style="border-top:1px solid #aaa;padding-top:10px;">
                 <h2 style="border-bottom:1px solid #aaa;">
                   <?php if($faction->name === 'Rock Hoppers'){ ?>
-                    Settle Asteroid Colony <img src='/img/art/symbols/exocolony-red.png' style='height:50px;width:50px;' />,
+                    Settle Asteroid Colony 
+                    <!--
+                    <img src='/img/art/symbols/exocolony-red.png' style='height:50px;width:50px;' />,
                     <img src='/img/art/symbols/colony-red.png' style='height:50px;width:50px;' />
+                    -->
                   <?php }else{ ?>
                     Settle EX Exocolony
                   <?php }?>
@@ -233,7 +236,7 @@
                     <?php } ?>
                     <span class='fa-stack fa-lg'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>6</i></span>.
                   <?php }else{ ?>
-                    Take any AS Asteroid card from the discarded AS Asteroid pile and your CO Colony or EX Exocolony and place them in any orbit.
+                    Take any AS Asteroid card from the discarded AS Asteroid pile and your CO Colony or EX Exocolony and place them below any MN Moon, PL Planet or DP Dwarf Planet.
                     These colonized AS Asteroids provide
                     <span class='fa-stack fa-lg'><i class='exo-coin fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span>
                     per turn and a total of

@@ -35,7 +35,7 @@
               on top of each <img src='/img/art/symbols/eternal-light.png' style='height:50px;' />Peak of Eternal Light in the habitable zone or closer to the ST Star.
             </li>
             <li>Each player draws a random Faction card and that Faction's starting cards.</li>
-            <li>Each player gets two FU Fuel one FO Food, one ME Metal and one WA Water.</li>
+            <li>Each player gets three FU Fuel one FO Food, one ME Metal and one WA Water.</li>
             <li>Each player gets 0, 2, 4, 6, or 8 
               CO Coins based on their starting position.</li>
             <li>Place five AC Action cards face up to start the Action card market.</li>
