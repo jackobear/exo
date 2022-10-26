@@ -24,11 +24,12 @@
 
           <ol style="font-size:31pt;margin-left:60px;">
             <li>Refresh exhausted AC Action cards and TS Trade Ships.</li>
+            <li>Refill the Action Card Market up to five AC Action Cards.</li>
             <li>Collect resources from colonized sites.</li>
             <li>Main Phase (Do any or none in any order).</li>
             <ul>
               <li>Play any number of an AC Action cards from the market.</li>
-              <li>Discard and replace up to two AC Action cards in the Action card market once per turn.</li>
+              <li>Discard and replace up to one AC Action card in the Action card market once per turn.</li>
               <li>Exhaust any number of your AC Action cards which are already in play.</li>
               <li>Buy and/or Sell one resource with the Resource Market once per turn for each of your TS Trade Ships.</li>
               <li>Settle CO Colonies or an EX Exocolony as described on your Faction card.</li>
