@@ -89,7 +89,7 @@ function World(sites_str, satellites_str=''){
         let featureImage = new Image(80, 80);
         featureImage.onload = function() {
             if(is_star){
-                context.drawImage(featureImage, satellite_x - ((satellites.length - satellite_index - 2) * satellite_width) - 95, satellite_y + 215, 80, 80);
+                context.drawImage(featureImage, satellite_x - ((satellites.length - satellite_index - 2) * satellite_width) - 95, satellite_y + 325, 80, 80);
             } else {
                 context.drawImage(featureImage, satellite_x - 95, satellite_y + 5 + (satellite_index * satellite_height), 80, 80);
             }
@@ -120,11 +120,11 @@ function World(sites_str, satellites_str=''){
         if(is_star){
             context.beginPath();
             context.shadowBlur = 0;
-            context.roundedRectangle(satellite_x - ((satellites.length - satellite_index - 1) * satellite_width), satellite_y + 300, 70, 90, 5);
+            context.roundedRectangle(satellite_x - ((satellites.length - satellite_index - 1) * satellite_width), satellite_y + 410, 70, 90, 5);
             context.fillStyle = '#fff';
             context.fill();
             context.beginPath();
-            context.drawImage(satelliteImage, satellite_x + 5 - ((satellites.length - satellite_index - 1) * satellite_width), satellite_y + 305, 60, 80);
+            context.drawImage(satelliteImage, satellite_x + 5 - ((satellites.length - satellite_index - 1) * satellite_width), satellite_y + 415, 60, 80);
         } else {
             console.log('not a star...');
             context.beginPath();

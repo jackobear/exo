@@ -51,7 +51,7 @@
               $height = 800;
               if(strlen(strip_tags($habitable_world->body)) > 27) $height -= 43;
               if(strlen(strip_tags($habitable_world->body)) > 80) $height -= 43;
-              if(strlen(strip_tags($habitable_world->body)) > 130) $height -= 43;
+              if(strlen(strip_tags($habitable_world->body)) > 135) $height -= 43;
               if(strlen(strip_tags($habitable_world->body)) > 170) $height -= 43;
               echo $height;
             ?>"></canvas>

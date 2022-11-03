@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legend</title>
+    <title>Legend (Side 1)</title>
     <link rel="stylesheet" href="/css/foundation/foundation.css">
     <link rel="stylesheet" href="/css/foundation/app.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,7 +22,7 @@
           background-repeat: no-repeat;background-position:top;padding:0px;max-width: 108rem;">
       <div class="glow" style="width: 1579px;height:985px;margin:70px 0px 70px 59px;border-radius:15px;">
         <h1 style='margin-left:10px;'>
-          Legend
+          Legend (Side 1)
         </h1>
 
         <table id='legend'>
@@ -34,7 +34,7 @@
           <tr>
             <td><img src='/img/art/symbols/metal.png' style='width:50px;' /></td>
             <td>Metal</td>
-            <td>Used to build CO Colonies, EX Exocolonies, SP Spaceports, AC Action cards</td>
+            <td>Used to build CO Colonies, EX Exocolonies, AC Action cards</td>
           </tr>
           <tr>
             <td><img src='/img/art/symbols/water.png' style='width:50px;' /></td>
@@ -99,7 +99,7 @@
                 <i class="exo-coin fa-stack-1x"></i>
                 <i class="fa-stack-1x cost" style='margin-top:5px;'>1</i>
               </span>
-              in the habitable zone or closer
+              if on a HW Habitable World or a world closer to the ST Star.
             </td>
           </tr>
           <tr>

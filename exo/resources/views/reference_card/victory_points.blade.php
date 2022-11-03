@@ -32,10 +32,10 @@
               <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Settle a CO Colony</li>
               <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Settle the first CO Colony on a World</li>
               <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Build a SP Spaceport</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Detect a LF Lifeform</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Detect the first LF Lifeform</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Build an AC Action Card with the sub-type 'Interstellar Probe'</li>
-              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Build the first AC Action Card with the sub-type 'Interstellar Probe'</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Place a LF Lifeform</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Place the first LF Lifeform</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Buy an AC Action Card with the sub-type 'Interstellar Probe'</li>
+              <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Buy the first AC Action Card with the sub-type 'Interstellar Probe'</li>
               <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>3</i></span> : Settle an EX Exocolony</li>
               <li><span class='fa-stack'><i class='exo-victory fa-stack-1x'></i><i class='fa-stack-1x cost'>1</i></span> : Settle the first EX Exocolony</li>
             </ul>
