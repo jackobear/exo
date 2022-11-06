@@ -23,7 +23,7 @@
    -webkit-text-stroke-color: black;
 }
 .exo-coin:before{content:'\0041';color:#fff8a8;}
-.exo-food:before{content:'\0042';color:#47331b;}
+.exo-food:before{content:'\0042';color:#a24e16;}
 .exo-fuel:before{content:'\0043';color:#e60000;}
 .exo-metal:before{content:'\0044';color:#7d7d7d;}
 .exo-water:before{content:'\0045';color:#3567cc;margin-top:-2px;}

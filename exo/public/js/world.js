@@ -183,7 +183,7 @@ function World(sites_str, satellites_str=''){
         switch(feature){
             case "F":
             case "Fo":
-                fillStyle = '#47331b';
+                fillStyle = '#a24e16';
                 strokeStyle = '#170400';
                 featureType = 'food';
                 break;
