@@ -22,8 +22,8 @@
       <div class="large-12 columns" style="background: url('/img/art/factions/<?echo strtolower(str_replace(" ", "-", str_replace("'", "", $faction->name)));?>.jpg');
           background-repeat: no-repeat;background-position:top;padding:0px;">
         <div style="width: 1725px;height:1125px;background:transparent;display: flex;flex-direction: column;">
-          <div class="glow" style="width:max-content;margin:65px 0px 65px 50px;">
-            <div style="margin: 0px;font-size:1.5em;line-height: 0.8;display:inline-block;"><? echo $faction->name; ?></div>
+          <div class="glow" style="width:max-content;margin:65px 0px 65px 75px;">
+            <div style="margin-top: 5px;font-size:1.5em;line-height: 0.8;display:inline-block;"><? echo $faction->name; ?></div>
           </div>
 
           <div style="height:100%;">&nbsp;</div>
@@ -32,7 +32,7 @@
             <div class="row expanded">
               <div class="columns large-6" style="border-right:1px solid #aaa;">
                 <h3><? echo $faction->body; ?></h3>
-                <span style="font-style:italic;font-size:20pt;color:#777;"><? echo $faction->flavor_text; ?></span>
+                <span style="font-style:italic;font-size:1.9375rem;color:#444;"><? echo $faction->flavor_text; ?></span>
               </div>
 
               <div class="columns large-6" style="">

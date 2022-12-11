@@ -75,7 +75,7 @@
                             $width = 65;
                             $margin_top = 5;
                             $margin_left = 2;
-                            $font_margin_top = 5;
+                            $font_margin_top = 0;
                             break;
                           case 2:
                             $font_size = 4;
@@ -113,7 +113,7 @@
               <div style="margin: 5px 0px 0px 0px;font-size:1.5em;line-height: 0.8;"><? echo $action->name; ?></div>
 
                 <?php if($action->name === 'Trade Ship') {?>
-                  <span style="color:#ffff00;font-size:30px;margin:0px;line-height: 1.1;">
+                  <span style="color:#17aa22;font-size:30px;margin:0px;line-height: 1.1;">
                     Trade Ship
                   </span>
                 <?php }else{ ?>

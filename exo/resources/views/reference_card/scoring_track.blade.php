@@ -19,7 +19,7 @@
           background-repeat: no-repeat;background-position:top;padding:0px;max-width: 108rem;">
       <div class="large-12 columns">
         <div class="glow" style="width: 1579px;height:985px;margin:70px 0px 70px 59px;border-radius:15px;padding-left:70px;">
-          <h1>
+          <h1 style='margin-left:-40px;'>
             Scoring Track
           </h1>
 

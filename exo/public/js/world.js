@@ -126,7 +126,6 @@ function World(sites_str, satellites_str=''){
             context.beginPath();
             context.drawImage(satelliteImage, satellite_x + 5 - ((satellites.length - satellite_index - 1) * satellite_width), satellite_y + 415, 60, 80);
         } else {
-            console.log('not a star...');
             context.beginPath();
             context.shadowBlur = 0;
             context.roundedRectangle(satellite_x, satellite_y + (satellite_index * satellite_height), 70, 90, 5);

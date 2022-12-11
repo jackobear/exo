@@ -128,6 +128,9 @@ body{
 .exo-coin + .cost {
     margin-left:1px;
 }
+#canvas_wrapper .site-bonus .cost {
+    margin-top: 7px;
+}
 .fa-stack{
     line-height: 45px;
     height:45px;
@@ -189,6 +192,6 @@ h3 span.fa-stack, li span.fa-stack{
 }
 
 .inline-card-icon {
-    height:30px;
+    height:35px;
     margin-top:-6px;
 }
