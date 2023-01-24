@@ -27,19 +27,20 @@
             <li>Place PL Planets and a HW Habitable World as described by the ST Star.</li>
             <li>Place MN Moons and DP Dwarf Planets as described by each PL Planet.</li>
             <li>
+              Place a <img src='/img/art/symbols/1-coin.png' style='height:50px;' /> 1-Coin marker
+              on top of each <img src='/img/art/symbols/eternal-light.png' style='height:50px;' />Peak of Eternal Light on the HW Habitable World or closer to the ST Star.
+            </li>
+            <li>
               Place <img src='/img/art/symbols/magnetic-storm.png' style='height:50px;' />Magnetic Storms and 
               <img src='/img/art/symbols/magnetic-shield.png' style='height:50px;' />  Magnetic Shield markers as described by ST Stars and PL Planets.
             </li>
-            <li>
-              Place a <img src='/img/art/symbols/1-coin.png' style='height:50px;' /> 1-Coin marker
-              on top of each <img src='/img/art/symbols/eternal-light.png' style='height:50px;' />Peak of Eternal Light in the habitable zone or closer to the ST Star.
-            </li>
-            <li>Each player draws a random Faction card and that Faction's starting cards.</li>
-            <li>Each player gets three FU Fuel one FO Food, one ME Metal and one WA Water.</li>
-            <li>Each player gets 0, 2, 4, 6, or 8 
-              CO Coins based on their starting position.</li>
             <li>Place five AC Action cards face up to start the Action card market.</li>
             <li>Place resources onto the Resource Market to set initial prices.</li>
+            <li>Each player draws a random Faction card and that Faction's starting cards.</li>
+            <li>Each player gets three FU Fuel one FO Food, one ME Metal and one WA Water.</li>
+            <li>Each player gets 0, 2, 4, 6, or 8 CO Coins based on their random starting position.</li>
+            <li>Each player takes turns placing an initial CO Colony and scoring marker.</li>
+
           </ol>
 
         </div>
