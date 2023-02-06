@@ -16,9 +16,13 @@
   <body>
     <div class="row" style="background-color: #000">
       <div class="large-12 columns">
-        <div class="card" style="width: 678px;height:980px;margin:73px 0px 72px 59px;border-radius:15px;">
+        <div class="card" style="width: 678px;height:980px;margin:73px 0px 72px 59px;border-radius:15px;
+          border: 12px solid <? echo $color; ?>;">
 
-            <canvas id="myCanvas" width="700" height="980" style="background-image: url('/img/art/card-backs/<? echo str_replace(' ', '-', $card_type); ?>.jpg');background-size: cover;background-repeat: no-repeat;background-position: 50% 50%;"></canvas>
+          <canvas id="myCanvas" width="700" height="980" style="
+            background-image: url('/img/art/card-backs/<? echo str_replace(' ', '-', $card_type); ?>.jpg');
+            background-size: cover;background-repeat: no-repeat;background-position: 180% 50%;">
+          </canvas>
         </div>
       </div>
     </div>

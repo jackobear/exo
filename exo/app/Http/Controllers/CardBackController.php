@@ -18,6 +18,17 @@ class CardBackController extends Controller
         "Stars",
         "Trade Ships"
     ];
+    private $colors = [
+        "#bc13aa",
+        "#ffffff",
+        "#a52315",
+        "#26415e",
+        "#4c6b49",
+        "#716d6a",
+        "#aa8220",
+        "#e83514",
+        "#19a923",
+    ];
 
     /**
      * Display a listing of the resource.
@@ -58,7 +69,10 @@ class CardBackController extends Controller
      */
     public function show($id)
     {
-        return view('card_back.show', ['card_type'=>$this->card_types[$id-1]]);
+        return view('card_back.show', [
+            'color' => $this->colors[$id-1],
+            'card_type' => $this->card_types[$id-1]
+        ]);
     }
 
     // TODO...this is copypasta from SavableAsPng since Cardbacks arent real models...either make them into models or find another way to not repeat this code
